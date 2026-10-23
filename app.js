@@ -69,12 +69,13 @@ async function load() {
 
 /* ---------- Utilidades de render ---------- */
 
-function champHTML(id, { items = [], carry = false, name = false, tag = "div" } = {}) {
+function champHTML(id, { items = [], carry = false, name = false, tag = "div", stars = 0 } = {}) {
   const c = state.champ[id];
   if (!c) return "";
   const its = items.map((i) => state.item[i]).filter(Boolean)
     .map((i) => `<img src="${i.img}" alt="${esc(i.name)}" title="${esc(i.name)}" loading="lazy">`).join("");
   return `<${tag} class="champ c${c.cost}${carry ? " carry" : ""}" data-id="${c.id}" title="${esc(c.name)}">
+    ${stars >= 2 ? `<span class="stars s${stars}" title="${stars} estrellas">${"★".repeat(stars)}</span>` : ""}
     <img class="pic" src="${c.img}" alt="${esc(c.name)}" loading="lazy">
     ${its ? `<div class="its">${its}</div>` : ""}
     ${name ? `<div class="nm">${esc(c.name)}</div>` : ""}
@@ -327,7 +328,7 @@ function cardHTML(c) {
       ${TREND[c.trend || "stable"]}
     </div>
     ${stats}
-    <div class="units">${sorted.map((u) => champHTML(u, { items: c.items[u] || [], carry: c.carries.includes(u) })).join("")}</div>
+    <div class="units">${sorted.map((u) => champHTML(u, { items: c.items[u] || [], carry: c.carries.includes(u), stars: (c.stars?.[u] === 3 ? 3 : 0) })).join("")}</div>
     <div class="mini-traits">${c.activeTraits.map(({ t, n, level }) =>
       `<span class="trait ${level}${state.traitSel.has(t.id) ? " sel" : ""}" title="${esc(t.name)}"><span class="hex"><img src="${t.img}" alt=""></span><span class="n">${n}</span></span>`).join("")}</div>
   </button>`;
@@ -364,7 +365,8 @@ function openComp(id) {
     <div class="card-head"><span class="tag">Tier ${c.tier === "?" ? "—" : c.tier}</span><span class="tag">${esc(c.style)}</span>${TREND[c.trend || "stable"]}</div>
     ${stats}
     <h3>Tablero final</h3>
-    <div class="units">${c.units.map((u) => champHTML(u, { carry: c.carries.includes(u), name: true })).join("")}</div>
+    <div class="units">${c.units.map((u) => champHTML(u, { carry: c.carries.includes(u), name: true, stars: c.stars?.[u] || 0 })).join("")}</div>
+    ${Object.values(c.stars || {}).includes(3) ? `<p class="source">★★★ = suele estar a 3 estrellas en los tableros que quedan top 4.</p>` : ""}
     <h3>Rasgos activos</h3>
     <div class="traits">${traits.map(traitHTML).join("")}</div>
     <h3>Aumentos recomendados</h3>

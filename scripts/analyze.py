@@ -167,6 +167,8 @@ def summarize(group, champs, traits, items, total_matches, split_time):
         "trend": trend,
         "level": level,
         "main_stars": main_stars,
+        # Estrellas más habituales de cada unidad en los tableros top 4
+        "stars": {u: Counter(stars[u]).most_common(1)[0][0] for u in final if stars[u]},
         "stats": {
             "avg": round(avg, 2),
             "top4": round(100 * sum(p <= 4 for p in places) / n, 1),
@@ -243,7 +245,8 @@ def main():
         # Estilo según el carry final: reroll si es de coste ≤3 y suele estar a 3 estrellas
         carry_stars = [u["stars"] for b in group for u in b["units"] if u["id"] == carry]
         s["main_stars"] = statistics.mean(carry_stars) if carry_stars else 0
-        if champs[carry]["cost"] <= 3 and s["main_stars"] >= 2.5:
+        three_share = sum(x == 3 for x in carry_stars) / max(1, len(carry_stars))
+        if champs[carry]["cost"] <= 3 and three_share >= 0.4:
             s["style"] = "Reroll"
         else:
             s["style"] = "Fast 9" if s["level"] >= 9 else "Fast 8"
@@ -267,6 +270,7 @@ def main():
             "units": s["units"],
             "items": s["items"],
             "carries": s["carries"] or [carry],
+            "stars": s["stars"],
             "tips": tips,
         })
 
