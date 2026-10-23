@@ -246,7 +246,9 @@ def main():
         carry_stars = [u["stars"] for b in group for u in b["units"] if u["id"] == carry]
         s["main_stars"] = statistics.mean(carry_stars) if carry_stars else 0
         three_share = sum(x == 3 for x in carry_stars) / max(1, len(carry_stars))
-        if champs[carry]["cost"] <= 3 and three_share >= 0.4:
+        # Reroll: el carry barato suele ir a 3 estrellas, o hay 3+ unidades baratas a 3 estrellas
+        reroll_units = [u for u, st in s["stars"].items() if st == 3 and champs[u]["cost"] <= 3]
+        if (champs[carry]["cost"] <= 3 and three_share >= 0.4) or len(reroll_units) >= 3:
             s["style"] = "Reroll"
         else:
             s["style"] = "Fast 9" if s["level"] >= 9 else "Fast 8"
@@ -260,6 +262,9 @@ def main():
             f"Nivel final habitual: {s['level']:g}. "
             f"Rasgo principal: {traits[trait]['name']}."
         )
+        if s["style"] == "Reroll" and reroll_units:
+            names = ", ".join(champs[u]["name"] for u in sorted(reroll_units, key=lambda u: champs[u]["cost"]))
+            tips += f" Sube a 3 estrellas: {names}."
         comps.append({
             "id": f"{carry}-{trait}",
             "name": name,
