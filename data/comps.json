@@ -1,108 +1,109 @@
 {
   "patch": "18.5",
-  "updated": "2026-10-23 10:40",
-  "source": "Datos propios de la API de Riot: 1330 partidas clasificatorias (10640 tableros) de jugadores Master+ de EUW, del 02/10 al 22/10/2026. Composiciones con al menos 30 tableros.",
+  "updated": "2026-10-23 09:06",
+  "source": "Datos propios de la API de Riot: 917 partidas clasificatorias (7336 tableros) de jugadores Master+ de EUW, del 16/10 al 23/10/2026. Composiciones con al menos 30 tableros.",
   "comps": [
+    {
+      "id": "da_18_kennen-da_juggernaut18",
+      "name": "Kennen Coloso",
+      "tier": "S",
+      "style": "Fast 9",
+      "trend": "stable",
+      "stats": {
+        "avg": 3.64,
+        "top4": 63.7,
+        "win": 26.8,
+        "pick": 0.18,
+        "games": 168
+      },
+      "units": [
+        "da_18_kennen",
+        "da_amumu18",
+        "da_18_ivern",
+        "da_18_maokai",
+        "da_taric18",
+        "da_sentinel18",
+        "da_fiddlesticks18",
+        "da_18_soraka",
+        "da_18_zyra"
+      ],
+      "items": {
+        "da_18_zyra": [
+          "da_voidstaff",
+          "da_spearofshojin",
+          "da_jeweledgauntlet"
+        ],
+        "da_18_kennen": [
+          "da_edgeofnight",
+          "da_handofjustice",
+          "da_rabadonsdeathcap"
+        ],
+        "da_18_ivern": [
+          "da_spearofshojin",
+          "da_bluebuff",
+          "da_adaptivehelm"
+        ],
+        "da_18_soraka": [
+          "da_rabadonsdeathcap",
+          "da_adaptivehelm",
+          "da_spearofshojin"
+        ]
+      },
+      "carries": [
+        "da_18_kennen"
+      ],
+      "tips": "Datos de 168 tableros de Master+ en EUW. Carry principal: Kennen (media de 1,6 estrellas). Nivel final habitual: 9. Rasgo principal: Coloso."
+    },
     {
       "id": "da_lux18_base-da_18_vanguard",
       "name": "Lux Vanguardia",
       "tier": "S",
       "style": "Fast 9",
-      "trend": "down",
+      "trend": "stable",
       "stats": {
-        "avg": 3.51,
-        "top4": 65.9,
-        "win": 27.8,
-        "pick": 0.15,
-        "games": 205
+        "avg": 3.69,
+        "top4": 61.9,
+        "win": 26.9,
+        "pick": 0.17,
+        "games": 160
       },
       "units": [
         "da_lux18_base",
-        "da_sentinel18",
         "da_amumu18",
+        "da_sentinel18",
         "da_taric18",
+        "da_fiddlesticks18",
+        "da_18_ivern",
         "da_18_maokai",
         "da_18_rakan",
-        "da_18_ivern",
-        "da_18_alune",
-        "da_18_diana"
+        "da_18_alune"
       ],
       "items": {
         "da_lux18_base": [
           "da_spearofshojin",
           "da_jeweledgauntlet",
-          "da_rabadonsdeathcap"
+          "da_bluebuff"
         ],
         "da_18_maokai": [
           "da_gargoylestoneplate",
-          "da_warmogsarmor",
-          "da_spiritvisage"
+          "da_spiritvisage",
+          "da_warmogsarmor"
         ],
         "da_18_alune": [
-          "da_voidstaff",
-          "da_spearofshojin",
-          "da_adaptivehelm"
+          "da_bluebuff",
+          "da_adaptivehelm",
+          "da_voidstaff"
         ],
         "da_sentinel18": [
           "da_protectorsvow",
           "da_gargoylestoneplate",
-          "da_warmogsarmor"
+          "da_adaptivehelm"
         ]
       },
       "carries": [
         "da_lux18_base"
       ],
-      "tips": "Datos de 205 tableros de Master+ en EUW. Carry principal: Lux (media de 1,6 estrellas). Nivel final habitual: 9. Rasgo principal: Vanguardia."
-    },
-    {
-      "id": "da_18_elderdragon-da_riftbeast18",
-      "name": "Dragón anciano Bestia de la Grieta",
-      "tier": "S",
-      "style": "Fast 9",
-      "trend": "stable",
-      "stats": {
-        "avg": 3.88,
-        "top4": 61.1,
-        "win": 16.1,
-        "pick": 0.21,
-        "games": 280
-      },
-      "units": [
-        "da_18_elderdragon",
-        "da_sentinel18",
-        "da_krug18",
-        "da_taric18",
-        "da_18_sentry",
-        "da_amumu18",
-        "da_18_maokai",
-        "da_scuttlecrab18"
-      ],
-      "items": {
-        "da_18_elderdragon": [
-          "da_infinityedge",
-          "da_steraksgage",
-          "da_deathblade"
-        ],
-        "da_krug18": [
-          "da_gargoylestoneplate",
-          "da_warmogsarmor",
-          "da_spiritvisage"
-        ],
-        "da_18_sentry": [
-          "da_bluebuff",
-          "da_jeweledgauntlet",
-          "da_rabadonsdeathcap"
-        ],
-        "da_18_maokai": [
-          "da_gargoylestoneplate",
-          "da_crownguard",
-          "da_spiritvisage"
-        ]
-      },
-      "carries": [
-        "da_18_elderdragon"
-      ],
-      "tips": "Datos de 280 tableros de Master+ en EUW. Carry principal: Dragón anciano (media de 1,6 estrellas). Nivel final habitual: 9. Rasgo principal: Bestia de la Grieta."
+      "tips": "Datos de 160 tableros de Master+ en EUW. Carry principal: Lux (media de 1,5 estrellas). Nivel final habitual: 9. Rasgo principal: Vanguardia."
     },
     {
       "id": "da_draven18-da_18_elderwood",
@@ -111,18 +112,18 @@
       "style": "Fast 9",
       "trend": "stable",
       "stats": {
-        "avg": 3.96,
-        "top4": 59.8,
-        "win": 24.2,
-        "pick": 0.33,
-        "games": 433
+        "avg": 4.13,
+        "top4": 54.2,
+        "win": 26.3,
+        "pick": 0.29,
+        "games": 262
       },
       "units": [
         "da_draven18",
         "da_amumu18",
-        "da_18_kennen",
         "da_18_maokai",
         "da_taric18",
+        "da_18_kennen",
         "da_18_ivern",
         "da_18_ezreal",
         "da_18_gnarsmall",
@@ -136,13 +137,13 @@
         ],
         "da_18_maokai": [
           "da_gargoylestoneplate",
-          "da_spiritvisage",
-          "da_warmogsarmor"
+          "da_warmogsarmor",
+          "da_spiritvisage"
         ],
         "da_18_ezreal": [
           "da_lastwhisper",
           "da_spearofshojin",
-          "da_deathblade"
+          "da_strikersflail"
         ],
         "da_18_kennen": [
           "da_thiefsgloves",
@@ -153,36 +154,137 @@
       "carries": [
         "da_draven18"
       ],
-      "tips": "Datos de 433 tableros de Master+ en EUW. Carry principal: Draven (media de 1,8 estrellas). Nivel final habitual: 9. Rasgo principal: Bosque ancestral."
+      "tips": "Datos de 262 tableros de Master+ en EUW. Carry principal: Draven (media de 1,8 estrellas). Nivel final habitual: 9. Rasgo principal: Bosque ancestral."
     },
     {
-      "id": "da_18_ezreal-da_18_executioner",
-      "name": "Ezreal Exterminador",
+      "id": "da_brambleback18-da_riftbeast18",
+      "name": "Ancestro ígneo Bestia de la Grieta",
+      "tier": "S",
+      "style": "Fast 8",
+      "trend": "up",
+      "stats": {
+        "avg": 4.23,
+        "top4": 55.0,
+        "win": 12.9,
+        "pick": 0.96,
+        "games": 877
+      },
+      "units": [
+        "da_sentinel18",
+        "da_krug18",
+        "da_18_sentry",
+        "da_brambleback18",
+        "da_murkwolf18",
+        "da_scuttlecrab18",
+        "da_18_elderdragon",
+        "da_cinderling18"
+      ],
+      "items": {
+        "da_18_elderdragon": [
+          "da_infinityedge",
+          "da_lastwhisper",
+          "da_deathblade"
+        ],
+        "da_brambleback18": [
+          "da_edgeofnight",
+          "da_guinsoosrageblade",
+          "da_handofjustice"
+        ],
+        "da_krug18": [
+          "da_gargoylestoneplate",
+          "da_warmogsarmor",
+          "da_spiritvisage"
+        ],
+        "da_18_sentry": [
+          "da_bluebuff",
+          "da_jeweledgauntlet",
+          "da_archangelsstaff"
+        ]
+      },
+      "carries": [
+        "da_brambleback18",
+        "da_18_elderdragon"
+      ],
+      "tips": "Datos de 877 tableros de Master+ en EUW. Carry principal: Ancestro ígneo (media de 1,8 estrellas). Nivel final habitual: 8. Rasgo principal: Bestia de la Grieta."
+    },
+    {
+      "id": "da_18_ezreal-da_18_elderwood",
+      "name": "Ezreal Bosque ancestral",
       "tier": "S",
       "style": "Fast 8",
       "trend": "stable",
       "stats": {
-        "avg": 4.08,
-        "top4": 56.4,
-        "win": 17.4,
-        "pick": 0.29,
-        "games": 385
+        "avg": 4.27,
+        "top4": 53.2,
+        "win": 16.5,
+        "pick": 0.52,
+        "games": 479
+      },
+      "units": [
+        "da_18_ezreal",
+        "da_18_hecarim",
+        "da_18_ornn",
+        "da_18_alistar",
+        "da_18_soraka",
+        "da_18_gnarsmall",
+        "da_fiddlesticks18",
+        "da_18_xayah"
+      ],
+      "items": {
+        "da_18_ezreal": [
+          "da_spearofshojin",
+          "da_lastwhisper",
+          "da_deathblade"
+        ],
+        "da_18_soraka": [
+          "da_spearofshojin",
+          "da_18_emblemelderwood",
+          "da_rabadonsdeathcap"
+        ],
+        "da_18_gnarsmall": [
+          "da_steraksgage",
+          "da_thiefsgloves",
+          "da_bloodthirster"
+        ],
+        "da_18_hecarim": [
+          "da_gargoylestoneplate",
+          "da_warmogsarmor",
+          "da_protectorsvow"
+        ]
+      },
+      "carries": [
+        "da_18_ezreal"
+      ],
+      "tips": "Datos de 479 tableros de Master+ en EUW. Carry principal: Ezreal (media de 1,7 estrellas). Nivel final habitual: 8. Rasgo principal: Bosque ancestral."
+    },
+    {
+      "id": "da_18_ezreal-da_18_executioner",
+      "name": "Ezreal Exterminador",
+      "tier": "A",
+      "style": "Fast 8",
+      "trend": "stable",
+      "stats": {
+        "avg": 4.35,
+        "top4": 52.5,
+        "win": 13.7,
+        "pick": 0.28,
+        "games": 255
       },
       "units": [
         "da_18_ezreal",
         "da_fiddlesticks18",
         "da_18_soraka",
-        "da_18_ornn",
         "da_18_khazix",
         "da_18_diana",
+        "da_18_ornn",
         "da_18_hecarim",
-        "da_18_sett"
+        "da_18_alune"
       ],
       "items": {
         "da_18_khazix": [
           "da_handofjustice",
           "da_rabadonsdeathcap",
-          "da_edgeofnight"
+          "da_nashorstooth"
         ],
         "da_18_hecarim": [
           "da_gargoylestoneplate",
@@ -196,270 +298,15 @@
         ],
         "da_18_diana": [
           "da_ionicspark",
-          "da_bloodthirster",
-          "da_jeweledgauntlet"
+          "da_jeweledgauntlet",
+          "da_bloodthirster"
         ]
       },
       "carries": [
         "da_18_ezreal",
         "da_18_khazix"
       ],
-      "tips": "Datos de 385 tableros de Master+ en EUW. Carry principal: Ezreal (media de 1,8 estrellas). Nivel final habitual: 8. Rasgo principal: Exterminador."
-    },
-    {
-      "id": "da_18_ashe-da_riftbeast18",
-      "name": "Ashe Bestia de la Grieta",
-      "tier": "S",
-      "style": "Fast 9",
-      "trend": "stable",
-      "stats": {
-        "avg": 4.11,
-        "top4": 55.3,
-        "win": 18.4,
-        "pick": 0.11,
-        "games": 141
-      },
-      "units": [
-        "da_18_ashe",
-        "da_18_elderdragon",
-        "da_amumu18",
-        "da_sentinel18",
-        "da_18_sivir",
-        "da_taric18",
-        "da_18_maokai",
-        "da_vi18"
-      ],
-      "items": {
-        "da_18_elderdragon": [
-          "da_infinityedge",
-          "da_steraksgage",
-          "da_deathblade"
-        ],
-        "da_18_ashe": [
-          "da_spearofshojin",
-          "da_redbuff",
-          "da_deathblade"
-        ],
-        "da_18_maokai": [
-          "da_gargoylestoneplate",
-          "da_warmogsarmor",
-          "da_spiritvisage"
-        ],
-        "da_18_sivir": [
-          "da_infinityedge",
-          "da_lastwhisper",
-          "da_deathblade"
-        ]
-      },
-      "carries": [
-        "da_18_ashe",
-        "da_18_elderdragon"
-      ],
-      "tips": "Datos de 141 tableros de Master+ en EUW. Carry principal: Ashe (media de 1,6 estrellas). Nivel final habitual: 9. Rasgo principal: Bestia de la Grieta."
-    },
-    {
-      "id": "da_18_alune-da_18_lunar",
-      "name": "Alune Lunar",
-      "tier": "A",
-      "style": "Fast 9",
-      "trend": "down",
-      "stats": {
-        "avg": 4.26,
-        "top4": 55.6,
-        "win": 13.7,
-        "pick": 0.09,
-        "games": 117
-      },
-      "units": [
-        "da_18_alune",
-        "da_amumu18",
-        "da_taric18",
-        "da_sentinel18",
-        "da_lux18_base",
-        "da_18_diana",
-        "da_fiddlesticks18",
-        "da_18_sett",
-        "da_18_kennen"
-      ],
-      "items": {
-        "da_18_alune": [
-          "da_spearofshojin",
-          "da_jeweledgauntlet",
-          "da_archangelsstaff"
-        ],
-        "da_18_kennen": [
-          "da_edgeofnight",
-          "da_redbuff",
-          "da_handofjustice"
-        ],
-        "da_sentinel18": [
-          "da_protectorsvow",
-          "da_spiritvisage",
-          "da_gargoylestoneplate"
-        ],
-        "da_lux18_base": [
-          "da_voidstaff",
-          "da_spearofshojin",
-          "da_rabadonsdeathcap"
-        ]
-      },
-      "carries": [
-        "da_18_alune"
-      ],
-      "tips": "Datos de 117 tableros de Master+ en EUW. Carry principal: Alune (media de 1,6 estrellas). Nivel final habitual: 9. Rasgo principal: Lunar."
-    },
-    {
-      "id": "da_18_kennen-da_18_executioner",
-      "name": "Kennen Exterminador",
-      "tier": "A",
-      "style": "Fast 8",
-      "trend": "stable",
-      "stats": {
-        "avg": 4.3,
-        "top4": 53.8,
-        "win": 12.4,
-        "pick": 0.37,
-        "games": 498
-      },
-      "units": [
-        "da_18_soraka",
-        "da_fiddlesticks18",
-        "da_18_kennen",
-        "da_18_zyra",
-        "da_18_azir",
-        "da_amumu18",
-        "da_18_malphite",
-        "da_18_yorick"
-      ],
-      "items": {
-        "da_18_kennen": [
-          "da_edgeofnight",
-          "da_handofjustice",
-          "da_thiefsgloves"
-        ],
-        "da_18_malphite": [
-          "da_gargoylestoneplate",
-          "da_warmogsarmor",
-          "da_crownguard"
-        ],
-        "da_18_zyra": [
-          "da_voidstaff",
-          "da_spearofshojin",
-          "da_18_emblemexecutioner"
-        ],
-        "da_18_soraka": [
-          "da_rabadonsdeathcap",
-          "da_spearofshojin",
-          "da_jeweledgauntlet"
-        ]
-      },
-      "carries": [
-        "da_18_kennen",
-        "da_18_soraka"
-      ],
-      "tips": "Datos de 498 tableros de Master+ en EUW. Carry principal: Kennen (media de 1,4 estrellas). Nivel final habitual: 8. Rasgo principal: Exterminador."
-    },
-    {
-      "id": "da_18_aphelios-da_18_vanguard",
-      "name": "Aphelios Vanguardia",
-      "tier": "A",
-      "style": "Fast 8",
-      "trend": "stable",
-      "stats": {
-        "avg": 4.31,
-        "top4": 57.1,
-        "win": 7.8,
-        "pick": 0.18,
-        "games": 245
-      },
-      "units": [
-        "da_18_aphelios",
-        "da_sentinel18",
-        "da_18_diana",
-        "da_crimsonraptor18",
-        "da_brambleback18",
-        "da_18_varus",
-        "da_amumu18",
-        "da_18_rakan"
-      ],
-      "items": {
-        "da_18_aphelios": [
-          "da_krakensfury",
-          "da_infinityedge",
-          "da_deathblade"
-        ],
-        "da_brambleback18": [
-          "da_18_emblemrapidfire",
-          "da_steraksgage",
-          "da_edgeofnight"
-        ],
-        "da_sentinel18": [
-          "da_protectorsvow",
-          "da_gargoylestoneplate",
-          "da_spiritvisage"
-        ],
-        "da_amumu18": [
-          "da_gargoylestoneplate",
-          "da_spiritvisage",
-          "da_warmogsarmor"
-        ]
-      },
-      "carries": [
-        "da_18_aphelios",
-        "da_brambleback18"
-      ],
-      "tips": "Datos de 245 tableros de Master+ en EUW. Carry principal: Aphelios (media de 1,9 estrellas). Nivel final habitual: 8. Rasgo principal: Vanguardia."
-    },
-    {
-      "id": "da_brambleback18-da_riftbeast18",
-      "name": "Ancestro ígneo Bestia de la Grieta",
-      "tier": "A",
-      "style": "Fast 8",
-      "trend": "up",
-      "stats": {
-        "avg": 4.33,
-        "top4": 52.8,
-        "win": 12.3,
-        "pick": 0.61,
-        "games": 805
-      },
-      "units": [
-        "da_krug18",
-        "da_18_sentry",
-        "da_sentinel18",
-        "da_scuttlecrab18",
-        "da_brambleback18",
-        "da_murkwolf18",
-        "da_cinderling18",
-        "da_gromp18_ap"
-      ],
-      "items": {
-        "da_gromp18_ap": [
-          "da_jeweledgauntlet",
-          "da_spearofshojin",
-          "da_voidstaff"
-        ],
-        "da_krug18": [
-          "da_gargoylestoneplate",
-          "da_warmogsarmor",
-          "da_spiritvisage"
-        ],
-        "da_18_sentry": [
-          "da_bluebuff",
-          "da_jeweledgauntlet",
-          "da_rabadonsdeathcap"
-        ],
-        "da_brambleback18": [
-          "da_edgeofnight",
-          "da_guinsoosrageblade",
-          "da_steraksgage"
-        ]
-      },
-      "carries": [
-        "da_brambleback18",
-        "da_18_sentry"
-      ],
-      "tips": "Datos de 805 tableros de Master+ en EUW. Carry principal: Ancestro ígneo (media de 1,8 estrellas). Nivel final habitual: 8. Rasgo principal: Bestia de la Grieta."
+      "tips": "Datos de 255 tableros de Master+ en EUW. Carry principal: Ezreal (media de 1,8 estrellas). Nivel final habitual: 8. Rasgo principal: Exterminador."
     },
     {
       "id": "da_18_akali_ad-da_18_solar",
@@ -468,17 +315,17 @@
       "style": "Reroll",
       "trend": "stable",
       "stats": {
-        "avg": 4.34,
-        "top4": 54.0,
-        "win": 9.4,
-        "pick": 0.21,
-        "games": 276
+        "avg": 4.36,
+        "top4": 53.1,
+        "win": 8.5,
+        "pick": 0.23,
+        "games": 211
       },
       "units": [
         "da_18_leona",
-        "da_18_varus",
-        "da_18_kayle",
         "da_18_sejuani",
+        "da_18_kayle",
+        "da_18_varus",
         "da_18_akali_ad",
         "da_18_camille",
         "da_18_ornn",
@@ -486,8 +333,8 @@
       ],
       "items": {
         "da_18_akali_ad": [
-          "da_handofjustice",
           "da_jeweledgauntlet",
+          "da_handofjustice",
           "da_edgeofnight"
         ],
         "da_18_camille": [
@@ -502,7 +349,7 @@
         ],
         "da_18_ornn": [
           "da_gargoylestoneplate",
-          "da_warmogsarmor",
+          "da_crownguard",
           "da_spiritvisage"
         ]
       },
@@ -511,57 +358,158 @@
         "da_18_camille",
         "da_18_varus"
       ],
-      "tips": "Datos de 276 tableros de Master+ en EUW. Carry principal: Akali (media de 3,0 estrellas). Nivel final habitual: 7. Rasgo principal: Solar."
+      "tips": "Datos de 211 tableros de Master+ en EUW. Carry principal: Akali (media de 3,0 estrellas). Nivel final habitual: 8. Rasgo principal: Solar."
     },
     {
-      "id": "da_18_ezreal-da_18_elderwood",
-      "name": "Ezreal Bosque ancestral",
+      "id": "da_18_veigar-da_18_spellweaver",
+      "name": "Veigar Tejehechizos",
+      "tier": "A",
+      "style": "Reroll",
+      "trend": "stable",
+      "stats": {
+        "avg": 4.43,
+        "top4": 47.2,
+        "win": 15.6,
+        "pick": 0.33,
+        "games": 301
+      },
+      "units": [
+        "da_fiddlesticks18",
+        "da_18_leblanc",
+        "da_18_ornn",
+        "da_18_veigar",
+        "da_18_reksai",
+        "da_18_alistar",
+        "da_18_cassiopeia",
+        "da_18_alune"
+      ],
+      "items": {
+        "da_18_alune": [
+          "da_voidstaff",
+          "da_spearofshojin",
+          "da_morellonomicon"
+        ],
+        "da_18_veigar": [
+          "da_jeweledgauntlet",
+          "da_bluebuff",
+          "da_hextechgunblade"
+        ],
+        "da_18_alistar": [
+          "da_gargoylestoneplate",
+          "da_warmogsarmor",
+          "da_spiritvisage"
+        ],
+        "da_18_reksai": [
+          "da_gargoylestoneplate",
+          "da_ionicspark",
+          "da_spiritvisage"
+        ]
+      },
+      "carries": [
+        "da_18_veigar"
+      ],
+      "tips": "Datos de 301 tableros de Master+ en EUW. Carry principal: Veigar (media de 3,0 estrellas). Nivel final habitual: 7. Rasgo principal: Tejehechizos."
+    },
+    {
+      "id": "da_18_ahri-da_18_blossom",
+      "name": "Ahri Brote",
       "tier": "A",
       "style": "Fast 8",
       "trend": "stable",
       "stats": {
-        "avg": 4.4,
-        "top4": 50.5,
-        "win": 15.9,
-        "pick": 0.5,
-        "games": 661
+        "avg": 4.44,
+        "top4": 54.5,
+        "win": 10.5,
+        "pick": 0.29,
+        "games": 266
       },
       "units": [
-        "da_18_ezreal",
-        "da_18_hecarim",
-        "da_18_ornn",
-        "da_18_soraka",
+        "da_18_sett",
+        "da_18_ahri",
+        "da_18_yorick",
         "da_fiddlesticks18",
-        "da_18_alistar",
+        "da_18_zyra",
         "da_18_gnarsmall",
-        "da_18_diana"
+        "da_18_lillia",
+        "da_18_rakan"
       ],
       "items": {
-        "da_18_ezreal": [
+        "da_18_ahri": [
+          "da_jeweledgauntlet",
           "da_spearofshojin",
-          "da_lastwhisper",
-          "da_deathblade"
+          "da_strikersflail"
         ],
-        "da_18_gnarsmall": [
-          "da_steraksgage",
-          "da_edgeofnight",
-          "da_thiefsgloves"
-        ],
-        "da_18_soraka": [
-          "da_rabadonsdeathcap",
-          "da_18_emblemelderwood",
+        "da_18_zyra": [
+          "da_voidstaff",
+          "da_morellonomicon",
           "da_spearofshojin"
         ],
-        "da_18_hecarim": [
+        "da_18_sett": [
           "da_gargoylestoneplate",
           "da_warmogsarmor",
-          "da_protectorsvow"
+          "da_spiritvisage"
+        ],
+        "da_18_lillia": [
+          "da_protectorsvow",
+          "da_adaptivehelm",
+          "da_warmogsarmor"
         ]
       },
       "carries": [
-        "da_18_ezreal"
+        "da_18_ahri"
       ],
-      "tips": "Datos de 661 tableros de Master+ en EUW. Carry principal: Ezreal (media de 1,7 estrellas). Nivel final habitual: 8. Rasgo principal: Bosque ancestral."
+      "tips": "Datos de 266 tableros de Master+ en EUW. Carry principal: Ahri (media de 1,9 estrellas). Nivel final habitual: 8. Rasgo principal: Brote."
+    },
+    {
+      "id": "da_brambleback18-da_18_vanguard",
+      "name": "Ancestro ígneo Vanguardia",
+      "tier": "A",
+      "style": "Fast 8",
+      "trend": "stable",
+      "stats": {
+        "avg": 4.45,
+        "top4": 52.7,
+        "win": 8.0,
+        "pick": 0.21,
+        "games": 188
+      },
+      "units": [
+        "da_18_aphelios",
+        "da_sentinel18",
+        "da_brambleback18",
+        "da_18_diana",
+        "da_crimsonraptor18",
+        "da_amumu18",
+        "da_18_varus",
+        "da_18_rakan"
+      ],
+      "items": {
+        "da_brambleback18": [
+          "da_18_emblemrapidfire",
+          "da_steraksgage",
+          "da_edgeofnight"
+        ],
+        "da_18_aphelios": [
+          "da_krakensfury",
+          "da_infinityedge",
+          "da_deathblade"
+        ],
+        "da_sentinel18": [
+          "da_protectorsvow",
+          "da_gargoylestoneplate",
+          "da_spiritvisage"
+        ],
+        "da_amumu18": [
+          "da_gargoylestoneplate",
+          "da_warmogsarmor",
+          "da_spiritvisage"
+        ]
+      },
+      "carries": [
+        "da_brambleback18",
+        "da_18_aphelios"
+      ],
+      "tips": "Datos de 188 tableros de Master+ en EUW. Carry principal: Ancestro ígneo (media de 1,9 estrellas). Nivel final habitual: 8. Rasgo principal: Vanguardia."
     },
     {
       "id": "da_18_ahri-da_18_spellweaver",
@@ -570,11 +518,11 @@
       "style": "Fast 8",
       "trend": "stable",
       "stats": {
-        "avg": 4.49,
-        "top4": 46.2,
-        "win": 10.5,
+        "avg": 4.47,
+        "top4": 45.9,
+        "win": 12.2,
         "pick": 0.11,
-        "games": 143
+        "games": 98
       },
       "units": [
         "da_18_ahri",
@@ -583,109 +531,57 @@
         "da_karma18",
         "da_18_alune",
         "da_18_lillia",
-        "da_sentinel18",
-        "da_18_cassiopeia"
+        "da_18_leblanc",
+        "da_krug18"
       ],
       "items": {
         "da_18_ahri": [
           "da_jeweledgauntlet",
-          "da_spearofshojin",
-          "da_nashorstooth"
+          "da_nashorstooth",
+          "da_strikersflail"
         ],
         "da_18_alune": [
           "da_voidstaff",
-          "da_spearofshojin",
+          "da_morellonomicon",
           "da_redbuff"
-        ],
-        "da_sentinel18": [
-          "da_protectorsvow",
-          "da_warmogsarmor",
-          "da_gargoylestoneplate"
         ],
         "da_18_lillia": [
           "da_protectorsvow",
           "da_18_emblemspellweaver",
-          "da_adaptivehelm"
+          "da_gargoylestoneplate"
+        ],
+        "da_18_sett": [
+          "da_gargoylestoneplate",
+          "da_warmogsarmor",
+          "da_spiritvisage"
         ]
       },
       "carries": [
         "da_18_ahri"
       ],
-      "tips": "Datos de 143 tableros de Master+ en EUW. Carry principal: Ahri (media de 1,8 estrellas). Nivel final habitual: 8. Rasgo principal: Tejehechizos."
-    },
-    {
-      "id": "da_18_rengar-da_18_blossom",
-      "name": "Rengar Brote",
-      "tier": "B",
-      "style": "Reroll",
-      "trend": "stable",
-      "stats": {
-        "avg": 4.5,
-        "top4": 48.8,
-        "win": 9.2,
-        "pick": 0.2,
-        "games": 260
-      },
-      "units": [
-        "da_18_masteryi_ad",
-        "da_vi18",
-        "da_18_sett",
-        "da_18_yorick",
-        "da_18_rengar",
-        "da_nidalee18_ap",
-        "da_krug18",
-        "da_kogmaw18_ad"
-      ],
-      "items": {
-        "da_18_masteryi_ad": [
-          "da_guinsoosrageblade",
-          "da_edgeofnight",
-          "da_18_emblembrawler"
-        ],
-        "da_18_rengar": [
-          "da_guinsoosrageblade",
-          "da_edgeofnight",
-          "da_steraksgage"
-        ],
-        "da_nidalee18_ap": [
-          "da_handofjustice",
-          "da_guinsoosrageblade",
-          "da_infinityedge"
-        ],
-        "da_vi18": [
-          "da_gargoylestoneplate",
-          "da_spiritvisage",
-          "da_warmogsarmor"
-        ]
-      },
-      "carries": [
-        "da_18_rengar",
-        "da_nidalee18_ap",
-        "da_18_masteryi_ad"
-      ],
-      "tips": "Datos de 260 tableros de Master+ en EUW. Carry principal: Rengar (media de 2,8 estrellas). Nivel final habitual: 8. Rasgo principal: Brote."
+      "tips": "Datos de 98 tableros de Master+ en EUW. Carry principal: Ahri (media de 1,8 estrellas). Nivel final habitual: 8. Rasgo principal: Tejehechizos."
     },
     {
       "id": "da_nidalee18_ap-da_primal18",
       "name": "Nidalee Primigenio",
-      "tier": "B",
+      "tier": "A",
       "style": "Fast 8",
       "trend": "stable",
       "stats": {
-        "avg": 4.55,
-        "top4": 49.4,
+        "avg": 4.52,
+        "top4": 50.7,
         "win": 6.8,
-        "pick": 0.72,
-        "games": 959
+        "pick": 0.75,
+        "games": 687
       },
       "units": [
-        "da_18_aphelios",
         "da_nidalee18_ap",
-        "da_18_diana",
-        "da_amumu18",
-        "da_sentinel18",
-        "da_vi18",
+        "da_18_aphelios",
         "da_kogmaw18_ad",
+        "da_amumu18",
+        "da_vi18",
+        "da_18_diana",
+        "da_sentinel18",
         "da_18_varus"
       ],
       "items": {
@@ -699,122 +595,122 @@
           "da_infinityedge",
           "da_spearofshojin"
         ],
-        "da_sentinel18": [
-          "da_protectorsvow",
-          "da_warmogsarmor",
-          "da_gargoylestoneplate"
-        ],
         "da_amumu18": [
           "da_gargoylestoneplate",
           "da_warmogsarmor",
           "da_spiritvisage"
+        ],
+        "da_sentinel18": [
+          "da_protectorsvow",
+          "da_warmogsarmor",
+          "da_crownguard"
         ]
       },
       "carries": [
         "da_nidalee18_ap",
         "da_18_aphelios"
       ],
-      "tips": "Datos de 959 tableros de Master+ en EUW. Carry principal: Nidalee (media de 1,9 estrellas). Nivel final habitual: 8. Rasgo principal: Primigenio."
+      "tips": "Datos de 687 tableros de Master+ en EUW. Carry principal: Nidalee (media de 1,9 estrellas). Nivel final habitual: 8. Rasgo principal: Primigenio."
     },
     {
-      "id": "da_18_ahri-da_18_blossom",
-      "name": "Ahri Brote",
+      "id": "da_18_soraka-da_18_executioner",
+      "name": "Soraka Exterminador",
       "tier": "B",
       "style": "Fast 8",
       "trend": "stable",
       "stats": {
         "avg": 4.55,
-        "top4": 51.3,
-        "win": 10.7,
-        "pick": 0.22,
-        "games": 298
+        "top4": 49.2,
+        "win": 6.1,
+        "pick": 0.21,
+        "games": 197
       },
       "units": [
-        "da_18_ahri",
-        "da_18_sett",
-        "da_18_yorick",
-        "da_18_zyra",
-        "da_fiddlesticks18",
-        "da_18_lillia",
-        "da_18_gnarsmall",
-        "da_18_rakan"
-      ],
-      "items": {
-        "da_18_ahri": [
-          "da_jeweledgauntlet",
-          "da_spearofshojin",
-          "da_strikersflail"
-        ],
-        "da_18_zyra": [
-          "da_voidstaff",
-          "da_spearofshojin",
-          "da_morellonomicon"
-        ],
-        "da_18_sett": [
-          "da_gargoylestoneplate",
-          "da_warmogsarmor",
-          "da_spiritvisage"
-        ],
-        "da_18_lillia": [
-          "da_protectorsvow",
-          "da_adaptivehelm",
-          "da_spiritvisage"
-        ]
-      },
-      "carries": [
-        "da_18_ahri"
-      ],
-      "tips": "Datos de 298 tableros de Master+ en EUW. Carry principal: Ahri (media de 1,9 estrellas). Nivel final habitual: 8. Rasgo principal: Brote."
-    },
-    {
-      "id": "da_18_azir-da_18_sprykin",
-      "name": "Azir Vivaz",
-      "tier": "B",
-      "style": "Fast 8",
-      "trend": "stable",
-      "stats": {
-        "avg": 4.57,
-        "top4": 47.8,
-        "win": 13.2,
-        "pick": 0.54,
-        "games": 722
-      },
-      "units": [
-        "da_18_azir",
-        "da_fiddlesticks18",
-        "da_18_zyra",
         "da_18_soraka",
-        "da_18_veigar",
-        "da_18_rammus",
-        "da_18_teemo",
-        "da_18_malphite"
+        "da_fiddlesticks18",
+        "da_18_azir",
+        "da_18_malphite",
+        "da_18_zyra",
+        "da_amumu18",
+        "da_18_yorick",
+        "da_18_kennen"
       ],
       "items": {
         "da_18_malphite": [
           "da_gargoylestoneplate",
           "da_warmogsarmor",
-          "da_spiritvisage"
+          "da_crownguard"
         ],
-        "da_18_azir": [
-          "da_hextechgunblade",
-          "da_rabadonsdeathcap",
-          "da_guinsoosrageblade"
+        "da_18_kennen": [
+          "da_handofjustice",
+          "da_edgeofnight",
+          "da_thiefsgloves"
         ],
-        "da_18_rammus": [
-          "da_gargoylestoneplate",
-          "da_crownguard",
-          "da_warmogsarmor"
+        "da_18_soraka": [
+          "da_spearofshojin",
+          "da_jeweledgauntlet",
+          "da_rabadonsdeathcap"
         ],
         "da_18_zyra": [
           "da_voidstaff",
-          "da_morellonomicon",
-          "da_spearofshojin"
+          "da_spearofshojin",
+          "da_18_emblemexecutioner"
         ]
       },
       "carries": [
-        "da_18_azir"
+        "da_18_soraka"
       ],
-      "tips": "Datos de 722 tableros de Master+ en EUW. Carry principal: Azir (media de 2,5 estrellas). Nivel final habitual: 8. Rasgo principal: Vivaz."
+      "tips": "Datos de 197 tableros de Master+ en EUW. Carry principal: Soraka (media de 1,8 estrellas). Nivel final habitual: 8. Rasgo principal: Exterminador."
+    },
+    {
+      "id": "da_18_rengar-da_18_blossom",
+      "name": "Rengar Brote",
+      "tier": "B",
+      "style": "Reroll",
+      "trend": "up",
+      "stats": {
+        "avg": 4.55,
+        "top4": 45.0,
+        "win": 8.9,
+        "pick": 0.2,
+        "games": 180
+      },
+      "units": [
+        "da_18_masteryi_ad",
+        "da_vi18",
+        "da_18_yorick",
+        "da_18_sett",
+        "da_18_rengar",
+        "da_nidalee18_ap",
+        "da_krug18"
+      ],
+      "items": {
+        "da_18_masteryi_ad": [
+          "da_guinsoosrageblade",
+          "da_edgeofnight",
+          "da_quicksilver"
+        ],
+        "da_18_rengar": [
+          "da_guinsoosrageblade",
+          "da_edgeofnight",
+          "da_quicksilver"
+        ],
+        "da_vi18": [
+          "da_gargoylestoneplate",
+          "da_spiritvisage",
+          "da_warmogsarmor"
+        ],
+        "da_nidalee18_ap": [
+          "da_infinityedge",
+          "da_handofjustice",
+          "da_thiefsgloves"
+        ]
+      },
+      "carries": [
+        "da_18_rengar",
+        "da_18_masteryi_ad"
+      ],
+      "tips": "Datos de 180 tableros de Master+ en EUW. Carry principal: Rengar (media de 2,8 estrellas). Nivel final habitual: 7. Rasgo principal: Brote."
     },
     {
       "id": "da_18_cassiopeia-da_18_vanguard",
@@ -823,11 +719,11 @@
       "style": "Fast 8",
       "trend": "down",
       "stats": {
-        "avg": 4.57,
-        "top4": 48.9,
-        "win": 15.8,
-        "pick": 0.14,
-        "games": 184
+        "avg": 4.58,
+        "top4": 47.0,
+        "win": 16.5,
+        "pick": 0.13,
+        "games": 115
       },
       "units": [
         "da_18_morgana",
@@ -855,8 +751,8 @@
           "da_jeweledgauntlet"
         ],
         "da_sentinel18": [
-          "da_protectorsvow",
           "da_warmogsarmor",
+          "da_protectorsvow",
           "da_adaptivehelm"
         ]
       },
@@ -864,188 +760,141 @@
         "da_18_cassiopeia",
         "da_18_morgana"
       ],
-      "tips": "Datos de 184 tableros de Master+ en EUW. Carry principal: Cassiopeia (media de 2,4 estrellas). Nivel final habitual: 7. Rasgo principal: Vanguardia."
+      "tips": "Datos de 115 tableros de Master+ en EUW. Carry principal: Cassiopeia (media de 2,4 estrellas). Nivel final habitual: 7. Rasgo principal: Vanguardia."
     },
     {
-      "id": "da_18_cassiopeia-da_18_defender",
-      "name": "Cassiopeia Defensor",
+      "id": "da_18_azir-da_18_sprykin",
+      "name": "Azir Vivaz",
       "tier": "B",
       "style": "Reroll",
-      "trend": "stable",
+      "trend": "down",
       "stats": {
         "avg": 4.59,
-        "top4": 48.0,
-        "win": 8.8,
-        "pick": 0.15,
-        "games": 204
+        "top4": 48.1,
+        "win": 13.2,
+        "pick": 0.54,
+        "games": 491
       },
       "units": [
-        "da_18_rammus",
-        "da_18_cassiopeia",
+        "da_18_azir",
         "da_fiddlesticks18",
-        "da_18_shen",
-        "da_18_lillia",
-        "da_18_ornn",
-        "da_18_leona"
-      ],
-      "items": {
-        "da_18_cassiopeia": [
-          "da_archangelsstaff",
-          "da_hextechgunblade",
-          "da_spearofshojin"
-        ],
-        "da_18_rammus": [
-          "da_warmogsarmor",
-          "da_spiritvisage",
-          "da_steadfastheart"
-        ],
-        "da_fiddlesticks18": [
-          "da_titansresolve",
-          "da_adaptivehelm",
-          "da_ionicspark"
-        ],
-        "da_18_lillia": [
-          "da_protectorsvow",
-          "da_thiefsgloves",
-          "da_adaptivehelm"
-        ]
-      },
-      "carries": [
-        "da_18_cassiopeia"
-      ],
-      "tips": "Datos de 204 tableros de Master+ en EUW. Carry principal: Cassiopeia (media de 2,8 estrellas). Nivel final habitual: 7. Rasgo principal: Defensor."
-    },
-    {
-      "id": "da_18_veigar-da_18_spellweaver",
-      "name": "Veigar Tejehechizos",
-      "tier": "B",
-      "style": "Reroll",
-      "trend": "stable",
-      "stats": {
-        "avg": 4.6,
-        "top4": 45.7,
-        "win": 13.4,
-        "pick": 0.38,
-        "games": 499
-      },
-      "units": [
-        "da_18_leblanc",
+        "da_18_soraka",
+        "da_18_zyra",
         "da_18_veigar",
-        "da_18_ornn",
-        "da_18_reksai",
-        "da_fiddlesticks18",
-        "da_18_alistar",
-        "da_18_cassiopeia"
+        "da_18_rammus",
+        "da_18_teemo",
+        "da_18_kennen"
       ],
       "items": {
-        "da_18_veigar": [
-          "da_jeweledgauntlet",
-          "da_bluebuff",
-          "da_hextechgunblade"
-        ],
-        "da_18_alistar": [
+        "da_18_rammus": [
           "da_gargoylestoneplate",
-          "da_warmogsarmor",
+          "da_crownguard",
           "da_spiritvisage"
         ],
-        "da_18_cassiopeia": [
+        "da_18_azir": [
+          "da_hextechgunblade",
+          "da_guinsoosrageblade",
+          "da_rabadonsdeathcap"
+        ],
+        "da_18_zyra": [
           "da_voidstaff",
           "da_morellonomicon",
           "da_spearofshojin"
         ],
-        "da_18_reksai": [
-          "da_warmogsarmor",
-          "da_gargoylestoneplate",
-          "da_ionicspark"
+        "da_18_kennen": [
+          "da_thiefsgloves",
+          "da_edgeofnight",
+          "da_sunfirecape"
         ]
       },
       "carries": [
-        "da_18_veigar"
+        "da_18_azir"
       ],
-      "tips": "Datos de 499 tableros de Master+ en EUW. Carry principal: Veigar (media de 3,0 estrellas). Nivel final habitual: 7. Rasgo principal: Tejehechizos."
+      "tips": "Datos de 491 tableros de Master+ en EUW. Carry principal: Azir (media de 2,5 estrellas). Nivel final habitual: 8. Rasgo principal: Vivaz."
     },
     {
-      "id": "da_18_zyra-da_juggernaut18",
-      "name": "Zyra Coloso",
+      "id": "da_18_sivir-da_primal18",
+      "name": "Sivir Primigenio",
       "tier": "B",
       "style": "Fast 8",
-      "trend": "down",
+      "trend": "up",
       "stats": {
-        "avg": 4.65,
-        "top4": 45.4,
-        "win": 12.7,
-        "pick": 0.35,
-        "games": 471
+        "avg": 4.6,
+        "top4": 48.5,
+        "win": 9.1,
+        "pick": 0.11,
+        "games": 99
       },
       "units": [
+        "da_18_sivir",
+        "da_nidalee18_ap",
+        "da_kogmaw18_ad",
+        "da_sentinel18",
         "da_vi18",
-        "da_amumu18",
-        "da_18_yorick",
-        "da_scuttlecrab18",
-        "da_18_maokai",
-        "da_18_rakan",
-        "da_18_zyra",
-        "da_18_sivir"
+        "da_18_ashe",
+        "da_18_malphite",
+        "da_amumu18"
       ],
       "items": {
-        "da_18_zyra": [
-          "da_archangelsstaff",
-          "da_hextechgunblade",
-          "da_spearofshojin"
+        "da_18_malphite": [
+          "da_gargoylestoneplate",
+          "da_crownguard",
+          "da_warmogsarmor"
         ],
         "da_18_sivir": [
           "da_infinityedge",
-          "da_lastwhisper",
+          "da_redbuff",
           "da_deathblade"
         ],
-        "da_amumu18": [
-          "da_gargoylestoneplate",
-          "da_warmogsarmor",
-          "da_spiritvisage"
+        "da_nidalee18_ap": [
+          "da_18_emblemhunter",
+          "da_steraksgage",
+          "da_infinityedge"
         ],
-        "da_18_maokai": [
-          "da_warmogsarmor",
-          "da_gargoylestoneplate",
-          "da_spiritvisage"
+        "da_18_ashe": [
+          "da_giantslayer",
+          "da_redbuff",
+          "da_18_embleminferno"
         ]
       },
       "carries": [
-        "da_18_zyra"
+        "da_18_sivir",
+        "da_nidalee18_ap"
       ],
-      "tips": "Datos de 471 tableros de Master+ en EUW. Carry principal: Zyra (media de 1,8 estrellas). Nivel final habitual: 8. Rasgo principal: Coloso."
+      "tips": "Datos de 99 tableros de Master+ en EUW. Carry principal: Sivir (media de 1,9 estrellas). Nivel final habitual: 8. Rasgo principal: Primigenio."
     },
     {
       "id": "da_18_yunara-da_18_solar",
       "name": "Yunara Solar",
-      "tier": "C",
+      "tier": "B",
       "style": "Reroll",
-      "trend": "up",
+      "trend": "stable",
       "stats": {
-        "avg": 4.71,
-        "top4": 48.9,
-        "win": 12.2,
-        "pick": 0.34,
-        "games": 452
+        "avg": 4.65,
+        "top4": 49.0,
+        "win": 13.0,
+        "pick": 0.44,
+        "games": 400
       },
       "units": [
         "da_18_yunara",
         "da_18_sejuani",
-        "da_18_yorick",
         "da_karma18",
+        "da_18_yorick",
         "da_18_leona",
         "da_18_kayle",
         "da_18_leblanc"
       ],
       "items": {
-        "da_18_yunara": [
-          "da_spearofshojin",
-          "da_deathblade",
-          "da_lastwhisper"
-        ],
         "da_karma18": [
           "da_jeweledgauntlet",
           "da_rabadonsdeathcap",
           "da_bluebuff"
+        ],
+        "da_18_yunara": [
+          "da_spearofshojin",
+          "da_deathblade",
+          "da_lastwhisper"
         ],
         "da_18_sejuani": [
           "da_gargoylestoneplate",
@@ -1055,32 +904,82 @@
         "da_18_leblanc": [
           "da_voidstaff",
           "da_morellonomicon",
-          "da_spearofshojin"
+          "da_redbuff"
         ]
       },
       "carries": [
         "da_18_yunara",
         "da_karma18"
       ],
-      "tips": "Datos de 452 tableros de Master+ en EUW. Carry principal: Yunara (media de 2,9 estrellas). Nivel final habitual: 7. Rasgo principal: Solar."
+      "tips": "Datos de 400 tableros de Master+ en EUW. Carry principal: Yunara (media de 2,9 estrellas). Nivel final habitual: 7. Rasgo principal: Solar."
     },
     {
-      "id": "da_18_ahri-da_riftbeast18",
-      "name": "Ahri Bestia de la Grieta",
-      "tier": "C",
+      "id": "da_18_ahri-da_18_executioner",
+      "name": "Ahri Exterminador",
+      "tier": "B",
       "style": "Fast 8",
       "trend": "stable",
       "stats": {
-        "avg": 4.72,
-        "top4": 47.7,
-        "win": 9.6,
-        "pick": 0.48,
-        "games": 637
+        "avg": 4.68,
+        "top4": 50.0,
+        "win": 9.2,
+        "pick": 0.11,
+        "games": 98
       },
       "units": [
         "da_18_ahri",
         "da_18_sett",
+        "da_fiddlesticks18",
         "da_sentinel18",
+        "da_18_gnarsmall",
+        "da_18_ezreal",
+        "da_18_morgana",
+        "da_18_ornn"
+      ],
+      "items": {
+        "da_18_morgana": [
+          "da_voidstaff",
+          "da_morellonomicon",
+          "da_redbuff"
+        ],
+        "da_18_ezreal": [
+          "da_spearofshojin",
+          "da_lastwhisper",
+          "da_deathblade"
+        ],
+        "da_18_ahri": [
+          "da_jeweledgauntlet",
+          "da_spearofshojin",
+          "da_nashorstooth"
+        ],
+        "da_18_sett": [
+          "da_gargoylestoneplate",
+          "da_warmogsarmor",
+          "da_dragonsclaw"
+        ]
+      },
+      "carries": [
+        "da_18_ahri"
+      ],
+      "tips": "Datos de 98 tableros de Master+ en EUW. Carry principal: Ahri (media de 1,9 estrellas). Nivel final habitual: 8. Rasgo principal: Exterminador."
+    },
+    {
+      "id": "da_18_ahri-da_riftbeast18",
+      "name": "Ahri Bestia de la Grieta",
+      "tier": "B",
+      "style": "Fast 8",
+      "trend": "stable",
+      "stats": {
+        "avg": 4.7,
+        "top4": 47.7,
+        "win": 8.9,
+        "pick": 0.48,
+        "games": 438
+      },
+      "units": [
+        "da_sentinel18",
+        "da_18_sett",
+        "da_18_ahri",
         "da_18_morgana",
         "da_18_sentry",
         "da_krug18",
@@ -1096,7 +995,7 @@
         "da_18_morgana": [
           "da_voidstaff",
           "da_morellonomicon",
-          "da_redbuff"
+          "da_rabadonsdeathcap"
         ],
         "da_sentinel18": [
           "da_protectorsvow",
@@ -1113,7 +1012,106 @@
         "da_18_ahri",
         "da_18_morgana"
       ],
-      "tips": "Datos de 637 tableros de Master+ en EUW. Carry principal: Ahri (media de 1,9 estrellas). Nivel final habitual: 8. Rasgo principal: Bestia de la Grieta."
+      "tips": "Datos de 438 tableros de Master+ en EUW. Carry principal: Ahri (media de 1,9 estrellas). Nivel final habitual: 8. Rasgo principal: Bestia de la Grieta."
+    },
+    {
+      "id": "da_18_zyra-da_juggernaut18",
+      "name": "Zyra Coloso",
+      "tier": "C",
+      "style": "Fast 8",
+      "trend": "stable",
+      "stats": {
+        "avg": 4.71,
+        "top4": 44.7,
+        "win": 13.1,
+        "pick": 0.22,
+        "games": 206
+      },
+      "units": [
+        "da_amumu18",
+        "da_vi18",
+        "da_18_yorick",
+        "da_18_maokai",
+        "da_18_zyra",
+        "da_scuttlecrab18",
+        "da_18_rakan",
+        "da_18_sivir"
+      ],
+      "items": {
+        "da_18_sivir": [
+          "da_infinityedge",
+          "da_lastwhisper",
+          "da_redbuff"
+        ],
+        "da_18_zyra": [
+          "da_archangelsstaff",
+          "da_hextechgunblade",
+          "da_spearofshojin"
+        ],
+        "da_amumu18": [
+          "da_gargoylestoneplate",
+          "da_warmogsarmor",
+          "da_spiritvisage"
+        ],
+        "da_18_maokai": [
+          "da_gargoylestoneplate",
+          "da_warmogsarmor",
+          "da_spiritvisage"
+        ]
+      },
+      "carries": [
+        "da_18_zyra"
+      ],
+      "tips": "Datos de 206 tableros de Master+ en EUW. Carry principal: Zyra (media de 1,9 estrellas). Nivel final habitual: 8. Rasgo principal: Coloso."
+    },
+    {
+      "id": "da_18_cassiopeia-da_18_defender",
+      "name": "Cassiopeia Defensor",
+      "tier": "C",
+      "style": "Reroll",
+      "trend": "stable",
+      "stats": {
+        "avg": 4.81,
+        "top4": 44.1,
+        "win": 6.3,
+        "pick": 0.16,
+        "games": 143
+      },
+      "units": [
+        "da_fiddlesticks18",
+        "da_18_rammus",
+        "da_18_cassiopeia",
+        "da_18_shen",
+        "da_18_lillia",
+        "da_18_ornn",
+        "da_18_leona"
+      ],
+      "items": {
+        "da_18_cassiopeia": [
+          "da_archangelsstaff",
+          "da_hextechgunblade",
+          "da_spearofshojin"
+        ],
+        "da_18_rammus": [
+          "da_steadfastheart",
+          "da_sunfirecape",
+          "da_warmogsarmor"
+        ],
+        "da_fiddlesticks18": [
+          "da_titansresolve",
+          "da_adaptivehelm",
+          "da_sunfirecape"
+        ],
+        "da_18_lillia": [
+          "da_protectorsvow",
+          "da_thiefsgloves",
+          "da_dragonsclaw"
+        ]
+      },
+      "carries": [
+        "da_18_cassiopeia"
+      ],
+      "tips": "Datos de 143 tableros de Master+ en EUW. Carry principal: Cassiopeia (media de 2,8 estrellas). Nivel final habitual: 7. Rasgo principal: Defensor."
     },
     {
       "id": "da_18_kayle-da_18_solar",
@@ -1122,18 +1120,18 @@
       "style": "Reroll",
       "trend": "stable",
       "stats": {
-        "avg": 4.85,
-        "top4": 47.2,
-        "win": 11.9,
-        "pick": 0.13,
-        "games": 176
+        "avg": 5.06,
+        "top4": 44.0,
+        "win": 11.0,
+        "pick": 0.12,
+        "games": 109
       },
       "units": [
         "da_18_kayle",
         "da_18_leona",
         "da_18_sejuani",
-        "da_18_rakan",
         "da_18_xayah",
+        "da_18_rakan",
         "da_18_ornn",
         "da_18_varus"
       ],
@@ -1143,77 +1141,77 @@
           "da_jeweledgauntlet",
           "da_rabadonsdeathcap"
         ],
+        "da_18_xayah": [
+          "da_guinsoosrageblade",
+          "da_krakensfury",
+          "da_infinityedge"
+        ],
         "da_18_varus": [
           "da_infinityedge",
           "da_spearofshojin",
           "da_lastwhisper"
         ],
-        "da_18_xayah": [
-          "da_guinsoosrageblade",
-          "da_infinityedge",
-          "da_krakensfury"
-        ],
         "da_18_rakan": [
-          "da_spiritvisage",
-          "da_gargoylestoneplate",
-          "da_protectorsvow"
+          "da_protectorsvow",
+          "da_crownguard",
+          "da_gargoylestoneplate"
         ]
       },
       "carries": [
-        "da_18_kayle"
-      ],
-      "tips": "Datos de 176 tableros de Master+ en EUW. Carry principal: Kayle (media de 2,8 estrellas). Nivel final habitual: 7. Rasgo principal: Solar."
-    },
-    {
-      "id": "da_18_sivir-da_18_fae",
-      "name": "Sivir Hada",
-      "tier": "C",
-      "style": "Fast 8",
-      "trend": "up",
-      "stats": {
-        "avg": 5.08,
-        "top4": 37.9,
-        "win": 9.1,
-        "pick": 0.1,
-        "games": 132
-      },
-      "units": [
-        "da_18_sivir",
-        "da_18_rakan",
-        "da_18_tristana",
-        "da_18_lillia",
-        "da_vi18",
-        "da_18_rammus",
-        "da_sentinel18",
+        "da_18_kayle",
         "da_18_xayah"
       ],
+      "tips": "Datos de 109 tableros de Master+ en EUW. Carry principal: Kayle (media de 2,7 estrellas). Nivel final habitual: 7. Rasgo principal: Solar."
+    },
+    {
+      "id": "da_18_tristana-da_18_fae",
+      "name": "Tristana Hada",
+      "tier": "C",
+      "style": "Reroll",
+      "trend": "up",
+      "stats": {
+        "avg": 5.15,
+        "top4": 38.3,
+        "win": 12.3,
+        "pick": 0.09,
+        "games": 81
+      },
+      "units": [
+        "da_18_tristana",
+        "da_18_rakan",
+        "da_vi18",
+        "da_18_lillia",
+        "da_18_sivir",
+        "da_18_rammus",
+        "da_18_xayah",
+        "da_18_rengar"
+      ],
       "items": {
-        "da_18_sivir": [
-          "da_infinityedge",
-          "da_redbuff",
-          "da_lastwhisper"
-        ],
         "da_18_tristana": [
           "da_guinsoosrageblade",
           "da_hextechgunblade",
           "da_krakensfury"
         ],
-        "da_18_rammus": [
-          "da_gargoylestoneplate",
-          "da_warmogsarmor",
-          "da_spiritvisage"
+        "da_18_sivir": [
+          "da_lastwhisper",
+          "da_18_emblemfae",
+          "da_redbuff"
         ],
         "da_18_lillia": [
           "da_protectorsvow",
           "da_adaptivehelm",
+          "da_warmogsarmor"
+        ],
+        "da_18_rammus": [
+          "da_gargoylestoneplate",
+          "da_warmogsarmor",
           "da_spiritvisage"
         ]
       },
       "carries": [
-        "da_18_sivir",
         "da_18_tristana"
       ],
-      "tips": "Datos de 132 tableros de Master+ en EUW. Carry principal: Sivir (media de 1,8 estrellas). Nivel final habitual: 8. Rasgo principal: Hada."
+      "tips": "Datos de 81 tableros de Master+ en EUW. Carry principal: Tristana (media de 2,6 estrellas). Nivel final habitual: 8. Rasgo principal: Hada."
     }
   ]
 }
