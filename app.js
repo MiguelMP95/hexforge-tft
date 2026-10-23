@@ -190,7 +190,7 @@ function transitionHTML(c) {
     const stars = st.key === "mid" ? c.midStars || {} : {};
     return `<div class="stage">
       <div class="stage-head"><b>${st.title}</b><small>${st.sub}</small><span class="tag">${keep}/${units.length} se quedan</span></div>
-      <div class="units">${units.map((u) => champHTML(u, { carry: c.carries.includes(u) || (c.stageCarries || []).includes(u), name: true, stars: stars[u] === 3 ? 3 : 0 })
+      <div class="units">${units.map((u) => champHTML(u, { carry: c.carries.includes(u) || (c.stageCarries || []).includes(u), name: true, stars: stars[u] === 3 ? 3 : 0, items: (c.stageItems?.[st.key] || {})[u] || [] })
         .replace('class="champ', `class="champ${c.units.includes(u) ? " keep" : ""}`)).join("")}</div>
       <div class="traits" style="margin-top:8px">${traits.map(traitHTML).join("")}</div>
     </div>`;
@@ -258,7 +258,7 @@ function placeUnits(units, c) {
   return grid;
 }
 
-function boardHTML(units, c, stars = {}) {
+function boardHTML(units, c, stars = {}, itemPlan = {}) {
   const grid = placeUnits(units, c);
   const rows = [];
   for (let r = 0; r < ROWS; r++) {
@@ -266,10 +266,12 @@ function boardHTML(units, c, stars = {}) {
     for (let k = 0; k < COLS; k++) {
       const u = Object.keys(grid).find((id) => grid[id].r === r && grid[id].c === k);
       const ch = u && state.champ[u];
+      const its = (u && itemPlan[u] || []).map((i) => state.item[i]).filter(Boolean);
       cells.push(ch
-        ? `<div class="hex-cell filled c${ch.cost}${c.carries.includes(u) ? " carry" : ""}" title="${esc(ch.name)}">
-             <img src="${ch.img}" alt="${esc(ch.name)}" loading="lazy">${stars[u] === 3 ? '<span class="hx-star">★3</span>' : ""}</div>`
-        : `<div class="hex-cell"></div>`);
+        ? `<div class="hex-slot"><div class="hex-cell filled c${ch.cost}${c.carries.includes(u) ? " carry" : ""}" title="${esc(ch.name)}">
+             <img src="${ch.img}" alt="${esc(ch.name)}" loading="lazy">${stars[u] === 3 ? '<span class="hx-star">★3</span>' : ""}</div>
+             ${its.length ? `<div class="hx-items">${its.map((i) => `<img src="${i.img}" alt="${esc(i.name)}" title="${esc(i.name)}">`).join("")}</div>` : ""}</div>`
+        : `<div class="hex-slot"><div class="hex-cell"></div></div>`);
     }
     rows.push(`<div class="hex-row${r % 2 ? " odd" : ""}">${cells.join("")}</div>`);
   }
@@ -278,9 +280,11 @@ function boardHTML(units, c, stars = {}) {
 
 function positioningHTML(c) {
   const b = stageBoards(c);
-  const tabs = [["early", "Early", b.early, {}], ["mid", "Mid", b.mid, c.midStars || {}], ["final", "Final", c.units, c.stars || {}]];
+  const si = c.stageItems || {};
+  const tabs = [["early", "Early", b.early, {}, si.early || {}], ["mid", "Mid", b.mid, c.midStars || {}, si.mid || {}],
+    ["final", "Final", c.units, c.stars || {}, c.itemOrder || c.items]];
   return `<div class="pos-tabs">${tabs.map(([k, label], i) => `<button class="pos-tab${i === 2 ? " active" : ""}" data-pos="${k}">${label}</button>`).join("")}</div>
-    ${tabs.map(([k, , units, stars], i) => `<div class="pos-panel" data-pos-panel="${k}"${i === 2 ? "" : " hidden"}>${boardHTML(units, c, stars)}</div>`).join("")}
+    ${tabs.map(([k, , units, stars, plan], i) => `<div class="pos-panel" data-pos-panel="${k}"${i === 2 ? "" : " hidden"}>${boardHTML(units, c, stars, plan)}</div>`).join("")}
     <p class="source">${c.guide
       ? `Posiciones del tablero final de la guía <a href="${esc(c.guide.url)}" target="_blank" rel="noopener">${esc(c.guide.name)} (TFT Flow)</a>; los campeones que no salen en la guía se colocan por alcance y rol.`
       : "Orientativo: Riot no publica las posiciones. Tanques y cuerpo a cuerpo delante; carries a distancia detrás, en la esquina."} Muévelos según dónde esté el carry rival.</p>`;
@@ -528,8 +532,8 @@ function openComp(id) {
       <img class="pic" src="${ch.img}" alt="" style="border-color:var(--c${ch.cost})">
       <div class="info"><b>${esc(ch.name)}</b> ${c.carries.includes(u) ? '<span class="tag" style="color:var(--accent)">Carry</span>' : '<span class="tag" style="color:#7ec8ff">Tanque</span>'}<br>
         <small>${ch.traits.map((t) => esc(state.trait[t]?.name || "")).join(" · ")}</small>
-        <div class="item-list" style="margin-top:6px">${its.map((i) => state.item[i]).filter(Boolean)
-          .map((i) => `<span class="item-chip"><img src="${i.img}" alt="">${esc(i.name)}</span>`).join("")}</div>
+        <div class="item-list" style="margin-top:6px">${(c.itemOrder?.[u] || its).map((i) => state.item[i]).filter(Boolean)
+          .map((i, k) => `<span class="item-chip"><b class="prio">${k + 1}.º</b><img src="${i.img}" alt="">${esc(i.name)}</span>`).join("")}</div>
       </div>
     </div>`;
   }).join("");
@@ -544,7 +548,7 @@ function openComp(id) {
     ${Object.values(c.stars || {}).includes(3) ? `<p class="source">★★★ = suele estar a 3 estrellas en los tableros que quedan top 4.</p>` : ""}
     <h3>Rasgos activos</h3>
     <div class="traits">${traits.map(traitHTML).join("")}</div>
-    <h3>Objetos (carries y tanque)</h3>
+    <h3>Objetos (carries y tanque, por orden)</h3>
     ${itemRows}
     <h3>Posicionamiento</h3>
     ${positioningHTML(c)}

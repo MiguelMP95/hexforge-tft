@@ -239,6 +239,106 @@ def attach_stage_boards(comps, boards, champs, traits, items, min_boards=15):
         c["stageGames"] = n
         c["stageSource"] = "boards"
         c["stageCarries"] = temp_carries(group, items)[0]
+        c["_itemFreq"] = completed_freq(group, items)
+
+
+def completed_freq(group, items):
+    """Cuántas veces aparece cada objeto completo en tableros de nivel 5-7 (= se hace pronto)."""
+    return Counter(i for b in group for u in b["units"] for i in u["items"]
+                   if items[i]["kind"] in ("completed", "radiant", "artifact", "emblem"))
+
+
+AP_STATS = {"AbilityPower", "Mana"}
+AD_STATS = {"AttackDamage", "AttackSpeed", "CritChance"}
+
+
+# Tipo de daño de cada componente: la Vara da poder de habilidad, Espadón y Arco dan ataque...
+COMPONENT_TYPE = {
+    "da_component_needlesslylargerod": ("ap", 2), "da_component_tearofthegoddess": ("ap", 1),
+    "da_component_bfsword": ("ad", 2), "da_component_recurvebow": ("ad", 2), "da_component_sparringgloves": ("ad", 0.5),
+}
+
+
+def item_type(i, items):
+    """'ap' o 'ad' según sus componentes (las etiquetas de los datos del juego no son fiables);
+    radiantes y artefactos sin receta usan sus etiquetas."""
+    comps = items[i].get("components") or []
+    if comps:
+        score = Counter()
+        for c in comps:
+            t, w = COMPONENT_TYPE.get(c, (None, 0))
+            if t:
+                score[t] += w
+        if score["ap"] != score["ad"]:
+            return "ap" if score["ap"] > score["ad"] else "ad"
+        return None
+    st = set(items[i].get("stats") or [])
+    ap, ad = len(st & AP_STATS), len(st & AD_STATS)
+    return "ap" if ap > ad else "ad" if ad > ap else None
+
+
+def champ_damage_types(boards, items):
+    """Si cada campeón suele llevar objetos de poder de habilidad (ap) o de ataque (ad), según las partidas."""
+    count = defaultdict(Counter)
+    for b in boards:
+        for u in b["units"]:
+            for i in u["items"]:
+                if items[i].get("role") == "dmg":
+                    t = item_type(i, items)
+                    if t:
+                        count[u["id"]][t] += 1
+    return {u: c.most_common(1)[0][0] for u, c in count.items() if sum(c.values()) >= 5}
+
+
+def attach_stage_items(comps, champs, items, dmg_type):
+    """Orden de prioridad de los objetos (según lo pronto que aparecen) y quién los lleva en early y mid."""
+    for c in comps:
+        freq = c.pop("_itemFreq", Counter())
+        holders = list(c["items"])
+        if not holders:
+            continue
+        carry = holders[0]
+        tank = next((u for u in holders if u not in c["carries"]), None)
+        order = lambda its: sorted(its, key=lambda i: -freq.get(i, 0))
+        carry_items = order(c["items"][carry])
+        tank_items = order(c["items"][tank]) if tank else []
+        c["itemOrder"] = {u: order(its) for u, its in c["items"].items()}
+
+        want = Counter(item_type(i, items) for i in carry_items).most_common(1)[0][0] if carry_items else None
+
+        def holder_carry(units):
+            """El carry final si ya está; si no, quien mejor le sustituye y usa el mismo tipo de objetos."""
+            if carry in units:
+                return carry
+            tmp = c.get("stageCarries", [])
+
+            def rank(u):
+                return (dmg_type.get(u) == want,          # mismo tipo de daño (ataque / poder de habilidad)
+                        u in tmp,                          # carry provisional según las partidas
+                        champs[u]["range"] >= 3,           # mejor a distancia
+                        champs[u]["cost"])
+            cands = [u for u in units if dmg_type.get(u) in (want, None)] or list(units)
+            return max(cands, key=rank) if cands else None
+
+        def holder_tank(units, taken):
+            if tank in units and tank != taken:
+                return tank
+            melee = sorted((u for u in units if champs[u]["range"] <= 1 and u != taken),
+                           key=lambda u: (-champs[u]["cost"], u))
+            return melee[0] if melee else None
+
+        stage_items = {}
+        for stage, n_carry, n_tank in (("early", 1, 1), ("mid", 2, 2)):
+            units = c.get(stage) or []
+            hc = holder_carry(units)
+            ht = holder_tank(units, hc)
+            plan = {}
+            if hc and carry_items:
+                plan[hc] = carry_items[:n_carry]
+            if ht and tank_items:
+                plan[ht] = tank_items[:n_tank]
+            stage_items[stage] = plan
+        c["stageItems"] = stage_items
 
 
 def stage_from_traits(c, low, champs, traits, items):
@@ -275,6 +375,7 @@ def stage_from_traits(c, low, champs, traits, items):
     c["stageGames"] = len(pool)
     c["stageSource"] = "traits"
     c["stageCarries"] = [u for u in carry_rank if champs[u]["cost"] <= 3][:2]
+    c["_itemFreq"] = completed_freq(pool, items)
 
 
 def attach_guides(comps, champs, traits, min_overlap=0.65):
@@ -420,6 +521,7 @@ def main():
     unique = sorted(comps, key=lambda c: -c["stats"]["games"])[:args.max_comps]
     attach_stage_boards(unique, boards, champs, traits, items)
     attach_guides(unique, champs, traits)
+    attach_stage_items(unique, champs, items, champ_damage_types(boards, items))
     unique.sort(key=lambda c: c["stats"]["avg"])
     n = len(unique)
     for i, c in enumerate(unique):
