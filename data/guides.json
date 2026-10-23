@@ -32,6 +32,56 @@
      "da_18_yorick"
     ]
    ],
+   "leveling": [
+    {
+     "stage": "2-1",
+     "level": 4,
+     "action": null,
+     "optional": true
+    },
+    {
+     "stage": "2-5",
+     "level": 5,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "3-1",
+     "level": 6,
+     "action": null,
+     "optional": true
+    },
+    {
+     "stage": "3-2",
+     "level": 6,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "3-5",
+     "level": 7,
+     "action": null,
+     "optional": true
+    },
+    {
+     "stage": "4-1",
+     "level": 7,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "4-2",
+     "level": 8,
+     "action": "roll",
+     "optional": false
+    },
+    {
+     "stage": "5-2",
+     "level": 9,
+     "action": null,
+     "optional": true
+    }
+   ],
    "url": "https://tftflow.com/composition/set18/ahri-zyra"
   },
   {
@@ -64,6 +114,56 @@
      "da_18_varus",
      "da_18_ornn"
     ]
+   ],
+   "leveling": [
+    {
+     "stage": "3-1",
+     "level": 4,
+     "action": "roll",
+     "optional": false
+    },
+    {
+     "stage": "3-2",
+     "level": 5,
+     "action": null,
+     "optional": true
+    },
+    {
+     "stage": "3-3",
+     "level": 5,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "3-5",
+     "level": 6,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "4-1",
+     "level": 6,
+     "action": "roll",
+     "optional": false
+    },
+    {
+     "stage": "4-2",
+     "level": 7,
+     "action": null,
+     "optional": true
+    },
+    {
+     "stage": "4-5",
+     "level": 7,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "5-1",
+     "level": 8,
+     "action": null,
+     "optional": true
+    }
    ],
    "url": "https://tftflow.com/composition/set18/akali-reroll"
   },
@@ -102,6 +202,68 @@
      "da_18_reksai"
     ]
    ],
+   "leveling": [
+    {
+     "stage": "2-1",
+     "level": 4,
+     "action": null,
+     "optional": true
+    },
+    {
+     "stage": "2-5",
+     "level": 5,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "3-1",
+     "level": 6,
+     "action": null,
+     "optional": true
+    },
+    {
+     "stage": "3-2",
+     "level": 6,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "3-5",
+     "level": 7,
+     "action": null,
+     "optional": true
+    },
+    {
+     "stage": "4-1",
+     "level": 7,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "4-2",
+     "level": 8,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "4-5",
+     "level": 9,
+     "action": null,
+     "optional": true
+    },
+    {
+     "stage": "5-1",
+     "level": 9,
+     "action": null,
+     "optional": true
+    },
+    {
+     "stage": "5-2",
+     "level": 9,
+     "action": "roll",
+     "optional": false
+    }
+   ],
    "url": "https://tftflow.com/composition/set18/alune-fast-9"
   },
   {
@@ -138,6 +300,62 @@
      "da_18_reksai"
     ]
    ],
+   "leveling": [
+    {
+     "stage": "2-1",
+     "level": 4,
+     "action": null,
+     "optional": true
+    },
+    {
+     "stage": "2-5",
+     "level": 5,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "3-2",
+     "level": 6,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "3-5",
+     "level": 6,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "4-1",
+     "level": 7,
+     "action": "roll",
+     "optional": false
+    },
+    {
+     "stage": "4-2",
+     "level": null,
+     "action": "slowroll",
+     "optional": false
+    },
+    {
+     "stage": "4-5",
+     "level": null,
+     "action": "roll",
+     "optional": false
+    },
+    {
+     "stage": "5-1",
+     "level": null,
+     "action": "roll",
+     "optional": false
+    },
+    {
+     "stage": "5-2",
+     "level": 8,
+     "action": null,
+     "optional": false
+    }
+   ],
    "url": "https://tftflow.com/composition/set18/azir-reroll"
   },
   {
@@ -171,6 +389,62 @@
      "da_18_azir"
     ]
    ],
+   "leveling": [
+    {
+     "stage": "2-1",
+     "level": 4,
+     "action": null,
+     "optional": true
+    },
+    {
+     "stage": "2-5",
+     "level": 5,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "3-2",
+     "level": 6,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "3-5",
+     "level": 6,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "4-1",
+     "level": 7,
+     "action": "roll",
+     "optional": false
+    },
+    {
+     "stage": "4-2",
+     "level": null,
+     "action": "slowroll",
+     "optional": false
+    },
+    {
+     "stage": "4-5",
+     "level": null,
+     "action": "roll",
+     "optional": false
+    },
+    {
+     "stage": "5-1",
+     "level": null,
+     "action": "roll",
+     "optional": false
+    },
+    {
+     "stage": "5-2",
+     "level": 8,
+     "action": null,
+     "optional": false
+    }
+   ],
    "url": "https://tftflow.com/composition/set18/blackthorn-khazix"
   },
   {
@@ -202,6 +476,56 @@
      "da_karma18",
      "da_18_yorick"
     ]
+   ],
+   "leveling": [
+    {
+     "stage": "2-1",
+     "level": 4,
+     "action": null,
+     "optional": true
+    },
+    {
+     "stage": "2-5",
+     "level": 5,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "3-1",
+     "level": 6,
+     "action": null,
+     "optional": true
+    },
+    {
+     "stage": "3-2",
+     "level": 6,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "3-5",
+     "level": 7,
+     "action": null,
+     "optional": true
+    },
+    {
+     "stage": "4-1",
+     "level": 7,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "4-2",
+     "level": 8,
+     "action": "roll",
+     "optional": false
+    },
+    {
+     "stage": "5-2",
+     "level": 9,
+     "action": null,
+     "optional": true
+    }
    ],
    "url": "https://tftflow.com/composition/set18/blossom"
   },
@@ -249,6 +573,56 @@
      "da_18_sejuani"
     ]
    ],
+   "leveling": [
+    {
+     "stage": "2-1",
+     "level": 4,
+     "action": null,
+     "optional": true
+    },
+    {
+     "stage": "2-5",
+     "level": 5,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "3-1",
+     "level": 6,
+     "action": null,
+     "optional": true
+    },
+    {
+     "stage": "3-2",
+     "level": 6,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "3-5",
+     "level": 7,
+     "action": null,
+     "optional": true
+    },
+    {
+     "stage": "4-1",
+     "level": 7,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "4-2",
+     "level": 8,
+     "action": "roll",
+     "optional": false
+    },
+    {
+     "stage": "5-2",
+     "level": 9,
+     "action": null,
+     "optional": true
+    }
+   ],
    "url": "https://tftflow.com/composition/set18/blossom-executioners"
   },
   {
@@ -280,6 +654,68 @@
      "da_karma18",
      "da_18_yorick"
     ]
+   ],
+   "leveling": [
+    {
+     "stage": "2-1",
+     "level": 4,
+     "action": null,
+     "optional": true
+    },
+    {
+     "stage": "2-5",
+     "level": 5,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "3-1",
+     "level": 6,
+     "action": null,
+     "optional": true
+    },
+    {
+     "stage": "3-2",
+     "level": 6,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "3-5",
+     "level": 7,
+     "action": null,
+     "optional": true
+    },
+    {
+     "stage": "4-1",
+     "level": 7,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "4-2",
+     "level": 8,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "4-5",
+     "level": 9,
+     "action": null,
+     "optional": true
+    },
+    {
+     "stage": "5-1",
+     "level": 9,
+     "action": null,
+     "optional": true
+    },
+    {
+     "stage": "5-2",
+     "level": 9,
+     "action": "roll",
+     "optional": false
+    }
    ],
    "url": "https://tftflow.com/composition/set18/blossom-fast-9"
   },
@@ -313,6 +749,50 @@
      "da_cinderling18"
     ]
    ],
+   "leveling": [
+    {
+     "stage": "2-1",
+     "level": 4,
+     "action": null,
+     "optional": true
+    },
+    {
+     "stage": "2-5",
+     "level": 5,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "3-2",
+     "level": 6,
+     "action": "roll",
+     "optional": false
+    },
+    {
+     "stage": "3-5",
+     "level": null,
+     "action": "slowroll",
+     "optional": false
+    },
+    {
+     "stage": "4-1",
+     "level": null,
+     "action": "slowroll",
+     "optional": false
+    },
+    {
+     "stage": "4-5",
+     "level": 7,
+     "action": "slowroll",
+     "optional": false
+    },
+    {
+     "stage": "5-1",
+     "level": 7,
+     "action": null,
+     "optional": true
+    }
+   ],
    "url": "https://tftflow.com/composition/set18/caitlyn-reroll"
   },
   {
@@ -344,6 +824,50 @@
      "da_18_elise",
      "da_18_cassiopeia"
     ]
+   ],
+   "leveling": [
+    {
+     "stage": "2-1",
+     "level": 4,
+     "action": null,
+     "optional": true
+    },
+    {
+     "stage": "2-5",
+     "level": 5,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "3-2",
+     "level": 6,
+     "action": "roll",
+     "optional": false
+    },
+    {
+     "stage": "3-5",
+     "level": null,
+     "action": "slowroll",
+     "optional": false
+    },
+    {
+     "stage": "4-1",
+     "level": null,
+     "action": "slowroll",
+     "optional": false
+    },
+    {
+     "stage": "4-5",
+     "level": 7,
+     "action": "slowroll",
+     "optional": false
+    },
+    {
+     "stage": "5-1",
+     "level": 7,
+     "action": null,
+     "optional": true
+    }
    ],
    "url": "https://tftflow.com/composition/set18/dark-ritual-coven"
   },
@@ -380,6 +904,62 @@
      "da_18_elise",
      "da_18_cassiopeia"
     ]
+   ],
+   "leveling": [
+    {
+     "stage": "2-1",
+     "level": 4,
+     "action": null,
+     "optional": true
+    },
+    {
+     "stage": "2-5",
+     "level": 5,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "3-2",
+     "level": 6,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "3-5",
+     "level": 6,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "4-1",
+     "level": 7,
+     "action": "roll",
+     "optional": false
+    },
+    {
+     "stage": "4-2",
+     "level": null,
+     "action": "slowroll",
+     "optional": false
+    },
+    {
+     "stage": "4-5",
+     "level": null,
+     "action": "roll",
+     "optional": false
+    },
+    {
+     "stage": "5-1",
+     "level": null,
+     "action": "roll",
+     "optional": false
+    },
+    {
+     "stage": "5-2",
+     "level": 8,
+     "action": null,
+     "optional": false
+    }
    ],
    "url": "https://tftflow.com/composition/set18/defender-cassiopeia"
   },
@@ -421,6 +1001,68 @@
      "da_18_hecarim"
     ]
    ],
+   "leveling": [
+    {
+     "stage": "2-1",
+     "level": 4,
+     "action": null,
+     "optional": true
+    },
+    {
+     "stage": "2-5",
+     "level": 5,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "3-1",
+     "level": 6,
+     "action": null,
+     "optional": true
+    },
+    {
+     "stage": "3-2",
+     "level": 6,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "3-5",
+     "level": 7,
+     "action": null,
+     "optional": true
+    },
+    {
+     "stage": "4-1",
+     "level": 7,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "4-2",
+     "level": 8,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "4-5",
+     "level": 9,
+     "action": null,
+     "optional": true
+    },
+    {
+     "stage": "5-1",
+     "level": 9,
+     "action": null,
+     "optional": true
+    },
+    {
+     "stage": "5-2",
+     "level": 9,
+     "action": "roll",
+     "optional": false
+    }
+   ],
    "url": "https://tftflow.com/composition/set18/draven-fast-9"
   },
   {
@@ -453,6 +1095,50 @@
      "da_18_varus",
      "da_18_shen"
     ]
+   ],
+   "leveling": [
+    {
+     "stage": "2-1",
+     "level": 4,
+     "action": null,
+     "optional": true
+    },
+    {
+     "stage": "2-5",
+     "level": 5,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "3-2",
+     "level": 6,
+     "action": "roll",
+     "optional": false
+    },
+    {
+     "stage": "3-5",
+     "level": null,
+     "action": "slowroll",
+     "optional": false
+    },
+    {
+     "stage": "4-1",
+     "level": null,
+     "action": "slowroll",
+     "optional": false
+    },
+    {
+     "stage": "4-5",
+     "level": 7,
+     "action": "slowroll",
+     "optional": false
+    },
+    {
+     "stage": "5-1",
+     "level": 7,
+     "action": null,
+     "optional": true
+    }
    ],
    "url": "https://tftflow.com/composition/set18/eclipse"
   },
@@ -492,6 +1178,56 @@
      "da_18_xayah",
      "da_18_hecarim"
     ]
+   ],
+   "leveling": [
+    {
+     "stage": "2-1",
+     "level": 4,
+     "action": null,
+     "optional": true
+    },
+    {
+     "stage": "2-5",
+     "level": 5,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "3-1",
+     "level": 6,
+     "action": null,
+     "optional": true
+    },
+    {
+     "stage": "3-2",
+     "level": 6,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "3-5",
+     "level": 7,
+     "action": null,
+     "optional": true
+    },
+    {
+     "stage": "4-1",
+     "level": 7,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "4-2",
+     "level": 8,
+     "action": "roll",
+     "optional": false
+    },
+    {
+     "stage": "5-2",
+     "level": 9,
+     "action": null,
+     "optional": true
+    }
    ],
    "url": "https://tftflow.com/composition/set18/elderwood-aphelios"
   },
@@ -534,6 +1270,56 @@
      "da_18_leblanc"
     ]
    ],
+   "leveling": [
+    {
+     "stage": "2-1",
+     "level": 4,
+     "action": null,
+     "optional": true
+    },
+    {
+     "stage": "2-5",
+     "level": 5,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "3-1",
+     "level": 6,
+     "action": null,
+     "optional": true
+    },
+    {
+     "stage": "3-2",
+     "level": 6,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "3-5",
+     "level": 7,
+     "action": null,
+     "optional": true
+    },
+    {
+     "stage": "4-1",
+     "level": 7,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "4-2",
+     "level": 8,
+     "action": "roll",
+     "optional": false
+    },
+    {
+     "stage": "5-2",
+     "level": 9,
+     "action": null,
+     "optional": true
+    }
+   ],
    "url": "https://tftflow.com/composition/set18/elderwood-executioners"
   },
   {
@@ -568,6 +1354,44 @@
      "da_18_xayah",
      "da_18_ornn"
     ]
+   ],
+   "leveling": [
+    {
+     "stage": "3-1",
+     "level": null,
+     "action": "slowroll",
+     "optional": false
+    },
+    {
+     "stage": "4-1",
+     "level": 6,
+     "action": "roll",
+     "optional": false
+    },
+    {
+     "stage": "4-2",
+     "level": 6,
+     "action": null,
+     "optional": true
+    },
+    {
+     "stage": "4-5",
+     "level": 7,
+     "action": null,
+     "optional": true
+    },
+    {
+     "stage": "5-1",
+     "level": 7,
+     "action": null,
+     "optional": true
+    },
+    {
+     "stage": "5-2",
+     "level": 8,
+     "action": "roll",
+     "optional": false
+    }
    ],
    "url": "https://tftflow.com/composition/set18/elderwood-kayle-reroll"
   },
@@ -604,6 +1428,56 @@
      "da_fiddlesticks18"
     ]
    ],
+   "leveling": [
+    {
+     "stage": "3-1",
+     "level": 4,
+     "action": "roll",
+     "optional": false
+    },
+    {
+     "stage": "3-2",
+     "level": 5,
+     "action": null,
+     "optional": true
+    },
+    {
+     "stage": "3-3",
+     "level": 5,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "3-5",
+     "level": 6,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "4-1",
+     "level": 6,
+     "action": "roll",
+     "optional": false
+    },
+    {
+     "stage": "4-2",
+     "level": 7,
+     "action": null,
+     "optional": true
+    },
+    {
+     "stage": "4-5",
+     "level": 7,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "5-1",
+     "level": 8,
+     "action": null,
+     "optional": true
+    }
+   ],
    "url": "https://tftflow.com/composition/set18/elderwood-veigar"
   },
   {
@@ -637,6 +1511,44 @@
      "da_18_shen"
     ]
    ],
+   "leveling": [
+    {
+     "stage": "3-1",
+     "level": null,
+     "action": "slowroll",
+     "optional": false
+    },
+    {
+     "stage": "4-1",
+     "level": 6,
+     "action": "roll",
+     "optional": false
+    },
+    {
+     "stage": "4-2",
+     "level": 6,
+     "action": null,
+     "optional": true
+    },
+    {
+     "stage": "4-5",
+     "level": 7,
+     "action": null,
+     "optional": true
+    },
+    {
+     "stage": "5-1",
+     "level": 7,
+     "action": null,
+     "optional": true
+    },
+    {
+     "stage": "5-2",
+     "level": 8,
+     "action": "roll",
+     "optional": false
+    }
+   ],
    "url": "https://tftflow.com/composition/set18/inferno-kayle-reroll"
   },
   {
@@ -668,6 +1580,56 @@
      "da_karma18",
      "da_18_yorick"
     ]
+   ],
+   "leveling": [
+    {
+     "stage": "2-1",
+     "level": 4,
+     "action": null,
+     "optional": true
+    },
+    {
+     "stage": "2-5",
+     "level": 5,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "3-1",
+     "level": 6,
+     "action": null,
+     "optional": true
+    },
+    {
+     "stage": "3-2",
+     "level": 6,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "3-5",
+     "level": 7,
+     "action": null,
+     "optional": true
+    },
+    {
+     "stage": "4-1",
+     "level": 7,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "4-2",
+     "level": 8,
+     "action": "roll",
+     "optional": false
+    },
+    {
+     "stage": "5-2",
+     "level": 9,
+     "action": null,
+     "optional": true
+    }
    ],
    "url": "https://tftflow.com/composition/set18/invoker-ahri"
   },
@@ -703,6 +1665,56 @@
      "da_18_cassiopeia"
     ]
    ],
+   "leveling": [
+    {
+     "stage": "2-1",
+     "level": 4,
+     "action": null,
+     "optional": true
+    },
+    {
+     "stage": "2-5",
+     "level": 5,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "3-1",
+     "level": 6,
+     "action": null,
+     "optional": true
+    },
+    {
+     "stage": "3-2",
+     "level": 6,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "3-5",
+     "level": 7,
+     "action": null,
+     "optional": true
+    },
+    {
+     "stage": "4-1",
+     "level": 7,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "4-2",
+     "level": 8,
+     "action": "roll",
+     "optional": false
+    },
+    {
+     "stage": "5-2",
+     "level": 9,
+     "action": null,
+     "optional": true
+    }
+   ],
    "url": "https://tftflow.com/composition/set18/invoker-brambleback"
   },
   {
@@ -737,6 +1749,56 @@
      "da_18_cassiopeia"
     ]
    ],
+   "leveling": [
+    {
+     "stage": "2-1",
+     "level": 4,
+     "action": null,
+     "optional": true
+    },
+    {
+     "stage": "2-5",
+     "level": 5,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "3-1",
+     "level": 6,
+     "action": null,
+     "optional": true
+    },
+    {
+     "stage": "3-2",
+     "level": 6,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "3-5",
+     "level": 7,
+     "action": null,
+     "optional": true
+    },
+    {
+     "stage": "4-1",
+     "level": 7,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "4-2",
+     "level": 8,
+     "action": "roll",
+     "optional": false
+    },
+    {
+     "stage": "5-2",
+     "level": 9,
+     "action": null,
+     "optional": true
+    }
+   ],
    "url": "https://tftflow.com/composition/set18/invoker-nidalee"
   },
   {
@@ -769,6 +1831,56 @@
      "da_18_kobuko",
      "da_18_reksai"
     ]
+   ],
+   "leveling": [
+    {
+     "stage": "2-1",
+     "level": 4,
+     "action": null,
+     "optional": true
+    },
+    {
+     "stage": "2-5",
+     "level": 5,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "3-1",
+     "level": 6,
+     "action": null,
+     "optional": true
+    },
+    {
+     "stage": "3-2",
+     "level": 6,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "3-5",
+     "level": 7,
+     "action": null,
+     "optional": true
+    },
+    {
+     "stage": "4-1",
+     "level": 7,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "4-2",
+     "level": 8,
+     "action": "roll",
+     "optional": false
+    },
+    {
+     "stage": "5-2",
+     "level": 9,
+     "action": null,
+     "optional": true
+    }
    ],
    "url": "https://tftflow.com/composition/set18/juggernaut-zyra"
   },
@@ -804,6 +1916,62 @@
      "da_18_ornn"
     ]
    ],
+   "leveling": [
+    {
+     "stage": "2-1",
+     "level": 4,
+     "action": null,
+     "optional": true
+    },
+    {
+     "stage": "2-5",
+     "level": 5,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "3-2",
+     "level": 6,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "3-5",
+     "level": 6,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "4-1",
+     "level": 7,
+     "action": "roll",
+     "optional": false
+    },
+    {
+     "stage": "4-2",
+     "level": null,
+     "action": "slowroll",
+     "optional": false
+    },
+    {
+     "stage": "4-5",
+     "level": null,
+     "action": "roll",
+     "optional": false
+    },
+    {
+     "stage": "5-1",
+     "level": null,
+     "action": "roll",
+     "optional": false
+    },
+    {
+     "stage": "5-2",
+     "level": 8,
+     "action": null,
+     "optional": false
+    }
+   ],
    "url": "https://tftflow.com/composition/set18/khazix-reroll"
   },
   {
@@ -835,6 +2003,62 @@
      "da_scuttlecrab18",
      "da_18_yorick"
     ]
+   ],
+   "leveling": [
+    {
+     "stage": "2-1",
+     "level": 4,
+     "action": null,
+     "optional": true
+    },
+    {
+     "stage": "2-5",
+     "level": 5,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "3-2",
+     "level": 6,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "3-5",
+     "level": 6,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "4-1",
+     "level": 7,
+     "action": "roll",
+     "optional": false
+    },
+    {
+     "stage": "4-2",
+     "level": null,
+     "action": "slowroll",
+     "optional": false
+    },
+    {
+     "stage": "4-5",
+     "level": null,
+     "action": "roll",
+     "optional": false
+    },
+    {
+     "stage": "5-1",
+     "level": null,
+     "action": "roll",
+     "optional": false
+    },
+    {
+     "stage": "5-2",
+     "level": 8,
+     "action": null,
+     "optional": false
+    }
    ],
    "url": "https://tftflow.com/composition/set18/master-yi-reroll"
   },
@@ -880,6 +2104,56 @@
      "da_cinderling18"
     ]
    ],
+   "leveling": [
+    {
+     "stage": "2-1",
+     "level": 4,
+     "action": null,
+     "optional": true
+    },
+    {
+     "stage": "2-5",
+     "level": 5,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "3-1",
+     "level": 6,
+     "action": null,
+     "optional": true
+    },
+    {
+     "stage": "3-2",
+     "level": 6,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "3-5",
+     "level": 7,
+     "action": null,
+     "optional": true
+    },
+    {
+     "stage": "4-1",
+     "level": 7,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "4-2",
+     "level": 8,
+     "action": "roll",
+     "optional": false
+    },
+    {
+     "stage": "5-2",
+     "level": 9,
+     "action": null,
+     "optional": true
+    }
+   ],
    "url": "https://tftflow.com/composition/set18/nidalee-aphelios"
   },
   {
@@ -912,6 +2186,56 @@
      "da_murkwolf18",
      "da_scuttlecrab18"
     ]
+   ],
+   "leveling": [
+    {
+     "stage": "3-1",
+     "level": 4,
+     "action": "roll",
+     "optional": false
+    },
+    {
+     "stage": "3-2",
+     "level": 5,
+     "action": null,
+     "optional": true
+    },
+    {
+     "stage": "3-3",
+     "level": 5,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "3-5",
+     "level": 6,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "4-1",
+     "level": 6,
+     "action": "roll",
+     "optional": false
+    },
+    {
+     "stage": "4-2",
+     "level": 7,
+     "action": null,
+     "optional": true
+    },
+    {
+     "stage": "4-5",
+     "level": 7,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "5-1",
+     "level": 8,
+     "action": null,
+     "optional": true
+    }
    ],
    "url": "https://tftflow.com/composition/set18/pebbles-reroll"
   },
@@ -946,6 +2270,62 @@
      "da_18_yorick",
      "da_18_yunara"
     ]
+   ],
+   "leveling": [
+    {
+     "stage": "2-1",
+     "level": 4,
+     "action": null,
+     "optional": true
+    },
+    {
+     "stage": "2-5",
+     "level": 5,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "3-2",
+     "level": 6,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "3-5",
+     "level": 6,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "4-1",
+     "level": 7,
+     "action": "roll",
+     "optional": false
+    },
+    {
+     "stage": "4-2",
+     "level": null,
+     "action": "slowroll",
+     "optional": false
+    },
+    {
+     "stage": "4-5",
+     "level": null,
+     "action": "roll",
+     "optional": false
+    },
+    {
+     "stage": "5-1",
+     "level": null,
+     "action": "roll",
+     "optional": false
+    },
+    {
+     "stage": "5-2",
+     "level": 8,
+     "action": null,
+     "optional": false
+    }
    ],
    "url": "https://tftflow.com/composition/set18/rammus-azir"
   },
@@ -982,6 +2362,56 @@
      "da_18_hecarim"
     ]
    ],
+   "leveling": [
+    {
+     "stage": "2-1",
+     "level": 4,
+     "action": null,
+     "optional": true
+    },
+    {
+     "stage": "2-5",
+     "level": 5,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "3-1",
+     "level": 6,
+     "action": null,
+     "optional": true
+    },
+    {
+     "stage": "3-2",
+     "level": 6,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "3-5",
+     "level": 7,
+     "action": null,
+     "optional": true
+    },
+    {
+     "stage": "4-1",
+     "level": 7,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "4-2",
+     "level": 8,
+     "action": "roll",
+     "optional": false
+    },
+    {
+     "stage": "5-2",
+     "level": 9,
+     "action": null,
+     "optional": true
+    }
+   ],
    "url": "https://tftflow.com/composition/set18/rapidfire-bramble"
   },
   {
@@ -1013,6 +2443,62 @@
      "da_18_xayah"
     ]
    ],
+   "leveling": [
+    {
+     "stage": "2-1",
+     "level": 4,
+     "action": null,
+     "optional": true
+    },
+    {
+     "stage": "2-5",
+     "level": 5,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "3-2",
+     "level": 6,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "3-5",
+     "level": 6,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "4-1",
+     "level": 7,
+     "action": "roll",
+     "optional": false
+    },
+    {
+     "stage": "4-2",
+     "level": null,
+     "action": "slowroll",
+     "optional": false
+    },
+    {
+     "stage": "4-5",
+     "level": null,
+     "action": "roll",
+     "optional": false
+    },
+    {
+     "stage": "5-1",
+     "level": null,
+     "action": "roll",
+     "optional": false
+    },
+    {
+     "stage": "5-2",
+     "level": 8,
+     "action": null,
+     "optional": false
+    }
+   ],
    "url": "https://tftflow.com/composition/set18/rengar-reroll-3"
   },
   {
@@ -1042,6 +2528,56 @@
      "da_18_warwick",
      "da_18_reksai"
     ]
+   ],
+   "leveling": [
+    {
+     "stage": "2-1",
+     "level": 4,
+     "action": null,
+     "optional": true
+    },
+    {
+     "stage": "2-5",
+     "level": 5,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "3-1",
+     "level": 6,
+     "action": null,
+     "optional": true
+    },
+    {
+     "stage": "3-2",
+     "level": 6,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "3-5",
+     "level": 7,
+     "action": null,
+     "optional": true
+    },
+    {
+     "stage": "4-1",
+     "level": 7,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "4-2",
+     "level": 8,
+     "action": "roll",
+     "optional": false
+    },
+    {
+     "stage": "5-2",
+     "level": 9,
+     "action": null,
+     "optional": true
+    }
    ],
    "url": "https://tftflow.com/composition/set18/riftbeast-brambleback"
   },
@@ -1075,6 +2611,62 @@
      "da_murkwolf18",
      "da_scuttlecrab18"
     ]
+   ],
+   "leveling": [
+    {
+     "stage": "2-1",
+     "level": 4,
+     "action": null,
+     "optional": true
+    },
+    {
+     "stage": "2-5",
+     "level": 5,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "3-2",
+     "level": 6,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "3-5",
+     "level": 6,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "4-1",
+     "level": 7,
+     "action": "roll",
+     "optional": false
+    },
+    {
+     "stage": "4-2",
+     "level": null,
+     "action": "slowroll",
+     "optional": false
+    },
+    {
+     "stage": "4-5",
+     "level": null,
+     "action": "roll",
+     "optional": false
+    },
+    {
+     "stage": "5-1",
+     "level": null,
+     "action": "roll",
+     "optional": false
+    },
+    {
+     "stage": "5-2",
+     "level": 8,
+     "action": null,
+     "optional": false
+    }
    ],
    "url": "https://tftflow.com/composition/set18/riftbeast-tempo"
   },
@@ -1122,6 +2714,68 @@
      "da_18_shen"
     ]
    ],
+   "leveling": [
+    {
+     "stage": "2-1",
+     "level": 4,
+     "action": null,
+     "optional": true
+    },
+    {
+     "stage": "2-5",
+     "level": 5,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "3-1",
+     "level": 6,
+     "action": null,
+     "optional": true
+    },
+    {
+     "stage": "3-2",
+     "level": 6,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "3-5",
+     "level": 7,
+     "action": null,
+     "optional": true
+    },
+    {
+     "stage": "4-1",
+     "level": 7,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "4-2",
+     "level": 8,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "4-5",
+     "level": 9,
+     "action": null,
+     "optional": true
+    },
+    {
+     "stage": "5-1",
+     "level": 9,
+     "action": null,
+     "optional": true
+    },
+    {
+     "stage": "5-2",
+     "level": 9,
+     "action": "roll",
+     "optional": false
+    }
+   ],
    "url": "https://tftflow.com/composition/set18/sivir-hunters"
   },
   {
@@ -1159,6 +2813,56 @@
      "da_18_reksai"
     ]
    ],
+   "leveling": [
+    {
+     "stage": "2-1",
+     "level": 4,
+     "action": null,
+     "optional": true
+    },
+    {
+     "stage": "2-5",
+     "level": 5,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "3-1",
+     "level": 6,
+     "action": null,
+     "optional": true
+    },
+    {
+     "stage": "3-2",
+     "level": 6,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "3-5",
+     "level": 7,
+     "action": null,
+     "optional": true
+    },
+    {
+     "stage": "4-1",
+     "level": 7,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "4-2",
+     "level": 8,
+     "action": "roll",
+     "optional": false
+    },
+    {
+     "stage": "5-2",
+     "level": 9,
+     "action": null,
+     "optional": true
+    }
+   ],
    "url": "https://tftflow.com/composition/set18/sivir-nidalee"
   },
   {
@@ -1191,6 +2895,44 @@
      "da_18_leblanc",
      "da_18_sejuani"
     ]
+   ],
+   "leveling": [
+    {
+     "stage": "3-1",
+     "level": null,
+     "action": "slowroll",
+     "optional": false
+    },
+    {
+     "stage": "4-1",
+     "level": 6,
+     "action": "roll",
+     "optional": false
+    },
+    {
+     "stage": "4-2",
+     "level": 6,
+     "action": null,
+     "optional": true
+    },
+    {
+     "stage": "4-5",
+     "level": 7,
+     "action": null,
+     "optional": true
+    },
+    {
+     "stage": "5-1",
+     "level": 7,
+     "action": null,
+     "optional": true
+    },
+    {
+     "stage": "5-2",
+     "level": 8,
+     "action": "roll",
+     "optional": false
+    }
    ],
    "url": "https://tftflow.com/composition/set18/solar-yunara"
   },
@@ -1232,6 +2974,56 @@
      "da_18_leblanc"
     ]
    ],
+   "leveling": [
+    {
+     "stage": "2-1",
+     "level": 4,
+     "action": null,
+     "optional": true
+    },
+    {
+     "stage": "2-5",
+     "level": 5,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "3-1",
+     "level": 6,
+     "action": null,
+     "optional": true
+    },
+    {
+     "stage": "3-2",
+     "level": 6,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "3-5",
+     "level": 7,
+     "action": null,
+     "optional": true
+    },
+    {
+     "stage": "4-1",
+     "level": 7,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "4-2",
+     "level": 8,
+     "action": "roll",
+     "optional": false
+    },
+    {
+     "stage": "5-2",
+     "level": 9,
+     "action": null,
+     "optional": true
+    }
+   ],
    "url": "https://tftflow.com/composition/set18/soraka-zyra"
   },
   {
@@ -1263,6 +3055,56 @@
      "da_karma18",
      "da_18_yorick"
     ]
+   ],
+   "leveling": [
+    {
+     "stage": "2-1",
+     "level": 4,
+     "action": null,
+     "optional": true
+    },
+    {
+     "stage": "2-5",
+     "level": 5,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "3-1",
+     "level": 6,
+     "action": null,
+     "optional": true
+    },
+    {
+     "stage": "3-2",
+     "level": 6,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "3-5",
+     "level": 7,
+     "action": null,
+     "optional": true
+    },
+    {
+     "stage": "4-1",
+     "level": 7,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "4-2",
+     "level": 8,
+     "action": "roll",
+     "optional": false
+    },
+    {
+     "stage": "5-2",
+     "level": 9,
+     "action": null,
+     "optional": true
+    }
    ],
    "url": "https://tftflow.com/composition/set18/spellweaver-ahri"
   },
@@ -1308,6 +3150,50 @@
      "da_18_leblanc"
     ]
    ],
+   "leveling": [
+    {
+     "stage": "2-1",
+     "level": 4,
+     "action": null,
+     "optional": true
+    },
+    {
+     "stage": "2-5",
+     "level": 5,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "3-2",
+     "level": 6,
+     "action": "roll",
+     "optional": false
+    },
+    {
+     "stage": "3-5",
+     "level": null,
+     "action": "slowroll",
+     "optional": false
+    },
+    {
+     "stage": "4-1",
+     "level": null,
+     "action": "slowroll",
+     "optional": false
+    },
+    {
+     "stage": "4-5",
+     "level": 7,
+     "action": "slowroll",
+     "optional": false
+    },
+    {
+     "stage": "5-1",
+     "level": 7,
+     "action": null,
+     "optional": true
+    }
+   ],
    "url": "https://tftflow.com/composition/set18/teemo-reroll-2"
   },
   {
@@ -1338,6 +3224,62 @@
      "da_18_kobuko",
      "da_18_rakan"
     ]
+   ],
+   "leveling": [
+    {
+     "stage": "2-1",
+     "level": 4,
+     "action": null,
+     "optional": true
+    },
+    {
+     "stage": "2-5",
+     "level": 5,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "3-2",
+     "level": 6,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "3-5",
+     "level": 6,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "4-1",
+     "level": 7,
+     "action": "roll",
+     "optional": false
+    },
+    {
+     "stage": "4-2",
+     "level": null,
+     "action": "slowroll",
+     "optional": false
+    },
+    {
+     "stage": "4-5",
+     "level": null,
+     "action": "roll",
+     "optional": false
+    },
+    {
+     "stage": "5-1",
+     "level": null,
+     "action": "roll",
+     "optional": false
+    },
+    {
+     "stage": "5-2",
+     "level": 8,
+     "action": null,
+     "optional": false
+    }
    ],
    "url": "https://tftflow.com/composition/set18/tristana-reroll-2"
   },
@@ -1374,6 +3316,62 @@
      "da_18_hecarim",
      "da_18_leblanc"
     ]
+   ],
+   "leveling": [
+    {
+     "stage": "2-1",
+     "level": 4,
+     "action": null,
+     "optional": true
+    },
+    {
+     "stage": "2-5",
+     "level": 5,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "3-2",
+     "level": 6,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "3-5",
+     "level": 6,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "4-1",
+     "level": 7,
+     "action": "roll",
+     "optional": false
+    },
+    {
+     "stage": "4-2",
+     "level": null,
+     "action": "slowroll",
+     "optional": false
+    },
+    {
+     "stage": "4-5",
+     "level": null,
+     "action": "roll",
+     "optional": false
+    },
+    {
+     "stage": "5-1",
+     "level": null,
+     "action": "roll",
+     "optional": false
+    },
+    {
+     "stage": "5-2",
+     "level": 8,
+     "action": null,
+     "optional": false
+    }
    ],
    "url": "https://tftflow.com/composition/set18/unrivaled-khazix-rengar"
   },
@@ -1417,6 +3415,56 @@
      "da_18_shen"
     ]
    ],
+   "leveling": [
+    {
+     "stage": "2-1",
+     "level": 4,
+     "action": null,
+     "optional": true
+    },
+    {
+     "stage": "2-5",
+     "level": 5,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "3-1",
+     "level": 6,
+     "action": null,
+     "optional": true
+    },
+    {
+     "stage": "3-2",
+     "level": 6,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "3-5",
+     "level": 7,
+     "action": null,
+     "optional": true
+    },
+    {
+     "stage": "4-1",
+     "level": 7,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "4-2",
+     "level": 8,
+     "action": "roll",
+     "optional": false
+    },
+    {
+     "stage": "5-2",
+     "level": 9,
+     "action": null,
+     "optional": true
+    }
+   ],
    "url": "https://tftflow.com/composition/set18/vanguard-aphelios"
   },
   {
@@ -1448,6 +3496,56 @@
      "da_18_reksai"
     ]
    ],
+   "leveling": [
+    {
+     "stage": "3-1",
+     "level": 4,
+     "action": "roll",
+     "optional": false
+    },
+    {
+     "stage": "3-2",
+     "level": 5,
+     "action": null,
+     "optional": true
+    },
+    {
+     "stage": "3-3",
+     "level": 5,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "3-5",
+     "level": 6,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "4-1",
+     "level": 6,
+     "action": "roll",
+     "optional": false
+    },
+    {
+     "stage": "4-2",
+     "level": 7,
+     "action": null,
+     "optional": true
+    },
+    {
+     "stage": "4-5",
+     "level": 7,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "5-1",
+     "level": 8,
+     "action": null,
+     "optional": true
+    }
+   ],
    "url": "https://tftflow.com/composition/set18/veigar-reroll"
   },
   {
@@ -1477,6 +3575,50 @@
      "da_18_warwick",
      "da_18_reksai"
     ]
+   ],
+   "leveling": [
+    {
+     "stage": "2-1",
+     "level": 4,
+     "action": null,
+     "optional": true
+    },
+    {
+     "stage": "2-5",
+     "level": 5,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "3-2",
+     "level": 6,
+     "action": "roll",
+     "optional": false
+    },
+    {
+     "stage": "3-5",
+     "level": null,
+     "action": "slowroll",
+     "optional": false
+    },
+    {
+     "stage": "4-1",
+     "level": null,
+     "action": "slowroll",
+     "optional": false
+    },
+    {
+     "stage": "4-5",
+     "level": 7,
+     "action": "slowroll",
+     "optional": false
+    },
+    {
+     "stage": "5-1",
+     "level": 7,
+     "action": null,
+     "optional": true
+    }
    ],
    "url": "https://tftflow.com/composition/set18/warwick-reroll"
   },
@@ -1513,6 +3655,50 @@
      "da_18_yunara",
      "da_18_azir"
     ]
+   ],
+   "leveling": [
+    {
+     "stage": "2-1",
+     "level": 4,
+     "action": null,
+     "optional": true
+    },
+    {
+     "stage": "2-5",
+     "level": 5,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "3-2",
+     "level": 6,
+     "action": "roll",
+     "optional": false
+    },
+    {
+     "stage": "3-5",
+     "level": null,
+     "action": "slowroll",
+     "optional": false
+    },
+    {
+     "stage": "4-1",
+     "level": null,
+     "action": "slowroll",
+     "optional": false
+    },
+    {
+     "stage": "4-5",
+     "level": 7,
+     "action": "slowroll",
+     "optional": false
+    },
+    {
+     "stage": "5-1",
+     "level": 7,
+     "action": null,
+     "optional": true
+    }
    ],
    "url": "https://tftflow.com/composition/set18/yunara-executioner-reroll"
   }

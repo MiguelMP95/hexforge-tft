@@ -64,7 +64,27 @@ def parse_guide(html):
             if units:
                 openers.append(list(dict.fromkeys(units)))
     openers = [list(o) for o in dict.fromkeys(tuple(o) for o in openers)]
-    return {"name": name, "units": list(positions), "positions": positions, "openers": openers}
+    return {"name": name, "units": list(positions), "positions": positions, "openers": openers,
+            "leveling": parse_leveling(html)}
+
+
+def parse_leveling(html):
+    """Plan de niveles de la guía: solo fase -> nivel y si toca tirar (no se guarda el texto)."""
+    block = re.search(r'class="econ-ol">(.*?)</ol>', html, flags=re.S)
+    if not block:
+        return []
+    steps = []
+    for stage, text in re.findall(r'<li data-prefix="(\d-\d)"[^>]*>(.*?)</li>', block.group(1), flags=re.S):
+        text = re.sub(r"<[^>]+>", " ", text)
+        lvl = re.search(r"\b(?:[Ll]evel|[Ll]vl) (?:to |up to )?(\d+)", text) or re.search(r"\b[Ss]tay (?:at )?(?:level |lvl )?(\d+)", text)
+        low = text.lower()
+        action = "slowroll" if "slow roll" in low or "slowroll" in low else \
+                 "roll" if re.search(r"\broll (?:down|for|until|to find|to 3|aggressively)|\ball[- ]in", low) and "don't need to roll" not in low else None
+        if lvl or action:
+            # "Level to 6 if ..." = solo si se cumple una condición (racha, oro...): opcional
+            optional = bool(re.search(r"\blevel (?:to |up to )?\d+,? (?:only )?if\b", low))
+            steps.append({"stage": stage, "level": int(lvl.group(1)) if lvl else None, "action": action, "optional": optional})
+    return steps
 
 
 def main():

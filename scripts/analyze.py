@@ -378,6 +378,39 @@ def stage_from_traits(c, low, champs, traits, items):
     c["_itemFreq"] = completed_freq(pool, items)
 
 
+# Planes de niveles estándar (para composiciones sin guía): fase -> nivel, acción
+DEFAULT_LEVELING = {
+    "Fast 8": [("2-1", 4, None, True), ("2-5", 5, None, False), ("3-2", 6, None, False), ("4-1", 7, None, False),
+               ("4-2", 8, "roll", False), ("5-1", 9, None, True)],
+    "Fast 9": [("2-1", 4, None, True), ("2-5", 5, None, False), ("3-2", 6, None, False), ("4-1", 7, None, False),
+               ("4-2", 8, None, False), ("5-1", 9, "roll", False)],
+    "Reroll 1": [("2-1", 4, None, False), ("2-5", 5, None, False), ("3-1", 5, "slowroll", False), ("4-1", 7, None, False),
+                 ("4-5", 8, None, False)],
+    "Reroll 2": [("2-1", 4, None, True), ("2-5", 5, None, False), ("3-1", 6, "slowroll", False), ("4-1", 7, None, False),
+                 ("4-5", 8, None, False)],
+    "Reroll 3": [("2-1", 4, None, True), ("2-5", 5, None, False), ("3-2", 6, None, False), ("3-5", 7, "slowroll", False),
+                 ("4-5", 8, None, True), ("5-1", 8, None, False)],
+}
+
+
+def attach_leveling(comps, champs, guides_by_name):
+    """Plan de subida de nivel: el de la guía experta si la composición tiene una; si no, el estándar de su estilo."""
+    for c in comps:
+        g = guides_by_name.get(c.get("guide", {}).get("name"))
+        if g and g.get("leveling"):
+            c["leveling"] = g["leveling"]
+            c["levelingSource"] = "guide"
+            continue
+        key = c["style"]
+        if key == "Reroll":
+            cheap3 = [u for u, st in c.get("stars", {}).items() if st == 3 and champs[u]["cost"] <= 3]
+            cost = champs[c["carries"][0]]["cost"] if champs[c["carries"][0]]["cost"] <= 3 else \
+                max((champs[u]["cost"] for u in cheap3), default=3)
+            key = f"Reroll {cost}"
+        c["leveling"] = [{"stage": st, "level": lv, "action": ac, "optional": op} for st, lv, ac, op in DEFAULT_LEVELING[key]]
+        c["levelingSource"] = "default"
+
+
 def attach_guides(comps, champs, traits, min_overlap=0.65):
     """Combina cada composición con la guía experta (TFT Flow) de tablero final más parecido:
     early = opener de la guía; mid = lo que ya se tiene a nivel 7 del final + opener + datos reales;
@@ -522,6 +555,9 @@ def main():
     attach_stage_boards(unique, boards, champs, traits, items)
     attach_guides(unique, champs, traits)
     attach_stage_items(unique, champs, items, champ_damage_types(boards, items))
+    guides_path = os.path.join(DATA, "guides.json")
+    guides_by_name = {g["name"]: g for g in json.load(open(guides_path, encoding="utf8"))["guides"]} if os.path.exists(guides_path) else {}
+    attach_leveling(unique, champs, guides_by_name)
     unique.sort(key=lambda c: c["stats"]["avg"])
     n = len(unique)
     for i, c in enumerate(unique):

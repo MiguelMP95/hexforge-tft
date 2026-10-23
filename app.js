@@ -212,6 +212,32 @@ function transitionHTML(c) {
     <p class="source">${source} Las unidades con borde punteado no están en el tablero final: véndelas al hacer la transición.</p>`;
 }
 
+/* ---------- Subida de nivel ---------- */
+
+function levelingHTML(c) {
+  const steps = c.leveling || [];
+  if (!steps.length) return "";
+  let prev = null;
+  const items = steps.map((st) => {
+    const lvl = st.level ?? prev;
+    const stay = st.level && st.level === prev;
+    const up = st.level && !stay;
+    prev = st.level ?? prev;
+    const action = st.action === "roll" ? `<span class="lv-act roll">🎲 Tirar</span>`
+      : st.action === "slowroll" ? `<span class="lv-act slow">🐢 Tirar despacio</span>` : "";
+    const what = up ? `Sube a <b>${lvl}</b>` : stay ? `Quédate en <b>${lvl}</b>` : lvl ? `Nivel <b>${lvl}</b>` : "";
+    return `<div class="lv-step${st.optional ? " opt" : ""}${up ? " up" : ""}">
+      <span class="lv-stage">${esc(st.stage)}</span>
+      <span class="lv-what">${what}${st.optional ? ' <small>(si vas bien de oro o en racha)</small>' : ""}</span>${action}
+    </div>`;
+  }).join("");
+  const source = c.levelingSource === "guide" && c.guide
+    ? `Plan de la guía <a href="${esc(c.guide.url)}" target="_blank" rel="noopener">${esc(c.guide.name)} (TFT Flow)</a>; allí explican cada paso y qué hacer con rachas de derrotas.`
+    : `Plan estándar para una composición ${esc(c.style)}${c.style === "Reroll" ? " según el coste de los campeones que se suben a 3 estrellas" : ""}.`;
+  return `<div class="leveling">${items}</div>
+    <p class="source">🎲 Tirar = gastar oro en la tienda hasta encontrar lo que necesitas. 🐢 Tirar despacio = gastar solo el oro por encima de 50 para no perder intereses. ${source}</p>`;
+}
+
 /* ---------- Posicionamiento ---------- */
 
 const TANK_TRAITS = ["vanguard", "defender", "juggernaut", "brawler"];
@@ -590,6 +616,8 @@ function openComp(id) {
     ${positioningHTML(c)}
     <h3>Cómo llegar: early y mid game</h3>
     ${transitionHTML(c)}
+    <h3>Cuándo subir de nivel</h3>
+    ${levelingHTML(c)}
     <h3>Consejos</h3>
     <p class="tips">${esc(c.tips)}</p>
     ${c.guide ? `<p class="source">Guía experta relacionada: <a href="${esc(c.guide.url)}" target="_blank" rel="noopener">${esc(c.guide.name)} en TFT Flow</a> (aumentos, economía y variantes).</p>` : ""}

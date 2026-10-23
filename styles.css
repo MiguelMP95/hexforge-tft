@@ -423,3 +423,15 @@ main { max-width: 960px; margin: 0 auto; padding: 12px 16px 24px; }
 .next { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 5px; font-weight: 400; font-size: 12px; color: var(--muted); align-items: center; }
 .next-u { display: inline-flex; align-items: center; gap: 4px; background: var(--panel); border-radius: 6px; padding: 2px 6px 2px 2px; color: var(--text); }
 .next-u img { width: 18px; height: 18px; border-radius: 4px; }
+
+/* Subida de nivel */
+.leveling { display: grid; gap: 4px; }
+.lv-step { display: flex; align-items: center; gap: 10px; background: var(--panel-2); border-radius: 8px; padding: 6px 10px; font-size: 14px; border-left: 3px solid transparent; }
+.lv-step.up { border-left-color: var(--accent); }
+.lv-step.opt { opacity: .75; border-left-style: dashed; }
+.lv-stage { font-weight: 800; font-variant-numeric: tabular-nums; min-width: 30px; color: var(--accent); }
+.lv-what { flex: 1; }
+.lv-what small { color: var(--muted); font-size: 11px; }
+.lv-act { font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 6px; white-space: nowrap; }
+.lv-act.roll { background: #3a1d1d; color: #ffb0a0; }
+.lv-act.slow { background: #1d2f3a; color: #9fd4ff; }
