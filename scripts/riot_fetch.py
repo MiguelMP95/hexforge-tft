@@ -46,6 +46,10 @@ def load_key():
     return key
 
 
+class KeyExpired(Exception):
+    """La API rechaza la clave (caducada o inválida)."""
+
+
 class RateLimiter:
     """Respeta los límites de la clave de desarrollo: 20 por segundo y 100 cada 2 minutos."""
 
@@ -94,7 +98,7 @@ class Riot:
                     time.sleep(2 * (attempt + 1))
                     continue
                 if e.code in (401, 403):
-                    sys.exit(f"La API rechaza la clave ({e.code}). ¿Ha caducado? Genera una nueva en developer.riotgames.com")
+                    raise KeyExpired(f"La API rechaza la clave ({e.code}). ¿Ha caducado? Genera una nueva en developer.riotgames.com.")
                 if e.code == 404:
                     return None
                 raise
@@ -148,7 +152,10 @@ def main():
     # 1. Jugadores de Master+ con su número de partidas (victorias + derrotas)
     games, lp = {}, {}
     for tier in args.tiers.split(","):
-        data = api.get(f"{plat}/tft/league/v1/{tier}") or {}
+        try:
+            data = api.get(f"{plat}/tft/league/v1/{tier}") or {}
+        except KeyExpired as e:
+            sys.exit(str(e))
         for e in data.get("entries", []):
             if e.get("puuid"):
                 games[e["puuid"]] = e.get("wins", 0) + e.get("losses", 0)
@@ -178,36 +185,40 @@ def main():
     since = f"&startTime={start}" if start else ""
     new_matches = queried = 0
     t0 = time.time()
-    for k, (_, _, puuid, count) in enumerate(queue, 1):
-        if time.time() > deadline:
-            print("Tiempo máximo alcanzado: lo que falta se recogerá en la próxima ejecución.", flush=True)
-            break
-        ids = api.get(f"{reg}/tft/match/v1/matches/by-puuid/{puuid}/ids?count={count}{since}")
-        if ids is None:
-            continue
-        for mid in ids:
-            path = os.path.join(MATCHES, f"{mid}.json.gz")
-            if mid in skipped or os.path.exists(path) or os.path.exists(path[:-3]):
-                continue
+    try:
+        for k, (_, _, puuid, count) in enumerate(queue, 1):
             if time.time() > deadline:
+                print("Tiempo máximo alcanzado: lo que falta se recogerá en la próxima ejecución.", flush=True)
                 break
-            m = api.get(f"{reg}/tft/match/v1/matches/{mid}")
-            if not m:
+            ids = api.get(f"{reg}/tft/match/v1/matches/by-puuid/{puuid}/ids?count={count}{since}")
+            if ids is None:
                 continue
-            if m.get("info", {}).get("queue_id") == RANKED_QUEUE:
-                with gzip.open(path, "wt") as f:
-                    json.dump(compact(m), f, separators=(",", ":"))
-                new_matches += 1
+            for mid in ids:
+                path = os.path.join(MATCHES, f"{mid}.json.gz")
+                if mid in skipped or os.path.exists(path) or os.path.exists(path[:-3]):
+                    continue
+                if time.time() > deadline:
+                    break
+                m = api.get(f"{reg}/tft/match/v1/matches/{mid}")
+                if not m:
+                    continue
+                if m.get("info", {}).get("queue_id") == RANKED_QUEUE:
+                    with gzip.open(path, "wt") as f:
+                        json.dump(compact(m), f, separators=(",", ":"))
+                    new_matches += 1
+                else:
+                    skipped.add(mid)
             else:
-                skipped.add(mid)
-        else:
-            seen_games[puuid] = games[puuid]  # jugador al día solo si se revisaron todas sus partidas
-        queried += 1
-        if k % 100 == 0:
-            mins = (time.time() - t0) / 60
-            print(f"  {k}/{len(queue)} jugadores · {new_matches} partidas nuevas · {mins:.0f} min", flush=True)
-            json.dump(seen_games, open(ladder_path, "w"))
-            json.dump(sorted(skipped), open(skipped_path, "w"))
+                seen_games[puuid] = games[puuid]  # jugador al día solo si se revisaron todas sus partidas
+            queried += 1
+            if k % 100 == 0:
+                mins = (time.time() - t0) / 60
+                print(f"  {k}/{len(queue)} jugadores · {new_matches} partidas nuevas · {mins:.0f} min", flush=True)
+                json.dump(seen_games, open(ladder_path, "w"))
+                json.dump(sorted(skipped), open(skipped_path, "w"))
+    except KeyExpired as e:
+        # Clave caducada a mitad: se guarda lo descargado y el análisis sigue con ello
+        print(f"{e} Se guarda lo descargado hasta ahora.", flush=True)
 
     json.dump(seen_games, open(ladder_path, "w"))
     json.dump(sorted(skipped), open(skipped_path, "w"))

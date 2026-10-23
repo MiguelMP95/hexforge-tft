@@ -42,7 +42,7 @@ jobs:
 
       # Las partidas ya descargadas se guardan entre ejecuciones para no volver a pedirlas
       - name: Recuperar partidas guardadas
-        uses: actions/cache@v4
+        uses: actions/cache/restore@v4
         with:
           path: data/raw
           key: riot-matches-${{ github.run_id }}
@@ -83,3 +83,11 @@ jobs:
             git pull --rebase --autostash
             git push
           fi
+
+      # Se guarda siempre, aunque algo falle (p. ej. clave caducada a mitad), para no perder lo descargado
+      - name: Guardar partidas
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: data/raw
+          key: riot-matches-${{ github.run_id }}
