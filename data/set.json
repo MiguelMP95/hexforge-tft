@@ -10,6 +10,7 @@
     "da_18_adaptor"
    ],
    "ability": "Burbuja eructante",
+   "range": 4,
    "img": "img/champs/da_gromp18_ap.png"
   },
   {
@@ -21,6 +22,7 @@
     "da_18_slayer"
    ],
    "ability": "Garras desgarradoras",
+   "range": 1,
    "img": "img/champs/da_murkwolf18.png"
   },
   {
@@ -32,6 +34,7 @@
     "da_18_invoker"
    ],
    "ability": "Láser celeste",
+   "range": 4,
    "img": "img/champs/da_18_sentry.png"
   },
   {
@@ -43,6 +46,7 @@
     "da_18_hunter"
    ],
    "ability": "Hojas afiladas",
+   "range": 4,
    "img": "img/champs/da_cinderling18.png"
   },
   {
@@ -54,6 +58,7 @@
     "da_juggernaut18"
    ],
    "ability": "¡¿Puedes seguirme el ritmo?!",
+   "range": 1,
    "img": "img/champs/da_scuttlecrab18.png"
   },
   {
@@ -65,6 +70,7 @@
     "da_18_brawler"
    ],
    "ability": "Rock and Roll",
+   "range": 1,
    "img": "img/champs/da_krug18.png"
   },
   {
@@ -77,6 +83,7 @@
     "da_18_invoker"
    ],
    "ability": "Onda de choque celeste",
+   "range": 1,
    "img": "img/champs/da_sentinel18.png"
   },
   {
@@ -88,6 +95,7 @@
     "da_18_slayer"
    ],
    "ability": "Furia carmesí",
+   "range": 1,
    "img": "img/champs/da_brambleback18.png"
   },
   {
@@ -100,6 +108,7 @@
     "da_18_rapidfire"
    ],
    "ability": "Plumaje mortífero",
+   "range": 4,
    "img": "img/champs/da_18_xayah.png"
   },
   {
@@ -111,6 +120,7 @@
     "da_18_defender"
    ],
    "ability": "Aliento de fuelle",
+   "range": 1,
    "img": "img/champs/da_18_ornn.png"
   },
   {
@@ -122,6 +132,7 @@
     "da_18_adaptor"
    ],
    "ability": "Jabalina",
+   "range": 1,
    "img": "img/champs/da_nidalee18_ap.png"
   },
   {
@@ -133,6 +144,7 @@
     "da_18_vanguard"
    ],
    "ability": "Espíritu de pavor",
+   "range": 1,
    "img": "img/champs/da_18_hecarim.png"
   },
   {
@@ -144,6 +156,7 @@
     "da_18_executioner"
    ],
    "ability": "Ráfaga del bosque",
+   "range": 4,
    "img": "img/champs/da_18_ezreal.png"
   },
   {
@@ -156,6 +169,7 @@
     "da_18_summoner"
    ],
    "ability": "¡Alzaos!",
+   "range": 4,
    "img": "img/champs/da_18_azir.png"
   },
   {
@@ -167,6 +181,7 @@
     "da_18_brawler"
    ],
    "ability": "De raíz",
+   "range": 1,
    "img": "img/champs/da_18_reksai.png"
   },
   {
@@ -179,6 +194,7 @@
     "da_18_spellweaver"
    ],
    "ability": "Estallido primordial",
+   "range": 4,
    "img": "img/champs/da_18_veigar.png"
   },
   {
@@ -190,6 +206,7 @@
     "da_juggernaut18"
    ],
    "ability": "Siembra de semillas",
+   "range": 1,
    "img": "img/champs/da_18_maokai.png"
   },
   {
@@ -201,6 +218,7 @@
     "da_18_battlemage"
    ],
    "ability": "Corteza petrificada",
+   "range": 1,
    "img": "img/champs/da_18_malphite.png"
   },
   {
@@ -213,6 +231,7 @@
     "da_18_summoner"
    ],
    "ability": "Ritos funerarios",
+   "range": 1,
    "img": "img/champs/da_18_yorick.png"
   },
   {
@@ -224,6 +243,7 @@
     "da_18_executioner"
    ],
    "ability": "Florescencia del espíritu",
+   "range": 4,
    "img": "img/champs/da_18_yunara.png"
   },
   {
@@ -235,6 +255,7 @@
     "da_18_brawler"
    ],
    "ability": "Trastazo",
+   "range": 1,
    "img": "img/champs/da_18_sett.png"
   },
   {
@@ -246,6 +267,7 @@
     "da_18_spellweaver"
    ],
    "ability": "Bomba espiritual",
+   "range": 4,
    "img": "img/champs/da_18_ahri.png"
   },
   {
@@ -257,6 +279,7 @@
     "da_18_hunter"
    ],
    "ability": "Grieta espiritual",
+   "range": 6,
    "img": "img/champs/da_18_ashe.png"
   },
   {
@@ -268,6 +291,7 @@
     "da_18_vanguard"
    ],
    "ability": "Reina de las arañas",
+   "range": 1,
    "img": "img/champs/da_18_elise.png"
   },
   {
@@ -279,6 +303,7 @@
     "da_18_hunter"
    ],
    "ability": "Disparo a la cabeza",
+   "range": 4,
    "img": "img/champs/da_18_caitlyn.png"
   },
   {
@@ -290,6 +315,7 @@
     "da_18_spellweaver"
    ],
    "ability": "Explosión perjudicial",
+   "range": 4,
    "img": "img/champs/da_18_cassiopeia.png"
   },
   {
@@ -301,6 +327,7 @@
     "da_18_invoker"
    ],
    "ability": "Maldición marchita",
+   "range": 2,
    "img": "img/champs/da_18_morgana.png"
   },
   {
@@ -313,6 +340,7 @@
     "da_18_vanguard"
    ],
    "ability": "Danza fascinante",
+   "range": 1,
    "img": "img/champs/da_18_rakan.png"
   },
   {
@@ -324,6 +352,7 @@
     "da_18_defender"
    ],
    "ability": "Nana rítmica",
+   "range": 1,
    "img": "img/champs/da_18_lillia.png"
   },
   {
@@ -335,6 +364,7 @@
     "da_18_brawler"
    ],
    "ability": "Danza vital",
+   "range": 1,
    "img": "img/champs/da_18_kobuko.png"
   },
   {
@@ -346,6 +376,7 @@
     "da_18_invoker"
    ],
    "ability": "Hongo aquí, hongo allá",
+   "range": 4,
    "img": "img/champs/da_18_teemo.png"
   },
   {
@@ -357,6 +388,7 @@
     "da_18_defender"
    ],
    "ability": "Posición defensiva",
+   "range": 1,
    "img": "img/champs/da_18_rammus.png"
   },
   {
@@ -369,6 +401,7 @@
     "da_18_brawler"
    ],
    "ability": "Gen de furia",
+   "range": 2,
    "img": "img/champs/da_18_gnarsmall.png"
   },
   {
@@ -381,6 +414,7 @@
     "da_18_hunter"
    ],
    "ability": "Carga explosiva",
+   "range": 4,
    "img": "img/champs/da_18_tristana.png"
   },
   {
@@ -392,6 +426,7 @@
     "da_18_hunter"
    ],
    "ability": "Cuchilla bumerán",
+   "range": 4,
    "img": "img/champs/da_18_sivir.png"
   },
   {
@@ -403,6 +438,7 @@
     "da_juggernaut18"
    ],
    "ability": "Puños furiosos",
+   "range": 1,
    "img": "img/champs/da_vi18.png"
   },
   {
@@ -415,6 +451,7 @@
     "da_18_slayer"
    ],
    "ability": "Impacto de kunai",
+   "range": 1,
    "img": "img/champs/da_18_akali_ad.png"
   },
   {
@@ -426,6 +463,7 @@
     "da_18_rapidfire"
    ],
    "ability": "Flecha penetrante",
+   "range": 4,
    "img": "img/champs/da_18_varus.png"
   },
   {
@@ -437,6 +475,7 @@
     "da_juggernaut18"
    ],
    "ability": "Berrinche",
+   "range": 1,
    "img": "img/champs/da_amumu18.png"
   },
   {
@@ -448,6 +487,7 @@
     "da_18_executioner"
    ],
    "ability": "Vorágine ígnea",
+   "range": 2,
    "img": "img/champs/da_18_kennen.png"
   },
   {
@@ -459,6 +499,7 @@
     "da_18_rapidfire"
    ],
    "ability": "Asalto de luz lunar",
+   "range": 4,
    "img": "img/champs/da_18_aphelios.png"
   },
   {
@@ -471,6 +512,7 @@
     "da_18_vanguard"
    ],
    "ability": "Barrera pálida",
+   "range": 1,
    "img": "img/champs/da_18_diana.png"
   },
   {
@@ -483,6 +525,7 @@
     "da_18_spellweaver"
    ],
    "ability": "Lluvia de luna",
+   "range": 4,
    "img": "img/champs/da_18_alune.png"
   },
   {
@@ -494,6 +537,7 @@
     "da_18_defender"
    ],
    "ability": "Golpe de escudo",
+   "range": 1,
    "img": "img/champs/da_18_leona.png"
   },
   {
@@ -505,6 +549,7 @@
     "da_18_rapidfire"
    ],
    "ability": "Juicio solar",
+   "range": 4,
    "img": "img/champs/da_18_kayle.png"
   },
   {
@@ -516,6 +561,7 @@
     "da_juggernaut18"
    ],
    "ability": "Cólera solar",
+   "range": 1,
    "img": "img/champs/da_18_sejuani.png"
   },
   {
@@ -526,6 +572,7 @@
     "da_18_rival"
    ],
    "ability": "Saborea su miedo",
+   "range": 1,
    "img": "img/champs/da_18_khazix.png"
   },
   {
@@ -536,6 +583,7 @@
     "da_18_rival"
    ],
    "ability": "Fiereza",
+   "range": 1,
    "img": "img/champs/da_18_rengar.png"
   },
   {
@@ -548,6 +596,7 @@
     "da_18_invoker"
    ],
    "ability": "Artillería descendente",
+   "range": 4,
    "img": "img/champs/da_kogmaw18_ad.png"
   },
   {
@@ -559,6 +608,7 @@
     "da_18_summoner"
    ],
    "ability": "Crecimiento desenfrenado",
+   "range": 4,
    "img": "img/champs/da_18_zyra.png"
   },
   {
@@ -571,6 +621,7 @@
     "da_18_spellweaver"
    ],
    "ability": "Cosecha",
+   "range": 1,
    "img": "img/champs/da_fiddlesticks18.png"
   },
   {
@@ -582,6 +633,7 @@
     "da_18_executioner"
    ],
    "ability": "Invocación estelar",
+   "range": 4,
    "img": "img/champs/da_18_soraka.png"
   },
   {
@@ -593,6 +645,7 @@
     "da_18_vanguard"
    ],
    "ability": "Esplendor esmeralda",
+   "range": 1,
    "img": "img/champs/da_taric18.png"
   },
   {
@@ -603,6 +656,7 @@
     "da_18_greenfather"
    ],
    "ability": "Semilla de relojería",
+   "range": 3,
    "img": "img/champs/da_18_ivern.png"
   },
   {
@@ -613,6 +667,7 @@
     "da_18_luxuniquetrait"
    ],
    "ability": "Chispa final",
+   "range": 6,
    "img": "img/champs/da_lux18_base.png"
   },
   {
@@ -624,6 +679,7 @@
     "da_18_brawler"
    ],
    "ability": "Rugido triunfal",
+   "range": 1,
    "img": "img/champs/da_18_alistar.png"
   },
   {
@@ -634,6 +690,7 @@
     "da_dravenuniquetrait18"
    ],
    "ability": "Espiral de muerte",
+   "range": 6,
    "img": "img/champs/da_draven18.png"
   },
   {
@@ -645,6 +702,7 @@
     "da_riftbeast18"
    ],
    "ability": "Calor sin igual",
+   "range": 2,
    "img": "img/champs/da_18_elderdragon.png"
   },
   {
@@ -656,6 +714,7 @@
     "da_18_spellweaver"
    ],
    "ability": "Vínculo kármico",
+   "range": 4,
    "img": "img/champs/da_karma18.png"
   },
   {
@@ -667,6 +726,7 @@
     "da_18_spellweaver"
    ],
    "ability": "Imagen especular",
+   "range": 4,
    "img": "img/champs/da_18_leblanc.png"
   },
   {
@@ -678,6 +738,7 @@
     "da_18_adaptor"
    ],
    "ability": "Estilo Wuju",
+   "range": 1,
    "img": "img/champs/da_18_masteryi_ad.png"
   },
   {
@@ -689,6 +750,7 @@
     "da_18_defender"
    ],
    "ability": "Barrera ki",
+   "range": 1,
    "img": "img/champs/da_18_shen.png"
   },
   {
@@ -700,6 +762,7 @@
     "da_18_slayer"
    ],
    "ability": "Las fauces de la bestia",
+   "range": 1,
    "img": "img/champs/da_18_warwick.png"
   },
   {
@@ -711,6 +774,7 @@
     "da_18_slayer"
    ],
    "ability": "Barrido defensivo",
+   "range": 1,
    "img": "img/champs/da_18_camille.png"
   },
   {
@@ -722,6 +786,7 @@
     "da_18_luxuniquetrait"
    ],
    "ability": "Chispa final",
+   "range": 6,
    "img": "img/champs/da_lux18_blackthorn.png"
   },
   {
@@ -733,6 +798,7 @@
     "da_18_luxuniquetrait"
    ],
    "ability": "Chispa final",
+   "range": 6,
    "img": "img/champs/da_lux18_blossom.png"
   },
   {
@@ -744,6 +810,7 @@
     "da_18_luxuniquetrait"
    ],
    "ability": "Chispa final",
+   "range": 6,
    "img": "img/champs/da_18_lux_coven.png"
   },
   {
@@ -755,6 +822,7 @@
     "da_18_luxuniquetrait"
    ],
    "ability": "Chispa final",
+   "range": 6,
    "img": "img/champs/da_18_lux_elderwood.png"
   },
   {
@@ -766,6 +834,7 @@
     "da_18_luxuniquetrait"
    ],
    "ability": "Chispa final",
+   "range": 6,
    "img": "img/champs/da_18_lux_fae.png"
   },
   {
@@ -777,6 +846,7 @@
     "da_18_luxuniquetrait"
    ],
    "ability": "Chispa final",
+   "range": 6,
    "img": "img/champs/da_18_lux_inferno.png"
   },
   {
@@ -788,6 +858,7 @@
     "da_18_luxuniquetrait"
    ],
    "ability": "Chispa final",
+   "range": 6,
    "img": "img/champs/da_18_lux_moonbeam.png"
   },
   {
@@ -799,6 +870,7 @@
     "da_18_luxuniquetrait"
    ],
    "ability": "Chispa final",
+   "range": 6,
    "img": "img/champs/da_18_lux_primal.png"
   },
   {
@@ -810,6 +882,7 @@
     "da_18_luxuniquetrait"
    ],
    "ability": "Chispa final",
+   "range": 6,
    "img": "img/champs/da_18_lux_sunbeam.png"
   },
   {
@@ -822,6 +895,7 @@
     "da_18_rapidfire"
    ],
    "ability": "Familia en bandada",
+   "range": 4,
    "img": "img/champs/da_crimsonraptor18.png"
   }
  ],

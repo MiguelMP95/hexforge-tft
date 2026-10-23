@@ -111,6 +111,7 @@ def main():
             "cost": c["cost"],
             "traits": [trait_by_name[t] for t in c["traits"] if t in trait_by_name],
             "ability": c.get("ability", {}).get("name", ""),
+            "range": int(round((c.get("stats") or {}).get("range") or 1)),
             "img": f"img/champs/{sid}.png",
         }
         champs.append(champ)

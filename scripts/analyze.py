@@ -134,12 +134,12 @@ def summarize(group, champs, traits, items, total_matches, split_time):
 
     carries = sorted((u for u in final if avg_dmg[u] >= 1.2), key=lambda u: -avg_dmg[u])
     carries = carries[:3]
-    item_holders = sorted(final, key=lambda u: -avg_items[u])[:4]
     best_items = {}
-    for u in item_holders:
+    for u in final:
         top = [i for i, _ in item_use[u].most_common() if items[i]["kind"] != "component"][:3]
         if len(top) >= 2:
             best_items[u] = top
+    avg_tank = {u: sum(c for i, c in item_use[u].items() if items[i].get("role") == "tank") / max(1, len(good)) for u in final}
 
     main = carries[0] if carries else None
     main_stars = statistics.mean(stars[main]) if main and stars[main] else 0
@@ -162,6 +162,7 @@ def summarize(group, champs, traits, items, total_matches, split_time):
         "units": final,
         "carries": carries,
         "items": best_items,
+        "avg_tank": avg_tank,
         "style": style,
         "tier": tier,
         "trend": trend,
@@ -177,6 +178,103 @@ def summarize(group, champs, traits, items, total_matches, split_time):
             "games": n,
         },
     }
+
+
+def pick_items(s, carry):
+    carries = [carry] + [u for u in s["carries"] if u != carry]
+    holders = [u for u in carries[:3] if u in s["items"]]
+    tanks = sorted((u for u in s["items"] if u not in carries and s["avg_tank"].get(u, 0) >= 0.5),
+                   key=lambda u: -s["avg_tank"][u])
+    holders += tanks[:1]
+    return {u: s["items"][u] for u in holders}
+
+
+def comp_traits(units, champs, traits):
+    count = Counter(t for u in set(units) for t in champs[u]["traits"])
+    return {t for t, n in count.items() if traits[t]["breakpoints"] != [1] and n >= traits[t]["breakpoints"][0]}
+
+
+def temp_carries(group, items, max_cost=3, n=2):
+    """Unidades que más veces llevan 2+ objetos de daño en tableros intermedios."""
+    holders = Counter(u["id"] for b in group for u in b["units"]
+                      if sum(1 for i in u["items"] if items[i].get("role") == "dmg") >= 2)
+    return [u for u, _ in holders.most_common() if u][:n], holders
+
+
+def attach_stage_boards(comps, boards, champs, traits, items, min_boards=15):
+    """Early y mid reales: tableros de nivel 5-7 (jugadores eliminados) asignados a la composición más parecida."""
+    info = [(c, set(c["units"]), comp_traits(c["units"], champs, traits)) for c in comps]
+    assigned = defaultdict(list)
+    for b in boards:
+        if b["level"] > 7:
+            continue
+        units = {u["id"] for u in b["units"]}
+        active = {t for t in b["traits"] if traits[t]["breakpoints"] != [1]}
+        # Parecido = unidades en común + rasgos activos en común (las Fast 8/9 se reconocen sobre todo por rasgos)
+        scored = sorted(((len(units & cu) + len(active & ct), c["id"]) for c, cu, ct in info), reverse=True)
+        if not scored or scored[0][0] < 3:
+            continue
+        best = [cid for sc, cid in scored if sc == scored[0][0]]
+        for cid in best:  # empate: el tablero cuenta para todas las empatadas
+            assigned[cid].append(b)
+    low = [b for b in boards if b["level"] <= 7]
+    for c in comps:
+        group = assigned.get(c["id"], [])
+        if len(group) < min_boards:
+            stage_from_traits(c, low, champs, traits, items)
+            continue
+        freq = Counter(u["id"] for b in group for u in b["units"])
+        n = len(group)
+        mid = [u for u, k in freq.most_common() if k / n >= 0.2][:7]
+        early = [u for u, k in freq.most_common() if champs[u]["cost"] <= 2 and k / n >= 0.12][:5]
+        if len(early) < 4:
+            early += [u for u, k in freq.most_common() if champs[u]["cost"] == 3 and u not in early][:5 - len(early)]
+        stars = defaultdict(list)
+        for b in group:
+            for u in b["units"]:
+                stars[u["id"]].append(u["stars"])
+        c["mid"] = sorted(mid, key=lambda u: champs[u]["cost"])
+        c["early"] = sorted(early, key=lambda u: champs[u]["cost"])
+        c["midStars"] = {u: Counter(stars[u]).most_common(1)[0][0] for u in mid}
+        c["stageGames"] = n
+        c["stageSource"] = "boards"
+        c["stageCarries"] = temp_carries(group, items)[0]
+
+
+def stage_from_traits(c, low, champs, traits, items):
+    """Para composiciones sin tableros intermedios propios (sobre todo Fast 8/9): campeones baratos
+    de sus dos rasgos principales más jugados en tableros de nivel 5-7 con esos rasgos activos."""
+    count = Counter(t for u in set(c["units"]) for t in champs[u]["traits"] if traits[t]["breakpoints"] != [1])
+    core = [t for t, _ in count.most_common(2)]
+    if not core:
+        return
+    pool = [b for b in low if any(t in b["traits"] for t in core)]
+    freq = Counter(u["id"] for b in pool for u in b["units"])
+    related = lambda u: u in c["units"] or any(t in champs[u]["traits"] for t in core)
+    _, holders = temp_carries(pool, items)
+    # Carry provisional: el que más lleva objetos de daño en esos tableros (mejor si es de sus rasgos)
+    carry_rank = sorted(holders, key=lambda u: -(holders[u] * (2 if related(u) else 1)))
+
+    def board(size, max_cost, extra=()):
+        tmp = [u for u in carry_rank if champs[u]["cost"] <= max_cost][:2 if size > 5 else 1]
+        picked = tmp + [u for u in sorted(c["units"], key=lambda u: -freq[u]) if champs[u]["cost"] <= max_cost and u not in tmp]
+        for u, _ in freq.most_common():
+            if len(picked) >= size:
+                break
+            if u not in picked and champs[u]["cost"] <= max_cost and related(u):
+                picked.append(u)
+        for u in extra:  # p. ej. el carry de 4 de coste que ya se juega a nivel 7
+            if u not in picked:
+                picked = picked[:size - 1] + [u]
+        return sorted(picked[:size], key=lambda u: champs[u]["cost"])
+
+    carry4 = [u for u in c["carries"] if champs[u]["cost"] == 4][:1]
+    c["mid"] = board(7, 3, carry4)
+    c["early"] = board(5, 2)
+    c["midStars"] = {}
+    c["stageGames"] = len(pool)
+    c["stageSource"] = "traits"
+    c["stageCarries"] = [u for u in carry_rank if champs[u]["cost"] <= 3][:2]
 
 
 def main():
@@ -273,7 +371,8 @@ def main():
             "trend": s["trend"],
             "stats": s["stats"],
             "units": s["units"],
-            "items": s["items"],
+            # Objetos solo de los carries (hasta 3) y del tanque principal, en ese orden
+            "items": pick_items(s, carry),
             "carries": s["carries"] or [carry],
             "stars": s["stars"],
             "tips": tips,
@@ -281,6 +380,7 @@ def main():
 
     # Las más jugadas; el tier es relativo entre ellas (por puesto medio)
     unique = sorted(comps, key=lambda c: -c["stats"]["games"])[:args.max_comps]
+    attach_stage_boards(unique, boards, champs, traits, items)
     unique.sort(key=lambda c: c["stats"]["avg"])
     n = len(unique)
     for i, c in enumerate(unique):

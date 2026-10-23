@@ -171,19 +171,26 @@ function priorityComponents(comp) {
   return Object.entries(count).filter(([id]) => state.item[id]).sort((a, b) => b[1] - a[1]).slice(0, 4);
 }
 
-function transitionHTML(c) {
-  // El mid se calcula primero para que el early lleve hacia él
+/** Tableros de early y mid: del análisis de partidas si existen; si no, sugerencia automática. */
+function stageBoards(c) {
+  if (c.early?.length && c.mid?.length) return { early: c.early, mid: c.mid };
   const boards = {};
   [...STAGES].reverse().forEach((st, i, arr) => {
     boards[st.key] = suggestBoard(c, st, i ? boards[arr[i - 1].key] : []);
   });
+  return boards;
+}
+
+function transitionHTML(c) {
+  const boards = stageBoards(c);
   const stages = STAGES.map((st) => {
     const units = boards[st.key];
     const traits = computeTraits(units).filter((x) => x.idx >= 0 && x.level !== "unique");
     const keep = units.filter((u) => c.units.includes(u)).length;
+    const stars = st.key === "mid" ? c.midStars || {} : {};
     return `<div class="stage">
       <div class="stage-head"><b>${st.title}</b><small>${st.sub}</small><span class="tag">${keep}/${units.length} se quedan</span></div>
-      <div class="units">${units.map((u) => champHTML(u, { carry: c.carries.includes(u), name: true })
+      <div class="units">${units.map((u) => champHTML(u, { carry: c.carries.includes(u) || (c.stageCarries || []).includes(u), name: true, stars: stars[u] === 3 ? 3 : 0 })
         .replace('class="champ', `class="champ${c.units.includes(u) ? " keep" : ""}`)).join("")}</div>
       <div class="traits" style="margin-top:8px">${traits.map(traitHTML).join("")}</div>
     </div>`;
@@ -193,8 +200,80 @@ function transitionHTML(c) {
       <div class="stage-head"><b>Componentes prioritarios</b><small>Guárdalos para los carries</small></div>
       <div class="item-list">${comps.map(([id, n]) => `<span class="item-chip"><img src="${state.item[id].img}" alt="">${esc(state.item[id].name)} ×${n}</span>`).join("")}</div>
     </div>` : "";
+  const source = c.stageSource === "boards"
+    ? `Sacado de ${c.stageGames} tableros reales de nivel 5–7 de jugadores que iban a esta composición.`
+    : c.stageSource === "traits"
+      ? `Campeones más jugados de sus rasgos principales en tableros reales de nivel 5–7 (${c.stageGames} tableros).`
+      : "Sugerencia automática según los rasgos del set.";
   return `${stages}${compHTML}
-    <p class="source">Sugerencia automática según los rasgos del set. Las unidades con borde punteado no están en el tablero final: véndelas al hacer la transición.</p>`;
+    <p class="source">${source} Las unidades con borde punteado no están en el tablero final: véndelas al hacer la transición.</p>`;
+}
+
+/* ---------- Posicionamiento ---------- */
+
+const TANK_TRAITS = ["vanguard", "defender", "juggernaut", "brawler"];
+const ROWS = 4, COLS = 7;
+
+/** Coloca un tablero en la cuadrícula de 4×7: tanques delante, carries a distancia detrás en la esquina. */
+function placeUnits(units, c) {
+  const tankItems = (u) => (c.items[u] || []).filter((i) => state.item[i]?.role === "tank").length;
+  const isTankTrait = (u) => state.champ[u].traits.some((t) => TANK_TRAITS.some((k) => t.includes(k)));
+  // Carries: los de la composición y, en early/mid, los provisionales que llevan los objetos de daño
+  const carries = [...c.carries, ...(c.stageCarries || [])].filter((u, i, a) => units.includes(u) && a.indexOf(u) === i);
+  if (!carries.length) {
+    const ranged = [...units].sort((a, b) => state.champ[b].cost - state.champ[a].cost).find((u) => state.champ[u].range >= 4);
+    if (ranged) carries.push(ranged);
+  }
+  const front = [], second = [], back = [];
+  units.forEach((u) => {
+    const ch = state.champ[u];
+    if (carries.includes(u)) (ch.range >= 3 ? back : second).push(u);
+    else if (ch.range <= 1 || tankItems(u) || (isTankTrait(u) && ch.range <= 2)) front.push(u);
+    else if (ch.range <= 2) second.push(u);
+    else back.push(u);
+  });
+  // Los tanques con más objetos defensivos, en el centro de la primera fila
+  front.sort((a, b) => tankItems(b) - tankItems(a) || state.champ[b].cost - state.champ[a].cost);
+  back.sort((a, b) => (carries.indexOf(a) + 1 || 9) - (carries.indexOf(b) + 1 || 9));
+
+  const grid = {};
+  const put = (u, row, order) => {
+    for (const r of [row, row === 0 ? 1 : row - 1, 2, 1]) {
+      const col = order.find((k) => !Object.values(grid).some((p) => p.r === r && p.c === k));
+      if (col !== undefined) { grid[u] = { r, c: col }; return; }
+    }
+  };
+  front.forEach((u) => put(u, 0, [2, 3, 1, 4, 0, 5, 6]));
+  second.forEach((u) => put(u, 1, [2, 3, 1, 4, 5, 0, 6]));
+  // Carry principal en la esquina izquierda de atrás, el segundo en la otra esquina
+  back.forEach((u, i) => put(u, 3, i === 0 ? [0, 1, 6] : i === 1 ? [6, 5, 1] : [1, 5, 2, 4, 3]));
+  return grid;
+}
+
+function boardHTML(units, c, stars = {}) {
+  const grid = placeUnits(units, c);
+  const rows = [];
+  for (let r = 0; r < ROWS; r++) {
+    const cells = [];
+    for (let k = 0; k < COLS; k++) {
+      const u = Object.keys(grid).find((id) => grid[id].r === r && grid[id].c === k);
+      const ch = u && state.champ[u];
+      cells.push(ch
+        ? `<div class="hex-cell filled c${ch.cost}${c.carries.includes(u) ? " carry" : ""}" title="${esc(ch.name)}">
+             <img src="${ch.img}" alt="${esc(ch.name)}" loading="lazy">${stars[u] === 3 ? '<span class="hx-star">★3</span>' : ""}</div>`
+        : `<div class="hex-cell"></div>`);
+    }
+    rows.push(`<div class="hex-row${r % 2 ? " odd" : ""}">${cells.join("")}</div>`);
+  }
+  return `<div class="hexboard"><span class="hb-label">Enemigo ↑</span>${rows.join("")}</div>`;
+}
+
+function positioningHTML(c) {
+  const b = stageBoards(c);
+  const tabs = [["early", "Early", b.early, {}], ["mid", "Mid", b.mid, c.midStars || {}], ["final", "Final", c.units, c.stars || {}]];
+  return `<div class="pos-tabs">${tabs.map(([k, label], i) => `<button class="pos-tab${i === 2 ? " active" : ""}" data-pos="${k}">${label}</button>`).join("")}</div>
+    ${tabs.map(([k, , units, stars], i) => `<div class="pos-panel" data-pos-panel="${k}"${i === 2 ? "" : " hidden"}>${boardHTML(units, c, stars)}</div>`).join("")}
+    <p class="source">Orientativo: Riot no publica las posiciones. Tanques y cuerpo a cuerpo delante; carries a distancia detrás, en la esquina. Muévelos según dónde esté el carry rival.</p>`;
 }
 
 /** Todos los componentes del jugador: los sueltos y los que forman los objetos ya puestos. */
@@ -327,17 +406,16 @@ function compAugments(c) {
   };
   const byCat = (cat) => generic.filter((a) => a.cats[cat]).map((a) => ({ a, score: a.cats[cat] * 2 + bonus(a, cat) }));
   groups.push({ key: dmg, title: dmg === "ap" ? "Para el carry (poder de habilidad)" : "Para el carry (ataque)", list: byCat(dmg) });
-  groups.push({ key: "tank", title: "Para la primera línea", list: byCat("tank") });
   groups.push(reroll
     ? { key: "reroll", title: "Para hacer reroll", list: byCat("reroll") }
     : { key: "econ", title: c.style === "Fast 9" ? "Economía (para llegar a nivel 9)" : "Economía", list: byCat("econ") });
-  groups.push({ key: "items", title: "Objetos", list: byCat("items") });
 
   return groups.map((g) => {
     const list = dedupeAugments(g.list).sort((x, y) => y.score - x.score || x.a.tier - y.a.tier || x.a.name.localeCompare(y.a.name, "es"));
     // Destacados: el mejor de cada nivel (en la partida te ofrecen tres del mismo nivel)
     const top = [1, 2, 3].map((t) => list.find((x) => x.a.tier === t)).filter(Boolean);
-    const picks = g.key === "traits" ? list.slice(0, AUG_SHOWN) : top;
+    const limit = g.key === "traits" ? 2 : ["ap", "ad"].includes(g.key) ? 2 : 1;
+    const picks = g.key === "traits" ? list.slice(0, limit) : [...top].reverse().slice(0, limit);
     return { ...g, picks, rest: list.filter((x) => !picks.includes(x)) };
   }).filter((g) => g.picks.length);
 }
@@ -362,11 +440,7 @@ function augmentsHTML(c) {
   if (!groups.length) return `<p class="source">No hay aumentos recomendados para esta composición.</p>`;
   return groups.map((g) => {
     const shown = g.picks.map(augRow).join("");
-    const rest = g.rest;
-    const more = rest.length
-      ? `<details class="aug-more"><summary>Ver ${rest.length} más</summary>${rest.slice(0, 20).map(augRow).join("")}</details>`
-      : "";
-    return `<div class="aug-group"><h4>${esc(g.title)}</h4>${shown}${more}</div>`;
+    return `<div class="aug-group"><h4>${esc(g.title)}</h4>${shown}</div>`;
   }).join("") +
     `<p class="source">Recomendados por afinidad con los rasgos, el carry y el estilo de la composición. La API de Riot no publica qué aumentos elige cada jugador, así que no hay estadísticas de cuál rinde más.</p>`;
 }
@@ -442,7 +516,7 @@ function openComp(id) {
     if (!ch) return "";
     return `<div class="carry-row">
       <img class="pic" src="${ch.img}" alt="" style="border-color:var(--c${ch.cost})">
-      <div class="info"><b>${esc(ch.name)}</b> ${c.carries.includes(u) ? '<span class="tag" style="color:var(--accent)">Carry</span>' : ""}<br>
+      <div class="info"><b>${esc(ch.name)}</b> ${c.carries.includes(u) ? '<span class="tag" style="color:var(--accent)">Carry</span>' : '<span class="tag" style="color:#7ec8ff">Tanque</span>'}<br>
         <small>${ch.traits.map((t) => esc(state.trait[t]?.name || "")).join(" · ")}</small>
         <div class="item-list" style="margin-top:6px">${its.map((i) => state.item[i]).filter(Boolean)
           .map((i) => `<span class="item-chip"><img src="${i.img}" alt="">${esc(i.name)}</span>`).join("")}</div>
@@ -460,15 +534,17 @@ function openComp(id) {
     ${Object.values(c.stars || {}).includes(3) ? `<p class="source">★★★ = suele estar a 3 estrellas en los tableros que quedan top 4.</p>` : ""}
     <h3>Rasgos activos</h3>
     <div class="traits">${traits.map(traitHTML).join("")}</div>
-    <h3>Aumentos recomendados</h3>
-    ${augmentsHTML(c)}
+    <h3>Objetos (carries y tanque)</h3>
+    ${itemRows}
+    <h3>Posicionamiento</h3>
+    ${positioningHTML(c)}
     <h3>Cómo llegar: early y mid game</h3>
     ${transitionHTML(c)}
-    <h3>Objetos</h3>
-    ${itemRows}
     <h3>Consejos</h3>
     <p class="tips">${esc(c.tips)}</p>
-    <button class="btn" data-load="${c.id}">Abrir en el creador</button>`;
+    <button class="btn" data-load="${c.id}">Abrir en el creador</button>
+    <h3>Aumentos recomendados</h3>
+    ${augmentsHTML(c)}`;
   $("#sheet").hidden = false;
 }
 
@@ -644,6 +720,13 @@ document.addEventListener("click", (e) => {
     return renderPool();
   }
   if (!e.target.closest("#trait-dd")) toggleDropdown(false);
+
+  const pos = e.target.closest(".pos-tab");
+  if (pos) {
+    document.querySelectorAll(".pos-tab").forEach((t) => t.classList.toggle("active", t === pos));
+    document.querySelectorAll("[data-pos-panel]").forEach((p) => (p.hidden = p.dataset.posPanel !== pos.dataset.pos));
+    return;
+  }
 
   const sub = e.target.closest(".subtab");
   if (sub) {
