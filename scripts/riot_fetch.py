@@ -8,6 +8,8 @@ Las partidas se guardan en data/raw/matches/ y no se vuelven a descargar si ya e
 así que se puede interrumpir y reanudar.
 """
 import argparse
+import glob
+import gzip
 import json
 import os
 import sys
@@ -101,74 +103,129 @@ class Riot:
         return None
 
 
+def compact(match):
+    """Solo lo que usa el análisis: unas 10 veces menos espacio que la partida completa."""
+    info = match["info"]
+    return {"info": {
+        "game_datetime": info.get("game_datetime"),
+        "queue_id": info.get("queue_id"),
+        "participants": [{
+            "placement": p["placement"],
+            "level": p.get("level"),
+            "units": [{"character_id": u["character_id"], "tier": u.get("tier", 1), "itemNames": u.get("itemNames", [])}
+                      for u in p.get("units", [])],
+            "traits": [{"name": t["name"], "num_units": t["num_units"], "tier_current": t.get("tier_current", 0)}
+                       for t in p.get("traits", []) if t.get("tier_current", 0) > 0],
+        } for p in info["participants"]],
+    }}
+
+
+def load_json(path, default):
+    try:
+        return json.load(open(path))
+    except (OSError, ValueError):
+        return default
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--platform", default="euw1")
     ap.add_argument("--region", default="europe")
-    ap.add_argument("--max-matches", type=int, default=2000)
-    ap.add_argument("--per-player", type=int, default=15)
     ap.add_argument("--tiers", default="challenger,grandmaster,master")
-    ap.add_argument("--days", type=int, default=0, help="pedir solo partidas de los últimos N días (0 = sin límite)")
+    ap.add_argument("--days", type=int, default=7, help="pedir solo partidas de los últimos N días (0 = sin límite)")
+    ap.add_argument("--max-minutes", type=float, default=60, help="tiempo máximo de descarga; lo que falte se recoge la próxima vez")
+    ap.add_argument("--first-run-count", type=int, default=10, help="partidas por jugador cuando aún no hay registro previo")
+    ap.add_argument("--max-matches", type=int, default=0, help="(compatibilidad) sin uso")
+    ap.add_argument("--per-player", type=int, default=0, help="(compatibilidad) sin uso")
     args = ap.parse_args()
 
+    deadline = time.time() + args.max_minutes * 60
     os.makedirs(MATCHES, exist_ok=True)
     api = Riot(load_key())
     plat = f"https://{args.platform}.api.riotgames.com"
     reg = f"https://{args.region}.api.riotgames.com"
 
-    # 1. Jugadores de alto nivel
-    players = []
+    # 1. Jugadores de Master+ con su número de partidas (victorias + derrotas)
+    games, lp = {}, {}
     for tier in args.tiers.split(","):
         data = api.get(f"{plat}/tft/league/v1/{tier}") or {}
-        entries = sorted(data.get("entries", []), key=lambda e: -e.get("leaguePoints", 0))
-        for e in entries:
+        for e in data.get("entries", []):
             if e.get("puuid"):
-                players.append(e["puuid"])
-        print(f"{tier}: {len(entries)} jugadores", flush=True)
-    players = list(dict.fromkeys(players))
-    if not players:
+                games[e["puuid"]] = e.get("wins", 0) + e.get("losses", 0)
+                lp[e["puuid"]] = e.get("leaguePoints", 0)
+        print(f"{tier}: {len(data.get('entries', []))} jugadores", flush=True)
+    if not games:
         sys.exit("No se encontraron jugadores.")
-    json.dump(players, open(os.path.join(RAW, "players.json"), "w"))
 
-    # 2. IDs de partidas (solo dentro de la ventana de días y del parche actual)
+    # 2. Solo se pregunta a quien ha jugado desde la última vez (según el registro de partidas jugadas)
+    ladder_path = os.path.join(RAW, "ladder.json")
+    seen_games = load_json(ladder_path, {})
+    skipped_path = os.path.join(RAW, "skipped.json")
+    skipped = set(load_json(skipped_path, []))  # partidas no clasificatorias ya revisadas
+    queue = []
+    for puuid, n in games.items():
+        if puuid not in seen_games:
+            queue.append((0, -lp[puuid], puuid, args.first_run_count))  # sin registro: primero los de más puntos
+        elif n > seen_games[puuid]:
+            new = n - seen_games[puuid]
+            queue.append((1, -new, puuid, min(new + 2, 40)))
+    # Primero quien ha jugado (más partidas nuevas antes); luego los que aún no tienen registro
+    queue.sort(key=lambda q: (-q[0], q[1]))
+    active = sum(1 for q in queue if q[0] == 1)
+    print(f"Jugadores que han jugado desde la última vez: {active} · sin registro previo: {len(queue) - active}", flush=True)
+
     start = window_start(args.days)
-    needed_players = min(len(players), max(1, args.max_matches * 8 // args.per_player // 6))
-    match_ids = []
-    seen = set()
-    for i, puuid in enumerate(players[:needed_players], 1):
-        since = f"&startTime={start}" if start else ""
-        ids = api.get(f"{reg}/tft/match/v1/matches/by-puuid/{puuid}/ids?count={args.per_player}{since}") or []
+    since = f"&startTime={start}" if start else ""
+    new_matches = queried = 0
+    t0 = time.time()
+    for k, (_, _, puuid, count) in enumerate(queue, 1):
+        if time.time() > deadline:
+            print("Tiempo máximo alcanzado: lo que falta se recogerá en la próxima ejecución.", flush=True)
+            break
+        ids = api.get(f"{reg}/tft/match/v1/matches/by-puuid/{puuid}/ids?count={count}{since}")
+        if ids is None:
+            continue
         for mid in ids:
-            if mid not in seen:
-                seen.add(mid)
-                match_ids.append(mid)
-        if i % 25 == 0:
-            print(f"  {i}/{needed_players} jugadores · {len(match_ids)} partidas encontradas", flush=True)
-        if len(match_ids) >= args.max_matches * 1.3:
-            break
-    print(f"Partidas encontradas: {len(match_ids)}", flush=True)
-
-    # 3. Detalle de partidas (se salta las ya descargadas)
-    saved = 0
-    start = time.time()
-    for i, mid in enumerate(match_ids, 1):
-        path = os.path.join(MATCHES, f"{mid}.json")
-        if os.path.exists(path):
-            saved += 1
-        else:
+            path = os.path.join(MATCHES, f"{mid}.json.gz")
+            if mid in skipped or os.path.exists(path) or os.path.exists(path[:-3]):
+                continue
+            if time.time() > deadline:
+                break
             m = api.get(f"{reg}/tft/match/v1/matches/{mid}")
-            if m and m.get("info", {}).get("queue_id") == RANKED_QUEUE:
-                with open(path, "w") as f:
-                    json.dump(m, f)
-                saved += 1
-        if i % 50 == 0:
-            rate = i / max(1, time.time() - start)
-            left = (min(len(match_ids), args.max_matches * 1.3) - i) / max(rate, 0.01)
-            print(f"  {i}/{len(match_ids)} revisadas · {saved} clasificatorias guardadas · ~{left / 60:.0f} min restantes", flush=True)
-        if saved >= args.max_matches:
-            break
+            if not m:
+                continue
+            if m.get("info", {}).get("queue_id") == RANKED_QUEUE:
+                with gzip.open(path, "wt") as f:
+                    json.dump(compact(m), f, separators=(",", ":"))
+                new_matches += 1
+            else:
+                skipped.add(mid)
+        else:
+            seen_games[puuid] = games[puuid]  # jugador al día solo si se revisaron todas sus partidas
+        queried += 1
+        if k % 100 == 0:
+            mins = (time.time() - t0) / 60
+            print(f"  {k}/{len(queue)} jugadores · {new_matches} partidas nuevas · {mins:.0f} min", flush=True)
+            json.dump(seen_games, open(ladder_path, "w"))
+            json.dump(sorted(skipped), open(skipped_path, "w"))
 
-    print(f"Listo: {saved} partidas guardadas en data/raw/matches ({api.count} peticiones).", flush=True)
+    json.dump(seen_games, open(ladder_path, "w"))
+    json.dump(sorted(skipped), open(skipped_path, "w"))
+
+    # Las partidas guardadas sin comprimir se reducen y se comprimen
+    shrunk = 0
+    for path in glob.glob(os.path.join(MATCHES, "*.json")):
+        try:
+            m = json.load(open(path))
+            with gzip.open(path + ".gz", "wt") as f:
+                json.dump(compact(m), f, separators=(",", ":"))
+            os.remove(path)
+            shrunk += 1
+        except (ValueError, KeyError):
+            pass
+    total = len(glob.glob(os.path.join(MATCHES, "*.json.gz")))
+    print(f"Listo: {new_matches} partidas nuevas · {queried} jugadores revisados · {total} partidas guardadas "
+          f"({api.count} peticiones{f', {shrunk} partidas comprimidas' if shrunk else ''}).", flush=True)
 
 
 if __name__ == "__main__":

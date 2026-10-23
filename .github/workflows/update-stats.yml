@@ -4,9 +4,9 @@ on:
   # Botón "Run workflow" en la pestaña Actions de GitHub
   workflow_dispatch:
     inputs:
-      max_matches:
-        description: "Máximo de partidas a descargar"
-        default: "2000"
+      max_minutes:
+        description: "Minutos máximos de descarga (lo que falte se recoge la próxima vez)"
+        default: "60"
       days:
         description: "Usar solo partidas de los últimos N días"
         default: "7"
@@ -66,10 +66,10 @@ jobs:
       - name: Descargar partidas
         env:
           RIOT_API_KEY: ${{ secrets.RIOT_API_KEY }}
-        run: python3 -u scripts/riot_fetch.py --max-matches "${{ inputs.max_matches || '2000' }}" --days "${{ inputs.days || '7' }}"
+        run: python3 -u scripts/riot_fetch.py --max-minutes "${{ inputs.max_minutes || '60' }}" --days "${{ inputs.days || '7' }}"
 
       - name: Analizar composiciones
-        run: python3 scripts/analyze.py --min-games 30 --days "${{ inputs.days || '7' }}" --prune
+        run: python3 scripts/analyze.py --days "${{ inputs.days || '7' }}" --prune
 
       - name: Publicar cambios
         run: |

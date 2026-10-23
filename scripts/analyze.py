@@ -6,6 +6,7 @@ Lee data/raw/matches/*.json y data/set.json; escribe data/comps.json
 """
 import argparse
 import glob
+import gzip
 import json
 import os
 import statistics
@@ -47,8 +48,11 @@ def read_boards(champs, traits, items, days=0, prune=False):
     matches = 0
     cutoff = datetime.now(timezone.utc).timestamp() - days * 86400 if days else 0
     cutoff = max(cutoff, patch_start())
-    for path in glob.glob(os.path.join(DATA, "raw", "matches", "*.json")):
-        info = json.load(open(path))["info"]
+    paths = glob.glob(os.path.join(DATA, "raw", "matches", "*.json")) + glob.glob(os.path.join(DATA, "raw", "matches", "*.json.gz"))
+    for path in paths:
+        opener = gzip.open if path.endswith(".gz") else open
+        with opener(path, "rt") as f:
+            info = json.load(f)["info"]
         ts = info.get("game_datetime", 0) / 1000
         if ts < cutoff:
             if prune:
@@ -451,7 +455,7 @@ def attach_guides(comps, champs, traits, min_overlap=0.65):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--min-games", type=int, default=40)
+    ap.add_argument("--min-games", type=int, default=0, help="mínimo de tableros por composición (0 = automático)")
     ap.add_argument("--max-comps", type=int, default=24)
     ap.add_argument("--days", type=int, default=0, help="usar solo las partidas de los últimos N días (0 = todas)")
     ap.add_argument("--prune", action="store_true", help="borrar las partidas más antiguas que --days")
@@ -471,6 +475,9 @@ def main():
         return
     if unknown:
         print("Identificadores sin datos:", unknown.most_common(10))
+    if args.min_games <= 0:
+        args.min_games = max(30, int(len(boards) * 0.002))
+        print(f"Mínimo de tableros por composición: {args.min_games}")
     split_time = statistics.median(times)
 
     groups = defaultdict(list)
