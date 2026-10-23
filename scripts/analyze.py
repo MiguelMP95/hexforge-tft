@@ -30,12 +30,23 @@ def slug(api):
     return "".join(ch if ch.isalnum() else "_" for ch in api.lower()).strip("_")
 
 
+def load_patch():
+    path = os.path.join(DATA, "patch.json")
+    return json.load(open(path, encoding="utf8")) if os.path.exists(path) else {}
+
+
+def patch_start():
+    start = load_patch().get("start")
+    return datetime.fromisoformat(start.replace("Z", "+00:00")).timestamp() if start else 0
+
+
 def read_boards(champs, traits, items, days=0, prune=False):
     """Lee los tableros. Con days > 0 solo usa las partidas de los últimos días (y con prune borra las demás)."""
     boards, times = [], []
     unknown = Counter()
     matches = 0
     cutoff = datetime.now(timezone.utc).timestamp() - days * 86400 if days else 0
+    cutoff = max(cutoff, patch_start())
     for path in glob.glob(os.path.join(DATA, "raw", "matches", "*.json")):
         info = json.load(open(path))["info"]
         ts = info.get("game_datetime", 0) / 1000
@@ -172,12 +183,20 @@ def main():
     ap.add_argument("--max-comps", type=int, default=24)
     ap.add_argument("--days", type=int, default=0, help="usar solo las partidas de los últimos N días (0 = todas)")
     ap.add_argument("--prune", action="store_true", help="borrar las partidas más antiguas que --days")
+    ap.add_argument("--min-matches", type=int, default=100, help="mínimo de partidas para recalcular")
     args = ap.parse_args()
 
     champs, traits, items = load_set()
     boards, matches, times, unknown = read_boards(champs, traits, items, args.days, args.prune)
-    if not boards:
-        raise SystemExit("No hay partidas en data/raw/matches")
+    if matches < args.min_matches:
+        # Parche recién salido: se mantienen las composiciones anteriores y la web lo indica
+        path = os.path.join(DATA, "comps.json")
+        prev = json.load(open(path, encoding="utf8"))
+        prev.update({"patch": load_patch().get("label", prev.get("patch")), "newPatch": True, "stale": True})
+        with open(path, "w", encoding="utf8") as f:
+            json.dump(prev, f, ensure_ascii=False, indent=2)
+        print(f"Solo {matches} partidas del parche actual: se mantienen las composiciones anteriores.")
+        return
     if unknown:
         print("Identificadores sin datos:", unknown.most_common(10))
     split_time = statistics.median(times)
@@ -261,9 +280,13 @@ def main():
 
     first = datetime.fromtimestamp(min(times), timezone.utc).strftime("%d/%m")
     last = datetime.fromtimestamp(max(times), timezone.utc).strftime("%d/%m/%Y")
-    manual = json.load(open(os.path.join(DATA, "comps_manual.json"), encoding="utf8"))
+    patch = load_patch()
+    patch_age_days = (datetime.now(timezone.utc).timestamp() - patch_start()) / 86400
     out = {
-        "patch": manual.get("patch", "?"),
+        "patch": patch.get("label", "?"),
+        "patchStart": patch.get("start"),
+        # Aviso en la web mientras el parche es reciente y hay pocos datos
+        "newPatch": patch_age_days < 3 and matches < 800,
         "updated": datetime.now().strftime("%Y-%m-%d %H:%M"),
         "source": (f"Datos propios de la API de Riot: {matches} partidas clasificatorias "
                    f"({len(boards)} tableros) de jugadores Master+ de EUW, del {first} al {last}. "

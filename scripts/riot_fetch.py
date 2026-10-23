@@ -15,11 +15,22 @@ import time
 import urllib.error
 import urllib.request
 from collections import deque
+from datetime import datetime
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 RAW = os.path.join(ROOT, "data", "raw")
 MATCHES = os.path.join(RAW, "matches")
 RANKED_QUEUE = 1100
+PATCH_FILE = os.path.join(ROOT, "data", "patch.json")
+
+
+def window_start(days):
+    """Inicio de la ventana: hace N días, pero nunca antes del inicio del parche actual."""
+    start = time.time() - days * 86400 if days else 0
+    if os.path.exists(PATCH_FILE):
+        patch = json.load(open(PATCH_FILE))
+        start = max(start, datetime.fromisoformat(patch["start"].replace("Z", "+00:00")).timestamp())
+    return int(start)
 
 
 def load_key():
@@ -119,12 +130,13 @@ def main():
         sys.exit("No se encontraron jugadores.")
     json.dump(players, open(os.path.join(RAW, "players.json"), "w"))
 
-    # 2. IDs de partidas
+    # 2. IDs de partidas (solo dentro de la ventana de días y del parche actual)
+    start = window_start(args.days)
     needed_players = min(len(players), max(1, args.max_matches * 8 // args.per_player // 6))
     match_ids = []
     seen = set()
     for i, puuid in enumerate(players[:needed_players], 1):
-        since = f"&startTime={int(time.time()) - args.days * 86400}" if args.days else ""
+        since = f"&startTime={start}" if start else ""
         ids = api.get(f"{reg}/tft/match/v1/matches/by-puuid/{puuid}/ids?count={args.per_player}{since}") or []
         for mid in ids:
             if mid not in seen:

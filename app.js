@@ -53,6 +53,12 @@ async function load() {
 
   $("#patch").textContent = `Set ${set.set} · Parche ${comps.patch}`;
   $("#source").textContent = `${comps.source} Última actualización: ${comps.updated}.`;
+  if (comps.newPatch) {
+    $("#patch-banner").textContent = comps.stale
+      ? `Parche nuevo (${comps.patch}): aún no hay suficientes partidas, así que se muestran las estadísticas del parche anterior.`
+      : `Parche nuevo (${comps.patch}): todavía hay pocas partidas, así que las estadísticas pueden cambiar bastante en los próximos días.`;
+    $("#patch-banner").hidden = false;
+  }
   comps.comps.forEach((c) => {
     c.activeTraits = computeTraits(c.units, c.items).filter((x) => x.idx >= 0 && x.level !== "unique");
   });

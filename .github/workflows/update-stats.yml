@@ -44,8 +44,13 @@ jobs:
           key: riot-matches-${{ github.run_id }}
           restore-keys: riot-matches-
 
+      # Si Riot ha sacado parche, guarda su fecha de inicio para usar solo partidas del meta nuevo
+      - name: Comprobar parche nuevo
+        id: patch
+        run: python3 scripts/check_patch.py
+
       - name: Actualizar datos del juego
-        if: ${{ inputs.refresh_set }}
+        if: ${{ inputs.refresh_set || steps.patch.outputs.changed == 'true' }}
         run: python3 scripts/build_data.py
 
       - name: Descargar partidas
@@ -60,10 +65,11 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/comps.json data/set.json img
+          git add data/comps.json data/set.json data/patch.json img
           if git diff --cached --quiet; then
             echo "Sin cambios"
           else
             git commit -m "Actualizar estadísticas ($(date -u +'%Y-%m-%d'))"
+            git pull --rebase --autostash
             git push
           fi
