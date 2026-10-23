@@ -256,28 +256,119 @@ function similarComps(units, components = []) {
 
 /* ---------- Aumentos ---------- */
 
-/** Aumentos del set ligados a los rasgos activos (o campeones) de la composición. */
+const AUG_TIER = { 1: ["Plata", "silver"], 2: ["Oro", "gold"], 3: ["Prismático", "prism"] };
+const AUG_SHOWN = 3;
+
+/** ¿El carry de la composición pega con ataque (AD) o con poder de habilidad (AP)? */
+function carryDamage(c) {
+  let ap = 0, ad = 0;
+  c.carries.forEach((u) => (c.items[u] || []).forEach((i) => {
+    const st = state.item[i]?.stats || [];
+    if (st.includes("AbilityPower") || st.includes("Mana")) ap++;
+    if (st.includes("AttackDamage") || st.includes("AttackSpeed") || st.includes("CritChance")) ad++;
+  }));
+  return ap > ad ? "ap" : "ad";
+}
+
+/** Un aumento por nombre base (sin "+"): se queda la variante de menor nivel y se anotan las demás. */
+function dedupeAugments(list) {
+  const groups = new Map();
+  list.forEach((x) => {
+    const base = x.a.name.replace(/\+*$/, "").replace(/\s+(I{1,3}|IV)$/, "").trim().toLowerCase();
+    const g = groups.get(base);
+    if (!g) groups.set(base, { ...x, tiers: new Set([x.a.tier]) });
+    else {
+      g.tiers.add(x.a.tier);
+      if (x.a.tier < g.a.tier) Object.assign(g, { a: x.a, score: Math.max(g.score, x.score) });
+    }
+  });
+  return [...groups.values()];
+}
+
+/** Aumentos recomendados por categoría según los rasgos, el carry, la primera línea y el estilo. */
 function compAugments(c) {
   const active = {};
   computeTraits(c.units, c.items).filter((x) => x.idx >= 0).forEach((x) => (active[x.t.id] = x.n));
-  return (state.set.augments || []).map((a) => {
-    const carryTraits = new Set(c.carries.flatMap((u) => state.champ[u]?.traits || []));
+  const carryTraits = new Set(c.carries.flatMap((u) => state.champ[u]?.traits || []));
+  const dmg = carryDamage(c);
+  const reroll = c.style === "Reroll";
+  const all = state.set.augments || [];
+
+  const groups = [];
+  // 1. De sus rasgos (2+ unidades o el rasgo de un carry)
+  const traitAugs = all.map((a) => {
     const t = a.traits.find((id) => active[id] && (active[id] >= 2 || carryTraits.has(id)));
     if (!t) return null;
-    // Variantes ligadas a un campeón concreto (p. ej. "Bestia interior (Sivir)")
     if (a.name.includes("(") && !a.champs.some((u) => u !== "da_vi18" && c.units.includes(u))) return null;
-    return { a, trait: state.trait[t], n: active[t] };
-  }).filter(Boolean).sort((x, y) => y.n - x.n || x.a.plus - y.a.plus);
+    return { a, trait: state.trait[t], score: active[t] };
+  }).filter(Boolean);
+  groups.push({ key: "traits", title: "De sus rasgos", list: traitAugs });
+
+  // 2. Genéricos por categoría. Se descartan los que nombran campeones que no lleva
+  //    y se priorizan los que nombran a los suyos o encajan con el carry y el estilo.
+  const carryStats = new Set(c.carries.flatMap((u) => (c.items[u] || []).flatMap((i) => state.item[i]?.stats || [])));
+  const costs = new Set(Object.entries(c.stars || {}).filter(([, st]) => st === 3).map(([u]) => state.champ[u]?.cost));
+  c.carries.forEach((u) => costs.add(state.champ[u]?.cost));
+  const generic = all.filter((a) => !a.traits.length && (!a.champs.length || a.champs.some((u) => c.units.includes(u))));
+  const bonus = (a, cat) => {
+    const d = a.desc.toLowerCase();
+    let b = a.champs.some((u) => c.units.includes(u)) ? 5 : 0;
+    const others = Object.keys(a.cats).filter((k) => k !== cat).length;
+    b += others ? 0 : 1; // aumento "puro" de su categoría
+    if (cat === "ad") {
+      if (carryStats.has("CritChance") && /cr[ií]tic/.test(d)) b += 2;
+      if (carryStats.has("AttackSpeed") && /velocidad de ataque/.test(d)) b += 2;
+    }
+    if (cat === "ap" && carryStats.has("Mana") && /man[aá]/.test(d)) b += 2;
+    if (cat === "reroll") [...costs].forEach((k) => { if (new RegExp(`coste ${k}\\b`).test(d)) b += 3; });
+    if (cat === "econ" && c.style === "Fast 9" && /(experiencia|nivel 9|subir de nivel)/.test(d)) b += 2;
+    if (cat === "econ" && c.style === "Fast 8" && /(experiencia|nivel 8|subir de nivel)/.test(d)) b += 1;
+    return b;
+  };
+  const byCat = (cat) => generic.filter((a) => a.cats[cat]).map((a) => ({ a, score: a.cats[cat] * 2 + bonus(a, cat) }));
+  groups.push({ key: dmg, title: dmg === "ap" ? "Para el carry (poder de habilidad)" : "Para el carry (ataque)", list: byCat(dmg) });
+  groups.push({ key: "tank", title: "Para la primera línea", list: byCat("tank") });
+  groups.push(reroll
+    ? { key: "reroll", title: "Para hacer reroll", list: byCat("reroll") }
+    : { key: "econ", title: c.style === "Fast 9" ? "Economía (para llegar a nivel 9)" : "Economía", list: byCat("econ") });
+  groups.push({ key: "items", title: "Objetos", list: byCat("items") });
+
+  return groups.map((g) => {
+    const list = dedupeAugments(g.list).sort((x, y) => y.score - x.score || x.a.tier - y.a.tier || x.a.name.localeCompare(y.a.name, "es"));
+    // Destacados: el mejor de cada nivel (en la partida te ofrecen tres del mismo nivel)
+    const top = [1, 2, 3].map((t) => list.find((x) => x.a.tier === t)).filter(Boolean);
+    const picks = g.key === "traits" ? list.slice(0, AUG_SHOWN) : top;
+    return { ...g, picks, rest: list.filter((x) => !picks.includes(x)) };
+  }).filter((g) => g.picks.length);
+}
+
+function augIcon(a, trait) {
+  if (a.img) return `<img class="aug-ic" src="${a.img}" alt="" loading="lazy">`;
+  const t = trait || state.trait[a.traits[0]];
+  return `<span class="aug-ic aug-fallback t${a.tier}">${t ? `<img src="${t.img}" alt="">` : "?"}</span>`;
+}
+
+function augRow({ a, trait, tiers }) {
+  const tierTags = [...(tiers || [a.tier])].sort().map((t) => AUG_TIER[t])
+    .filter(Boolean).map(([label, cls]) => `<span class="aug-tier ${cls}">${label}</span>`).join("");
+  return `<div class="aug">
+      ${augIcon(a, trait)}
+      <div><b>${esc(a.name)}</b> ${tierTags}${trait ? ` <span class="tag">${esc(trait.name)}</span>` : ""}<p>${esc(a.desc)}</p></div>
+    </div>`;
 }
 
 function augmentsHTML(c) {
-  const list = compAugments(c);
-  if (!list.length) return `<p class="source">Esta composición no tiene aumentos propios del set ligados a sus rasgos.</p>`;
-  return list.map(({ a, trait }) => `<div class="aug">
-      <img src="${a.img}" alt="" loading="lazy">
-      <div><b>${esc(a.name)}</b> <span class="tag">${esc(trait.name)}</span><p>${esc(a.desc)}</p></div>
-    </div>`).join("") +
-    `<p class="source">Aumentos del Set 18 relacionados con los rasgos de esta composición. La API de Riot no publica datos de aumentos, así que no hay estadísticas de cuál rinde más.</p>`;
+  const groups = compAugments(c);
+  if (!groups.length) return `<p class="source">No hay aumentos recomendados para esta composición.</p>`;
+  return groups.map((g) => {
+    const shown = g.picks.map(augRow).join("");
+    const rest = g.rest;
+    const more = rest.length
+      ? `<details class="aug-more"><summary>Ver ${rest.length} más</summary>${rest.slice(0, 20).map(augRow).join("")}</details>`
+      : "";
+    return `<div class="aug-group"><h4>${esc(g.title)}</h4>${shown}${more}</div>`;
+  }).join("") +
+    `<p class="source">Recomendados por afinidad con los rasgos, el carry y el estilo de la composición. La API de Riot no publica qué aumentos elige cada jugador, así que no hay estadísticas de cuál rinde más.</p>`;
 }
 
 /* ---------- Composiciones ---------- */

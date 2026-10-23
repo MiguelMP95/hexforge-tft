@@ -47,6 +47,17 @@ def clean_desc(text):
     return text.replace("\r", "").replace("\\n", "\n").strip()
 
 
+# Etiquetas de nivel de los aumentos: 1 = plata, 2 = oro, 3 = prismático
+AUGMENT_TIERS = {"{d11fd6d5}": 1, "{ce1fd21c}": 2, "{cf1fd3af}": 3}
+# Palabras clave (en la descripción en español) para clasificar los aumentos
+AUGMENT_CATEGORIES = {
+    "econ": [r"\boro\b", r"experiencia", r"inter[eé]s"],
+    "reroll": [r"actualizaci", r"3 estrellas", r"tres estrellas", r"de coste [123]\b"],
+    "items": [r"componente", r"\bobjeto", r"yunque", r"esp[aá]tula"],
+    "ap": [r"poder de habilidad", r"\bman[aá]\b"],
+    "ad": [r"da[ñn]o de ataque", r"velocidad de ataque", r"cr[ií]tic"],
+    "tank": [r"armadura", r"resistencia m[aá]gica", r"vida m[aá]xima", r"\bescudo", r"durabilidad"],
+}
 OFFENSE = {"AbilityPower", "AttackDamage", "AttackSpeed", "CritChance", "Mana"}
 TANK_TAG = "{15b72700}"
 
@@ -136,38 +147,48 @@ def main():
             "desc": clean_desc(i.get("desc")),
             "components": [slug(c) for c in comp] if kind in ("completed", "emblem") else [],
             "role": item_role(i.get("tags") or [], kind),
+            "stats": sorted(set(i.get("tags") or []) & OFFENSE),
             "img": f"img/items/{sid}.png",
         }
         items.append(item)
         downloads.append((asset_url(i["icon"]), os.path.join(ROOT, item["img"])))
 
-    # Aumentos propios del set, enlazados a rasgos y campeones
+    # Aumentos del set (lista oficial), con nivel, rasgos asociados y categorías
+    set_data = next((x for x in d["setData"] if x.get("mutator") == f"TFTSet{SET}"), {})
+    pool = set_data.get("augments", [])
+    trait_by_api = {t["apiName"]: slug(t["apiName"]) for t in s["traits"]}
     augments = []
-    trait_keys = {t["id"]: re.sub(r"(da_|18|_|uniquetrait)", "", t["id"]) for t in traits}
-    for i in d["items"]:
-        api = i["apiName"]
-        if "Augment" not in api or "Emblem" in api or not i.get("name") or not i.get("icon"):
+    for api in pool:
+        i = by_api.get(api)
+        if not i or not i.get("name"):
             continue
-        if not (api.startswith(f"DA_{SET}_") or api.startswith("DA_")):
-            continue
-        low = api.lower()
         desc = clean_desc(i.get("desc"))
-        linked_traits = [tid for tid, key in trait_keys.items() if key and len(key) >= 3 and key in low]
+        text = re.sub(r"@[^@]+@", "X", desc).replace("  ", " ")
+        tags = set(i.get("tags") or [])
+        tier = next((n for tag, n in AUGMENT_TIERS.items() if tag in tags), 0)
+        icon = i.get("icon") or ""
+        linked_traits = [trait_by_api[t] for t in i.get("associatedTraits") or [] if t in trait_by_api]
         linked_champs = [c["id"] for c in champs
                          if "(" not in c["name"] and re.search(rf"\b{re.escape(c['name'])}\b", desc)]
-        if "lux" in low:
+        if "lux" in api.lower():
             linked_champs.append("da_lux18_base")
+        low = text.lower()
+        cats = {cat: sum(1 for p in pats if re.search(p, low)) for cat, pats in AUGMENT_CATEGORIES.items()}
         sid = slug(api)
-        augments.append({
+        aug = {
             "id": sid,
             "name": i["name"],
-            "desc": re.sub(r"@[^@]+@", "X", desc).replace("  ", " "),
+            "desc": text,
+            "tier": tier,
             "traits": linked_traits,
             "champs": sorted(set(linked_champs)),
-            "plus": api.endswith("Plus") or "Plus_" in api or i["name"].endswith("+"),
-            "img": f"img/augments/{sid}.png",
-        })
-        downloads.append((asset_url(i["icon"]), os.path.join(ROOT, "img", "augments", f"{sid}.png")))
+            "cats": {c: n for c, n in cats.items() if n},
+            "plus": i["name"].endswith("+"),
+            "img": None if "missing" in icon else f"img/augments/{sid}.png",
+        }
+        augments.append(aug)
+        if aug["img"]:
+            downloads.append((asset_url(icon), os.path.join(ROOT, aug["img"])))
     os.makedirs(os.path.join(IMG, "augments"), exist_ok=True)
     # Aumentos con el mismo nombre (p. ej. "Bestia interior" de Sivir y de Nidalee): se añade el campeón
     names = Counter(a["name"] for a in augments)

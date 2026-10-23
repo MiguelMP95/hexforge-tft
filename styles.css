@@ -375,3 +375,18 @@ main { max-width: 960px; margin: 0 auto; padding: 12px 16px 24px; }
 .stars.s2 { color: #c9d3dd; }
 .stars.s3 { color: #ffcf4a; text-shadow: 0 0 4px rgba(255, 190, 40, .6); }
 .units { padding-top: 4px; }
+
+/* Aumentos por categorías */
+.aug-group h4 { margin: 12px 0 6px; font-size: 14px; }
+.aug-group:first-child h4 { margin-top: 0; }
+.aug .aug-ic { width: 40px; height: 40px; border-radius: 8px; flex: none; background: #0b0d11; }
+.aug-fallback { display: grid; place-items: center; clip-path: polygon(25% 3%, 75% 3%, 100% 50%, 75% 97%, 25% 97%, 0 50%); }
+.aug-fallback img { width: 24px; height: 24px; filter: brightness(0); }
+.aug-fallback.t1 { background: var(--silver); }
+.aug-fallback.t2 { background: var(--gold); }
+.aug-fallback.t3 { background: var(--prism); }
+.aug-tier { font-size: 10px; font-weight: 700; text-transform: uppercase; padding: 1px 6px; border-radius: 5px; margin-left: 2px; color: #111; }
+.aug-tier.silver { background: var(--silver); }
+.aug-tier.gold { background: var(--gold); }
+.aug-tier.prism { background: var(--prism); }
+.aug-more summary { cursor: pointer; color: var(--accent); font-size: 13px; padding: 4px 0 8px; }
