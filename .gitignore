@@ -1,0 +1,5 @@
+.riot_key
+data/raw/
+data/es_es.json
+data/fetch.log
+__pycache__/

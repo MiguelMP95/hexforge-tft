@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Hexforge TFT</title>
+  <meta name="theme-color" content="#0e1116">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="top">
+    <div class="brand">
+      <span class="logo">HEX<b>FORGE</b> <small>TFT</small></span>
+      <span class="patch" id="patch">Parche —</span>
+    </div>
+    <nav class="tabs" role="tablist">
+      <button class="tab active" data-view="comps" role="tab">Composiciones</button>
+      <button class="tab" data-view="builder" role="tab">Creador</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="view-comps" class="view">
+      <div class="toolbar">
+        <input id="search" type="search" placeholder="Buscar campeón o composición…" autocomplete="off">
+        <div class="chips" id="style-filter">
+          <button class="chip active" data-style="">Todas</button>
+          <button class="chip" data-style="Reroll">Reroll</button>
+          <button class="chip" data-style="Fast 8">Fast 8</button>
+          <button class="chip" data-style="Fast 9">Fast 9</button>
+        </div>
+        <div class="trait-filter" id="comp-traits"></div>
+      </div>
+      <div id="tiers"></div>
+      <p class="source" id="source"></p>
+    </section>
+
+    <section id="view-builder" class="view" hidden>
+      <div class="board-wrap">
+        <div class="board-head">
+          <h2>Tu equipo <span id="board-count">0/10</span></h2>
+          <button class="btn-ghost" id="clear-board">Vaciar</button>
+        </div>
+        <div class="board" id="board"></div>
+        <div class="traits" id="board-traits"></div>
+        <div class="inv-wrap">
+          <h3>Tus componentes <span id="inv-count">0/12</span></h3>
+          <div class="inv" id="inv"></div>
+        </div>
+        <div id="board-suggest"></div>
+      </div>
+
+      <div class="subtabs" role="tablist">
+        <button class="subtab active" data-sub="champs" role="tab">Campeones</button>
+        <button class="subtab" data-sub="items" role="tab">Componentes</button>
+      </div>
+
+      <div class="subpanel" id="sub-champs">
+        <div class="toolbar">
+          <input id="pool-search" type="search" placeholder="Buscar campeón…" autocomplete="off">
+          <div class="dd" id="trait-dd">
+            <button class="dd-btn" id="trait-dd-btn" aria-haspopup="listbox" aria-expanded="false"></button>
+            <div class="dd-list" id="trait-dd-list" role="listbox" hidden></div>
+          </div>
+        </div>
+        <div id="pool"></div>
+      </div>
+
+      <div class="subpanel" id="sub-items" hidden>
+        <p class="hint">Toca los componentes que te hayan tocado. Si tienes dos iguales, tócalo dos veces.</p>
+        <div class="inv-pick" id="inv-pick"></div>
+      </div>
+    </section>
+  </main>
+
+  <div class="sheet" id="sheet" hidden>
+    <div class="sheet-backdrop" data-close></div>
+    <div class="sheet-panel" role="dialog" aria-modal="true">
+      <button class="sheet-close" data-close aria-label="Cerrar">×</button>
+      <div id="sheet-body"></div>
+    </div>
+  </div>
+
+  <footer class="foot">
+    Hexforge TFT no está respaldado por Riot Games ni refleja sus opiniones. Teamfight Tactics y sus recursos son marcas de Riot Games, Inc.
+    Datos del juego: Community Dragon.
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

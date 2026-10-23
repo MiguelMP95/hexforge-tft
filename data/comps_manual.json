@@ -1,0 +1,478 @@
+{
+  "patch": "18.5",
+  "updated": "2026-10-22",
+  "source": "Estadísticas de topmeta.gg (parche 18.5). Las composiciones marcadas como orientativas no tienen estadísticas.",
+  "comps": [
+    {
+      "id": "guijarro-bestias",
+      "name": "Guijarro Bestias de la Grieta",
+      "tier": "S",
+      "style": "Fast 8",
+      "trend": "up",
+      "stats": {
+        "avg": 3.67,
+        "top4": 69.8,
+        "win": 22.6,
+        "pick": 0.43
+      },
+      "units": [
+        "da_18_sentry",
+        "da_brambleback18",
+        "da_18_elderdragon",
+        "da_krug18",
+        "da_18_gnarsmall",
+        "da_sentinel18",
+        "da_murkwolf18",
+        "da_taric18"
+      ],
+      "items": {
+        "da_18_sentry": [
+          "da_bluebuff",
+          "da_jeweledgauntlet",
+          "da_rabadonsdeathcap"
+        ],
+        "da_brambleback18": [
+          "da_handofjustice",
+          "da_guinsoosrageblade",
+          "da_edgeofnight"
+        ],
+        "da_18_elderdragon": [
+          "da_strikersflail",
+          "da_lastwhisper",
+          "da_infinityedge"
+        ],
+        "da_krug18": [
+          "da_warmogsarmor",
+          "da_spiritvisage",
+          "da_gargoylestoneplate"
+        ]
+      },
+      "carries": [
+        "da_18_sentry",
+        "da_brambleback18",
+        "da_18_elderdragon"
+      ],
+      "tips": "La composición más fuerte del parche. Guijarro es el carry mágico: dale Mejora azul en cuanto puedas. Monta Bestias de la Grieta y busca el Dragón anciano a nivel 8."
+    },
+    {
+      "id": "aphelios-bosque",
+      "name": "Aphelios Bosque ancestral",
+      "tier": "S",
+      "style": "Fast 8",
+      "trend": "up",
+      "stats": {
+        "avg": 4.07,
+        "top4": 57.5,
+        "win": 16.8,
+        "pick": 0.13
+      },
+      "units": [
+        "da_18_aphelios",
+        "da_18_ezreal",
+        "da_18_lillia",
+        "da_18_hecarim",
+        "da_18_gnarsmall",
+        "da_18_leblanc",
+        "da_18_alistar",
+        "da_18_xayah",
+        "da_18_ornn"
+      ],
+      "items": {
+        "da_18_aphelios": [
+          "da_guinsoosrageblade",
+          "da_krakensfury",
+          "da_infinityedge"
+        ],
+        "da_18_ezreal": [
+          "da_lastwhisper",
+          "da_spearofshojin",
+          "da_infinityedge"
+        ],
+        "da_18_lillia": [
+          "da_warmogsarmor",
+          "da_protectorsvow",
+          "da_crownguard"
+        ],
+        "da_18_hecarim": [
+          "da_warmogsarmor",
+          "da_spiritvisage",
+          "da_gargoylestoneplate"
+        ]
+      },
+      "carries": [
+        "da_18_aphelios",
+        "da_18_ezreal"
+      ],
+      "tips": "Dos carries físicos con Bosque ancestral como base. Juega con muchas unidades de Bosque ancestral desde el principio y mete a Aphelios cuando llegues a nivel 8."
+    },
+    {
+      "id": "ashe-coloso",
+      "name": "Ashe Coloso",
+      "tier": "S",
+      "style": "Fast 9",
+      "trend": "new",
+      "stats": {
+        "avg": 4.17,
+        "top4": 55.3,
+        "win": 16.8,
+        "pick": 0.13
+      },
+      "units": [
+        "da_18_ashe",
+        "da_18_maokai",
+        "da_18_sivir",
+        "da_amumu18",
+        "da_18_kennen",
+        "da_taric18",
+        "da_18_ivern",
+        "da_vi18",
+        "da_18_rakan"
+      ],
+      "items": {
+        "da_18_ashe": [
+          "da_redbuff",
+          "da_spearofshojin",
+          "da_18_embleminferno"
+        ],
+        "da_18_maokai": [
+          "da_warmogsarmor",
+          "da_spiritvisage",
+          "da_gargoylestoneplate"
+        ],
+        "da_18_sivir": [
+          "da_strikersflail",
+          "da_spearofshojin",
+          "da_infinityedge"
+        ],
+        "da_amumu18": [
+          "da_warmogsarmor",
+          "da_spiritvisage",
+          "da_gargoylestoneplate"
+        ]
+      },
+      "carries": [
+        "da_18_ashe",
+        "da_18_sivir"
+      ],
+      "tips": "Composición de cartas caras: aguanta con tanques Colosos y sube rápido a nivel 9. El Emblema de infernal en Ashe activa Infernal con Kennen y Amumu."
+    },
+    {
+      "id": "morgana-vanguardia",
+      "name": "Morgana Vanguardia",
+      "tier": "S",
+      "style": "Fast 8",
+      "trend": "up",
+      "stats": {
+        "avg": 4.2,
+        "top4": 54.1,
+        "win": 18.6,
+        "pick": 0.13
+      },
+      "units": [
+        "da_18_morgana",
+        "da_18_alune",
+        "da_taric18",
+        "da_sentinel18",
+        "da_18_ivern",
+        "da_18_lillia",
+        "da_18_diana",
+        "da_fiddlesticks18",
+        "da_18_hecarim"
+      ],
+      "items": {
+        "da_18_morgana": [
+          "da_hextechgunblade",
+          "da_morellonomicon",
+          "da_voidstaff"
+        ],
+        "da_18_alune": [
+          "da_jeweledgauntlet",
+          "da_spearofshojin",
+          "da_archangelsstaff"
+        ],
+        "da_taric18": [
+          "da_warmogsarmor",
+          "da_spiritvisage",
+          "da_gargoylestoneplate"
+        ],
+        "da_sentinel18": [
+          "da_warmogsarmor",
+          "da_protectorsvow",
+          "da_gargoylestoneplate"
+        ]
+      },
+      "carries": [
+        "da_18_morgana",
+        "da_18_alune"
+      ],
+      "tips": "Línea frontal de Vanguardia muy resistente con dos carries mágicos detrás. Morgana lleva el daño hasta que encuentres a Alune."
+    },
+    {
+      "id": "alune-vanguardia",
+      "name": "Alune Vanguardia",
+      "tier": "S",
+      "style": "Fast 9",
+      "trend": "stable",
+      "stats": {
+        "avg": 4.23,
+        "top4": 53.6,
+        "win": 19.2,
+        "pick": 0.26
+      },
+      "units": [
+        "da_18_alune",
+        "da_18_morgana",
+        "da_taric18",
+        "da_sentinel18",
+        "da_18_elderdragon",
+        "da_18_diana",
+        "da_18_elise",
+        "da_18_cassiopeia"
+      ],
+      "items": {
+        "da_18_alune": [
+          "da_jeweledgauntlet",
+          "da_nashorstooth",
+          "da_spearofshojin"
+        ],
+        "da_18_morgana": [
+          "da_rabadonsdeathcap",
+          "da_morellonomicon",
+          "da_voidstaff"
+        ],
+        "da_taric18": [
+          "da_warmogsarmor",
+          "da_spiritvisage",
+          "da_gargoylestoneplate"
+        ],
+        "da_sentinel18": [
+          "da_warmogsarmor",
+          "da_protectorsvow",
+          "da_gargoylestoneplate"
+        ]
+      },
+      "carries": [
+        "da_18_alune",
+        "da_18_morgana"
+      ],
+      "tips": "Muy parecida a Morgana Vanguardia, pero Alune es el carry principal. Es la más jugada de las dos."
+    },
+    {
+      "id": "teemo-conjurador",
+      "name": "Teemo Conjurador",
+      "tier": "A",
+      "style": "Reroll",
+      "trend": "stable",
+      "stats": {
+        "avg": 4.3,
+        "top4": 55.9,
+        "win": 6.8,
+        "pick": 0.12
+      },
+      "units": [
+        "da_18_teemo",
+        "da_18_leblanc",
+        "da_18_morgana",
+        "da_18_alistar",
+        "da_sentinel18",
+        "da_18_hecarim",
+        "da_18_veigar",
+        "da_18_kobuko"
+      ],
+      "items": {
+        "da_18_teemo": [
+          "da_bluebuff",
+          "da_jeweledgauntlet",
+          "da_rabadonsdeathcap"
+        ],
+        "da_18_leblanc": [
+          "da_strikersflail",
+          "da_jeweledgauntlet",
+          "da_spearofshojin"
+        ],
+        "da_18_morgana": [
+          "da_adaptivehelm",
+          "da_morellonomicon",
+          "da_voidstaff"
+        ],
+        "da_18_alistar": [
+          "da_warmogsarmor",
+          "da_gargoylestoneplate",
+          "da_gargoylestoneplate"
+        ]
+      },
+      "carries": [
+        "da_18_teemo",
+        "da_18_leblanc"
+      ],
+      "tips": "Reroll de campeones de 2 de coste: busca a Teemo y LeBlanc de 3 estrellas a nivel 6–7. Rara vez gana la partida, pero casi siempre queda entre los 4 primeros."
+    },
+    {
+      "id": "aphelios-versatil",
+      "name": "Aphelios Versátil",
+      "tier": "A",
+      "style": "Fast 8",
+      "trend": "down",
+      "stats": {
+        "avg": 4.32,
+        "top4": 55.9,
+        "win": 6.7,
+        "pick": 0.42
+      },
+      "units": [
+        "da_18_aphelios",
+        "da_nidalee18_ap",
+        "da_sentinel18",
+        "da_amumu18",
+        "da_kogmaw18_ad",
+        "da_18_diana",
+        "da_vi18",
+        "da_18_varus"
+      ],
+      "items": {
+        "da_18_aphelios": [
+          "da_guinsoosrageblade",
+          "da_krakensfury",
+          "da_infinityedge"
+        ],
+        "da_nidalee18_ap": [
+          "da_steraksgage",
+          "da_spearofshojin",
+          "da_infinityedge"
+        ],
+        "da_sentinel18": [
+          "da_warmogsarmor",
+          "da_protectorsvow",
+          "da_protectorsvow"
+        ],
+        "da_amumu18": [
+          "da_warmogsarmor",
+          "da_spiritvisage",
+          "da_gargoylestoneplate"
+        ]
+      },
+      "carries": [
+        "da_18_aphelios",
+        "da_nidalee18_ap"
+      ],
+      "tips": "Muy popular, pero con pocas victorias. Es una opción segura si te tocan buenos objetos físicos al principio."
+    },
+    {
+      "id": "azir-flora",
+      "name": "Azir Flora fatalis",
+      "tier": "A",
+      "style": "Reroll",
+      "trend": "stable",
+      "stats": {
+        "avg": 4.32,
+        "top4": 53.3,
+        "win": 12.6,
+        "pick": 0.35
+      },
+      "units": [
+        "da_18_azir",
+        "da_18_zyra",
+        "da_18_rammus",
+        "da_fiddlesticks18",
+        "da_18_soraka",
+        "da_18_teemo",
+        "da_18_veigar",
+        "da_18_kennen"
+      ],
+      "items": {
+        "da_18_azir": [
+          "da_guinsoosrageblade",
+          "da_hextechgunblade",
+          "da_rabadonsdeathcap"
+        ],
+        "da_18_zyra": [
+          "da_spearofshojin",
+          "da_morellonomicon",
+          "da_voidstaff"
+        ],
+        "da_18_rammus": [
+          "da_gargoylestoneplate",
+          "da_gargoylestoneplate",
+          "da_crownguard"
+        ],
+        "da_fiddlesticks18": [
+          "da_spiritvisage",
+          "da_ionicspark",
+          "da_sunfirecape"
+        ]
+      },
+      "carries": [
+        "da_18_azir",
+        "da_18_zyra"
+      ],
+      "tips": "Reroll de Azir (3 de coste) con Flora fatalis. Rammus de 3 estrellas aguanta la primera línea."
+    },
+    {
+      "id": "yunara-solar",
+      "name": "Yunara Solar",
+      "tier": "?",
+      "style": "Reroll",
+      "trend": "up",
+      "orientative": true,
+      "stats": null,
+      "units": [
+        "da_18_yunara",
+        "da_karma18",
+        "da_18_leona",
+        "da_18_kayle",
+        "da_18_sejuani",
+        "da_18_ahri",
+        "da_18_sett",
+        "da_18_ashe"
+      ],
+      "items": {
+        "da_18_yunara": [
+          "da_guinsoosrageblade",
+          "da_krakensfury",
+          "da_infinityedge"
+        ],
+        "da_karma18": [
+          "da_bluebuff",
+          "da_spearofshojin",
+          "da_jeweledgauntlet"
+        ]
+      },
+      "carries": [
+        "da_18_yunara",
+        "da_karma18"
+      ],
+      "tips": "Varias webs la sitúan en lo más alto del parche, pero no tengo sus estadísticas. El tablero y los objetos son una aproximación mía a partir de sus rasgos (Solar + Brote)."
+    },
+    {
+      "id": "draven-fast9",
+      "name": "Draven Fast 9",
+      "tier": "?",
+      "style": "Fast 9",
+      "trend": "stable",
+      "orientative": true,
+      "stats": null,
+      "units": [
+        "da_draven18",
+        "da_18_aphelios",
+        "da_18_kayle",
+        "da_18_varus",
+        "da_18_xayah",
+        "da_taric18",
+        "da_18_maokai",
+        "da_amumu18",
+        "da_18_lillia"
+      ],
+      "items": {
+        "da_draven18": [
+          "da_redbuff",
+          "da_guinsoosrageblade",
+          "da_infinityedge"
+        ]
+      },
+      "carries": [
+        "da_draven18"
+      ],
+      "tips": "Draven es una unidad de 5 de coste con rasgo único (Cazarretos). Tablero aproximado con Fuego rápido; no tengo estadísticas de esta composición."
+    }
+  ]
+}

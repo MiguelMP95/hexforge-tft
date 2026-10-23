@@ -1,0 +1,3068 @@
+{
+ "set": "18",
+ "champions": [
+  {
+   "id": "da_gromp18_ap",
+   "name": "Gromp",
+   "cost": 2,
+   "traits": [
+    "da_riftbeast18",
+    "da_18_adaptor"
+   ],
+   "ability": "Burbuja eructante",
+   "img": "img/champs/da_gromp18_ap.png"
+  },
+  {
+   "id": "da_murkwolf18",
+   "name": "Lóbrego",
+   "cost": 2,
+   "traits": [
+    "da_riftbeast18",
+    "da_18_slayer"
+   ],
+   "ability": "Garras desgarradoras",
+   "img": "img/champs/da_murkwolf18.png"
+  },
+  {
+   "id": "da_18_sentry",
+   "name": "Guijarro",
+   "cost": 1,
+   "traits": [
+    "da_riftbeast18",
+    "da_18_invoker"
+   ],
+   "ability": "Láser celeste",
+   "img": "img/champs/da_18_sentry.png"
+  },
+  {
+   "id": "da_cinderling18",
+   "name": "Zarcillo",
+   "cost": 1,
+   "traits": [
+    "da_riftbeast18",
+    "da_18_hunter"
+   ],
+   "ability": "Hojas afiladas",
+   "img": "img/champs/da_cinderling18.png"
+  },
+  {
+   "id": "da_scuttlecrab18",
+   "name": "Cangrejo escurridizo",
+   "cost": 2,
+   "traits": [
+    "da_riftbeast18",
+    "da_juggernaut18"
+   ],
+   "ability": "¡¿Puedes seguirme el ritmo?!",
+   "img": "img/champs/da_scuttlecrab18.png"
+  },
+  {
+   "id": "da_krug18",
+   "name": "Krug",
+   "cost": 3,
+   "traits": [
+    "da_riftbeast18",
+    "da_18_brawler"
+   ],
+   "ability": "Rock and Roll",
+   "img": "img/champs/da_krug18.png"
+  },
+  {
+   "id": "da_sentinel18",
+   "name": "Centinela",
+   "cost": 4,
+   "traits": [
+    "da_riftbeast18",
+    "da_18_vanguard",
+    "da_18_invoker"
+   ],
+   "ability": "Onda de choque celeste",
+   "img": "img/champs/da_sentinel18.png"
+  },
+  {
+   "id": "da_brambleback18",
+   "name": "Ancestro ígneo",
+   "cost": 4,
+   "traits": [
+    "da_riftbeast18",
+    "da_18_slayer"
+   ],
+   "ability": "Furia carmesí",
+   "img": "img/champs/da_brambleback18.png"
+  },
+  {
+   "id": "da_18_xayah",
+   "name": "Xayah",
+   "cost": 1,
+   "traits": [
+    "da_18_elderwood",
+    "da_18_fae",
+    "da_18_rapidfire"
+   ],
+   "ability": "Plumaje mortífero",
+   "img": "img/champs/da_18_xayah.png"
+  },
+  {
+   "id": "da_18_ornn",
+   "name": "Ornn",
+   "cost": 1,
+   "traits": [
+    "da_18_elderwood",
+    "da_18_defender"
+   ],
+   "ability": "Aliento de fuelle",
+   "img": "img/champs/da_18_ornn.png"
+  },
+  {
+   "id": "da_nidalee18_ap",
+   "name": "Nidalee",
+   "cost": 4,
+   "traits": [
+    "da_primal18",
+    "da_18_adaptor"
+   ],
+   "ability": "Jabalina",
+   "img": "img/champs/da_nidalee18_ap.png"
+  },
+  {
+   "id": "da_18_hecarim",
+   "name": "Hecarim",
+   "cost": 3,
+   "traits": [
+    "da_18_elderwood",
+    "da_18_vanguard"
+   ],
+   "ability": "Espíritu de pavor",
+   "img": "img/champs/da_18_hecarim.png"
+  },
+  {
+   "id": "da_18_ezreal",
+   "name": "Ezreal",
+   "cost": 4,
+   "traits": [
+    "da_18_elderwood",
+    "da_18_executioner"
+   ],
+   "ability": "Ráfaga del bosque",
+   "img": "img/champs/da_18_ezreal.png"
+  },
+  {
+   "id": "da_18_azir",
+   "name": "Azir",
+   "cost": 3,
+   "traits": [
+    "da_18_blackthorn",
+    "da_18_executioner",
+    "da_18_summoner"
+   ],
+   "ability": "¡Alzaos!",
+   "img": "img/champs/da_18_azir.png"
+  },
+  {
+   "id": "da_18_reksai",
+   "name": "Rek'Sai",
+   "cost": 1,
+   "traits": [
+    "da_18_blackthorn",
+    "da_18_brawler"
+   ],
+   "ability": "De raíz",
+   "img": "img/champs/da_18_reksai.png"
+  },
+  {
+   "id": "da_18_veigar",
+   "name": "Veigar",
+   "cost": 1,
+   "traits": [
+    "da_18_blackthorn",
+    "da_18_sprykin",
+    "da_18_spellweaver"
+   ],
+   "ability": "Estallido primordial",
+   "img": "img/champs/da_18_veigar.png"
+  },
+  {
+   "id": "da_18_maokai",
+   "name": "Maokai",
+   "cost": 5,
+   "traits": [
+    "da_18_maokai_uniquetrait",
+    "da_juggernaut18"
+   ],
+   "ability": "Siembra de semillas",
+   "img": "img/champs/da_18_maokai.png"
+  },
+  {
+   "id": "da_18_malphite",
+   "name": "Malphite",
+   "cost": 4,
+   "traits": [
+    "da_18_blackthorn",
+    "da_18_battlemage"
+   ],
+   "ability": "Corteza petrificada",
+   "img": "img/champs/da_18_malphite.png"
+  },
+  {
+   "id": "da_18_yorick",
+   "name": "Yorick",
+   "cost": 1,
+   "traits": [
+    "da_18_blossom",
+    "da_juggernaut18",
+    "da_18_summoner"
+   ],
+   "ability": "Ritos funerarios",
+   "img": "img/champs/da_18_yorick.png"
+  },
+  {
+   "id": "da_18_yunara",
+   "name": "Yunara",
+   "cost": 2,
+   "traits": [
+    "da_18_blossom",
+    "da_18_executioner"
+   ],
+   "ability": "Florescencia del espíritu",
+   "img": "img/champs/da_18_yunara.png"
+  },
+  {
+   "id": "da_18_sett",
+   "name": "Sett",
+   "cost": 4,
+   "traits": [
+    "da_18_blossom",
+    "da_18_brawler"
+   ],
+   "ability": "Trastazo",
+   "img": "img/champs/da_18_sett.png"
+  },
+  {
+   "id": "da_18_ahri",
+   "name": "Ahri",
+   "cost": 4,
+   "traits": [
+    "da_18_blossom",
+    "da_18_spellweaver"
+   ],
+   "ability": "Bomba espiritual",
+   "img": "img/champs/da_18_ahri.png"
+  },
+  {
+   "id": "da_18_ashe",
+   "name": "Ashe",
+   "cost": 5,
+   "traits": [
+    "da_18_blossom",
+    "da_18_hunter"
+   ],
+   "ability": "Grieta espiritual",
+   "img": "img/champs/da_18_ashe.png"
+  },
+  {
+   "id": "da_18_elise",
+   "name": "Elise",
+   "cost": 2,
+   "traits": [
+    "da_18_coven",
+    "da_18_vanguard"
+   ],
+   "ability": "Reina de las arañas",
+   "img": "img/champs/da_18_elise.png"
+  },
+  {
+   "id": "da_18_caitlyn",
+   "name": "Caitlyn",
+   "cost": 2,
+   "traits": [
+    "da_18_coven",
+    "da_18_hunter"
+   ],
+   "ability": "Disparo a la cabeza",
+   "img": "img/champs/da_18_caitlyn.png"
+  },
+  {
+   "id": "da_18_cassiopeia",
+   "name": "Cassiopeia",
+   "cost": 3,
+   "traits": [
+    "da_18_coven",
+    "da_18_spellweaver"
+   ],
+   "ability": "Explosión perjudicial",
+   "img": "img/champs/da_18_cassiopeia.png"
+  },
+  {
+   "id": "da_18_morgana",
+   "name": "Morgana",
+   "cost": 4,
+   "traits": [
+    "da_18_coven",
+    "da_18_invoker"
+   ],
+   "ability": "Maldición marchita",
+   "img": "img/champs/da_18_morgana.png"
+  },
+  {
+   "id": "da_18_rakan",
+   "name": "Rakan",
+   "cost": 1,
+   "traits": [
+    "da_18_fae",
+    "da_juggernaut18",
+    "da_18_vanguard"
+   ],
+   "ability": "Danza fascinante",
+   "img": "img/champs/da_18_rakan.png"
+  },
+  {
+   "id": "da_18_lillia",
+   "name": "Lillia",
+   "cost": 4,
+   "traits": [
+    "da_18_fae",
+    "da_18_defender"
+   ],
+   "ability": "Nana rítmica",
+   "img": "img/champs/da_18_lillia.png"
+  },
+  {
+   "id": "da_18_kobuko",
+   "name": "Kobuko",
+   "cost": 1,
+   "traits": [
+    "da_18_sprykin",
+    "da_18_brawler"
+   ],
+   "ability": "Danza vital",
+   "img": "img/champs/da_18_kobuko.png"
+  },
+  {
+   "id": "da_18_teemo",
+   "name": "Teemo",
+   "cost": 2,
+   "traits": [
+    "da_18_sprykin",
+    "da_18_invoker"
+   ],
+   "ability": "Hongo aquí, hongo allá",
+   "img": "img/champs/da_18_teemo.png"
+  },
+  {
+   "id": "da_18_rammus",
+   "name": "Rammus",
+   "cost": 3,
+   "traits": [
+    "da_18_sprykin",
+    "da_18_defender"
+   ],
+   "ability": "Posición defensiva",
+   "img": "img/champs/da_18_rammus.png"
+  },
+  {
+   "id": "da_18_gnarsmall",
+   "name": "Gnar",
+   "cost": 5,
+   "traits": [
+    "da_18_elderwood",
+    "da_18_sprykin",
+    "da_18_brawler"
+   ],
+   "ability": "Gen de furia",
+   "img": "img/champs/da_18_gnarsmall.png"
+  },
+  {
+   "id": "da_18_tristana",
+   "name": "Tristana",
+   "cost": 3,
+   "traits": [
+    "da_18_fae",
+    "da_18_sprykin",
+    "da_18_hunter"
+   ],
+   "ability": "Carga explosiva",
+   "img": "img/champs/da_18_tristana.png"
+  },
+  {
+   "id": "da_18_sivir",
+   "name": "Sivir",
+   "cost": 4,
+   "traits": [
+    "da_primal18",
+    "da_18_hunter"
+   ],
+   "ability": "Cuchilla bumerán",
+   "img": "img/champs/da_18_sivir.png"
+  },
+  {
+   "id": "da_vi18",
+   "name": "Vi",
+   "cost": 3,
+   "traits": [
+    "da_primal18",
+    "da_juggernaut18"
+   ],
+   "ability": "Puños furiosos",
+   "img": "img/champs/da_vi18.png"
+  },
+  {
+   "id": "da_18_akali_ad",
+   "name": "Akali",
+   "cost": 1,
+   "traits": [
+    "da_18_inferno",
+    "da_18_adaptor",
+    "da_18_slayer"
+   ],
+   "ability": "Impacto de kunai",
+   "img": "img/champs/da_18_akali_ad.png"
+  },
+  {
+   "id": "da_18_varus",
+   "name": "Varus",
+   "cost": 1,
+   "traits": [
+    "da_18_inferno",
+    "da_18_rapidfire"
+   ],
+   "ability": "Flecha penetrante",
+   "img": "img/champs/da_18_varus.png"
+  },
+  {
+   "id": "da_amumu18",
+   "name": "Amumu",
+   "cost": 4,
+   "traits": [
+    "da_18_inferno",
+    "da_juggernaut18"
+   ],
+   "ability": "Berrinche",
+   "img": "img/champs/da_amumu18.png"
+  },
+  {
+   "id": "da_18_kennen",
+   "name": "Kennen",
+   "cost": 5,
+   "traits": [
+    "da_18_inferno",
+    "da_18_executioner"
+   ],
+   "ability": "Vorágine ígnea",
+   "img": "img/champs/da_18_kennen.png"
+  },
+  {
+   "id": "da_18_aphelios",
+   "name": "Aphelios",
+   "cost": 4,
+   "traits": [
+    "da_18_lunar",
+    "da_18_rapidfire"
+   ],
+   "ability": "Asalto de luz lunar",
+   "img": "img/champs/da_18_aphelios.png"
+  },
+  {
+   "id": "da_18_diana",
+   "name": "Diana",
+   "cost": 3,
+   "traits": [
+    "da_18_lunar",
+    "da_18_slayer",
+    "da_18_vanguard"
+   ],
+   "ability": "Barrera pálida",
+   "img": "img/champs/da_18_diana.png"
+  },
+  {
+   "id": "da_18_alune",
+   "name": "Alune",
+   "cost": 5,
+   "traits": [
+    "da_aluneuniquetrait18",
+    "da_18_lunar",
+    "da_18_spellweaver"
+   ],
+   "ability": "Lluvia de luna",
+   "img": "img/champs/da_18_alune.png"
+  },
+  {
+   "id": "da_18_leona",
+   "name": "Leona",
+   "cost": 1,
+   "traits": [
+    "da_18_solar",
+    "da_18_defender"
+   ],
+   "ability": "Golpe de escudo",
+   "img": "img/champs/da_18_leona.png"
+  },
+  {
+   "id": "da_18_kayle",
+   "name": "Kayle",
+   "cost": 2,
+   "traits": [
+    "da_18_solar",
+    "da_18_rapidfire"
+   ],
+   "ability": "Juicio solar",
+   "img": "img/champs/da_18_kayle.png"
+  },
+  {
+   "id": "da_18_sejuani",
+   "name": "Sejuani",
+   "cost": 2,
+   "traits": [
+    "da_18_solar",
+    "da_juggernaut18"
+   ],
+   "ability": "Cólera solar",
+   "img": "img/champs/da_18_sejuani.png"
+  },
+  {
+   "id": "da_18_khazix",
+   "name": "Kha'Zix",
+   "cost": 3,
+   "traits": [
+    "da_18_rival"
+   ],
+   "ability": "Saborea su miedo",
+   "img": "img/champs/da_18_khazix.png"
+  },
+  {
+   "id": "da_18_rengar",
+   "name": "Rengar",
+   "cost": 3,
+   "traits": [
+    "da_18_rival"
+   ],
+   "ability": "Fiereza",
+   "img": "img/champs/da_18_rengar.png"
+  },
+  {
+   "id": "da_kogmaw18_ad",
+   "name": "Kog'Maw",
+   "cost": 3,
+   "traits": [
+    "da_18_caustic",
+    "da_18_adaptor",
+    "da_18_invoker"
+   ],
+   "ability": "Artillería descendente",
+   "img": "img/champs/da_kogmaw18_ad.png"
+  },
+  {
+   "id": "da_18_zyra",
+   "name": "Zyra",
+   "cost": 4,
+   "traits": [
+    "da_18_zyrauniquetrait",
+    "da_18_summoner"
+   ],
+   "ability": "Crecimiento desenfrenado",
+   "img": "img/champs/da_18_zyra.png"
+  },
+  {
+   "id": "da_fiddlesticks18",
+   "name": "Fiddlesticks",
+   "cost": 3,
+   "traits": [
+    "da_florafatalis18",
+    "da_18_defender",
+    "da_18_spellweaver"
+   ],
+   "ability": "Cosecha",
+   "img": "img/champs/da_fiddlesticks18.png"
+  },
+  {
+   "id": "da_18_soraka",
+   "name": "Soraka",
+   "cost": 4,
+   "traits": [
+    "da_florafatalis18",
+    "da_18_executioner"
+   ],
+   "ability": "Invocación estelar",
+   "img": "img/champs/da_18_soraka.png"
+  },
+  {
+   "id": "da_taric18",
+   "name": "Taric",
+   "cost": 5,
+   "traits": [
+    "da_emerald18",
+    "da_18_vanguard"
+   ],
+   "ability": "Esplendor esmeralda",
+   "img": "img/champs/da_taric18.png"
+  },
+  {
+   "id": "da_18_ivern",
+   "name": "Ivern",
+   "cost": 5,
+   "traits": [
+    "da_18_greenfather"
+   ],
+   "ability": "Semilla de relojería",
+   "img": "img/champs/da_18_ivern.png"
+  },
+  {
+   "id": "da_lux18_base",
+   "name": "Lux",
+   "cost": 5,
+   "traits": [
+    "da_18_luxuniquetrait"
+   ],
+   "ability": "Chispa final",
+   "img": "img/champs/da_lux18_base.png"
+  },
+  {
+   "id": "da_18_alistar",
+   "name": "Alistar",
+   "cost": 2,
+   "traits": [
+    "da_18_elderwood",
+    "da_18_brawler"
+   ],
+   "ability": "Rugido triunfal",
+   "img": "img/champs/da_18_alistar.png"
+  },
+  {
+   "id": "da_draven18",
+   "name": "Draven",
+   "cost": 5,
+   "traits": [
+    "da_dravenuniquetrait18"
+   ],
+   "ability": "Espiral de muerte",
+   "img": "img/champs/da_draven18.png"
+  },
+  {
+   "id": "da_18_elderdragon",
+   "name": "Dragón anciano",
+   "cost": 5,
+   "traits": [
+    "da_18_apexpredator",
+    "da_riftbeast18"
+   ],
+   "ability": "Calor sin igual",
+   "img": "img/champs/da_18_elderdragon.png"
+  },
+  {
+   "id": "da_karma18",
+   "name": "Karma",
+   "cost": 1,
+   "traits": [
+    "da_18_blossom",
+    "da_18_spellweaver"
+   ],
+   "ability": "Vínculo kármico",
+   "img": "img/champs/da_karma18.png"
+  },
+  {
+   "id": "da_18_leblanc",
+   "name": "LeBlanc",
+   "cost": 2,
+   "traits": [
+    "da_18_elderwood",
+    "da_18_spellweaver"
+   ],
+   "ability": "Imagen especular",
+   "img": "img/champs/da_18_leblanc.png"
+  },
+  {
+   "id": "da_18_masteryi_ad",
+   "name": "Maestro Yi",
+   "cost": 3,
+   "traits": [
+    "da_18_blossom",
+    "da_18_adaptor"
+   ],
+   "ability": "Estilo Wuju",
+   "img": "img/champs/da_18_masteryi_ad.png"
+  },
+  {
+   "id": "da_18_shen",
+   "name": "Shen",
+   "cost": 2,
+   "traits": [
+    "da_18_inferno",
+    "da_18_defender"
+   ],
+   "ability": "Barrera ki",
+   "img": "img/champs/da_18_shen.png"
+  },
+  {
+   "id": "da_18_warwick",
+   "name": "Warwick",
+   "cost": 2,
+   "traits": [
+    "da_18_blackthorn",
+    "da_18_slayer"
+   ],
+   "ability": "Las fauces de la bestia",
+   "img": "img/champs/da_18_warwick.png"
+  },
+  {
+   "id": "da_18_camille",
+   "name": "Camille",
+   "cost": 1,
+   "traits": [
+    "da_18_coven",
+    "da_18_slayer"
+   ],
+   "ability": "Barrido defensivo",
+   "img": "img/champs/da_18_camille.png"
+  },
+  {
+   "id": "da_lux18_blackthorn",
+   "name": "Lux (espina negra)",
+   "cost": 5,
+   "traits": [
+    "da_18_blackthorn",
+    "da_18_luxuniquetrait"
+   ],
+   "ability": "Chispa final",
+   "img": "img/champs/da_lux18_blackthorn.png"
+  },
+  {
+   "id": "da_lux18_blossom",
+   "name": "Lux (brote)",
+   "cost": 5,
+   "traits": [
+    "da_18_blossom",
+    "da_18_luxuniquetrait"
+   ],
+   "ability": "Chispa final",
+   "img": "img/champs/da_lux18_blossom.png"
+  },
+  {
+   "id": "da_18_lux_coven",
+   "name": "Lux (aquelarre)",
+   "cost": 5,
+   "traits": [
+    "da_18_coven",
+    "da_18_luxuniquetrait"
+   ],
+   "ability": "Chispa final",
+   "img": "img/champs/da_18_lux_coven.png"
+  },
+  {
+   "id": "da_18_lux_elderwood",
+   "name": "Lux (bosque ancestral)",
+   "cost": 5,
+   "traits": [
+    "da_18_elderwood",
+    "da_18_luxuniquetrait"
+   ],
+   "ability": "Chispa final",
+   "img": "img/champs/da_18_lux_elderwood.png"
+  },
+  {
+   "id": "da_18_lux_fae",
+   "name": "Lux (hada)",
+   "cost": 5,
+   "traits": [
+    "da_18_fae",
+    "da_18_luxuniquetrait"
+   ],
+   "ability": "Chispa final",
+   "img": "img/champs/da_18_lux_fae.png"
+  },
+  {
+   "id": "da_18_lux_inferno",
+   "name": "Lux (infernal)",
+   "cost": 5,
+   "traits": [
+    "da_18_inferno",
+    "da_18_luxuniquetrait"
+   ],
+   "ability": "Chispa final",
+   "img": "img/champs/da_18_lux_inferno.png"
+  },
+  {
+   "id": "da_18_lux_moonbeam",
+   "name": "Lux (lunar)",
+   "cost": 5,
+   "traits": [
+    "da_18_lunar",
+    "da_18_luxuniquetrait"
+   ],
+   "ability": "Chispa final",
+   "img": "img/champs/da_18_lux_moonbeam.png"
+  },
+  {
+   "id": "da_18_lux_primal",
+   "name": "Lux (primigenia)",
+   "cost": 5,
+   "traits": [
+    "da_primal18",
+    "da_18_luxuniquetrait"
+   ],
+   "ability": "Chispa final",
+   "img": "img/champs/da_18_lux_primal.png"
+  },
+  {
+   "id": "da_18_lux_sunbeam",
+   "name": "Lux (solar)",
+   "cost": 5,
+   "traits": [
+    "da_18_solar",
+    "da_18_luxuniquetrait"
+   ],
+   "ability": "Chispa final",
+   "img": "img/champs/da_18_lux_sunbeam.png"
+  },
+  {
+   "id": "da_crimsonraptor18",
+   "name": "Mamipicu",
+   "cost": 3,
+   "traits": [
+    "da_riftbeast18",
+    "da_18_summoner",
+    "da_18_rapidfire"
+   ],
+   "ability": "Familia en bandada",
+   "img": "img/champs/da_crimsonraptor18.png"
+  }
+ ],
+ "traits": [
+  {
+   "id": "da_18_elderwood",
+   "name": "Bosque ancestral",
+   "desc": "Obtienes plantas de Bosque ancestral que puedes colocar.\n(@MinUnits@) Un árbol de rocorteza y un vitalbrote.\n(@MinUnits@) Un segundo árbol de rocorteza y los árboles de rocorteza obtienen @StonebarkTreeBonusHealth@ de vida.\n(@MinUnits@) Y el protector de bosquejondo.\n(@MinUnits@) Las plantas suben a 2 estrellas.\n(@MinUnits@) Las plantas suben a 3 estrellas y el bosque cobra vida.",
+   "breakpoints": [
+    3,
+    5,
+    7,
+    9,
+    11
+   ],
+   "img": "img/traits/da_18_elderwood.png"
+  },
+  {
+   "id": "da_18_luxuniquetrait",
+   "name": "Avatar",
+   "desc": "Tener un avatar en el banquillo o en el tablero hace que el resto de avatares de tu tienda adquieran el atributo del mismo.\n\nEl atributo elegido por el avatar cuenta dos veces para las bonificaciones de los atributos.",
+   "breakpoints": [
+    1
+   ],
+   "img": "img/traits/da_18_luxuniquetrait.png"
+  },
+  {
+   "id": "da_18_slayer",
+   "name": "Asolador",
+   "desc": "Los asoladores obtienen un @Omnivamp*100@% de omnisucción. Además, los asoladores infligen daño adicional, que se duplica contra unidades con menos de un @EnemyHealthThreshold*100@% de vida.\n(@MinUnits@) @BonusDamagePercentBase*100@% de daño adicional.\n(@MinUnits@) @BonusDamagePercentBase*100@% de daño adicional.\n(@MinUnits@) @BonusDamagePercentBase*100@% de daño adicional.",
+   "breakpoints": [
+    2,
+    4,
+    6
+   ],
+   "img": "img/traits/da_18_slayer.png"
+  },
+  {
+   "id": "da_dravenuniquetrait18",
+   "name": "Cazarretos",
+   "desc": "Elige un botín. Tu Draven más fuerte puede progresar con el botín para conseguir su recompensa. Al completar un botín, elige otro.",
+   "breakpoints": [
+    1
+   ],
+   "img": "img/traits/da_dravenuniquetrait18.png"
+  },
+  {
+   "id": "da_18_solar",
+   "name": "Solar",
+   "desc": "(@MinUnits@) Tus campeones obtienen un escudo equivalente a un @ShieldRatio*100@% de la vida máxima e infligen un @BonusMagicDamage*100@% de daño mágico adicional. Otorga bonificaciones adicionales por cada campeón de 3 estrellas único:\n\n1: El escudo y el daño mágico aumentan un @PercentIncreasePer3Star*100@% por cada campeón de 3 estrellas.\n@NumThreeStarThreshold1@: @Threshold1AttackSpeed*100@%  y @Threshold1ArmorMagicResist@ .\n@NumThreeStarThreshold2@: Convierte un @Threshold2TrueDamageConversion*100@% del daño mágico adicional en daño verdadero.\n@NumThreeStarThreshold3@: Cada @Threshold3StarUpPeriod@ s de combate, un campeón de 3 estrellas asciende a 4 estrellas.",
+   "breakpoints": [
+    3
+   ],
+   "img": "img/traits/da_18_solar.png"
+  },
+  {
+   "id": "da_18_sprykin",
+   "name": "Vivaz",
+   "desc": "Obtienes a la bestia inseparable. Coloca a una unidad vivaz sobre tu besti para elegir a su jinete.\n(@MinUnits@) El jinete obtiene un\n@HealthIncrease*100@%  y un @AttackSpeedIncrease*100@% .\n(@MinUnits@) @HealthIncrease*100@% , un @AttackSpeedIncrease*100@%  y un @TeamwideRatio*100@% de la habilidad de tu besti se aplica a tus campeones vivaces.\n(@MinUnits@) @HealthIncrease*100@% , un @AttackSpeedIncrease*100@%  y un @TeamwideRatio*100@% de la habilidad de tu besti se aplica a tus campeones vivaces.",
+   "breakpoints": [
+    3,
+    5,
+    7
+   ],
+   "img": "img/traits/da_18_sprykin.png"
+  },
+  {
+   "id": "da_18_adaptor",
+   "name": "Versátil",
+   "desc": "Innato: Las habilidades de Versátil cambian según si su daño de ataque o su poder de habilidad es mayor.\n\nLas unidades de Versátil obtienen poder de habilidad o daño de ataque, según cuál de los dos sea mayor.\n(@MinUnits@) @ADAPGain*100@% O\n(@MinUnits@) @ADAPGain*100@% O\n(@MinUnits@) @ADAPGain*100@%.",
+   "breakpoints": [
+    2,
+    3,
+    4
+   ],
+   "img": "img/traits/da_18_adaptor.png"
+  },
+  {
+   "id": "da_18_coven",
+   "name": "Aquelarre",
+   "desc": "Acumula esencia al asesinar campeones, y más al perder combates contra jugadores.\n\nA partir de @EssenceForRitualTooltip@ de esencia, elige entre convertir la esencia en recompensas o seguir acumulándola. Cada recompensa requiere una cantidad de esencia cada vez mayor.\n(@MinUnits@) @EssencePerDeath@ de esencia por asesinato, @EssencePerLoss@ de esencia por derrota.\n(@MinUnits@) @EssencePerDeath@ por asesinato, @EssencePerLoss@ por derrota.\n(@MinUnits@) @EssencePerDeath@ por asesinato, @EssencePerLoss@ por derrota.\n(@MinUnits@) @EssencePerDeath@ por asesinato, @EssencePerLoss@ por derrota.",
+   "breakpoints": [
+    3,
+    4,
+    5,
+    7
+   ],
+   "img": "img/traits/da_18_coven.png"
+  },
+  {
+   "id": "da_18_hunter",
+   "name": "Cazador",
+   "desc": "Los cazadores obtienen daño de ataque. Si un cazador no ha cambiado de objetivo durante @HunterDuration@ s, obtiene un @DamageAmp*100@% de amplificación de daño.\n(@MinUnits@) @HunterAD*100@% .\n(@MinUnits@) @HunterAD*100@% .\n(@MinUnits@) @HunterAD*100@% \n(@MinUnits@) @HunterAD*100@% .",
+   "breakpoints": [
+    2,
+    3,
+    4,
+    5
+   ],
+   "img": "img/traits/da_18_hunter.png"
+  },
+  {
+   "id": "da_18_maokai_uniquetrait",
+   "name": "Frondantigua",
+   "desc": "Cada vez que un enemigo muere en un radio de @UniqueTraitHexRange@ hexágonos, tu campeón Frondantigua más fuerte obtiene @UniqueTraitHealthPerStack@ de vida máxima permanente.\n\nActual: 0",
+   "breakpoints": [
+    1
+   ],
+   "img": "img/traits/da_18_maokai_uniquetrait.png"
+  },
+  {
+   "id": "da_18_battlemage",
+   "name": "Monolito",
+   "desc": "Los monolitos obtienen @Resists@ de armadura y de resistencia mágica por cada enemigo que los marque como objetivo.",
+   "breakpoints": [
+    1
+   ],
+   "img": "img/traits/da_18_battlemage.png"
+  },
+  {
+   "id": "da_primal18",
+   "name": "Primigenio",
+   "desc": "Elige una de entre cuatro bendiciones primigenias.\n(@MinUnits@)\n(@MinUnits@)",
+   "breakpoints": [
+    2,
+    4
+   ],
+   "img": "img/traits/da_primal18.png"
+  },
+  {
+   "id": "da_18_greenfather",
+   "name": "Padre Arborescente",
+   "desc": "Obtienes @SeedsPerCast@ semilla cuando tu Ivern más fuerte lanza una habilidad, y @CombatStartSeeds@ más cada combate. Ivern usa @SeedsToGrowHex@ semillas para hacer crecer un hexágono en tu tablero que otorga una bonificación a su ocupante.\n\nSemillas: 0/@SeedsToGrowHex@\n\nBioma actual:",
+   "breakpoints": [
+    1
+   ],
+   "img": "img/traits/da_18_greenfather.png"
+  },
+  {
+   "id": "da_18_invoker",
+   "name": "Conjurador",
+   "desc": "Tu equipo obtiene regeneración de maná, que aumenta para los conjuradores.\n(@MinUnits@) @TeamManaRegen@ de  | @InvokerManaBonus@ .\n(@MinUnits@) @TeamManaRegen@  | @InvokerManaBonus@ .\n(@MinUnits@) @TeamManaRegen@  | @InvokerManaBonus@ .\n(@MinUnits@) @TeamManaRegen@  | @InvokerManaBonus@ .",
+   "breakpoints": [
+    2,
+    3,
+    4,
+    5
+   ],
+   "img": "img/traits/da_18_invoker.png"
+  },
+  {
+   "id": "da_18_rapidfire",
+   "name": "Fuego rápido",
+   "desc": "Tu equipo obtiene un @TeamAS*100@% de velocidad de ataque. Los campeones de Fuego rápido obtienen más con cada ataque, hasta un máximo de @MaxStacks@ acumulaciones.\n(@MinUnits@) +@ASPerAttack*100@%  por ataque.\n(@MinUnits@) +@ASPerAttack*100@%  por ataque.\n(@MinUnits@) +@ASPerAttack*100@%  por ataque.\n(@MinUnits@) +@ASPerAttack*100@%  por ataque.",
+   "breakpoints": [
+    2,
+    3,
+    4,
+    5
+   ],
+   "img": "img/traits/da_18_rapidfire.png"
+  },
+  {
+   "id": "da_juggernaut18",
+   "name": "Coloso",
+   "desc": "El equipo obtiene durabilidad. Los colosos obtienen más.\n(@MinUnits@) @TeamDurability*100@%  o @JuggernautDurability*100@% .\n(@MinUnits@) @TeamDurability*100@%  o @JuggernautDurability*100@% .\n(@MinUnits@) @TeamDurability*100@%  o @JuggernautDurability*100@% .",
+   "breakpoints": [
+    2,
+    4,
+    6
+   ],
+   "img": "img/traits/da_juggernaut18.png"
+  },
+  {
+   "id": "da_18_inferno",
+   "name": "Infernal",
+   "desc": "El daño de los infernales quema y hiere a los enemigos durante @Duration@ s. La quemadura de Infernal se acumula con otras quemaduras.\n(@MinUnits@) @HPBurnPerSecond@% de quemadura, @WoundPercent@% de heridas.\n(@MinUnits@) Tras el combate, @LuckySlotCount@ de los huecos de la tienda sin campeones infernales se queman y ofrecen un campeón de un nivel superior.\n(@MinUnits@) Quema @LuckySlotCount@ huecos de la tienda, @HPBurnPerSecond@% de quemadura.\n(@MinUnits@) Quema @LuckySlotCount@ huecos de la tienda, @HPBurnPerSecond@% de quemadura.",
+   "breakpoints": [
+    2,
+    3,
+    5,
+    7
+   ],
+   "img": "img/traits/da_18_inferno.png"
+  },
+  {
+   "id": "da_aluneuniquetrait18",
+   "name": "Afín",
+   "desc": "Tu Alune más fuerte cambia a una nueva fase de la luna tras cada lanzamiento. Mientras la luna esté medio llena o menos, tu equipo obtiene un @Durability*100@% de durabilidad. Mientras esté en una fase superior, tu equipo obtiene un @DamageAmp*100@% de amplificación de daño.",
+   "breakpoints": [
+    1
+   ],
+   "img": "img/traits/da_aluneuniquetrait18.png"
+  },
+  {
+   "id": "da_18_rival",
+   "name": "Rival",
+   "desc": "(@MinUnits@) Solo se activa al desplegar a 1 rival.\n\nLos rivales acumulan eliminaciones y obtienen 3 si eliminan a otro rival.\n(@MinUnits@) Los rivales acumulan eliminaciones y obtienen 3 si eliminan a otro rival.\n\nLas eliminaciones hacen que Kha'Zix evolucione, lo que le otorga de forma permanente el atributo que elijas: Exterminador, Fuego rápido, Asolador o Tejehechizos.\n\nRengar otorga @RengarGold@/@RengarGold_2@/@RengarGold_3@ de oro por cada @RengarStackReq@ eliminaciones. Tras @RengarADStackReq@ eliminaciones, tu equipo obtiene un @RengarThresholdAD*100@% de daño de ataque + @RengarADPerStack*100@%  por cada eliminación adicional.\n\nEliminaciones de Kha'Zix: 0/0\nEliminaciones de Rengar: 0\nOro ganado: 0\n(@MinUnits@) Los rivales pueden desplegarse juntos y sus habilidades les otorgan bonificaciones.",
+   "breakpoints": [
+    1,
+    2
+   ],
+   "img": "img/traits/da_18_rival.png"
+  },
+  {
+   "id": "da_18_vanguard",
+   "name": "Vanguardia",
+   "desc": "Al comienzo del combate y cuando su vida es inferior a un @HealthThreshold*100@%, las unidades de Vanguardia obtienen un escudo según su vida máxima durante @ShieldDuration@ s.\n(@MinUnits@) @MaxHealthShield*100@% de la vida máxima.\n(@MinUnits@) @MaxHealthShield*100@% de la vida máxima.\n(@MinUnits@) @MaxHealthShield*100@% de la vida máxima. Mientras tienen un escudo, obtienen un @DurabilityIncrease*100@% de durabilidad.",
+   "breakpoints": [
+    2,
+    4,
+    6
+   ],
+   "img": "img/traits/da_18_vanguard.png"
+  },
+  {
+   "id": "da_18_brawler",
+   "name": "Luchador",
+   "desc": "Tu equipo obtiene @BrawlerTeamHealth@ de vida máxima. Los luchadores obtienen más.\n(@MinUnits@) @BrawlerHealthPercent*100@% .\n(@MinUnits@) @BrawlerHealthPercent*100@% .\n(@MinUnits@) @BrawlerHealthPercent*100@% .",
+   "breakpoints": [
+    2,
+    4,
+    6
+   ],
+   "img": "img/traits/da_18_brawler.png"
+  },
+  {
+   "id": "da_18_blackthorn",
+   "name": "Espina negra",
+   "desc": "El aliado en el hexágono de Espina negra se sacrifica antes del combate, lo que otorga vida a tus campeones. \n\nLos campeones de Espina negra obtienen estadísticas adicionales según el rol, el nivel de estrellas y el coste del sacrificio.\n(@MinUnits@) @Health@ \n.(@MinUnits@) @Health@ . La bonificación es un @StatMultiplier*100@% más potente.\n(@MinUnits@) @Health@ . La bonificación es un @StatMultiplier*100@% más potente.",
+   "breakpoints": [
+    2,
+    4,
+    6
+   ],
+   "img": "img/traits/da_18_blackthorn.png"
+  },
+  {
+   "id": "da_18_executioner",
+   "name": "Exterminador",
+   "desc": "(@MinUnits@) Los exterminadores obtienen Precisión y un @CritChance*100@% de probabilidad de impacto crítico.\n(@MinUnits@) Además, los enemigos se desangran y reciben un @BonusBleedPercent*100@% de daño verdadero adicional a lo largo de @BleedDuration@&nbsp;s.\n(@MinUnits@) El daño de sangrado aumenta a un @BonusBleedPercent*100@%.",
+   "breakpoints": [
+    2,
+    3,
+    4
+   ],
+   "img": "img/traits/da_18_executioner.png"
+  },
+  {
+   "id": "da_18_apexpredator",
+   "name": "Depredador alfa",
+   "desc": "El Dragón anciano ocupa 2 ranuras de equipo y otorga +2 al atributo Bestia de la Grieta.",
+   "breakpoints": [
+    1
+   ],
+   "img": "img/traits/da_18_apexpredator.png"
+  },
+  {
+   "id": "da_riftbeast18",
+   "name": "Bestia de la Grieta",
+   "desc": "(@MinUnits@) Usa la marca alfa para otorgar a una bestia de la Grieta su mejora única.\n(@MinUnits@) Cada @OverrunCombats@ combates, tu próxima tienda se llenará de bestias de la Grieta.\n(@MinUnits@) Al comienzo del combate y cada 5 s, las bestias de la Grieta obtienen un \n@CapstoneAD*100@% , un @CapstoneAP*100@% , un @CapstoneAspd*100@% \n+@CapstoneArmor@ , +@CapstoneMR@ , +@CapstoneHealth@  y +@CapstoneManaRegen@ .\n(@MinUnits@) +@TeamSize@ de tamaño máximo del equipo.",
+   "breakpoints": [
+    3,
+    5,
+    7,
+    10
+   ],
+   "img": "img/traits/da_riftbeast18.png"
+  },
+  {
+   "id": "da_18_caustic",
+   "name": "Cáustico",
+   "desc": "El daño de las unidades cáusticas desgarra y resquebraja un @ShredPercent@% a los enemigos durante @ShredDuration@ s.\n\nDesgarre: Reduce la resistencia mágica.\nResquebrajamiento: Reduce la armadura.",
+   "breakpoints": [
+    1
+   ],
+   "img": "img/traits/da_18_caustic.png"
+  },
+  {
+   "id": "da_18_fae",
+   "name": "Hada",
+   "desc": "El daño, la curación y los escudos de tu equipo atraen a hadas.\n\nCada hada otorga daño de ataque y poder de habilidad a los campeones feéricos. Cuando su vida cae por debajo de un @HealThreshold*100@%, se curan por cada hada.\n(@MinUnits@) @ADAP@% y @Heal@% de curación.\n(@MinUnits@) @ADAP@%  y @Heal@% de curación. Tras atraer a 7 hadas, empezarás a atraer a hadas doradas, que otorgan oro.",
+   "breakpoints": [
+    2,
+    4
+   ],
+   "img": "img/traits/da_18_fae.png"
+  },
+  {
+   "id": "da_18_lunar",
+   "name": "Lunar",
+   "desc": "Los campeones lunares y los aliados adyacentes obtienen velocidad de ataque y poder de habilidad. Los campeones lunares obtienen un @LunarMultiplier*100@% más.\n(@MinUnits@) @AttackSpeed*100@% , @AbilityPower*100@% .\n(@MinUnits@) @AttackSpeed*100@% , @AbilityPower*100@% .\n(@MinUnits@) @AttackSpeed*100@% , @AbilityPower*100@% .\n(@MinUnits@) @AttackSpeed*100@% , @AbilityPower*100@% .",
+   "breakpoints": [
+    2,
+    3,
+    4,
+    5
+   ],
+   "img": "img/traits/da_18_lunar.png"
+  },
+  {
+   "id": "da_18_defender",
+   "name": "Defensor",
+   "desc": "Tu equipo obtiene @NonDefenderDefenseGain@ de armadura y resistencia mágica. Los defensores obtienen más.\n(@MinUnits@) @DefenderDefenseGain@.\n(@MinUnits@) @DefenderDefenseGain@.\n(@MinUnits@) @DefenderDefenseGain@.",
+   "breakpoints": [
+    2,
+    4,
+    6
+   ],
+   "img": "img/traits/da_18_defender.png"
+  },
+  {
+   "id": "da_18_spellweaver",
+   "name": "Tejehechizos",
+   "desc": "Tu equipo obtiene un @TeamwideAP*100@% de poder de habilidad. Los tejehechizos obtienen más, así como poder de habilidad adicional cada vez que un tejehechizos lanza una habilidad.\n(@MinUnits@) @SpellweaverAP*100@% de  + @APPerCast*100@% de  por habilidad.\n(@MinUnits@) @SpellweaverAP*100@% de  + @APPerCast*100@% de  por habilidad.\n(@MinUnits@) @SpellweaverAP*100@% de  + @APPerCast*100@% de  por habilidad.",
+   "breakpoints": [
+    2,
+    4,
+    6
+   ],
+   "img": "img/traits/da_18_spellweaver.png"
+  },
+  {
+   "id": "da_18_zyrauniquetrait",
+   "name": "Dama de las espinas",
+   "desc": "Tu equipo obtiene un @BaseDurability*100@% de durabilidad, que aumenta a un @IncreasedDurability*100@% si hay @PlantNumThreshold@ o más plantas de Zyra vivas.",
+   "breakpoints": [
+    1
+   ],
+   "img": "img/traits/da_18_zyrauniquetrait.png"
+  },
+  {
+   "id": "da_florafatalis18",
+   "name": "Flora fatalis",
+   "desc": "Los campeones de Flora fatalis cosechan a los enemigos al eliminarlos, lo que otorga:\n(@MinUnits@) @Mana@ de maná.\n(@MinUnits@) Y un @PercentHeal*100@% de la vida máxima al aliado con menos vida.",
+   "breakpoints": [
+    1,
+    2
+   ],
+   "img": "img/traits/da_florafatalis18.png"
+  },
+  {
+   "id": "da_18_summoner",
+   "name": "Invocador",
+   "desc": "Los invocadores potencian sus invocaciones de diferentes formas.\n\nYorick: +@HealthMult*100@% de vida.\nAzir: +@AzirDamageMult*100@% de daño.\nMamipicu: +@DamageMult*100@% de daño.\nZyra: +@NumExtraAttacks@ ataques de plantas.\n(@MinUnits@) Potencia las invocaciones.\n(@MinUnits@) Mejora todos los efectos un 50%.",
+   "breakpoints": [
+    2,
+    3
+   ],
+   "img": "img/traits/da_18_summoner.png"
+  },
+  {
+   "id": "da_18_blossom",
+   "name": "Brote",
+   "desc": "Tras el combate, tus fuegos fatuos se potencian.\n\nLos campeones de Brote obtienen daño de ataque, poder de habilidad y un @BonusHealth*100@% de vida máxima.\n(@MinUnits@) Los fuegos fatuos se mejoran, @ADAP*100@% .\n(@MinUnits@) Hay fuegos fatuos en todas las tiendas, @ADAP*100@% .\n(@MinUnits@) Obtienes @GoldPerCharmPurchased@ de oro tras comprar un fuego fatuo, @ADAP*100@% .\n(@MinUnits@) Puedes comprar 2 fuegos fatuos por ronda, @ADAP*100@% .\n(@MinUnits@) Los fuegos fatuos rebosan de poder, @ADAP*100@% .",
+   "breakpoints": [
+    3,
+    5,
+    7,
+    9,
+    11
+   ],
+   "img": "img/traits/da_18_blossom.png"
+  },
+  {
+   "id": "da_emerald18",
+   "name": "Aspecto de esmeralda",
+   "desc": "Arrastra a un aliado sobre tu Taric más fuerte para vincularlos, lo que otorga al aliado poderosas bonificaciones con la habilidad de Taric.",
+   "breakpoints": [
+    1
+   ],
+   "img": "img/traits/da_emerald18.png"
+  }
+ ],
+ "items": [
+  {
+   "id": "da_18_radiantize_upgrade",
+   "api": "DA_18_Radiantize_Upgrade",
+   "name": "¡Radiantes a mí!",
+   "kind": "radiant",
+   "desc": "Tras @DelayUpgrade@ s, @NumItemsUpgrade@ objeto equipado aleatorio se convierte temporalmente en un objeto radiante.",
+   "components": [],
+   "role": "tank",
+   "img": "img/items/da_18_radiantize_upgrade.png"
+  },
+  {
+   "id": "da_18_radiantize",
+   "api": "DA_18_Radiantize",
+   "name": "¡Radiantes a mí!",
+   "kind": "radiant",
+   "desc": "Tras @Delay@ s, @NumItems@ objeto equipado aleatorio se convierte temporalmente en un objeto radiante.",
+   "components": [],
+   "role": "tank",
+   "img": "img/items/da_18_radiantize.png"
+  },
+  {
+   "id": "da_redbuff",
+   "api": "DA_RedBuff",
+   "name": "Mejora roja",
+   "kind": "completed",
+   "desc": "",
+   "components": [
+    "da_component_recurvebow",
+    "da_component_recurvebow"
+   ],
+   "role": "dmg",
+   "img": "img/items/da_redbuff.png"
+  },
+  {
+   "id": "da_evenshroud",
+   "api": "DA_Evenshroud",
+   "name": "Mortaja de la quietud",
+   "kind": "completed",
+   "desc": "",
+   "components": [
+    "da_component_negatroncloak",
+    "da_component_giantsbelt"
+   ],
+   "role": "tank",
+   "img": "img/items/da_evenshroud.png"
+  },
+  {
+   "id": "da_dragonsclawradiant",
+   "api": "DA_DragonsClawRadiant",
+   "name": "Garra de dragón radiante",
+   "kind": "radiant",
+   "desc": "",
+   "components": [],
+   "role": "tank",
+   "img": "img/items/da_dragonsclawradiant.png"
+  },
+  {
+   "id": "da_spearofshojin",
+   "api": "DA_SpearOfShojin",
+   "name": "Lanza de Shojin",
+   "kind": "completed",
+   "desc": "",
+   "components": [
+    "da_component_tearofthegoddess",
+    "da_component_bfsword"
+   ],
+   "role": "dmg",
+   "img": "img/items/da_spearofshojin.png"
+  },
+  {
+   "id": "da_component_negatroncloak",
+   "api": "DA_Component_NegatronCloak",
+   "name": "Capa negatrón",
+   "kind": "component",
+   "desc": "",
+   "components": [],
+   "role": "other",
+   "img": "img/items/da_component_negatroncloak.png"
+  },
+  {
+   "id": "da_quicksilver",
+   "api": "DA_Quicksilver",
+   "name": "Fajín de mercurio",
+   "kind": "completed",
+   "desc": "",
+   "components": [
+    "da_component_negatroncloak",
+    "da_component_sparringgloves"
+   ],
+   "role": "dmg",
+   "img": "img/items/da_quicksilver.png"
+  },
+  {
+   "id": "da_artifact_witsend",
+   "api": "DA_Artifact_WitsEnd",
+   "name": "Final del ingenio",
+   "kind": "artifact",
+   "desc": "",
+   "components": [],
+   "role": "tank",
+   "img": "img/items/da_artifact_witsend.png"
+  },
+  {
+   "id": "da_voidstaffradiant",
+   "api": "DA_VoidStaffRadiant",
+   "name": "Bastón del Vacío radiante",
+   "kind": "radiant",
+   "desc": "",
+   "components": [],
+   "role": "tank",
+   "img": "img/items/da_voidstaffradiant.png"
+  },
+  {
+   "id": "da_artifact_mittens",
+   "api": "DA_Artifact_Mittens",
+   "name": "Mitones",
+   "kind": "artifact",
+   "desc": "",
+   "components": [],
+   "role": "tank",
+   "img": "img/items/da_artifact_mittens.png"
+  },
+  {
+   "id": "da_artifact_titanichydra",
+   "api": "DA_Artifact_TitanicHydra",
+   "name": "Hidra titánica",
+   "kind": "artifact",
+   "desc": "",
+   "components": [],
+   "role": "tank",
+   "img": "img/items/da_artifact_titanichydra.png"
+  },
+  {
+   "id": "da_crownguardradiant",
+   "api": "DA_CrownguardRadiant",
+   "name": "Regiaguardia radiante",
+   "kind": "radiant",
+   "desc": "",
+   "components": [],
+   "role": "dmg",
+   "img": "img/items/da_crownguardradiant.png"
+  },
+  {
+   "id": "da_18_emblemvanguard",
+   "api": "DA_18_EmblemVanguard",
+   "name": "Emblema de vanguardia",
+   "kind": "emblem",
+   "desc": "",
+   "components": [
+    "da_component_fryingpan",
+    "da_component_chainvest"
+   ],
+   "role": "other",
+   "img": "img/items/da_18_emblemvanguard.png"
+  },
+  {
+   "id": "da_artifact_zhonyasparadox",
+   "api": "DA_Artifact_ZhonyasParadox",
+   "name": "Paradoja de Zhonya",
+   "kind": "artifact",
+   "desc": "",
+   "components": [],
+   "role": "tank",
+   "img": "img/items/da_artifact_zhonyasparadox.png"
+  },
+  {
+   "id": "da_gargoylestoneplate",
+   "api": "DA_GargoyleStoneplate",
+   "name": "Protector pétreo de gárgola",
+   "kind": "completed",
+   "desc": "",
+   "components": [
+    "da_component_chainvest",
+    "da_component_negatroncloak"
+   ],
+   "role": "tank",
+   "img": "img/items/da_gargoylestoneplate.png"
+  },
+  {
+   "id": "da_18_emblemblackthorn",
+   "api": "DA_18_EmblemBlackthorn",
+   "name": "Emblema de espina negra",
+   "kind": "emblem",
+   "desc": "",
+   "components": [
+    "da_component_spatula",
+    "da_component_giantsbelt"
+   ],
+   "role": "other",
+   "img": "img/items/da_18_emblemblackthorn.png"
+  },
+  {
+   "id": "da_spiritvisage_radiant",
+   "api": "DA_SpiritVisage_Radiant",
+   "name": "Rostro espiritual radiante",
+   "kind": "radiant",
+   "desc": "",
+   "components": [],
+   "role": "tank",
+   "img": "img/items/da_spiritvisage_radiant.png"
+  },
+  {
+   "id": "da_krakensfury_radiant",
+   "api": "DA_KrakensFury_Radiant",
+   "name": "Furia del kraken radiante",
+   "kind": "radiant",
+   "desc": "",
+   "components": [],
+   "role": "dmg",
+   "img": "img/items/da_krakensfury_radiant.png"
+  },
+  {
+   "id": "da_jeweledgauntletradiant",
+   "api": "DA_JeweledGauntletRadiant",
+   "name": "Guantelete enjoyado radiante",
+   "kind": "radiant",
+   "desc": "",
+   "components": [],
+   "role": "dmg",
+   "img": "img/items/da_jeweledgauntletradiant.png"
+  },
+  {
+   "id": "da_nashorstooth",
+   "api": "DA_NashorsTooth",
+   "name": "Diente de Nashor",
+   "kind": "completed",
+   "desc": "",
+   "components": [
+    "da_component_recurvebow",
+    "da_component_giantsbelt"
+   ],
+   "role": "dmg",
+   "img": "img/items/da_nashorstooth.png"
+  },
+  {
+   "id": "da_artifact_voidgauntlet",
+   "api": "DA_Artifact_VoidGauntlet",
+   "name": "Guantelete del Vacío",
+   "kind": "artifact",
+   "desc": "",
+   "components": [],
+   "role": "tank",
+   "img": "img/items/da_artifact_voidgauntlet.png"
+  },
+  {
+   "id": "da_lastwhisperradiant",
+   "api": "DA_LastWhisperRadiant",
+   "name": "Últimas palabras radiante",
+   "kind": "radiant",
+   "desc": "",
+   "components": [],
+   "role": "tank",
+   "img": "img/items/da_lastwhisperradiant.png"
+  },
+  {
+   "id": "da_component_tearofthegoddess",
+   "api": "DA_Component_TearOfTheGoddess",
+   "name": "Lágrima de la diosa",
+   "kind": "component",
+   "desc": "",
+   "components": [],
+   "role": "other",
+   "img": "img/items/da_component_tearofthegoddess.png"
+  },
+  {
+   "id": "da_infinityedgeradiant",
+   "api": "DA_InfinityEdgeRadiant",
+   "name": "Filo infinito radiante",
+   "kind": "radiant",
+   "desc": "",
+   "components": [],
+   "role": "tank",
+   "img": "img/items/da_infinityedgeradiant.png"
+  },
+  {
+   "id": "da_18_emblemhunter",
+   "api": "DA_18_EmblemHunter",
+   "name": "Emblema de cazador",
+   "kind": "emblem",
+   "desc": "",
+   "components": [
+    "da_component_fryingpan",
+    "da_component_bfsword"
+   ],
+   "role": "other",
+   "img": "img/items/da_18_emblemhunter.png"
+  },
+  {
+   "id": "da_artifact_lightshieldcrest",
+   "api": "DA_Artifact_LightshieldCrest",
+   "name": "Blasón de Escudo de luz",
+   "kind": "artifact",
+   "desc": "",
+   "components": [],
+   "role": "tank",
+   "img": "img/items/da_artifact_lightshieldcrest.png"
+  },
+  {
+   "id": "da_thiefsgloves",
+   "api": "DA_ThiefsGloves",
+   "name": "Guantes de ladrón",
+   "kind": "completed",
+   "desc": "",
+   "components": [
+    "da_component_sparringgloves",
+    "da_component_sparringgloves"
+   ],
+   "role": "tank",
+   "img": "img/items/da_thiefsgloves.png"
+  },
+  {
+   "id": "da_infinityedge",
+   "api": "DA_InfinityEdge",
+   "name": "Filo infinito",
+   "kind": "completed",
+   "desc": "",
+   "components": [
+    "da_component_bfsword",
+    "da_component_sparringgloves"
+   ],
+   "role": "dmg",
+   "img": "img/items/da_infinityedge.png"
+  },
+  {
+   "id": "da_artifact_ludenstempest",
+   "api": "DA_Artifact_LudensTempest",
+   "name": "Tempestad de Luden",
+   "kind": "artifact",
+   "desc": "",
+   "components": [],
+   "role": "tank",
+   "img": "img/items/da_artifact_ludenstempest.png"
+  },
+  {
+   "id": "da_morellonomicon",
+   "api": "DA_Morellonomicon",
+   "name": "Morellonomicón",
+   "kind": "completed",
+   "desc": "",
+   "components": [
+    "da_component_giantsbelt",
+    "da_component_needlesslylargerod"
+   ],
+   "role": "dmg",
+   "img": "img/items/da_morellonomicon.png"
+  },
+  {
+   "id": "da_18_emblemprimal",
+   "api": "DA_18_EmblemPrimal",
+   "name": "Emblema de primigenio",
+   "kind": "emblem",
+   "desc": "",
+   "components": [
+    "da_component_spatula",
+    "da_component_sparringgloves"
+   ],
+   "role": "other",
+   "img": "img/items/da_18_emblemprimal.png"
+  },
+  {
+   "id": "da_protectorsvow",
+   "api": "DA_ProtectorsVow",
+   "name": "Promesa del protector",
+   "kind": "completed",
+   "desc": "",
+   "components": [
+    "da_component_chainvest",
+    "da_component_tearofthegoddess"
+   ],
+   "role": "tank",
+   "img": "img/items/da_protectorsvow.png"
+  },
+  {
+   "id": "da_artifact_rapidfirecannon",
+   "api": "DA_Artifact_RapidFireCannon",
+   "name": "Cañón de fuego rápido",
+   "kind": "artifact",
+   "desc": "",
+   "components": [],
+   "role": "tank",
+   "img": "img/items/da_artifact_rapidfirecannon.png"
+  },
+  {
+   "id": "da_protectorsvowradiant",
+   "api": "DA_ProtectorsVowRadiant",
+   "name": "Promesa del protector radiante",
+   "kind": "radiant",
+   "desc": "",
+   "components": [],
+   "role": "tank",
+   "img": "img/items/da_protectorsvowradiant.png"
+  },
+  {
+   "id": "da_component_bfsword",
+   "api": "DA_Component_BFSword",
+   "name": "Espadón",
+   "kind": "component",
+   "desc": "",
+   "components": [],
+   "role": "other",
+   "img": "img/items/da_component_bfsword.png"
+  },
+  {
+   "id": "da_warmogsarmor",
+   "api": "DA_WarmogsArmor",
+   "name": "Armadura de Warmog",
+   "kind": "completed",
+   "desc": "",
+   "components": [
+    "da_component_giantsbelt",
+    "da_component_giantsbelt"
+   ],
+   "role": "tank",
+   "img": "img/items/da_warmogsarmor.png"
+  },
+  {
+   "id": "da_18_emblemslayer",
+   "api": "DA_18_EmblemSlayer",
+   "name": "Emblema de asolador",
+   "kind": "emblem",
+   "desc": "",
+   "components": [
+    "da_component_fryingpan",
+    "da_component_negatroncloak"
+   ],
+   "role": "other",
+   "img": "img/items/da_18_emblemslayer.png"
+  },
+  {
+   "id": "da_morellonomiconradiant",
+   "api": "DA_MorellonomiconRadiant",
+   "name": "Morellonomicón radiante",
+   "kind": "radiant",
+   "desc": "",
+   "components": [],
+   "role": "dmg",
+   "img": "img/items/da_morellonomiconradiant.png"
+  },
+  {
+   "id": "da_artifact_hellfirehatchet",
+   "api": "DA_Artifact_HellfireHatchet",
+   "name": "Hacha infernal",
+   "kind": "artifact",
+   "desc": "",
+   "components": [],
+   "role": "tank",
+   "img": "img/items/da_artifact_hellfirehatchet.png"
+  },
+  {
+   "id": "da_healthpotion18_radiant",
+   "api": "DA_HealthPotion18_Radiant",
+   "name": "Poción de vida radiante",
+   "kind": "radiant",
+   "desc": "",
+   "components": [],
+   "role": "tank",
+   "img": "img/items/da_healthpotion18_radiant.png"
+  },
+  {
+   "id": "da_blastpotion18_radiant",
+   "api": "DA_BlastPotion18_Radiant",
+   "name": "Poción explosiva radiante",
+   "kind": "radiant",
+   "desc": "",
+   "components": [],
+   "role": "tank",
+   "img": "img/items/da_blastpotion18_radiant.png"
+  },
+  {
+   "id": "da_steraksgageradiant",
+   "api": "DA_SteraksGageRadiant",
+   "name": "Calibrador de Sterak radiante",
+   "kind": "radiant",
+   "desc": "",
+   "components": [],
+   "role": "dmg",
+   "img": "img/items/da_steraksgageradiant.png"
+  },
+  {
+   "id": "da_artifact_lichbane",
+   "api": "DA_Artifact_LichBane",
+   "name": "Perdición del liche",
+   "kind": "artifact",
+   "desc": "",
+   "components": [],
+   "role": "tank",
+   "img": "img/items/da_artifact_lichbane.png"
+  },
+  {
+   "id": "da_voidstaff",
+   "api": "DA_VoidStaff",
+   "name": "Bastón del Vacío",
+   "kind": "completed",
+   "desc": "",
+   "components": [
+    "da_component_recurvebow",
+    "da_component_tearofthegoddess"
+   ],
+   "role": "tank",
+   "img": "img/items/da_voidstaff.png"
+  },
+  {
+   "id": "da_artifact_forbiddenidol",
+   "api": "DA_Artifact_ForbiddenIdol",
+   "name": "Ídolo prohibido",
+   "kind": "artifact",
+   "desc": "",
+   "components": [],
+   "role": "tank",
+   "img": "img/items/da_artifact_forbiddenidol.png"
+  },
+  {
+   "id": "da_18_emblemdefender",
+   "api": "DA_18_EmblemDefender",
+   "name": "Emblema de defensor",
+   "kind": "emblem",
+   "desc": "",
+   "components": [],
+   "role": "other",
+   "img": "img/items/da_18_emblemdefender.png"
+  },
+  {
+   "id": "da_dragonsclaw",
+   "api": "DA_DragonsClaw",
+   "name": "Garra de dragón",
+   "kind": "completed",
+   "desc": "",
+   "components": [
+    "da_component_negatroncloak",
+    "da_component_negatroncloak"
+   ],
+   "role": "tank",
+   "img": "img/items/da_dragonsclaw.png"
+  },
+  {
+   "id": "da_18_emblemflorafatalis",
+   "api": "DA_18_EmblemFloraFatalis",
+   "name": "Emblema de flora fatalis",
+   "kind": "emblem",
+   "desc": "",
+   "components": [],
+   "role": "other",
+   "img": "img/items/da_18_emblemflorafatalis.png"
+  },
+  {
+   "id": "da_18_emblemfae",
+   "api": "DA_18_EmblemFae",
+   "name": "Emblema de hada",
+   "kind": "emblem",
+   "desc": "",
+   "components": [
+    "da_component_spatula",
+    "da_component_bfsword"
+   ],
+   "role": "other",
+   "img": "img/items/da_18_emblemfae.png"
+  },
+  {
+   "id": "da_spiritvisage",
+   "api": "DA_SpiritVisage",
+   "name": "Rostro espiritual",
+   "kind": "completed",
+   "desc": "",
+   "components": [
+    "da_component_giantsbelt",
+    "da_component_tearofthegoddess"
+   ],
+   "role": "tank",
+   "img": "img/items/da_spiritvisage.png"
+  },
+  {
+   "id": "da_artifact_fishbones",
+   "api": "DA_Artifact_Fishbones",
+   "name": "Espinas",
+   "kind": "artifact",
+   "desc": "",
+   "components": [],
+   "role": "tank",
+   "img": "img/items/da_artifact_fishbones.png"
+  },
+  {
+   "id": "da_edgeofnight",
+   "api": "DA_EdgeOfNight",
+   "name": "Filo de la noche",
+   "kind": "completed",
+   "desc": "",
+   "components": [
+    "da_component_bfsword",
+    "da_component_chainvest"
+   ],
+   "role": "dmg",
+   "img": "img/items/da_edgeofnight.png"
+  },
+  {
+   "id": "da_artifact_aegisofdusk",
+   "api": "DA_Artifact_AegisOfDusk",
+   "name": "Égida del anochecer",
+   "kind": "artifact",
+   "desc": "",
+   "components": [],
+   "role": "tank",
+   "img": "img/items/da_artifact_aegisofdusk.png"
+  },
+  {
+   "id": "da_artifact_goldcollector",
+   "api": "DA_Artifact_GoldCollector",
+   "name": "Coleccionista de oro",
+   "kind": "artifact",
+   "desc": "",
+   "components": [],
+   "role": "tank",
+   "img": "img/items/da_artifact_goldcollector.png"
+  },
+  {
+   "id": "da_component_recurvebow",
+   "api": "DA_Component_RecurveBow",
+   "name": "Arco curvo",
+   "kind": "component",
+   "desc": "",
+   "components": [],
+   "role": "other",
+   "img": "img/items/da_component_recurvebow.png"
+  },
+  {
+   "id": "da_manapotion18_radiant",
+   "api": "DA_ManaPotion18_Radiant",
+   "name": "Poción de maná radiante",
+   "kind": "radiant",
+   "desc": "",
+   "components": [],
+   "role": "tank",
+   "img": "img/items/da_manapotion18_radiant.png"
+  },
+  {
+   "id": "da_18_emblemsprykin",
+   "api": "DA_18_EmblemSprykin",
+   "name": "Emblema de vivaz",
+   "kind": "emblem",
+   "desc": "",
+   "components": [
+    "da_component_spatula",
+    "da_component_negatroncloak"
+   ],
+   "role": "other",
+   "img": "img/items/da_18_emblemsprykin.png"
+  },
+  {
+   "id": "da_titansresolve",
+   "api": "DA_TitansResolve",
+   "name": "Resolución titánica",
+   "kind": "completed",
+   "desc": "",
+   "components": [
+    "da_component_recurvebow",
+    "da_component_chainvest"
+   ],
+   "role": "tank",
+   "img": "img/items/da_titansresolve.png"
+  },
+  {
+   "id": "da_artifact_statikkshiv",
+   "api": "DA_Artifact_StatikkShiv",
+   "name": "Puñal de Statikk",
+   "kind": "artifact",
+   "desc": "",
+   "components": [],
+   "role": "tank",
+   "img": "img/items/da_artifact_statikkshiv.png"
+  },
+  {
+   "id": "da_artifact_horizonfocus",
+   "api": "DA_Artifact_HorizonFocus",
+   "name": "Precisión infalible",
+   "kind": "artifact",
+   "desc": "",
+   "components": [],
+   "role": "tank",
+   "img": "img/items/da_artifact_horizonfocus.png"
+  },
+  {
+   "id": "da_18_embleminvoker",
+   "api": "DA_18_EmblemInvoker",
+   "name": "Emblema de conjurador",
+   "kind": "emblem",
+   "desc": "",
+   "components": [
+    "da_component_fryingpan",
+    "da_component_tearofthegoddess"
+   ],
+   "role": "other",
+   "img": "img/items/da_18_embleminvoker.png"
+  },
+  {
+   "id": "da_edgeofnightradiant",
+   "api": "DA_EdgeOfNightRadiant",
+   "name": "Filo de la noche radiante",
+   "kind": "radiant",
+   "desc": "",
+   "components": [],
+   "role": "tank",
+   "img": "img/items/da_edgeofnightradiant.png"
+  },
+  {
+   "id": "da_component_giantsbelt",
+   "api": "DA_Component_GiantsBelt",
+   "name": "Cinturón de gigante",
+   "kind": "component",
+   "desc": "",
+   "components": [],
+   "role": "other",
+   "img": "img/items/da_component_giantsbelt.png"
+  },
+  {
+   "id": "da_artifact_dawncore",
+   "api": "DA_Artifact_Dawncore",
+   "name": "Corazón del alba",
+   "kind": "artifact",
+   "desc": "",
+   "components": [],
+   "role": "tank",
+   "img": "img/items/da_artifact_dawncore.png"
+  },
+  {
+   "id": "da_artifact_theindomitable",
+   "api": "DA_Artifact_TheIndomitable",
+   "name": "Indomable",
+   "kind": "artifact",
+   "desc": "",
+   "components": [],
+   "role": "tank",
+   "img": "img/items/da_artifact_theindomitable.png"
+  },
+  {
+   "id": "da_rabadonsdeathcap_radiant",
+   "api": "DA_RabadonsDeathcap_Radiant",
+   "name": "Sombrero mortal de Rabadon radiante",
+   "kind": "radiant",
+   "desc": "",
+   "components": [],
+   "role": "tank",
+   "img": "img/items/da_rabadonsdeathcap_radiant.png"
+  },
+  {
+   "id": "da_evenshroudradiant",
+   "api": "DA_EvenshroudRadiant",
+   "name": "Mortaja de la quietud radiante",
+   "kind": "radiant",
+   "desc": "",
+   "components": [],
+   "role": "tank",
+   "img": "img/items/da_evenshroudradiant.png"
+  },
+  {
+   "id": "da_artifact_aegisofdawn",
+   "api": "DA_Artifact_AegisOfDawn",
+   "name": "Égida del amanecer",
+   "kind": "artifact",
+   "desc": "",
+   "components": [],
+   "role": "tank",
+   "img": "img/items/da_artifact_aegisofdawn.png"
+  },
+  {
+   "id": "da_artifact_seekersarmguard",
+   "api": "DA_Artifact_SeekersArmguard",
+   "name": "Brazalete de la buscadora",
+   "kind": "artifact",
+   "desc": "",
+   "components": [],
+   "role": "tank",
+   "img": "img/items/da_artifact_seekersarmguard.png"
+  },
+  {
+   "id": "da_18_emblembrawler",
+   "api": "DA_18_EmblemBrawler",
+   "name": "Emblema de luchador",
+   "kind": "emblem",
+   "desc": "",
+   "components": [
+    "da_component_fryingpan",
+    "da_component_giantsbelt"
+   ],
+   "role": "other",
+   "img": "img/items/da_18_emblembrawler.png"
+  },
+  {
+   "id": "da_artifact_eternalpact",
+   "api": "DA_Artifact_EternalPact",
+   "name": "Pacto eterno",
+   "kind": "artifact",
+   "desc": "",
+   "components": [],
+   "role": "tank",
+   "img": "img/items/da_artifact_eternalpact.png"
+  },
+  {
+   "id": "da_bloodthirsterradiant",
+   "api": "DA_BloodthirsterRadiant",
+   "name": "Sanguinaria radiante",
+   "kind": "radiant",
+   "desc": "",
+   "components": [],
+   "role": "tank",
+   "img": "img/items/da_bloodthirsterradiant.png"
+  },
+  {
+   "id": "da_artifact_silvermeredawn",
+   "api": "DA_Artifact_SilvermereDawn",
+   "name": "Amanecer de Meraplata",
+   "kind": "artifact",
+   "desc": "",
+   "components": [],
+   "role": "tank",
+   "img": "img/items/da_artifact_silvermeredawn.png"
+  },
+  {
+   "id": "da_component_sparringgloves",
+   "api": "DA_Component_SparringGloves",
+   "name": "Guantes de combate",
+   "kind": "component",
+   "desc": "",
+   "components": [],
+   "role": "other",
+   "img": "img/items/da_component_sparringgloves.png"
+  },
+  {
+   "id": "da_component_needlesslylargerod",
+   "api": "DA_Component_NeedlesslyLargeRod",
+   "name": "Vara innecesariamente grande",
+   "kind": "component",
+   "desc": "",
+   "components": [],
+   "role": "other",
+   "img": "img/items/da_component_needlesslylargerod.png"
+  },
+  {
+   "id": "da_archangelsstaffradiant",
+   "api": "DA_ArchangelsStaffRadiant",
+   "name": "Bastón del arcángel radiante",
+   "kind": "radiant",
+   "desc": "",
+   "components": [],
+   "role": "dmg",
+   "img": "img/items/da_archangelsstaffradiant.png"
+  },
+  {
+   "id": "da_deathbladeradiant",
+   "api": "DA_DeathbladeRadiant",
+   "name": "Filo mortal radiante",
+   "kind": "radiant",
+   "desc": "",
+   "components": [],
+   "role": "dmg",
+   "img": "img/items/da_deathbladeradiant.png"
+  },
+  {
+   "id": "da_tacticianscape",
+   "api": "DA_TacticiansCape",
+   "name": "Capa de estratega",
+   "kind": "completed",
+   "desc": "",
+   "components": [
+    "da_component_spatula",
+    "da_component_fryingpan"
+   ],
+   "role": "tank",
+   "img": "img/items/da_tacticianscape.png"
+  },
+  {
+   "id": "da_hextechgunblade",
+   "api": "DA_HextechGunblade",
+   "name": "Sable-pistola hextech",
+   "kind": "completed",
+   "desc": "",
+   "components": [
+    "da_component_bfsword",
+    "da_component_needlesslylargerod"
+   ],
+   "role": "dmg",
+   "img": "img/items/da_hextechgunblade.png"
+  },
+  {
+   "id": "da_artifact_hullcrusher",
+   "api": "DA_Artifact_Hullcrusher",
+   "name": "Aplastacráneos",
+   "kind": "artifact",
+   "desc": "",
+   "components": [],
+   "role": "tank",
+   "img": "img/items/da_artifact_hullcrusher.png"
+  },
+  {
+   "id": "da_spearofshojinradiant",
+   "api": "DA_SpearOfShojinRadiant",
+   "name": "Lanza de Shojin radiante",
+   "kind": "radiant",
+   "desc": "",
+   "components": [],
+   "role": "dmg",
+   "img": "img/items/da_spearofshojinradiant.png"
+  },
+  {
+   "id": "da_handofjustice",
+   "api": "DA_HandOfJustice",
+   "name": "Mano de la justicia",
+   "kind": "completed",
+   "desc": "",
+   "components": [
+    "da_component_tearofthegoddess",
+    "da_component_sparringgloves"
+   ],
+   "role": "dmg",
+   "img": "img/items/da_handofjustice.png"
+  },
+  {
+   "id": "da_artifact_manazane",
+   "api": "DA_Artifact_Manazane",
+   "name": "Manazane",
+   "kind": "artifact",
+   "desc": "",
+   "components": [],
+   "role": "tank",
+   "img": "img/items/da_artifact_manazane.png"
+  },
+  {
+   "id": "da_radiantluckyitemchest",
+   "api": "DA_RadiantLuckyItemChest",
+   "name": "Cofre de objeto de la suerte radiante",
+   "kind": "radiant",
+   "desc": "",
+   "components": [],
+   "role": "tank",
+   "img": "img/items/da_radiantluckyitemchest.png"
+  },
+  {
+   "id": "da_giantslayer_radiant",
+   "api": "DA_GiantSlayer_Radiant",
+   "name": "Verdugo de gigantes radiante",
+   "kind": "radiant",
+   "desc": "",
+   "components": [],
+   "role": "tank",
+   "img": "img/items/da_giantslayer_radiant.png"
+  },
+  {
+   "id": "da_artifact_gamblersblade",
+   "api": "DA_Artifact_GamblersBlade",
+   "name": "Espada del apostador",
+   "kind": "artifact",
+   "desc": "",
+   "components": [],
+   "role": "tank",
+   "img": "img/items/da_artifact_gamblersblade.png"
+  },
+  {
+   "id": "da_titansresolve_radiant",
+   "api": "DA_TitansResolve_Radiant",
+   "name": "Resolución titánica radiante",
+   "kind": "radiant",
+   "desc": "",
+   "components": [],
+   "role": "tank",
+   "img": "img/items/da_titansresolve_radiant.png"
+  },
+  {
+   "id": "da_18_emblemexecutioner",
+   "api": "DA_18_EmblemExecutioner",
+   "name": "Emblema de exterminador",
+   "kind": "emblem",
+   "desc": "",
+   "components": [
+    "da_component_fryingpan",
+    "da_component_sparringgloves"
+   ],
+   "role": "other",
+   "img": "img/items/da_18_emblemexecutioner.png"
+  },
+  {
+   "id": "da_strikersflail",
+   "api": "DA_StrikersFlail",
+   "name": "Mangual del guerrero",
+   "kind": "completed",
+   "desc": "",
+   "components": [
+    "da_component_giantsbelt",
+    "da_component_sparringgloves"
+   ],
+   "role": "dmg",
+   "img": "img/items/da_strikersflail.png"
+  },
+  {
+   "id": "da_handofjusticeradiant",
+   "api": "DA_HandOfJusticeRadiant",
+   "name": "Mano de la justicia radiante",
+   "kind": "radiant",
+   "desc": "",
+   "components": [],
+   "role": "dmg",
+   "img": "img/items/da_handofjusticeradiant.png"
+  },
+  {
+   "id": "da_18_emblemlunar",
+   "api": "DA_18_EmblemLunar",
+   "name": "Emblema de lunar",
+   "kind": "emblem",
+   "desc": "",
+   "components": [
+    "da_component_spatula",
+    "da_component_tearofthegoddess"
+   ],
+   "role": "other",
+   "img": "img/items/da_18_emblemlunar.png"
+  },
+  {
+   "id": "da_steadfastheart",
+   "api": "DA_SteadfastHeart",
+   "name": "Corazón resuelto",
+   "kind": "completed",
+   "desc": "",
+   "components": [
+    "da_component_chainvest",
+    "da_component_sparringgloves"
+   ],
+   "role": "tank",
+   "img": "img/items/da_steadfastheart.png"
+  },
+  {
+   "id": "da_guinsoosrageblade",
+   "api": "DA_GuinsoosRageblade",
+   "name": "Hoja de furia de Guinsoo",
+   "kind": "completed",
+   "desc": "",
+   "components": [
+    "da_component_recurvebow",
+    "da_component_needlesslylargerod"
+   ],
+   "role": "dmg",
+   "img": "img/items/da_guinsoosrageblade.png"
+  },
+  {
+   "id": "da_artifact_infinityforce",
+   "api": "DA_Artifact_InfinityForce",
+   "name": "Fuerza del infinito",
+   "kind": "artifact",
+   "desc": "",
+   "components": [],
+   "role": "tank",
+   "img": "img/items/da_artifact_infinityforce.png"
+  },
+  {
+   "id": "da_guinsoosragebladeradiant",
+   "api": "DA_GuinsoosRagebladeRadiant",
+   "name": "Hoja de furia de Guinsoo radiante",
+   "kind": "radiant",
+   "desc": "",
+   "components": [],
+   "role": "dmg",
+   "img": "img/items/da_guinsoosragebladeradiant.png"
+  },
+  {
+   "id": "da_18_emblemrapidfire",
+   "api": "DA_18_EmblemRapidfire",
+   "name": "Emblema de fuego rápido",
+   "kind": "emblem",
+   "desc": "",
+   "components": [
+    "da_component_fryingpan",
+    "da_component_recurvebow"
+   ],
+   "role": "other",
+   "img": "img/items/da_18_emblemrapidfire.png"
+  },
+  {
+   "id": "da_hextechgunbladeradiant",
+   "api": "DA_HextechGunbladeRadiant",
+   "name": "Sable-pistola hextech radiante",
+   "kind": "radiant",
+   "desc": "",
+   "components": [],
+   "role": "tank",
+   "img": "img/items/da_hextechgunbladeradiant.png"
+  },
+  {
+   "id": "da_artifact_navoriflickerblade",
+   "api": "DA_Artifact_NavoriFlickerblade",
+   "name": "Filofugaz",
+   "kind": "artifact",
+   "desc": "",
+   "components": [],
+   "role": "tank",
+   "img": "img/items/da_artifact_navoriflickerblade.png"
+  },
+  {
+   "id": "da_ionicsparkradiant",
+   "api": "DA_IonicSparkRadiant",
+   "name": "Chispa iónica radiante",
+   "kind": "radiant",
+   "desc": "",
+   "components": [],
+   "role": "tank",
+   "img": "img/items/da_ionicsparkradiant.png"
+  },
+  {
+   "id": "da_bloodthirster",
+   "api": "DA_Bloodthirster",
+   "name": "Sanguinaria",
+   "kind": "completed",
+   "desc": "",
+   "components": [
+    "da_component_bfsword",
+    "da_component_negatroncloak"
+   ],
+   "role": "dmg",
+   "img": "img/items/da_bloodthirster.png"
+  },
+  {
+   "id": "da_strikersflailradiant",
+   "api": "DA_StrikersFlailRadiant",
+   "name": "Mangual del guerrero radiante",
+   "kind": "radiant",
+   "desc": "",
+   "components": [],
+   "role": "dmg",
+   "img": "img/items/da_strikersflailradiant.png"
+  },
+  {
+   "id": "da_ionicspark",
+   "api": "DA_IonicSpark",
+   "name": "Chispa iónica",
+   "kind": "completed",
+   "desc": "",
+   "components": [
+    "da_component_needlesslylargerod",
+    "da_component_negatroncloak"
+   ],
+   "role": "tank",
+   "img": "img/items/da_ionicspark.png"
+  },
+  {
+   "id": "da_rabadonsdeathcap",
+   "api": "DA_RabadonsDeathcap",
+   "name": "Sombrero mortal de Rabadon",
+   "kind": "completed",
+   "desc": "",
+   "components": [
+    "da_component_needlesslylargerod",
+    "da_component_needlesslylargerod"
+   ],
+   "role": "dmg",
+   "img": "img/items/da_rabadonsdeathcap.png"
+  },
+  {
+   "id": "da_18_emblemelderwood",
+   "api": "DA_18_EmblemElderwood",
+   "name": "Emblema de bosque ancestral",
+   "kind": "emblem",
+   "desc": "",
+   "components": [
+    "da_component_spatula",
+    "da_component_chainvest"
+   ],
+   "role": "other",
+   "img": "img/items/da_18_emblemelderwood.png"
+  },
+  {
+   "id": "da_tacticianscrown",
+   "api": "DA_TacticiansCrown",
+   "name": "Corona de estratega",
+   "kind": "completed",
+   "desc": "",
+   "components": [
+    "da_component_spatula",
+    "da_component_spatula"
+   ],
+   "role": "tank",
+   "img": "img/items/da_tacticianscrown.png"
+  },
+  {
+   "id": "da_artifact_mogulsmail",
+   "api": "DA_Artifact_MogulsMail",
+   "name": "Malla de magnate",
+   "kind": "artifact",
+   "desc": "",
+   "components": [],
+   "role": "tank",
+   "img": "img/items/da_artifact_mogulsmail.png"
+  },
+  {
+   "id": "da_bluebuffradiant",
+   "api": "DA_BlueBuffRadiant",
+   "name": "Mejora azul radiante",
+   "kind": "radiant",
+   "desc": "",
+   "components": [],
+   "role": "dmg",
+   "img": "img/items/da_bluebuffradiant.png"
+  },
+  {
+   "id": "da_lastwhisper",
+   "api": "DA_LastWhisper",
+   "name": "Últimas palabras",
+   "kind": "completed",
+   "desc": "",
+   "components": [
+    "da_component_recurvebow",
+    "da_component_sparringgloves"
+   ],
+   "role": "tank",
+   "img": "img/items/da_lastwhisper.png"
+  },
+  {
+   "id": "da_thiefsglovesradiant",
+   "api": "DA_ThiefsGlovesRadiant",
+   "name": "Guantes de ladrón radiante",
+   "kind": "radiant",
+   "desc": "",
+   "components": [],
+   "role": "tank",
+   "img": "img/items/da_thiefsglovesradiant.png"
+  },
+  {
+   "id": "da_crownguard",
+   "api": "DA_Crownguard",
+   "name": "Regiaguardia",
+   "kind": "completed",
+   "desc": "",
+   "components": [
+    "da_component_needlesslylargerod",
+    "da_component_chainvest"
+   ],
+   "role": "dmg",
+   "img": "img/items/da_crownguard.png"
+  },
+  {
+   "id": "da_18_emblemspellweaver",
+   "api": "DA_18_EmblemSpellweaver",
+   "name": "Emblema de tejehechizos",
+   "kind": "emblem",
+   "desc": "",
+   "components": [
+    "da_component_fryingpan",
+    "da_component_needlesslylargerod"
+   ],
+   "role": "other",
+   "img": "img/items/da_18_emblemspellweaver.png"
+  },
+  {
+   "id": "da_quicksilverradiant",
+   "api": "DA_QuicksilverRadiant",
+   "name": "Fajín de mercurio radiante",
+   "kind": "radiant",
+   "desc": "",
+   "components": [],
+   "role": "dmg",
+   "img": "img/items/da_quicksilverradiant.png"
+  },
+  {
+   "id": "da_sunfirecape_radiant",
+   "api": "DA_SunfireCape_Radiant",
+   "name": "Capa de fuego solar radiante",
+   "kind": "radiant",
+   "desc": "",
+   "components": [],
+   "role": "tank",
+   "img": "img/items/da_sunfirecape_radiant.png"
+  },
+  {
+   "id": "da_redbuffradiant",
+   "api": "DA_RedBuffRadiant",
+   "name": "Mejora roja radiante",
+   "kind": "radiant",
+   "desc": "",
+   "components": [],
+   "role": "dmg",
+   "img": "img/items/da_redbuffradiant.png"
+  },
+  {
+   "id": "da_18_emblemcoven",
+   "api": "DA_18_EmblemCoven",
+   "name": "Emblema de aquelarre",
+   "kind": "emblem",
+   "desc": "",
+   "components": [],
+   "role": "other",
+   "img": "img/items/da_18_emblemcoven.png"
+  },
+  {
+   "id": "da_component_spatula",
+   "api": "DA_Component_Spatula",
+   "name": "Espátula",
+   "kind": "component",
+   "desc": "",
+   "components": [],
+   "role": "other",
+   "img": "img/items/da_component_spatula.png"
+  },
+  {
+   "id": "da_steraksgage",
+   "api": "DA_SteraksGage",
+   "name": "Calibrador de Sterak",
+   "kind": "completed",
+   "desc": "",
+   "components": [
+    "da_component_bfsword",
+    "da_component_giantsbelt"
+   ],
+   "role": "dmg",
+   "img": "img/items/da_steraksgage.png"
+  },
+  {
+   "id": "da_adaptivehelm_radiant",
+   "api": "DA_AdaptiveHelm_Radiant",
+   "name": "Yelmo adaptable radiante",
+   "kind": "radiant",
+   "desc": "",
+   "components": [],
+   "role": "tank",
+   "img": "img/items/da_adaptivehelm_radiant.png"
+  },
+  {
+   "id": "da_sunfirecape",
+   "api": "DA_SunfireCape",
+   "name": "Capa de fuego solar",
+   "kind": "completed",
+   "desc": "",
+   "components": [
+    "da_component_chainvest",
+    "da_component_giantsbelt"
+   ],
+   "role": "tank",
+   "img": "img/items/da_sunfirecape.png"
+  },
+  {
+   "id": "da_archangelsstaff",
+   "api": "DA_ArchangelsStaff",
+   "name": "Bastón del arcángel",
+   "kind": "completed",
+   "desc": "",
+   "components": [
+    "da_component_needlesslylargerod",
+    "da_component_tearofthegoddess"
+   ],
+   "role": "dmg",
+   "img": "img/items/da_archangelsstaff.png"
+  },
+  {
+   "id": "da_adaptivehelm",
+   "api": "DA_AdaptiveHelm",
+   "name": "Yelmo adaptable",
+   "kind": "completed",
+   "desc": "",
+   "components": [
+    "da_component_tearofthegoddess",
+    "da_component_negatroncloak"
+   ],
+   "role": "tank",
+   "img": "img/items/da_adaptivehelm.png"
+  },
+  {
+   "id": "da_bramblevest",
+   "api": "DA_BrambleVest",
+   "name": "Chaleco de zarzas",
+   "kind": "completed",
+   "desc": "",
+   "components": [
+    "da_component_chainvest",
+    "da_component_chainvest"
+   ],
+   "role": "tank",
+   "img": "img/items/da_bramblevest.png"
+  },
+  {
+   "id": "da_artifact_blightingjewel",
+   "api": "DA_Artifact_BlightingJewel",
+   "name": "Joya de la plaga",
+   "kind": "artifact",
+   "desc": "",
+   "components": [],
+   "role": "tank",
+   "img": "img/items/da_artifact_blightingjewel.png"
+  },
+  {
+   "id": "da_warmogsarmorradiant",
+   "api": "DA_WarmogsArmorRadiant",
+   "name": "Armadura de Warmog radiante",
+   "kind": "radiant",
+   "desc": "",
+   "components": [],
+   "role": "tank",
+   "img": "img/items/da_warmogsarmorradiant.png"
+  },
+  {
+   "id": "da_jeweledgauntlet",
+   "api": "DA_JeweledGauntlet",
+   "name": "Guantelete enjoyado",
+   "kind": "completed",
+   "desc": "",
+   "components": [
+    "da_component_sparringgloves",
+    "da_component_needlesslylargerod"
+   ],
+   "role": "dmg",
+   "img": "img/items/da_jeweledgauntlet.png"
+  },
+  {
+   "id": "da_steadfastheartradiant",
+   "api": "DA_SteadfastHeartRadiant",
+   "name": "Corazón resuelto radiante",
+   "kind": "radiant",
+   "desc": "",
+   "components": [],
+   "role": "tank",
+   "img": "img/items/da_steadfastheartradiant.png"
+  },
+  {
+   "id": "da_component_chainvest",
+   "api": "DA_Component_ChainVest",
+   "name": "Chaleco de cadenas",
+   "kind": "component",
+   "desc": "",
+   "components": [],
+   "role": "other",
+   "img": "img/items/da_component_chainvest.png"
+  },
+  {
+   "id": "da_tacticiansshield",
+   "api": "DA_TacticiansShield",
+   "name": "Escudo de estratega",
+   "kind": "completed",
+   "desc": "",
+   "components": [
+    "da_component_fryingpan",
+    "da_component_fryingpan"
+   ],
+   "role": "tank",
+   "img": "img/items/da_tacticiansshield.png"
+  },
+  {
+   "id": "da_component_fryingpan",
+   "api": "DA_Component_FryingPan",
+   "name": "Sartén",
+   "kind": "component",
+   "desc": "",
+   "components": [],
+   "role": "other",
+   "img": "img/items/da_component_fryingpan.png"
+  },
+  {
+   "id": "da_bramblevestradiant",
+   "api": "DA_BrambleVestRadiant",
+   "name": "Chaleco de zarzas radiante",
+   "kind": "radiant",
+   "desc": "",
+   "components": [],
+   "role": "tank",
+   "img": "img/items/da_bramblevestradiant.png"
+  },
+  {
+   "id": "da_bluebuff",
+   "api": "DA_BlueBuff",
+   "name": "Mejora azul",
+   "kind": "completed",
+   "desc": "",
+   "components": [
+    "da_component_tearofthegoddess",
+    "da_component_tearofthegoddess"
+   ],
+   "role": "dmg",
+   "img": "img/items/da_bluebuff.png"
+  },
+  {
+   "id": "da_krakensfury",
+   "api": "DA_KrakensFury",
+   "name": "Furia del kraken",
+   "kind": "completed",
+   "desc": "",
+   "components": [
+    "da_component_recurvebow",
+    "da_component_negatroncloak"
+   ],
+   "role": "dmg",
+   "img": "img/items/da_krakensfury.png"
+  },
+  {
+   "id": "da_gargoylestoneplate_radiant",
+   "api": "DA_GargoyleStoneplate_Radiant",
+   "name": "Protector pétreo de gárgola radiante",
+   "kind": "radiant",
+   "desc": "",
+   "components": [],
+   "role": "tank",
+   "img": "img/items/da_gargoylestoneplate_radiant.png"
+  },
+  {
+   "id": "da_giantslayer",
+   "api": "DA_GiantSlayer",
+   "name": "Verdugo de gigantes",
+   "kind": "completed",
+   "desc": "",
+   "components": [
+    "da_component_recurvebow",
+    "da_component_bfsword"
+   ],
+   "role": "tank",
+   "img": "img/items/da_giantslayer.png"
+  },
+  {
+   "id": "da_18_emblemblossom",
+   "api": "DA_18_EmblemBlossom",
+   "name": "Emblema de brote",
+   "kind": "emblem",
+   "desc": "",
+   "components": [
+    "da_component_spatula",
+    "da_component_needlesslylargerod"
+   ],
+   "role": "other",
+   "img": "img/items/da_18_emblemblossom.png"
+  },
+  {
+   "id": "da_deathblade",
+   "api": "DA_Deathblade",
+   "name": "Filo mortal",
+   "kind": "completed",
+   "desc": "",
+   "components": [
+    "da_component_bfsword",
+    "da_component_bfsword"
+   ],
+   "role": "dmg",
+   "img": "img/items/da_deathblade.png"
+  },
+  {
+   "id": "da_18_embleminferno",
+   "api": "DA_18_EmblemInferno",
+   "name": "Emblema de infernal",
+   "kind": "emblem",
+   "desc": "",
+   "components": [
+    "da_component_spatula",
+    "da_component_recurvebow"
+   ],
+   "role": "other",
+   "img": "img/items/da_18_embleminferno.png"
+  },
+  {
+   "id": "da_nashorstoothradiant",
+   "api": "DA_NashorsToothRadiant",
+   "name": "Diente de Nashor radiante",
+   "kind": "radiant",
+   "desc": "",
+   "components": [],
+   "role": "dmg",
+   "img": "img/items/da_nashorstoothradiant.png"
+  },
+  {
+   "id": "da_18_emblemjuggernaut",
+   "api": "DA_18_EmblemJuggernaut",
+   "name": "Emblema de coloso",
+   "kind": "emblem",
+   "desc": "",
+   "components": [],
+   "role": "other",
+   "img": "img/items/da_18_emblemjuggernaut.png"
+  },
+  {
+   "id": "da_radiantrelic",
+   "api": "DA_RadiantRelic",
+   "name": "Reliquias radiantes",
+   "kind": "radiant",
+   "desc": "Elige 1 de entre 5 objetos radiantes. Obtienes 1 Limpiador magnético.",
+   "components": [],
+   "role": "tank",
+   "img": "img/items/da_radiantrelic.png"
+  },
+  {
+   "id": "da_radiantrascal",
+   "api": "DA_RadiantRascal",
+   "name": "Pillín radiante",
+   "kind": "radiant",
+   "desc": "Obtienes 1 Guantes de ladrón radiantes. Esto equipa 2 objetos radiantes aleatorios cada ronda.",
+   "components": [],
+   "role": "tank",
+   "img": "img/items/da_radiantrascal.png"
+  }
+ ],
+ "augments": [
+  {
+   "id": "da_18_riftbeasttraitaugment",
+   "name": "Bestia de la Grieta omega",
+   "desc": "Ahora, puedes elegir una segunda bestia de la Grieta alfa. Las bestias de la Grieta alfa obtienen un X% de vida máxima y un X% de velocidad de ataque. Obtienes 1 Cangrejo escurridizo, 1 Zarcillo y 1 Guijarro.",
+   "traits": [
+    "da_riftbeast18"
+   ],
+   "champs": [
+    "da_18_sentry",
+    "da_cinderling18",
+    "da_scuttlecrab18"
+   ],
+   "plus": false,
+   "img": "img/augments/da_18_riftbeasttraitaugment.png"
+  },
+  {
+   "id": "da_18_elderwoodtraitaugment",
+   "name": "Refugio de la naturaleza",
+   "desc": "Los campeones que comienzan el combate adyacentes a una planta de Bosque ancestral obtienen un X% de velocidad de ataque y recuperan un X% de su vida máxima cada X s. Obtienes 1 Alistar, 1 Ornn y 1 Xayah.",
+   "traits": [
+    "da_18_elderwood"
+   ],
+   "champs": [
+    "da_18_alistar",
+    "da_18_ornn",
+    "da_18_xayah"
+   ],
+   "plus": false,
+   "img": "img/augments/da_18_elderwoodtraitaugment.png"
+  },
+  {
+   "id": "da_18_solartraitaugment",
+   "name": "Avatar del sol",
+   "desc": "Obtienes 1 Leona, 1 Kayle y 1 Sejuani. Leona obtiene X de vida máxima permanente en cada ronda, que aumenta en X por cada campeón de 3 estrellas único en el tablero.",
+   "traits": [
+    "da_18_solar"
+   ],
+   "champs": [
+    "da_18_kayle",
+    "da_18_leona",
+    "da_18_sejuani"
+   ],
+   "plus": false,
+   "img": "img/augments/da_18_solartraitaugment.png"
+  },
+  {
+   "id": "da_18_lunartraitaugmentplus",
+   "name": "Sol y luna+",
+   "desc": "Tus campeones lunares obtienen X de vida y un X% de amplificación de daño por cada campeón solar único en el tablero. Obtienes 1 Kayle, 1 Aphelios y 1 Leona.",
+   "traits": [
+    "da_18_lunar"
+   ],
+   "champs": [
+    "da_18_aphelios",
+    "da_18_kayle",
+    "da_18_leona"
+   ],
+   "plus": true,
+   "img": "img/augments/da_18_lunartraitaugmentplus.png"
+  },
+  {
+   "id": "da_blackthorntraitaugment",
+   "name": "Extracción de objetos",
+   "desc": "Las primeras X veces que sacrifiques a un campeón en el hexágono de Espina negra, obtienes una copia de un componente aleatorio que tenga equipado. Consigue 1 Azir y 1 Rek'Sai.",
+   "traits": [
+    "da_18_blackthorn"
+   ],
+   "champs": [
+    "da_18_azir",
+    "da_18_reksai"
+   ],
+   "plus": false,
+   "img": "img/augments/da_blackthorntraitaugment.png"
+  },
+  {
+   "id": "da_18_primalaugment_sivir",
+   "name": "Bestia interior (Sivir)",
+   "desc": "Primigenio otorga una bendición adicional. Obtienes 1 Vi ahora y 1 Sivir tras X rondas.",
+   "traits": [
+    "da_primal18"
+   ],
+   "champs": [
+    "da_18_sivir",
+    "da_vi18"
+   ],
+   "plus": false,
+   "img": "img/augments/da_18_primalaugment_sivir.png"
+  },
+  {
+   "id": "da_18_florafatalisaugment",
+   "name": "Consumo de flora",
+   "desc": "Obtienes 1 Emblema de flora fatalis. El campeón portador del emblema obtiene un X de beneficios aumentados de Flora Fatalis. Obtienes X de oro.",
+   "traits": [
+    "da_florafatalis18"
+   ],
+   "champs": [],
+   "plus": false,
+   "img": "img/augments/da_18_florafatalisaugment.png"
+  },
+  {
+   "id": "da_18_coventraitaugment",
+   "name": "Acólita del Aquelarre",
+   "desc": "Cuando decides seguir reuniendo la esencia de Aquelarre, recuperas X de vida de estratega. Obtienes 1 Camille, 1 Elise y 1 Caitlyn.",
+   "traits": [
+    "da_18_coven"
+   ],
+   "champs": [
+    "da_18_caitlyn",
+    "da_18_camille",
+    "da_18_elise"
+   ],
+   "plus": false,
+   "img": "img/augments/da_18_coventraitaugment.png"
+  },
+  {
+   "id": "da_18_primalaugment_nidalee",
+   "name": "Bestia interior (Nidalee)",
+   "desc": "Primigenio otorga una bendición adicional. Obtienes 1 Vi ahora y 1 Nidalee tras X rondas.",
+   "traits": [
+    "da_primal18"
+   ],
+   "champs": [
+    "da_nidalee18_ap",
+    "da_vi18"
+   ],
+   "plus": false,
+   "img": "img/augments/da_18_primalaugment_nidalee.png"
+  },
+  {
+   "id": "da_18_lunartraitaugment",
+   "name": "Sol y luna",
+   "desc": "Tus campeones lunares obtienen X de vida y un X% de amplificación de daño por cada campeón solar único en el tablero. Obtienes 1 Leona, 1 Kayle y 1 Diana.",
+   "traits": [
+    "da_18_lunar"
+   ],
+   "champs": [
+    "da_18_diana",
+    "da_18_kayle",
+    "da_18_leona"
+   ],
+   "plus": false,
+   "img": "img/augments/da_18_lunartraitaugment.png"
+  },
+  {
+   "id": "da_18_rivalsaugment",
+   "name": "Exrivales",
+   "desc": "Puedes desplegar a Rengar y a Kha'Zix juntos sin ninguna penalización, y obtienen bonificaciones cuando el otro lanza su habilidad. Obtienes 1 Rengar y 1 Kha'Zix.",
+   "traits": [
+    "da_18_rival"
+   ],
+   "champs": [
+    "da_18_khazix",
+    "da_18_rengar"
+   ],
+   "plus": false,
+   "img": "img/augments/da_18_rivalsaugment.png"
+  },
+  {
+   "id": "da_18_primalaugmentplus_nidalee",
+   "name": "Bestia interior+ (Nidalee)",
+   "desc": "Primigenio otorga una bendición adicional. Obtienes 1 Vi y 1 Nidalee.",
+   "traits": [
+    "da_primal18"
+   ],
+   "champs": [
+    "da_nidalee18_ap",
+    "da_vi18"
+   ],
+   "plus": true,
+   "img": "img/augments/da_18_primalaugmentplus_nidalee.png"
+  },
+  {
+   "id": "da_18_faetraitaugment",
+   "name": "Agigantar",
+   "desc": "Las hadas son más grandes y otorgan un X% de daño de ataque y poder de habilidad adicionales. Los campeones feéricos obtienen un X% de daño de ataque y de poder de habilidad de inmediato. Obtienes 1 Xayah y 1 Rakan.",
+   "traits": [
+    "da_18_fae"
+   ],
+   "champs": [
+    "da_18_rakan",
+    "da_18_xayah"
+   ],
+   "plus": false,
+   "img": "img/augments/da_18_faetraitaugment.png"
+  },
+  {
+   "id": "da_augmentedpower",
+   "name": "Poder mejorado",
+   "desc": "Tu siguiente aumento es de un rango superior.",
+   "traits": [],
+   "champs": [],
+   "plus": false,
+   "img": "img/augments/da_augmentedpower.png"
+  },
+  {
+   "id": "da_18_luxaugmentii",
+   "name": "Maestría de los orígenes II",
+   "desc": "Abre una armería y elige uno de entre X atributos. Obtienes 1 Lux con ese atributo y 1 Lanza de Shojin.\n\nEs más probable que los atributos de tu tablero aparezcan en la armería. Lux otorga +2 al atributo elegido.",
+   "traits": [
+    "da_18_luxuniquetrait"
+   ],
+   "champs": [
+    "da_lux18_base"
+   ],
+   "plus": false,
+   "img": "img/augments/da_18_luxaugmentii.png"
+  },
+  {
+   "id": "da_18_coventraitaugment_loottoap",
+   "name": "Ritual oscuro",
+   "desc": "Al convertir la esencia de Aquelarre en recompensas, se otorga poder de habilidad a los campeones de Aquelarre en lugar de botín. Obtienes 1 Camille, 1 Elise y 1 Caitlyn.",
+   "traits": [
+    "da_18_coven"
+   ],
+   "champs": [
+    "da_18_caitlyn",
+    "da_18_camille",
+    "da_18_elise"
+   ],
+   "plus": false,
+   "img": "img/augments/da_18_coventraitaugment_loottoap.png"
+  },
+  {
+   "id": "da_18_blossomtraitaugment",
+   "name": "Llamada de los brotes",
+   "desc": "Al comprar un fuego fatuo, obtienes 1 campeón de Brote aleatorio, según el coste del fuego fatuo. Obtienes 1 Yunara, 1 Yorick y 1 Karma.",
+   "traits": [
+    "da_18_blossom"
+   ],
+   "champs": [
+    "da_18_yorick",
+    "da_18_yunara",
+    "da_karma18"
+   ],
+   "plus": false,
+   "img": "img/augments/da_18_blossomtraitaugment.png"
+  },
+  {
+   "id": "da_18_primalaugmentplus_sivir",
+   "name": "Bestia interior+ (Sivir)",
+   "desc": "Primigenio otorga una bendición adicional. Obtienes 1 Vi y 1 Sivir.",
+   "traits": [
+    "da_primal18"
+   ],
+   "champs": [
+    "da_18_sivir",
+    "da_vi18"
+   ],
+   "plus": true,
+   "img": "img/augments/da_18_primalaugmentplus_sivir.png"
+  },
+  {
+   "id": "da_18_infernotraitaugment",
+   "name": "Llameante",
+   "desc": "Tus campeones infernales de coste 1 y 2 obtienen X de daño de ataque y poder de habilidad. Quien haya infligido más daño en el último combate obtendrá el doble. Obtienes 1 Varus y 1 Akali.",
+   "traits": [
+    "da_18_inferno"
+   ],
+   "champs": [
+    "da_18_akali_ad",
+    "da_18_varus"
+   ],
+   "plus": false,
+   "img": "img/augments/da_18_infernotraitaugment.png"
+  },
+  {
+   "id": "da_18_sprykinaugment",
+   "name": "Minibestia inseparable",
+   "desc": "Mientras Vivaz esté activo, obtienes una segunda besti invocada con unX% del poder. Obtienes 1 Teemo, 1 Veigar y 1 Kobuko.",
+   "traits": [
+    "da_18_sprykin"
+   ],
+   "champs": [
+    "da_18_kobuko",
+    "da_18_teemo",
+    "da_18_veigar"
+   ],
+   "plus": false,
+   "img": "img/augments/da_18_sprykinaugment.png"
+  }
+ ]
+}
