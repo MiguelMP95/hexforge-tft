@@ -3,3 +3,4 @@ data/raw/
 data/es_es.json
 data/fetch.log
 __pycache__/
+data/*.log
