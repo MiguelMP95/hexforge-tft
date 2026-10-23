@@ -97,6 +97,7 @@ def main():
     ap.add_argument("--max-matches", type=int, default=2000)
     ap.add_argument("--per-player", type=int, default=15)
     ap.add_argument("--tiers", default="challenger,grandmaster,master")
+    ap.add_argument("--days", type=int, default=0, help="pedir solo partidas de los últimos N días (0 = sin límite)")
     args = ap.parse_args()
 
     os.makedirs(MATCHES, exist_ok=True)
@@ -123,7 +124,8 @@ def main():
     match_ids = []
     seen = set()
     for i, puuid in enumerate(players[:needed_players], 1):
-        ids = api.get(f"{reg}/tft/match/v1/matches/by-puuid/{puuid}/ids?count={args.per_player}") or []
+        since = f"&startTime={int(time.time()) - args.days * 86400}" if args.days else ""
+        ids = api.get(f"{reg}/tft/match/v1/matches/by-puuid/{puuid}/ids?count={args.per_player}{since}") or []
         for mid in ids:
             if mid not in seen:
                 seen.add(mid)

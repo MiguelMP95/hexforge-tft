@@ -1,0 +1,69 @@
+name: Actualizar estadísticas
+
+on:
+  # Botón "Run workflow" en la pestaña Actions de GitHub
+  workflow_dispatch:
+    inputs:
+      max_matches:
+        description: "Máximo de partidas a descargar"
+        default: "2000"
+      days:
+        description: "Usar solo partidas de los últimos N días"
+        default: "7"
+      refresh_set:
+        description: "Actualizar datos del juego (campeones, objetos, imágenes) por cambio de parche"
+        type: boolean
+        default: false
+  # Actualización diaria: se activa cuando haya clave personal de Riot (las de desarrollo caducan en 24 h)
+  # schedule:
+  #   - cron: "0 6 * * *"   # todos los días a las 06:00 UTC (08:00 en España en verano)
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-stats
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # Las partidas ya descargadas se guardan entre ejecuciones para no volver a pedirlas
+      - name: Recuperar partidas guardadas
+        uses: actions/cache@v4
+        with:
+          path: data/raw
+          key: riot-matches-${{ github.run_id }}
+          restore-keys: riot-matches-
+
+      - name: Actualizar datos del juego
+        if: ${{ inputs.refresh_set }}
+        run: python3 scripts/build_data.py
+
+      - name: Descargar partidas
+        env:
+          RIOT_API_KEY: ${{ secrets.RIOT_API_KEY }}
+        run: python3 -u scripts/riot_fetch.py --max-matches "${{ inputs.max_matches || '2000' }}" --days "${{ inputs.days || '7' }}"
+
+      - name: Analizar composiciones
+        run: python3 scripts/analyze.py --min-games 30 --days "${{ inputs.days || '7' }}" --prune
+
+      - name: Publicar cambios
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/comps.json data/set.json img
+          if git diff --cached --quiet; then
+            echo "Sin cambios"
+          else
+            git commit -m "Actualizar estadísticas ($(date -u +'%Y-%m-%d'))"
+            git push
+          fi
