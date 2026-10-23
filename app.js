@@ -330,21 +330,57 @@ function matchingComponents(comp, components) {
   return n;
 }
 
-/** Composiciones que mejor encajan con tus campeones y componentes. */
+const STAGE_NAMES = { early: "early", mid: "mid", final: "tablero final" };
+const STAGE_SIZE = { early: 5, mid: 7, final: 9 };
+const NEXT_STAGE = { early: "mid", mid: "final", final: "final" };
+
+/** Fase de la composición (early, mid o final) que más se parece a tu equipo. */
+function stageMatch(units, c) {
+  const boards = { ...stageBoards(c), final: c.units };
+  let best = null;
+  for (const stage of ["early", "mid", "final"]) {
+    const list = boards[stage] || [];
+    const shared = units.filter((u) => list.includes(u)).length;
+    // Desempate: la fase cuyo tamaño se parece más al número de campeones que llevas
+    const fit = shared - Math.abs(STAGE_SIZE[stage] - units.length) * 0.1;
+    if (!best || fit > best.fit) best = { stage, shared, size: list.length, fit };
+  }
+  const next = boards[NEXT_STAGE[best.stage]] || [];
+  best.add = next.filter((u) => !units.includes(u))
+    .sort((a, b) => (c.carries.includes(b) - c.carries.includes(a)) || state.champ[a].cost - state.champ[b].cost)
+    .slice(0, 3);
+  return best;
+}
+
+/** Composiciones que mejor encajan con tus campeones (en early, mid o final) y tus componentes. */
 function similarComps(units, components = []) {
   if (!units.length && !components.length) return [];
   const myTraits = new Set(units.flatMap((u) => state.champ[u]?.traits || []));
   return state.comps.comps.map((c) => {
-    const shared = units.filter((u) => c.units.includes(u)).length;
-    const compTraits = new Set(c.units.flatMap((u) => state.champ[u]?.traits || []));
+    const m = stageMatch(units, c);
+    const boards = stageBoards(c);
+    const compTraits = new Set([...c.units, ...(boards.early || []), ...(boards.mid || [])]
+      .flatMap((u) => state.champ[u]?.traits || []));
     const traitOverlap = [...myTraits].filter((t) => compTraits.has(t)).length;
-    const build = buildableItems(c, components);
+    const build = buildableItems(c, components).map((b) => ({ ...b, holder: itemHolder(c, m.stage, b, units) }));
     const matched = matchingComponents(c, components);
     const tierBonus = { S: 1, A: 0.5 }[c.tier] || 0;
-    const score = shared * 3 + traitOverlap + build.length * 3 + matched + tierBonus;
-    return { c, shared, build, matched, score };
+    const score = m.shared * 3 + traitOverlap + build.length * 3 + matched + tierBonus;
+    return { c, shared: m.shared, stage: m.stage, add: m.add, build, matched, score };
   }).filter((x) => x.shared || x.matched || x.build.length || x.score > 1.5)
     .sort((a, b) => b.score - a.score).slice(0, 3);
+}
+
+/** Quién debería llevar ahora un objeto: el campeón final si lo tienes; si no, quien lo lleva en esa fase. */
+function itemHolder(c, stage, { item, champ }, units) {
+  if (units.includes(champ)) return champ;
+  for (const st of [stage, "mid", "early"]) {
+    const plan = c.stageItems?.[st] || {};
+    const h = Object.keys(plan).find((u) => units.includes(u) && plan[u].includes(item));
+    if (h) return h;
+  }
+  if (c.carries.includes(champ)) return (c.stageCarries || []).find((u) => units.includes(u)) || champ;
+  return champ;
 }
 
 /* ---------- Aumentos ---------- */
@@ -598,19 +634,22 @@ function renderBoard() {
   const comps = myComponents();
   const similar = similarComps(b, comps);
   $("#board-suggest").innerHTML = similar.length
-    ? `<h3>Te recomiendo ir a…</h3>${similar.map(({ c, shared, build, matched }) => {
+    ? `<h3>Te recomiendo ir a…</h3>${similar.map(({ c, shared, stage, add, build, matched }) => {
         const why = [
-          shared ? `${shared} de tus campeones` : "",
+          shared ? `${shared} de tus campeones encajan con su ${STAGE_NAMES[stage]}` : "",
           comps.length ? `${matched}/${comps.length} componentes sirven` : "",
           esc(c.style),
         ].filter(Boolean).join(" · ");
         const craft = build.length
-          ? `<span class="craft">Puedes hacer: ${build.map(({ item, champ }) =>
-              `<span class="craft-it"><img src="${state.item[item].img}" alt="">${esc(state.item[item].name)} <small>→ ${esc(state.champ[champ]?.name || "")}</small></span>`).join("")}</span>`
+          ? `<span class="craft">Puedes hacer: ${build.map(({ item, champ, holder }) =>
+              `<span class="craft-it"><img src="${state.item[item].img}" alt="">${esc(state.item[item].name)} <small>→ ${esc(state.champ[holder || champ]?.name || "")}</small></span>`).join("")}</span>`
+          : "";
+        const next = shared && add.length
+          ? `<span class="next">Siguiente: añade ${add.map((u) => `<span class="next-u"><img src="${state.champ[u].img}" alt="">${esc(state.champ[u].name)}</span>`).join("")}</span>`
           : "";
         return `<button class="suggest" data-comp="${c.id}">
           <span class="tier-dot ${c.tier === "?" ? "q" : c.tier}">${c.tier === "?" ? "–" : c.tier}</span>
-          <span class="s-name">${esc(c.name)}<small>${why}</small>${craft}</span>
+          <span class="s-name">${esc(c.name)}<small>${why}</small>${next}${craft}</span>
           <span class="s-units">${c.carries.map((u) => champHTML(u, { carry: true })).join("")}</span>
         </button>`;
       }).join("")}`

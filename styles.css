@@ -420,3 +420,6 @@ main { max-width: 960px; margin: 0 auto; padding: 12px 16px 24px; }
 .hex-cell.carry { background: var(--accent) !important; }
 .hx-star { position: absolute; bottom: 14%; left: 50%; transform: translateX(-50%); font-size: 9px; font-weight: 800; color: #ffcf4a; background: rgba(0,0,0,.75); padding: 0 3px; border-radius: 3px; }
 .source a, .tips a { color: var(--accent); }
+.next { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 5px; font-weight: 400; font-size: 12px; color: var(--muted); align-items: center; }
+.next-u { display: inline-flex; align-items: center; gap: 4px; background: var(--panel); border-radius: 6px; padding: 2px 6px 2px 2px; color: var(--text); }
+.next-u img { width: 18px; height: 18px; border-radius: 4px; }
