@@ -2,8 +2,8 @@
   "patch": "18.5",
   "patchStart": "2026-10-01T00:00:00Z",
   "newPatch": false,
-  "updated": "2026-10-23 12:16",
-  "source": "Datos propios de la API de Riot: 963 partidas clasificatorias (7704 tableros) de jugadores Master+ de EUW, del 16/10 al 23/10/2026. Composiciones con al menos 30 tableros.",
+  "updated": "2026-10-23 12:40",
+  "source": "Datos propios de la API de Riot: 969 partidas clasificatorias (7752 tableros) de jugadores Master+ de EUW, del 16/10 al 23/10/2026. Composiciones con al menos 30 tableros.",
   "comps": [
     {
       "id": "da_18_kennen-da_juggernaut18",
@@ -12,9 +12,9 @@
       "style": "Fast 9",
       "trend": "stable",
       "stats": {
-        "avg": 3.62,
-        "top4": 63.9,
-        "win": 26.1,
+        "avg": 3.64,
+        "top4": 63.3,
+        "win": 25.6,
         "pick": 0.19,
         "games": 180
       },
@@ -60,10 +60,10 @@
         "da_18_akali_ad",
         "da_18_ornn",
         "da_18_varus",
-        "da_karma18",
-        "da_18_yorick",
         "da_18_shen",
-        "da_fiddlesticks18"
+        "da_18_yunara",
+        "da_fiddlesticks18",
+        "da_18_azir"
       ],
       "early": [
         "da_18_akali_ad",
@@ -73,11 +73,11 @@
         "da_18_shen"
       ],
       "midStars": {},
-      "stageGames": 714,
+      "stageGames": 693,
       "stageSource": "guide",
       "stageCarries": [
-        "da_18_akali_ad",
-        "da_karma18"
+        "da_18_azir",
+        "da_18_akali_ad"
       ],
       "positions": {
         "da_sentinel18": 1,
@@ -94,9 +94,9 @@
       },
       "itemOrder": {
         "da_18_kennen": [
-          "da_edgeofnight",
           "da_rabadonsdeathcap",
-          "da_handofjustice"
+          "da_handofjustice",
+          "da_edgeofnight"
         ],
         "da_18_maokai": [
           "da_gargoylestoneplate",
@@ -107,36 +107,99 @@
       "stageItems": {
         "early": {
           "da_18_akali_ad": [
-            "da_edgeofnight"
+            "da_rabadonsdeathcap"
           ],
           "da_18_shen": [
             "da_gargoylestoneplate"
           ]
         },
         "mid": {
-          "da_karma18": [
-            "da_edgeofnight",
-            "da_rabadonsdeathcap"
+          "da_18_azir": [
+            "da_rabadonsdeathcap",
+            "da_handofjustice"
           ],
           "da_fiddlesticks18": [
             "da_gargoylestoneplate",
             "da_warmogsarmor"
           ]
         }
-      }
+      },
+      "leveling": [
+        {
+          "stage": "2-1",
+          "level": 4,
+          "action": null,
+          "optional": true
+        },
+        {
+          "stage": "2-5",
+          "level": 5,
+          "action": null,
+          "optional": false
+        },
+        {
+          "stage": "3-1",
+          "level": 6,
+          "action": null,
+          "optional": true
+        },
+        {
+          "stage": "3-2",
+          "level": 6,
+          "action": null,
+          "optional": false
+        },
+        {
+          "stage": "3-5",
+          "level": 7,
+          "action": null,
+          "optional": true
+        },
+        {
+          "stage": "4-1",
+          "level": 7,
+          "action": null,
+          "optional": false
+        },
+        {
+          "stage": "4-2",
+          "level": 8,
+          "action": null,
+          "optional": false
+        },
+        {
+          "stage": "4-5",
+          "level": 9,
+          "action": null,
+          "optional": true
+        },
+        {
+          "stage": "5-1",
+          "level": 9,
+          "action": null,
+          "optional": true
+        },
+        {
+          "stage": "5-2",
+          "level": 9,
+          "action": "roll",
+          "optional": false
+        }
+      ],
+      "levelingSource": "guide"
     },
     {
-      "id": "da_lux18_base-da_18_vanguard",
-      "name": "Lux Vanguardia",
+      "id": "da_lux18_base-da_18_blackthorn",
+      "name": "Lux Espina negra",
       "tier": "S",
       "style": "Fast 9",
       "trend": "stable",
       "stats": {
         "avg": 3.69,
-        "top4": 62.3,
-        "win": 26.3,
+        "top4": 62.7,
+        "win": 26.0,
         "pick": 0.17,
-        "games": 167
+        "games": 169
       },
       "units": [
         "da_lux18_base",
@@ -147,7 +210,7 @@
         "da_18_ivern",
         "da_18_maokai",
         "da_18_rakan",
-        "da_18_alune"
+        "da_18_lillia"
       ],
       "items": {
         "da_lux18_base": [
@@ -170,12 +233,12 @@
         "da_sentinel18": 2,
         "da_taric18": 2,
         "da_fiddlesticks18": 2,
-        "da_18_ivern": 2,
+        "da_18_ivern": 1,
         "da_18_maokai": 2,
         "da_18_rakan": 2,
-        "da_18_alune": 2
+        "da_18_lillia": 2
       },
-      "tips": "Datos de 167 tableros de Master+ en EUW. Carry principal: Lux (media de 1,5 estrellas). Nivel final habitual: 9. Rasgo principal: Vanguardia.",
+      "tips": "Datos de 169 tableros de Master+ en EUW. Carry principal: Lux (media de 1,5 estrellas). Nivel final habitual: 9. Rasgo principal: Espina negra.",
       "mid": [
         "da_18_rakan",
         "da_karma18",
@@ -193,19 +256,19 @@
         "da_18_elise"
       ],
       "midStars": {},
-      "stageGames": 842,
+      "stageGames": 844,
       "stageSource": "guide",
       "stageCarries": [
         "da_karma18",
         "da_18_khazix"
       ],
       "positions": {
+        "da_18_lillia": 0,
         "da_taric18": 3,
         "da_sentinel18": 4,
         "da_fiddlesticks18": 6,
         "da_18_rakan": 9,
-        "da_18_ivern": 21,
-        "da_18_alune": 27
+        "da_18_ivern": 21
       },
       "guide": {
         "name": "Alune Fast 9",
@@ -243,7 +306,70 @@
             "da_warmogsarmor"
           ]
         }
-      }
+      },
+      "leveling": [
+        {
+          "stage": "2-1",
+          "level": 4,
+          "action": null,
+          "optional": true
+        },
+        {
+          "stage": "2-5",
+          "level": 5,
+          "action": null,
+          "optional": false
+        },
+        {
+          "stage": "3-1",
+          "level": 6,
+          "action": null,
+          "optional": true
+        },
+        {
+          "stage": "3-2",
+          "level": 6,
+          "action": null,
+          "optional": false
+        },
+        {
+          "stage": "3-5",
+          "level": 7,
+          "action": null,
+          "optional": true
+        },
+        {
+          "stage": "4-1",
+          "level": 7,
+          "action": null,
+          "optional": false
+        },
+        {
+          "stage": "4-2",
+          "level": 8,
+          "action": null,
+          "optional": false
+        },
+        {
+          "stage": "4-5",
+          "level": 9,
+          "action": null,
+          "optional": true
+        },
+        {
+          "stage": "5-1",
+          "level": 9,
+          "action": null,
+          "optional": true
+        },
+        {
+          "stage": "5-2",
+          "level": 9,
+          "action": "roll",
+          "optional": false
+        }
+      ],
+      "levelingSource": "guide"
     },
     {
       "id": "da_draven18-da_18_elderwood",
@@ -301,7 +427,7 @@
         "da_18_ornn",
         "da_18_varus",
         "da_18_xayah",
-        "da_karma18",
+        "da_18_veigar",
         "da_18_alistar",
         "da_18_shen"
       ],
@@ -313,11 +439,11 @@
         "da_18_shen"
       ],
       "midStars": {},
-      "stageGames": 929,
+      "stageGames": 584,
       "stageSource": "guide",
       "stageCarries": [
-        "da_18_leblanc",
-        "da_karma18"
+        "da_18_akali_ad",
+        "da_18_veigar"
       ],
       "positions": {
         "da_taric18": 2,
@@ -363,7 +489,70 @@
             "da_warmogsarmor"
           ]
         }
-      }
+      },
+      "leveling": [
+        {
+          "stage": "2-1",
+          "level": 4,
+          "action": null,
+          "optional": true
+        },
+        {
+          "stage": "2-5",
+          "level": 5,
+          "action": null,
+          "optional": false
+        },
+        {
+          "stage": "3-1",
+          "level": 6,
+          "action": null,
+          "optional": true
+        },
+        {
+          "stage": "3-2",
+          "level": 6,
+          "action": null,
+          "optional": false
+        },
+        {
+          "stage": "3-5",
+          "level": 7,
+          "action": null,
+          "optional": true
+        },
+        {
+          "stage": "4-1",
+          "level": 7,
+          "action": null,
+          "optional": false
+        },
+        {
+          "stage": "4-2",
+          "level": 8,
+          "action": null,
+          "optional": false
+        },
+        {
+          "stage": "4-5",
+          "level": 9,
+          "action": null,
+          "optional": true
+        },
+        {
+          "stage": "5-1",
+          "level": 9,
+          "action": null,
+          "optional": true
+        },
+        {
+          "stage": "5-2",
+          "level": 9,
+          "action": "roll",
+          "optional": false
+        }
+      ],
+      "levelingSource": "guide"
     },
     {
       "id": "da_brambleback18-da_riftbeast18",
@@ -375,8 +564,8 @@
         "avg": 4.25,
         "top4": 54.7,
         "win": 13.1,
-        "pick": 0.97,
-        "games": 938
+        "pick": 0.98,
+        "games": 946
       },
       "units": [
         "da_sentinel18",
@@ -419,7 +608,7 @@
         "da_18_elderdragon": 1,
         "da_cinderling18": 3
       },
-      "tips": "Datos de 938 tableros de Master+ en EUW. Carry principal: Ancestro ígneo (media de 1,8 estrellas). Nivel final habitual: 8. Rasgo principal: Bestia de la Grieta. Sube a 3 estrellas: Guijarro, Zarcillo, Cangrejo escurridizo, Krug.",
+      "tips": "Datos de 946 tableros de Master+ en EUW. Carry principal: Ancestro ígneo (media de 1,8 estrellas). Nivel final habitual: 8. Rasgo principal: Bestia de la Grieta. Sube a 3 estrellas: Guijarro, Zarcillo, Cangrejo escurridizo, Krug.",
       "mid": [
         "da_18_sentry",
         "da_cinderling18",
@@ -445,7 +634,7 @@
         "da_cinderling18": 3,
         "da_sentinel18": 1
       },
-      "stageGames": 119,
+      "stageGames": 118,
       "stageSource": "guide",
       "stageCarries": [
         "da_18_sentry",
@@ -501,7 +690,64 @@
             "da_warmogsarmor"
           ]
         }
-      }
+      },
+      "leveling": [
+        {
+          "stage": "2-1",
+          "level": 4,
+          "action": null,
+          "optional": true
+        },
+        {
+          "stage": "2-5",
+          "level": 5,
+          "action": null,
+          "optional": false
+        },
+        {
+          "stage": "3-2",
+          "level": 6,
+          "action": null,
+          "optional": false
+        },
+        {
+          "stage": "3-5",
+          "level": 6,
+          "action": null,
+          "optional": false
+        },
+        {
+          "stage": "4-1",
+          "level": 7,
+          "action": "roll",
+          "optional": false
+        },
+        {
+          "stage": "4-2",
+          "level": null,
+          "action": "slowroll",
+          "optional": false
+        },
+        {
+          "stage": "4-5",
+          "level": null,
+          "action": "roll",
+          "optional": false
+        },
+        {
+          "stage": "5-1",
+          "level": null,
+          "action": "roll",
+          "optional": false
+        },
+        {
+          "stage": "5-2",
+          "level": 8,
+          "action": null,
+          "optional": false
+        }
+      ],
+      "levelingSource": "guide"
     },
     {
       "id": "da_18_ezreal-da_18_elderwood",
@@ -510,11 +756,11 @@
       "style": "Fast 8",
       "trend": "stable",
       "stats": {
-        "avg": 4.28,
-        "top4": 53.3,
-        "win": 16.2,
+        "avg": 4.27,
+        "top4": 53.5,
+        "win": 16.5,
         "pick": 0.52,
-        "games": 501
+        "games": 503
       },
       "units": [
         "da_18_ezreal",
@@ -547,11 +793,11 @@
         "da_18_ornn": 2,
         "da_18_alistar": 2,
         "da_18_soraka": 2,
-        "da_18_gnarsmall": 2,
+        "da_18_gnarsmall": 1,
         "da_fiddlesticks18": 2,
         "da_18_xayah": 2
       },
-      "tips": "Datos de 501 tableros de Master+ en EUW. Carry principal: Ezreal (media de 1,7 estrellas). Nivel final habitual: 8. Rasgo principal: Bosque ancestral.",
+      "tips": "Datos de 503 tableros de Master+ en EUW. Carry principal: Ezreal (media de 1,7 estrellas). Nivel final habitual: 8. Rasgo principal: Bosque ancestral.",
       "mid": [
         "da_18_ornn",
         "da_18_alistar",
@@ -569,7 +815,7 @@
         "da_18_leblanc"
       ],
       "midStars": {},
-      "stageGames": 773,
+      "stageGames": 776,
       "stageSource": "traits",
       "stageCarries": [
         "da_18_azir",
@@ -606,7 +852,46 @@
             "da_warmogsarmor"
           ]
         }
-      }
+      },
+      "leveling": [
+        {
+          "stage": "2-1",
+          "level": 4,
+          "action": null,
+          "optional": true
+        },
+        {
+          "stage": "2-5",
+          "level": 5,
+          "action": null,
+          "optional": false
+        },
+        {
+          "stage": "3-2",
+          "level": 6,
+          "action": null,
+          "optional": false
+        },
+        {
+          "stage": "4-1",
+          "level": 7,
+          "action": null,
+          "optional": false
+        },
+        {
+          "stage": "4-2",
+          "level": 8,
+          "action": "roll",
+          "optional": false
+        },
+        {
+          "stage": "5-1",
+          "level": 9,
+          "action": null,
+          "optional": true
+        }
+      ],
+      "levelingSource": "default"
     },
     {
       "id": "da_18_ezreal-da_18_executioner",
@@ -730,7 +1015,46 @@
             "da_warmogsarmor"
           ]
         }
-      }
+      },
+      "leveling": [
+        {
+          "stage": "2-1",
+          "level": 4,
+          "action": null,
+          "optional": true
+        },
+        {
+          "stage": "2-5",
+          "level": 5,
+          "action": null,
+          "optional": false
+        },
+        {
+          "stage": "3-2",
+          "level": 6,
+          "action": null,
+          "optional": false
+        },
+        {
+          "stage": "3-5",
+          "level": 7,
+          "action": "slowroll",
+          "optional": false
+        },
+        {
+          "stage": "4-5",
+          "level": 8,
+          "action": null,
+          "optional": true
+        },
+        {
+          "stage": "5-1",
+          "level": 8,
+          "action": null,
+          "optional": false
+        }
+      ],
+      "levelingSource": "default"
     },
     {
       "id": "da_18_ahri-da_18_blossom",
@@ -739,11 +1063,11 @@
       "style": "Fast 8",
       "trend": "stable",
       "stats": {
-        "avg": 4.38,
-        "top4": 56.2,
+        "avg": 4.37,
+        "top4": 56.4,
         "win": 11.0,
         "pick": 0.29,
-        "games": 281
+        "games": 282
       },
       "units": [
         "da_18_sett",
@@ -780,13 +1104,13 @@
         "da_18_lillia": 2,
         "da_18_rakan": 2
       },
-      "tips": "Datos de 281 tableros de Master+ en EUW. Carry principal: Ahri (media de 1,9 estrellas). Nivel final habitual: 8. Rasgo principal: Brote.",
+      "tips": "Datos de 282 tableros de Master+ en EUW. Carry principal: Ahri (media de 1,9 estrellas). Nivel final habitual: 8. Rasgo principal: Brote.",
       "mid": [
         "da_18_yorick",
         "da_18_rakan",
         "da_karma18",
-        "da_18_yunara",
-        "da_18_alistar",
+        "da_18_veigar",
+        "da_18_leblanc",
         "da_fiddlesticks18",
         "da_18_ahri"
       ],
@@ -794,15 +1118,15 @@
         "da_karma18",
         "da_18_yorick",
         "da_18_rakan",
-        "da_18_yunara",
-        "da_18_alistar"
+        "da_18_veigar",
+        "da_18_leblanc"
       ],
       "midStars": {},
-      "stageGames": 664,
+      "stageGames": 1081,
       "stageSource": "guide",
       "stageCarries": [
         "da_karma18",
-        "da_18_yunara"
+        "da_18_veigar"
       ],
       "positions": {
         "da_18_yorick": 0,
@@ -831,10 +1155,10 @@
       },
       "stageItems": {
         "early": {
-          "da_18_yunara": [
+          "da_18_yorick": [
             "da_jeweledgauntlet"
           ],
-          "da_18_alistar": [
+          "da_18_rakan": [
             "da_gargoylestoneplate"
           ]
         },
@@ -848,7 +1172,58 @@
             "da_warmogsarmor"
           ]
         }
-      }
+      },
+      "leveling": [
+        {
+          "stage": "2-1",
+          "level": 4,
+          "action": null,
+          "optional": true
+        },
+        {
+          "stage": "2-5",
+          "level": 5,
+          "action": null,
+          "optional": false
+        },
+        {
+          "stage": "3-1",
+          "level": 6,
+          "action": null,
+          "optional": true
+        },
+        {
+          "stage": "3-2",
+          "level": 6,
+          "action": null,
+          "optional": false
+        },
+        {
+          "stage": "3-5",
+          "level": 7,
+          "action": null,
+          "optional": true
+        },
+        {
+          "stage": "4-1",
+          "level": 7,
+          "action": null,
+          "optional": false
+        },
+        {
+          "stage": "4-2",
+          "level": 8,
+          "action": "roll",
+          "optional": false
+        },
+        {
+          "stage": "5-2",
+          "level": 9,
+          "action": null,
+          "optional": true
+        }
+      ],
+      "levelingSource": "guide"
     },
     {
       "id": "da_18_akali_ad-da_18_solar",
@@ -859,9 +1234,9 @@
       "stats": {
         "avg": 4.4,
         "top4": 51.8,
-        "win": 8.3,
+        "win": 8.2,
         "pick": 0.23,
-        "games": 218
+        "games": 220
       },
       "units": [
         "da_18_leona",
@@ -892,7 +1267,7 @@
         "da_18_ornn": [
           "da_gargoylestoneplate",
           "da_crownguard",
-          "da_spiritvisage"
+          "da_warmogsarmor"
         ]
       },
       "carries": [
@@ -910,7 +1285,7 @@
         "da_18_ornn": 3,
         "da_kogmaw18_ad": 1
       },
-      "tips": "Datos de 218 tableros de Master+ en EUW. Carry principal: Akali (media de 3,0 estrellas). Nivel final habitual: 7.5. Rasgo principal: Solar. Sube a 3 estrellas: Leona, Varus, Akali, Camille, Ornn.",
+      "tips": "Datos de 220 tableros de Master+ en EUW. Carry principal: Akali (media de 3,0 estrellas). Nivel final habitual: 7.5. Rasgo principal: Solar. Sube a 3 estrellas: Leona, Varus, Akali, Camille, Ornn.",
       "mid": [
         "da_18_leona",
         "da_18_varus",
@@ -974,7 +1349,7 @@
         ],
         "da_18_ornn": [
           "da_gargoylestoneplate",
-          "da_spiritvisage",
+          "da_warmogsarmor",
           "da_crownguard"
         ]
       },
@@ -994,10 +1369,61 @@
           ],
           "da_18_ornn": [
             "da_gargoylestoneplate",
-            "da_spiritvisage"
+            "da_warmogsarmor"
           ]
         }
-      }
+      },
+      "leveling": [
+        {
+          "stage": "3-1",
+          "level": 4,
+          "action": "roll",
+          "optional": false
+        },
+        {
+          "stage": "3-2",
+          "level": 5,
+          "action": null,
+          "optional": true
+        },
+        {
+          "stage": "3-3",
+          "level": 5,
+          "action": null,
+          "optional": false
+        },
+        {
+          "stage": "3-5",
+          "level": 6,
+          "action": null,
+          "optional": false
+        },
+        {
+          "stage": "4-1",
+          "level": 6,
+          "action": "roll",
+          "optional": false
+        },
+        {
+          "stage": "4-2",
+          "level": 7,
+          "action": null,
+          "optional": true
+        },
+        {
+          "stage": "4-5",
+          "level": 7,
+          "action": null,
+          "optional": false
+        },
+        {
+          "stage": "5-1",
+          "level": 8,
+          "action": null,
+          "optional": true
+        }
+      ],
+      "levelingSource": "guide"
     },
     {
       "id": "da_brambleback18-da_18_vanguard",
@@ -1006,11 +1432,11 @@
       "style": "Fast 8",
       "trend": "stable",
       "stats": {
-        "avg": 4.44,
-        "top4": 53.3,
+        "avg": 4.45,
+        "top4": 53.2,
         "win": 8.5,
         "pick": 0.21,
-        "games": 199
+        "games": 201
       },
       "units": [
         "da_18_aphelios",
@@ -1053,7 +1479,7 @@
         "da_18_varus": 2,
         "da_18_rakan": 2
       },
-      "tips": "Datos de 199 tableros de Master+ en EUW. Carry principal: Ancestro ígneo (media de 1,9 estrellas). Nivel final habitual: 8. Rasgo principal: Vanguardia.",
+      "tips": "Datos de 201 tableros de Master+ en EUW. Carry principal: Ancestro ígneo (media de 1,9 estrellas). Nivel final habitual: 8. Rasgo principal: Vanguardia.",
       "mid": [
         "da_18_varus",
         "da_18_rakan",
@@ -1136,7 +1562,202 @@
             "da_protectorsvow"
           ]
         }
-      }
+      },
+      "leveling": [
+        {
+          "stage": "2-1",
+          "level": 4,
+          "action": null,
+          "optional": true
+        },
+        {
+          "stage": "2-5",
+          "level": 5,
+          "action": null,
+          "optional": false
+        },
+        {
+          "stage": "3-1",
+          "level": 6,
+          "action": null,
+          "optional": true
+        },
+        {
+          "stage": "3-2",
+          "level": 6,
+          "action": null,
+          "optional": false
+        },
+        {
+          "stage": "3-5",
+          "level": 7,
+          "action": null,
+          "optional": true
+        },
+        {
+          "stage": "4-1",
+          "level": 7,
+          "action": null,
+          "optional": false
+        },
+        {
+          "stage": "4-2",
+          "level": 8,
+          "action": "roll",
+          "optional": false
+        },
+        {
+          "stage": "5-2",
+          "level": 9,
+          "action": null,
+          "optional": true
+        }
+      ],
+      "levelingSource": "guide"
+    },
+    {
+      "id": "da_18_ahri-da_18_spellweaver",
+      "name": "Ahri Tejehechizos",
+      "tier": "A",
+      "style": "Fast 8",
+      "trend": "stable",
+      "stats": {
+        "avg": 4.45,
+        "top4": 47.1,
+        "win": 12.7,
+        "pick": 0.11,
+        "games": 102
+      },
+      "units": [
+        "da_18_ahri",
+        "da_fiddlesticks18",
+        "da_18_sett",
+        "da_karma18",
+        "da_18_alune",
+        "da_18_lillia",
+        "da_18_leblanc",
+        "da_18_cassiopeia"
+      ],
+      "items": {
+        "da_18_ahri": [
+          "da_jeweledgauntlet",
+          "da_nashorstooth",
+          "da_spearofshojin"
+        ],
+        "da_18_sett": [
+          "da_gargoylestoneplate",
+          "da_warmogsarmor",
+          "da_spiritvisage"
+        ]
+      },
+      "carries": [
+        "da_18_ahri"
+      ],
+      "stars": {
+        "da_18_ahri": 2,
+        "da_fiddlesticks18": 2,
+        "da_18_sett": 2,
+        "da_karma18": 2,
+        "da_18_alune": 1,
+        "da_18_lillia": 2,
+        "da_18_leblanc": 3,
+        "da_18_cassiopeia": 2
+      },
+      "tips": "Datos de 102 tableros de Master+ en EUW. Carry principal: Ahri (media de 1,8 estrellas). Nivel final habitual: 8. Rasgo principal: Tejehechizos.",
+      "mid": [
+        "da_karma18",
+        "da_18_veigar",
+        "da_18_yorick",
+        "da_18_leblanc",
+        "da_fiddlesticks18",
+        "da_18_cassiopeia",
+        "da_18_ahri"
+      ],
+      "early": [
+        "da_karma18",
+        "da_18_veigar",
+        "da_18_yorick",
+        "da_18_leblanc",
+        "da_18_yunara"
+      ],
+      "midStars": {},
+      "stageGames": 1081,
+      "stageSource": "traits",
+      "stageCarries": [
+        "da_karma18",
+        "da_18_veigar"
+      ],
+      "itemOrder": {
+        "da_18_ahri": [
+          "da_jeweledgauntlet",
+          "da_spearofshojin",
+          "da_nashorstooth"
+        ],
+        "da_18_sett": [
+          "da_gargoylestoneplate",
+          "da_warmogsarmor",
+          "da_spiritvisage"
+        ]
+      },
+      "stageItems": {
+        "early": {
+          "da_18_yunara": [
+            "da_jeweledgauntlet"
+          ],
+          "da_18_yorick": [
+            "da_gargoylestoneplate"
+          ]
+        },
+        "mid": {
+          "da_18_ahri": [
+            "da_jeweledgauntlet",
+            "da_spearofshojin"
+          ],
+          "da_fiddlesticks18": [
+            "da_gargoylestoneplate",
+            "da_warmogsarmor"
+          ]
+        }
+      },
+      "leveling": [
+        {
+          "stage": "2-1",
+          "level": 4,
+          "action": null,
+          "optional": true
+        },
+        {
+          "stage": "2-5",
+          "level": 5,
+          "action": null,
+          "optional": false
+        },
+        {
+          "stage": "3-2",
+          "level": 6,
+          "action": null,
+          "optional": false
+        },
+        {
+          "stage": "4-1",
+          "level": 7,
+          "action": null,
+          "optional": false
+        },
+        {
+          "stage": "4-2",
+          "level": 8,
+          "action": "roll",
+          "optional": false
+        },
+        {
+          "stage": "5-1",
+          "level": 9,
+          "action": null,
+          "optional": true
+        }
+      ],
+      "levelingSource": "default"
     },
     {
       "id": "da_18_veigar-da_18_spellweaver",
@@ -1145,11 +1766,11 @@
       "style": "Reroll",
       "trend": "stable",
       "stats": {
-        "avg": 4.48,
-        "top4": 46.8,
-        "win": 14.4,
+        "avg": 4.5,
+        "top4": 46.7,
+        "win": 14.2,
         "pick": 0.36,
-        "games": 348
+        "games": 351
       },
       "units": [
         "da_18_veigar",
@@ -1186,7 +1807,7 @@
         "da_18_cassiopeia": 2,
         "da_18_alune": 1
       },
-      "tips": "Datos de 348 tableros de Master+ en EUW. Carry principal: Veigar (media de 3,0 estrellas). Nivel final habitual: 8. Rasgo principal: Tejehechizos. Sube a 3 estrellas: Veigar, Ornn, Rek'Sai, LeBlanc, Alistar.",
+      "tips": "Datos de 351 tableros de Master+ en EUW. Carry principal: Veigar (media de 3,0 estrellas). Nivel final habitual: 8. Rasgo principal: Tejehechizos. Sube a 3 estrellas: Veigar, Ornn, Rek'Sai, LeBlanc, Alistar.",
       "mid": [
         "da_18_reksai",
         "da_18_veigar",
@@ -1212,7 +1833,7 @@
         "da_fiddlesticks18": 2,
         "da_18_cassiopeia": 2
       },
-      "stageGames": 228,
+      "stageGames": 231,
       "stageSource": "boards",
       "stageCarries": [
         "da_18_veigar",
@@ -1249,112 +1870,40 @@
             "da_warmogsarmor"
           ]
         }
-      }
-    },
-    {
-      "id": "da_18_ahri-da_18_spellweaver",
-      "name": "Ahri Tejehechizos",
-      "tier": "A",
-      "style": "Fast 8",
-      "trend": "stable",
-      "stats": {
-        "avg": 4.48,
-        "top4": 46.5,
-        "win": 12.9,
-        "pick": 0.1,
-        "games": 101
       },
-      "units": [
-        "da_18_ahri",
-        "da_fiddlesticks18",
-        "da_18_sett",
-        "da_karma18",
-        "da_18_alune",
-        "da_18_lillia",
-        "da_18_leblanc",
-        "da_krug18"
-      ],
-      "items": {
-        "da_18_ahri": [
-          "da_jeweledgauntlet",
-          "da_spearofshojin",
-          "da_nashorstooth"
-        ],
-        "da_18_sett": [
-          "da_gargoylestoneplate",
-          "da_warmogsarmor",
-          "da_spiritvisage"
-        ]
-      },
-      "carries": [
-        "da_18_ahri"
-      ],
-      "stars": {
-        "da_18_ahri": 2,
-        "da_fiddlesticks18": 2,
-        "da_18_sett": 2,
-        "da_karma18": 2,
-        "da_18_alune": 1,
-        "da_18_lillia": 2,
-        "da_18_leblanc": 3,
-        "da_krug18": 2
-      },
-      "tips": "Datos de 101 tableros de Master+ en EUW. Carry principal: Ahri (media de 1,8 estrellas). Nivel final habitual: 8. Rasgo principal: Tejehechizos.",
-      "mid": [
-        "da_karma18",
-        "da_18_veigar",
-        "da_18_yunara",
-        "da_18_leblanc",
-        "da_fiddlesticks18",
-        "da_krug18",
-        "da_18_ahri"
-      ],
-      "early": [
-        "da_karma18",
-        "da_18_veigar",
-        "da_18_yorick",
-        "da_18_leblanc",
-        "da_18_yunara"
-      ],
-      "midStars": {},
-      "stageGames": 1075,
-      "stageSource": "traits",
-      "stageCarries": [
-        "da_karma18",
-        "da_18_yunara"
-      ],
-      "itemOrder": {
-        "da_18_ahri": [
-          "da_jeweledgauntlet",
-          "da_spearofshojin",
-          "da_nashorstooth"
-        ],
-        "da_18_sett": [
-          "da_gargoylestoneplate",
-          "da_warmogsarmor",
-          "da_spiritvisage"
-        ]
-      },
-      "stageItems": {
-        "early": {
-          "da_18_yunara": [
-            "da_jeweledgauntlet"
-          ],
-          "da_18_yorick": [
-            "da_gargoylestoneplate"
-          ]
+      "leveling": [
+        {
+          "stage": "2-1",
+          "level": 4,
+          "action": null,
+          "optional": false
         },
-        "mid": {
-          "da_18_ahri": [
-            "da_jeweledgauntlet",
-            "da_spearofshojin"
-          ],
-          "da_fiddlesticks18": [
-            "da_gargoylestoneplate",
-            "da_warmogsarmor"
-          ]
+        {
+          "stage": "2-5",
+          "level": 5,
+          "action": null,
+          "optional": false
+        },
+        {
+          "stage": "3-1",
+          "level": 5,
+          "action": "slowroll",
+          "optional": false
+        },
+        {
+          "stage": "4-1",
+          "level": 7,
+          "action": null,
+          "optional": false
+        },
+        {
+          "stage": "4-5",
+          "level": 8,
+          "action": null,
+          "optional": false
         }
-      }
+      ],
+      "levelingSource": "default"
     },
     {
       "id": "da_nidalee18_ap-da_primal18",
@@ -1363,11 +1912,11 @@
       "style": "Fast 8",
       "trend": "stable",
       "stats": {
-        "avg": 4.51,
-        "top4": 50.7,
+        "avg": 4.53,
+        "top4": 50.5,
         "win": 6.9,
         "pick": 0.73,
-        "games": 706
+        "games": 711
       },
       "units": [
         "da_nidalee18_ap",
@@ -1410,7 +1959,7 @@
         "da_sentinel18": 2,
         "da_18_varus": 2
       },
-      "tips": "Datos de 706 tableros de Master+ en EUW. Carry principal: Nidalee (media de 1,9 estrellas). Nivel final habitual: 8. Rasgo principal: Primigenio.",
+      "tips": "Datos de 711 tableros de Master+ en EUW. Carry principal: Nidalee (media de 1,9 estrellas). Nivel final habitual: 8. Rasgo principal: Primigenio.",
       "mid": [
         "da_18_varus",
         "da_18_camille",
@@ -1421,18 +1970,18 @@
         "da_nidalee18_ap"
       ],
       "early": [
-        "da_18_akali_ad",
+        "da_18_sentry",
         "da_18_varus",
-        "da_18_xayah",
-        "da_18_kayle",
-        "da_18_shen"
+        "da_18_akali_ad",
+        "da_gromp18_ap",
+        "da_18_teemo"
       ],
       "midStars": {},
-      "stageGames": 282,
+      "stageGames": 258,
       "stageSource": "guide",
       "stageCarries": [
-        "da_18_akali_ad",
-        "da_18_varus"
+        "da_18_masteryi_ad",
+        "da_18_sentry"
       ],
       "positions": {
         "da_amumu18": 2,
@@ -1451,9 +2000,9 @@
       },
       "itemOrder": {
         "da_nidalee18_ap": [
-          "da_infinityedge",
           "da_steraksgage",
-          "da_spearofshojin"
+          "da_spearofshojin",
+          "da_infinityedge"
         ],
         "da_18_aphelios": [
           "da_guinsoosrageblade",
@@ -1469,23 +2018,74 @@
       "stageItems": {
         "early": {
           "da_18_varus": [
-            "da_infinityedge"
+            "da_steraksgage"
           ],
-          "da_18_shen": [
+          "da_18_akali_ad": [
             "da_gargoylestoneplate"
           ]
         },
         "mid": {
           "da_nidalee18_ap": [
-            "da_infinityedge",
-            "da_steraksgage"
+            "da_steraksgage",
+            "da_spearofshojin"
           ],
           "da_18_diana": [
             "da_gargoylestoneplate",
             "da_warmogsarmor"
           ]
         }
-      }
+      },
+      "leveling": [
+        {
+          "stage": "2-1",
+          "level": 4,
+          "action": null,
+          "optional": true
+        },
+        {
+          "stage": "2-5",
+          "level": 5,
+          "action": null,
+          "optional": false
+        },
+        {
+          "stage": "3-1",
+          "level": 6,
+          "action": null,
+          "optional": true
+        },
+        {
+          "stage": "3-2",
+          "level": 6,
+          "action": null,
+          "optional": false
+        },
+        {
+          "stage": "3-5",
+          "level": 7,
+          "action": null,
+          "optional": true
+        },
+        {
+          "stage": "4-1",
+          "level": 7,
+          "action": null,
+          "optional": false
+        },
+        {
+          "stage": "4-2",
+          "level": 8,
+          "action": "roll",
+          "optional": false
+        },
+        {
+          "stage": "5-2",
+          "level": 9,
+          "action": null,
+          "optional": true
+        }
+      ],
+      "levelingSource": "guide"
     },
     {
       "id": "da_18_soraka-da_18_executioner",
@@ -1494,11 +2094,11 @@
       "style": "Fast 8",
       "trend": "stable",
       "stats": {
-        "avg": 4.55,
-        "top4": 49.5,
-        "win": 6.3,
-        "pick": 0.21,
-        "games": 206
+        "avg": 4.53,
+        "top4": 49.8,
+        "win": 6.7,
+        "pick": 0.22,
+        "games": 209
       },
       "units": [
         "da_18_soraka",
@@ -1535,7 +2135,7 @@
         "da_18_kennen": 1,
         "da_18_yorick": 2
       },
-      "tips": "Datos de 206 tableros de Master+ en EUW. Carry principal: Soraka (media de 1,8 estrellas). Nivel final habitual: 8. Rasgo principal: Exterminador.",
+      "tips": "Datos de 209 tableros de Master+ en EUW. Carry principal: Soraka (media de 1,8 estrellas). Nivel final habitual: 8. Rasgo principal: Exterminador.",
       "mid": [
         "da_18_yorick",
         "da_18_veigar",
@@ -1550,7 +2150,7 @@
         "da_18_yunara"
       ],
       "midStars": {},
-      "stageGames": 532,
+      "stageGames": 533,
       "stageSource": "guide",
       "stageCarries": [
         "da_18_azir",
@@ -1602,7 +2202,58 @@
             "da_warmogsarmor"
           ]
         }
-      }
+      },
+      "leveling": [
+        {
+          "stage": "2-1",
+          "level": 4,
+          "action": null,
+          "optional": true
+        },
+        {
+          "stage": "2-5",
+          "level": 5,
+          "action": null,
+          "optional": false
+        },
+        {
+          "stage": "3-1",
+          "level": 6,
+          "action": null,
+          "optional": true
+        },
+        {
+          "stage": "3-2",
+          "level": 6,
+          "action": null,
+          "optional": false
+        },
+        {
+          "stage": "3-5",
+          "level": 7,
+          "action": null,
+          "optional": true
+        },
+        {
+          "stage": "4-1",
+          "level": 7,
+          "action": null,
+          "optional": false
+        },
+        {
+          "stage": "4-2",
+          "level": 8,
+          "action": "roll",
+          "optional": false
+        },
+        {
+          "stage": "5-2",
+          "level": 9,
+          "action": null,
+          "optional": true
+        }
+      ],
+      "levelingSource": "guide"
     },
     {
       "id": "da_18_azir-da_18_sprykin",
@@ -1611,11 +2262,11 @@
       "style": "Reroll",
       "trend": "down",
       "stats": {
-        "avg": 4.56,
-        "top4": 48.2,
-        "win": 13.2,
+        "avg": 4.55,
+        "top4": 48.4,
+        "win": 13.4,
         "pick": 0.51,
-        "games": 492
+        "games": 494
       },
       "units": [
         "da_18_azir",
@@ -1652,7 +2303,7 @@
         "da_18_teemo": 2,
         "da_18_malphite": 2
       },
-      "tips": "Datos de 492 tableros de Master+ en EUW. Carry principal: Azir (media de 2,5 estrellas). Nivel final habitual: 8. Rasgo principal: Vivaz. Sube a 3 estrellas: Azir, Rammus.",
+      "tips": "Datos de 494 tableros de Master+ en EUW. Carry principal: Azir (media de 2,5 estrellas). Nivel final habitual: 8. Rasgo principal: Vivaz. Sube a 3 estrellas: Azir, Rammus.",
       "mid": [
         "da_18_veigar",
         "da_18_kobuko",
@@ -1729,7 +2380,64 @@
             "da_crownguard"
           ]
         }
-      }
+      },
+      "leveling": [
+        {
+          "stage": "2-1",
+          "level": 4,
+          "action": null,
+          "optional": true
+        },
+        {
+          "stage": "2-5",
+          "level": 5,
+          "action": null,
+          "optional": false
+        },
+        {
+          "stage": "3-2",
+          "level": 6,
+          "action": null,
+          "optional": false
+        },
+        {
+          "stage": "3-5",
+          "level": 6,
+          "action": null,
+          "optional": false
+        },
+        {
+          "stage": "4-1",
+          "level": 7,
+          "action": "roll",
+          "optional": false
+        },
+        {
+          "stage": "4-2",
+          "level": null,
+          "action": "slowroll",
+          "optional": false
+        },
+        {
+          "stage": "4-5",
+          "level": null,
+          "action": "roll",
+          "optional": false
+        },
+        {
+          "stage": "5-1",
+          "level": null,
+          "action": "roll",
+          "optional": false
+        },
+        {
+          "stage": "5-2",
+          "level": 8,
+          "action": null,
+          "optional": false
+        }
+      ],
+      "levelingSource": "guide"
     },
     {
       "id": "da_18_ahri-da_18_executioner",
@@ -1781,27 +2489,27 @@
       },
       "tips": "Datos de 105 tableros de Master+ en EUW. Carry principal: Ahri (media de 1,9 estrellas). Nivel final habitual: 8. Rasgo principal: Exterminador.",
       "mid": [
-        "da_18_veigar",
+        "da_karma18",
         "da_18_ornn",
+        "da_18_yorick",
+        "da_18_yunara",
         "da_18_leblanc",
-        "da_18_khazix",
         "da_fiddlesticks18",
-        "da_18_hecarim",
         "da_18_ahri"
       ],
       "early": [
-        "da_18_veigar",
+        "da_karma18",
         "da_18_ornn",
-        "da_18_sentry",
+        "da_18_yorick",
         "da_18_leblanc",
-        "da_18_alistar"
+        "da_18_yunara"
       ],
       "midStars": {},
-      "stageGames": 529,
+      "stageGames": 788,
       "stageSource": "traits",
       "stageCarries": [
-        "da_18_veigar",
-        "da_18_khazix"
+        "da_karma18",
+        "da_18_yunara"
       ],
       "itemOrder": {
         "da_18_ahri": [
@@ -1817,10 +2525,10 @@
       },
       "stageItems": {
         "early": {
-          "da_18_veigar": [
+          "da_18_yunara": [
             "da_jeweledgauntlet"
           ],
-          "da_18_alistar": [
+          "da_18_ornn": [
             "da_gargoylestoneplate"
           ]
         },
@@ -1829,12 +2537,51 @@
             "da_jeweledgauntlet",
             "da_spearofshojin"
           ],
-          "da_18_hecarim": [
+          "da_fiddlesticks18": [
             "da_gargoylestoneplate",
             "da_warmogsarmor"
           ]
         }
-      }
+      },
+      "leveling": [
+        {
+          "stage": "2-1",
+          "level": 4,
+          "action": null,
+          "optional": true
+        },
+        {
+          "stage": "2-5",
+          "level": 5,
+          "action": null,
+          "optional": false
+        },
+        {
+          "stage": "3-2",
+          "level": 6,
+          "action": null,
+          "optional": false
+        },
+        {
+          "stage": "4-1",
+          "level": 7,
+          "action": null,
+          "optional": false
+        },
+        {
+          "stage": "4-2",
+          "level": 8,
+          "action": "roll",
+          "optional": false
+        },
+        {
+          "stage": "5-1",
+          "level": 9,
+          "action": null,
+          "optional": true
+        }
+      ],
+      "levelingSource": "default"
     },
     {
       "id": "da_18_rengar-da_18_blossom",
@@ -1843,11 +2590,11 @@
       "style": "Reroll",
       "trend": "up",
       "stats": {
-        "avg": 4.59,
-        "top4": 44.5,
-        "win": 8.5,
+        "avg": 4.58,
+        "top4": 44.3,
+        "win": 8.4,
         "pick": 0.21,
-        "games": 200
+        "games": 203
       },
       "units": [
         "da_18_masteryi_ad",
@@ -1890,7 +2637,7 @@
         "da_krug18": 2,
         "da_kogmaw18_ad": 2
       },
-      "tips": "Datos de 200 tableros de Master+ en EUW. Carry principal: Rengar (media de 2,8 estrellas). Nivel final habitual: 7. Rasgo principal: Brote. Sube a 3 estrellas: Maestro Yi, Vi, Rengar.",
+      "tips": "Datos de 203 tableros de Master+ en EUW. Carry principal: Rengar (media de 2,8 estrellas). Nivel final habitual: 7. Rasgo principal: Brote. Sube a 3 estrellas: Maestro Yi, Vi, Rengar.",
       "mid": [
         "da_18_yorick",
         "da_gromp18_ap",
@@ -1909,13 +2656,13 @@
       "midStars": {
         "da_18_masteryi_ad": 3,
         "da_18_yorick": 2,
-        "da_18_sett": 1,
         "da_vi18": 2,
+        "da_18_sett": 1,
         "da_krug18": 2,
         "da_18_rengar": 3,
         "da_nidalee18_ap": 1
       },
-      "stageGames": 121,
+      "stageGames": 123,
       "stageSource": "guide",
       "stageCarries": [
         "da_18_masteryi_ad",
@@ -1971,7 +2718,64 @@
             "da_spiritvisage"
           ]
         }
-      }
+      },
+      "leveling": [
+        {
+          "stage": "2-1",
+          "level": 4,
+          "action": null,
+          "optional": true
+        },
+        {
+          "stage": "2-5",
+          "level": 5,
+          "action": null,
+          "optional": false
+        },
+        {
+          "stage": "3-2",
+          "level": 6,
+          "action": null,
+          "optional": false
+        },
+        {
+          "stage": "3-5",
+          "level": 6,
+          "action": null,
+          "optional": false
+        },
+        {
+          "stage": "4-1",
+          "level": 7,
+          "action": "roll",
+          "optional": false
+        },
+        {
+          "stage": "4-2",
+          "level": null,
+          "action": "slowroll",
+          "optional": false
+        },
+        {
+          "stage": "4-5",
+          "level": null,
+          "action": "roll",
+          "optional": false
+        },
+        {
+          "stage": "5-1",
+          "level": null,
+          "action": "roll",
+          "optional": false
+        },
+        {
+          "stage": "5-2",
+          "level": 8,
+          "action": null,
+          "optional": false
+        }
+      ],
+      "levelingSource": "guide"
     },
     {
       "id": "da_18_sivir-da_primal18",
@@ -2043,7 +2847,7 @@
         "da_gromp18_ap"
       ],
       "midStars": {},
-      "stageGames": 192,
+      "stageGames": 194,
       "stageSource": "guide",
       "stageCarries": [
         "da_18_masteryi_ad",
@@ -2098,7 +2902,58 @@
             "da_protectorsvow"
           ]
         }
-      }
+      },
+      "leveling": [
+        {
+          "stage": "2-1",
+          "level": 4,
+          "action": null,
+          "optional": true
+        },
+        {
+          "stage": "2-5",
+          "level": 5,
+          "action": null,
+          "optional": false
+        },
+        {
+          "stage": "3-1",
+          "level": 6,
+          "action": null,
+          "optional": true
+        },
+        {
+          "stage": "3-2",
+          "level": 6,
+          "action": null,
+          "optional": false
+        },
+        {
+          "stage": "3-5",
+          "level": 7,
+          "action": null,
+          "optional": true
+        },
+        {
+          "stage": "4-1",
+          "level": 7,
+          "action": null,
+          "optional": false
+        },
+        {
+          "stage": "4-2",
+          "level": 8,
+          "action": "roll",
+          "optional": false
+        },
+        {
+          "stage": "5-2",
+          "level": 9,
+          "action": null,
+          "optional": true
+        }
+      ],
+      "levelingSource": "guide"
     },
     {
       "id": "da_karma18-da_18_solar",
@@ -2109,9 +2964,9 @@
       "stats": {
         "avg": 4.66,
         "top4": 48.7,
-        "win": 12.9,
+        "win": 13.1,
         "pick": 0.45,
-        "games": 433
+        "games": 435
       },
       "units": [
         "da_18_sejuani",
@@ -2152,7 +3007,7 @@
         "da_18_kayle": 2,
         "da_18_leblanc": 3
       },
-      "tips": "Datos de 433 tableros de Master+ en EUW. Carry principal: Karma (media de 3,0 estrellas). Nivel final habitual: 7. Rasgo principal: Solar. Sube a 3 estrellas: Karma, Yorick, Leona, Sejuani, Yunara, LeBlanc.",
+      "tips": "Datos de 435 tableros de Master+ en EUW. Carry principal: Karma (media de 3,0 estrellas). Nivel final habitual: 7. Rasgo principal: Solar. Sube a 3 estrellas: Karma, Yorick, Leona, Sejuani, Yunara, LeBlanc.",
       "mid": [
         "da_karma18",
         "da_18_yorick",
@@ -2178,7 +3033,7 @@
         "da_18_leblanc": 3,
         "da_18_kayle": 2
       },
-      "stageGames": 267,
+      "stageGames": 268,
       "stageSource": "guide",
       "stageCarries": [
         "da_karma18",
@@ -2234,7 +3089,46 @@
             "da_warmogsarmor"
           ]
         }
-      }
+      },
+      "leveling": [
+        {
+          "stage": "3-1",
+          "level": null,
+          "action": "slowroll",
+          "optional": false
+        },
+        {
+          "stage": "4-1",
+          "level": 6,
+          "action": "roll",
+          "optional": false
+        },
+        {
+          "stage": "4-2",
+          "level": 6,
+          "action": null,
+          "optional": true
+        },
+        {
+          "stage": "4-5",
+          "level": 7,
+          "action": null,
+          "optional": true
+        },
+        {
+          "stage": "5-1",
+          "level": 7,
+          "action": null,
+          "optional": true
+        },
+        {
+          "stage": "5-2",
+          "level": 8,
+          "action": "roll",
+          "optional": false
+        }
+      ],
+      "levelingSource": "guide"
     },
     {
       "id": "da_18_cassiopeia-da_18_vanguard",
@@ -2371,7 +3265,52 @@
             "da_titansresolve"
           ]
         }
-      }
+      },
+      "leveling": [
+        {
+          "stage": "2-1",
+          "level": 4,
+          "action": null,
+          "optional": true
+        },
+        {
+          "stage": "2-5",
+          "level": 5,
+          "action": null,
+          "optional": false
+        },
+        {
+          "stage": "3-2",
+          "level": 6,
+          "action": "roll",
+          "optional": false
+        },
+        {
+          "stage": "3-5",
+          "level": null,
+          "action": "slowroll",
+          "optional": false
+        },
+        {
+          "stage": "4-1",
+          "level": null,
+          "action": "slowroll",
+          "optional": false
+        },
+        {
+          "stage": "4-5",
+          "level": 7,
+          "action": "slowroll",
+          "optional": false
+        },
+        {
+          "stage": "5-1",
+          "level": 7,
+          "action": null,
+          "optional": true
+        }
+      ],
+      "levelingSource": "guide"
     },
     {
       "id": "da_18_zyra-da_juggernaut18",
@@ -2380,11 +3319,11 @@
       "style": "Fast 8",
       "trend": "stable",
       "stats": {
-        "avg": 4.75,
-        "top4": 43.4,
-        "win": 13.1,
+        "avg": 4.73,
+        "top4": 43.9,
+        "win": 13.5,
         "pick": 0.23,
-        "games": 221
+        "games": 223
       },
       "units": [
         "da_amumu18",
@@ -2427,14 +3366,14 @@
         "da_18_rakan": 2,
         "da_18_sivir": 2
       },
-      "tips": "Datos de 221 tableros de Master+ en EUW. Carry principal: Zyra (media de 1,8 estrellas). Nivel final habitual: 8. Rasgo principal: Coloso.",
+      "tips": "Datos de 223 tableros de Master+ en EUW. Carry principal: Zyra (media de 1,8 estrellas). Nivel final habitual: 8. Rasgo principal: Coloso.",
       "mid": [
         "da_18_yorick",
         "da_18_rakan",
         "da_karma18",
         "da_scuttlecrab18",
+        "da_18_yunara",
         "da_vi18",
-        "da_18_azir",
         "da_18_zyra"
       ],
       "early": [
@@ -2445,11 +3384,11 @@
         "da_18_sejuani"
       ],
       "midStars": {},
-      "stageGames": 760,
+      "stageGames": 569,
       "stageSource": "guide",
       "stageCarries": [
-        "da_18_azir",
-        "da_karma18"
+        "da_karma18",
+        "da_18_yunara"
       ],
       "positions": {
         "da_scuttlecrab18": 0,
@@ -2474,8 +3413,8 @@
         ],
         "da_18_sivir": [
           "da_lastwhisper",
-          "da_redbuff",
-          "da_infinityedge"
+          "da_infinityedge",
+          "da_redbuff"
         ],
         "da_amumu18": [
           "da_gargoylestoneplate",
@@ -2502,7 +3441,58 @@
             "da_warmogsarmor"
           ]
         }
-      }
+      },
+      "leveling": [
+        {
+          "stage": "2-1",
+          "level": 4,
+          "action": null,
+          "optional": true
+        },
+        {
+          "stage": "2-5",
+          "level": 5,
+          "action": null,
+          "optional": false
+        },
+        {
+          "stage": "3-1",
+          "level": 6,
+          "action": null,
+          "optional": true
+        },
+        {
+          "stage": "3-2",
+          "level": 6,
+          "action": null,
+          "optional": false
+        },
+        {
+          "stage": "3-5",
+          "level": 7,
+          "action": null,
+          "optional": true
+        },
+        {
+          "stage": "4-1",
+          "level": 7,
+          "action": null,
+          "optional": false
+        },
+        {
+          "stage": "4-2",
+          "level": 8,
+          "action": "roll",
+          "optional": false
+        },
+        {
+          "stage": "5-2",
+          "level": 9,
+          "action": null,
+          "optional": true
+        }
+      ],
+      "levelingSource": "guide"
     },
     {
       "id": "da_18_cassiopeia-da_18_defender",
@@ -2514,7 +3504,7 @@
         "avg": 4.75,
         "top4": 44.0,
         "win": 8.0,
-        "pick": 0.16,
+        "pick": 0.15,
         "games": 150
       },
       "units": [
@@ -2627,7 +3617,64 @@
             "da_sunfirecape"
           ]
         }
-      }
+      },
+      "leveling": [
+        {
+          "stage": "2-1",
+          "level": 4,
+          "action": null,
+          "optional": true
+        },
+        {
+          "stage": "2-5",
+          "level": 5,
+          "action": null,
+          "optional": false
+        },
+        {
+          "stage": "3-2",
+          "level": 6,
+          "action": null,
+          "optional": false
+        },
+        {
+          "stage": "3-5",
+          "level": 6,
+          "action": null,
+          "optional": false
+        },
+        {
+          "stage": "4-1",
+          "level": 7,
+          "action": "roll",
+          "optional": false
+        },
+        {
+          "stage": "4-2",
+          "level": null,
+          "action": "slowroll",
+          "optional": false
+        },
+        {
+          "stage": "4-5",
+          "level": null,
+          "action": "roll",
+          "optional": false
+        },
+        {
+          "stage": "5-1",
+          "level": null,
+          "action": "roll",
+          "optional": false
+        },
+        {
+          "stage": "5-2",
+          "level": 8,
+          "action": null,
+          "optional": false
+        }
+      ],
+      "levelingSource": "guide"
     },
     {
       "id": "da_18_ahri-da_riftbeast18",
@@ -2636,11 +3683,11 @@
       "style": "Fast 8",
       "trend": "stable",
       "stats": {
-        "avg": 4.76,
-        "top4": 46.3,
+        "avg": 4.77,
+        "top4": 46.0,
         "win": 8.4,
         "pick": 0.48,
-        "games": 462
+        "games": 467
       },
       "units": [
         "da_sentinel18",
@@ -2683,29 +3730,29 @@
         "da_karma18": 2,
         "da_taric18": 1
       },
-      "tips": "Datos de 462 tableros de Master+ en EUW. Carry principal: Ahri (media de 1,9 estrellas). Nivel final habitual: 8. Rasgo principal: Bestia de la Grieta.",
+      "tips": "Datos de 467 tableros de Master+ en EUW. Carry principal: Ahri (media de 1,9 estrellas). Nivel final habitual: 8. Rasgo principal: Bestia de la Grieta.",
       "mid": [
         "da_18_sentry",
         "da_karma18",
         "da_18_yorick",
-        "da_18_yunara",
+        "da_gromp18_ap",
+        "da_scuttlecrab18",
         "da_krug18",
-        "da_18_masteryi_ad",
         "da_18_ahri"
       ],
       "early": [
-        "da_karma18",
         "da_18_sentry",
-        "da_18_yorick",
-        "da_18_yunara",
-        "da_18_teemo"
+        "da_karma18",
+        "da_cinderling18",
+        "da_scuttlecrab18",
+        "da_murkwolf18"
       ],
       "midStars": {},
-      "stageGames": 520,
+      "stageGames": 193,
       "stageSource": "guide",
       "stageCarries": [
-        "da_karma18",
-        "da_18_yunara"
+        "da_18_sentry",
+        "da_gromp18_ap"
       ],
       "positions": {
         "da_18_sett": 3,
@@ -2724,13 +3771,13 @@
       },
       "itemOrder": {
         "da_18_ahri": [
-          "da_spearofshojin",
           "da_jeweledgauntlet",
+          "da_spearofshojin",
           "da_strikersflail"
         ],
         "da_18_morgana": [
-          "da_rabadonsdeathcap",
           "da_voidstaff",
+          "da_rabadonsdeathcap",
           "da_morellonomicon"
         ],
         "da_sentinel18": [
@@ -2741,24 +3788,75 @@
       },
       "stageItems": {
         "early": {
-          "da_18_yunara": [
-            "da_spearofshojin"
+          "da_cinderling18": [
+            "da_jeweledgauntlet"
           ],
-          "da_18_yorick": [
+          "da_murkwolf18": [
             "da_gargoylestoneplate"
           ]
         },
         "mid": {
           "da_18_ahri": [
-            "da_spearofshojin",
-            "da_jeweledgauntlet"
+            "da_jeweledgauntlet",
+            "da_spearofshojin"
           ],
-          "da_18_masteryi_ad": [
+          "da_krug18": [
             "da_gargoylestoneplate",
             "da_adaptivehelm"
           ]
         }
-      }
+      },
+      "leveling": [
+        {
+          "stage": "2-1",
+          "level": 4,
+          "action": null,
+          "optional": true
+        },
+        {
+          "stage": "2-5",
+          "level": 5,
+          "action": null,
+          "optional": false
+        },
+        {
+          "stage": "3-1",
+          "level": 6,
+          "action": null,
+          "optional": true
+        },
+        {
+          "stage": "3-2",
+          "level": 6,
+          "action": null,
+          "optional": false
+        },
+        {
+          "stage": "3-5",
+          "level": 7,
+          "action": null,
+          "optional": true
+        },
+        {
+          "stage": "4-1",
+          "level": 7,
+          "action": null,
+          "optional": false
+        },
+        {
+          "stage": "4-2",
+          "level": 8,
+          "action": "roll",
+          "optional": false
+        },
+        {
+          "stage": "5-2",
+          "level": 9,
+          "action": null,
+          "optional": true
+        }
+      ],
+      "levelingSource": "guide"
     },
     {
       "id": "da_18_kayle-da_18_solar",
@@ -2767,11 +3865,11 @@
       "style": "Reroll",
       "trend": "stable",
       "stats": {
-        "avg": 4.9,
-        "top4": 46.9,
-        "win": 11.5,
+        "avg": 4.92,
+        "top4": 46.4,
+        "win": 11.6,
         "pick": 0.12,
-        "games": 113
+        "games": 112
       },
       "units": [
         "da_18_kayle",
@@ -2812,7 +3910,7 @@
         "da_18_ornn": 3,
         "da_18_varus": 3
       },
-      "tips": "Datos de 113 tableros de Master+ en EUW. Carry principal: Kayle (media de 2,7 estrellas). Nivel final habitual: 7. Rasgo principal: Solar. Sube a 3 estrellas: Leona, Xayah, Rakan, Ornn, Varus, Kayle, Sejuani.",
+      "tips": "Datos de 112 tableros de Master+ en EUW. Carry principal: Kayle (media de 2,7 estrellas). Nivel final habitual: 7. Rasgo principal: Solar. Sube a 3 estrellas: Leona, Xayah, Rakan, Ornn, Varus, Kayle, Sejuani.",
       "mid": [
         "da_18_leona",
         "da_18_xayah",
@@ -2838,7 +3936,7 @@
         "da_18_ornn": 3,
         "da_18_varus": 3
       },
-      "stageGames": 93,
+      "stageGames": 92,
       "stageSource": "guide",
       "stageCarries": [
         "da_18_kayle",
@@ -2892,7 +3990,58 @@
             "da_spiritvisage"
           ]
         }
-      }
+      },
+      "leveling": [
+        {
+          "stage": "3-1",
+          "level": 4,
+          "action": "roll",
+          "optional": false
+        },
+        {
+          "stage": "3-2",
+          "level": 5,
+          "action": null,
+          "optional": true
+        },
+        {
+          "stage": "3-3",
+          "level": 5,
+          "action": null,
+          "optional": false
+        },
+        {
+          "stage": "3-5",
+          "level": 6,
+          "action": null,
+          "optional": false
+        },
+        {
+          "stage": "4-1",
+          "level": 6,
+          "action": "roll",
+          "optional": false
+        },
+        {
+          "stage": "4-2",
+          "level": 7,
+          "action": null,
+          "optional": true
+        },
+        {
+          "stage": "4-5",
+          "level": 7,
+          "action": null,
+          "optional": false
+        },
+        {
+          "stage": "5-1",
+          "level": 8,
+          "action": null,
+          "optional": true
+        }
+      ],
+      "levelingSource": "guide"
     },
     {
       "id": "da_18_tristana-da_18_fae",
@@ -2901,11 +4050,11 @@
       "style": "Reroll",
       "trend": "up",
       "stats": {
-        "avg": 5.2,
-        "top4": 37.1,
-        "win": 12.4,
+        "avg": 5.17,
+        "top4": 37.8,
+        "win": 12.2,
         "pick": 0.09,
-        "games": 89
+        "games": 90
       },
       "units": [
         "da_18_tristana",
@@ -2942,7 +4091,7 @@
         "da_18_rengar": 3,
         "da_18_xayah": 2
       },
-      "tips": "Datos de 89 tableros de Master+ en EUW. Carry principal: Tristana (media de 2,6 estrellas). Nivel final habitual: 8. Rasgo principal: Hada. Sube a 3 estrellas: Tristana, Rammus, Rengar.",
+      "tips": "Datos de 90 tableros de Master+ en EUW. Carry principal: Tristana (media de 2,6 estrellas). Nivel final habitual: 8. Rasgo principal: Hada. Sube a 3 estrellas: Tristana, Rammus, Rengar.",
       "mid": [
         "da_18_rakan",
         "da_18_xayah",
@@ -3019,7 +4168,64 @@
             "da_protectorsvow"
           ]
         }
-      }
+      },
+      "leveling": [
+        {
+          "stage": "2-1",
+          "level": 4,
+          "action": null,
+          "optional": true
+        },
+        {
+          "stage": "2-5",
+          "level": 5,
+          "action": null,
+          "optional": false
+        },
+        {
+          "stage": "3-2",
+          "level": 6,
+          "action": null,
+          "optional": false
+        },
+        {
+          "stage": "3-5",
+          "level": 6,
+          "action": null,
+          "optional": false
+        },
+        {
+          "stage": "4-1",
+          "level": 7,
+          "action": "roll",
+          "optional": false
+        },
+        {
+          "stage": "4-2",
+          "level": null,
+          "action": "slowroll",
+          "optional": false
+        },
+        {
+          "stage": "4-5",
+          "level": null,
+          "action": "roll",
+          "optional": false
+        },
+        {
+          "stage": "5-1",
+          "level": null,
+          "action": "roll",
+          "optional": false
+        },
+        {
+          "stage": "5-2",
+          "level": 8,
+          "action": null,
+          "optional": false
+        }
+      ],
+      "levelingSource": "guide"
     }
   ]
 }
