@@ -277,6 +277,44 @@ def stage_from_traits(c, low, champs, traits, items):
     c["stageCarries"] = [u for u in carry_rank if champs[u]["cost"] <= 3][:2]
 
 
+def attach_guides(comps, champs, traits, min_overlap=0.65):
+    """Combina cada composición con la guía experta (TFT Flow) de tablero final más parecido:
+    early = opener de la guía; mid = lo que ya se tiene a nivel 7 del final + opener + datos reales;
+    posiciones del tablero final = las de la guía."""
+    path = os.path.join(DATA, "guides.json")
+    if not os.path.exists(path):
+        return
+    guides = [g for g in json.load(open(path, encoding="utf8"))["guides"] if all(u in champs for u in g["units"])]
+    for c in comps:
+        units = set(c["units"])
+        best, score = None, 0
+        for g in guides:
+            gu = set(g["units"])
+            sc = len(units & gu) / max(1, min(len(units), len(gu)))
+            if sc > score:
+                best, score = g, sc
+        if not best or score < min_overlap:
+            continue
+        final_traits = {t for u in c["units"] for t in champs[u]["traits"]}
+        opener = [u for u in (best["openers"][0] if best["openers"] else []) if u in champs]
+        data_mid = c.get("mid", [])
+        mid = [u for u in sorted(c["units"], key=lambda u: champs[u]["cost"]) if champs[u]["cost"] <= 3]
+        carry4 = [u for u in c["carries"] if champs[u]["cost"] == 4][:1]
+        for u in opener + data_mid:
+            if len(mid) >= 7 - len(carry4):
+                break
+            if u not in mid and (u in data_mid or set(champs[u]["traits"]) & final_traits):
+                mid.append(u)
+        mid = (mid[:7 - len(carry4)] + [u for u in carry4 if u not in mid])[:7]
+        if len(opener) >= 4:  # openers con huecos libres ("flex") se quedan con el early de los datos
+            c["early"] = opener
+        if len(mid) >= 5:
+            c["mid"] = sorted(mid, key=lambda u: champs[u]["cost"])
+        c["positions"] = {u: i for u, i in best["positions"].items() if u in units}
+        c["guide"] = {"name": best["name"], "url": best["url"], "match": round(score, 2)}
+        c["stageSource"] = "guide"
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--min-games", type=int, default=40)
@@ -381,6 +419,7 @@ def main():
     # Las más jugadas; el tier es relativo entre ellas (por puesto medio)
     unique = sorted(comps, key=lambda c: -c["stats"]["games"])[:args.max_comps]
     attach_stage_boards(unique, boards, champs, traits, items)
+    attach_guides(unique, champs, traits)
     unique.sort(key=lambda c: c["stats"]["avg"])
     n = len(unique)
     for i, c in enumerate(unique):

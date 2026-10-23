@@ -200,7 +200,10 @@ function transitionHTML(c) {
       <div class="stage-head"><b>Componentes prioritarios</b><small>Guárdalos para los carries</small></div>
       <div class="item-list">${comps.map(([id, n]) => `<span class="item-chip"><img src="${state.item[id].img}" alt="">${esc(state.item[id].name)} ×${n}</span>`).join("")}</div>
     </div>` : "";
-  const source = c.stageSource === "boards"
+  const guideLink = c.guide ? `<a href="${esc(c.guide.url)}" target="_blank" rel="noopener">${esc(c.guide.name)} (TFT Flow)</a>` : "";
+  const source = c.stageSource === "guide"
+    ? `Early: opener de la guía ${guideLink}. Mid: combinación de esa guía con tableros reales de nivel 5–7.`
+    : c.stageSource === "boards"
     ? `Sacado de ${c.stageGames} tableros reales de nivel 5–7 de jugadores que iban a esta composición.`
     : c.stageSource === "traits"
       ? `Campeones más jugados de sus rasgos principales en tableros reales de nivel 5–7 (${c.stageGames} tableros).`
@@ -224,8 +227,14 @@ function placeUnits(units, c) {
     const ranged = [...units].sort((a, b) => state.champ[b].cost - state.champ[a].cost).find((u) => state.champ[u].range >= 4);
     if (ranged) carries.push(ranged);
   }
+  const grid = {};
+  // Posiciones de la guía experta (fila 0 = delante); solo si la casilla está libre
+  Object.entries(c.positions || {}).forEach(([u, i]) => {
+    const r = Math.floor(i / COLS), col = i % COLS;
+    if (units.includes(u) && !Object.values(grid).some((p) => p.r === r && p.c === col)) grid[u] = { r, c: col };
+  });
   const front = [], second = [], back = [];
-  units.forEach((u) => {
+  units.filter((u) => !grid[u]).forEach((u) => {
     const ch = state.champ[u];
     if (carries.includes(u)) (ch.range >= 3 ? back : second).push(u);
     else if (ch.range <= 1 || tankItems(u) || (isTankTrait(u) && ch.range <= 2)) front.push(u);
@@ -236,7 +245,6 @@ function placeUnits(units, c) {
   front.sort((a, b) => tankItems(b) - tankItems(a) || state.champ[b].cost - state.champ[a].cost);
   back.sort((a, b) => (carries.indexOf(a) + 1 || 9) - (carries.indexOf(b) + 1 || 9));
 
-  const grid = {};
   const put = (u, row, order) => {
     for (const r of [row, row === 0 ? 1 : row - 1, 2, 1]) {
       const col = order.find((k) => !Object.values(grid).some((p) => p.r === r && p.c === k));
@@ -273,7 +281,9 @@ function positioningHTML(c) {
   const tabs = [["early", "Early", b.early, {}], ["mid", "Mid", b.mid, c.midStars || {}], ["final", "Final", c.units, c.stars || {}]];
   return `<div class="pos-tabs">${tabs.map(([k, label], i) => `<button class="pos-tab${i === 2 ? " active" : ""}" data-pos="${k}">${label}</button>`).join("")}</div>
     ${tabs.map(([k, , units, stars], i) => `<div class="pos-panel" data-pos-panel="${k}"${i === 2 ? "" : " hidden"}>${boardHTML(units, c, stars)}</div>`).join("")}
-    <p class="source">Orientativo: Riot no publica las posiciones. Tanques y cuerpo a cuerpo delante; carries a distancia detrás, en la esquina. Muévelos según dónde esté el carry rival.</p>`;
+    <p class="source">${c.guide
+      ? `Posiciones del tablero final de la guía <a href="${esc(c.guide.url)}" target="_blank" rel="noopener">${esc(c.guide.name)} (TFT Flow)</a>; los campeones que no salen en la guía se colocan por alcance y rol.`
+      : "Orientativo: Riot no publica las posiciones. Tanques y cuerpo a cuerpo delante; carries a distancia detrás, en la esquina."} Muévelos según dónde esté el carry rival.</p>`;
 }
 
 /** Todos los componentes del jugador: los sueltos y los que forman los objetos ya puestos. */
@@ -542,6 +552,7 @@ function openComp(id) {
     ${transitionHTML(c)}
     <h3>Consejos</h3>
     <p class="tips">${esc(c.tips)}</p>
+    ${c.guide ? `<p class="source">Guía experta relacionada: <a href="${esc(c.guide.url)}" target="_blank" rel="noopener">${esc(c.guide.name)} en TFT Flow</a> (aumentos, economía y variantes).</p>` : ""}
     <button class="btn" data-load="${c.id}">Abrir en el creador</button>
     <h3>Aumentos recomendados</h3>
     ${augmentsHTML(c)}`;
