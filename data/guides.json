@@ -1,6 +1,6 @@
 {
  "source": "TFT Flow (tftflow.com)",
- "fetched": "2026-10-23",
+ "fetched": "2026-10-25",
  "guides": [
   {
    "name": "Ahri Zyra",
@@ -966,23 +966,29 @@
   {
    "name": "Draven Fast 9",
    "units": [
-    "da_sentinel18",
+    "da_18_alistar",
+    "da_elderwood18_stonebarktree",
     "da_taric18",
     "da_amumu18",
     "da_18_maokai",
     "da_18_kennen",
-    "da_18_elderdragon",
+    "da_18_gnarsmall",
     "da_18_ivern",
+    "da_elderwood18_lifeblossom",
+    "da_18_ezreal",
     "da_draven18"
    ],
    "positions": {
-    "da_sentinel18": 1,
+    "da_18_alistar": 0,
+    "da_elderwood18_stonebarktree": 1,
     "da_taric18": 2,
     "da_amumu18": 3,
     "da_18_maokai": 4,
     "da_18_kennen": 8,
-    "da_18_elderdragon": 10,
+    "da_18_gnarsmall": 18,
     "da_18_ivern": 21,
+    "da_elderwood18_lifeblossom": 23,
+    "da_18_ezreal": 26,
     "da_draven18": 27
    },
    "openers": [
@@ -1973,6 +1979,97 @@
     }
    ],
    "url": "https://tftflow.com/composition/set18/khazix-reroll"
+  },
+  {
+   "name": "Mama Beak Reroll",
+   "units": [
+    "da_elderwood18_stonebarktree",
+    "da_18_hecarim",
+    "da_krug18",
+    "da_18_alistar",
+    "da_sentinel18",
+    "da_crimsonraptor18",
+    "da_18_xayah",
+    "da_elderwood18_lifeblossom",
+    "da_18_zyra"
+   ],
+   "positions": {
+    "da_elderwood18_stonebarktree": 0,
+    "da_18_hecarim": 2,
+    "da_krug18": 3,
+    "da_18_alistar": 4,
+    "da_sentinel18": 5,
+    "da_crimsonraptor18": 21,
+    "da_18_xayah": 22,
+    "da_elderwood18_lifeblossom": 25,
+    "da_18_zyra": 27
+   },
+   "openers": [
+    [
+     "da_18_ornn",
+     "da_18_rakan",
+     "da_18_varus",
+     "da_18_xayah",
+     "da_18_hecarim"
+    ]
+   ],
+   "leveling": [
+    {
+     "stage": "2-1",
+     "level": 4,
+     "action": null,
+     "optional": true
+    },
+    {
+     "stage": "2-5",
+     "level": 5,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "3-2",
+     "level": 6,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "3-5",
+     "level": 6,
+     "action": null,
+     "optional": false
+    },
+    {
+     "stage": "4-1",
+     "level": 7,
+     "action": "roll",
+     "optional": false
+    },
+    {
+     "stage": "4-2",
+     "level": null,
+     "action": "slowroll",
+     "optional": false
+    },
+    {
+     "stage": "4-5",
+     "level": null,
+     "action": "roll",
+     "optional": false
+    },
+    {
+     "stage": "5-1",
+     "level": null,
+     "action": "roll",
+     "optional": false
+    },
+    {
+     "stage": "5-2",
+     "level": 8,
+     "action": null,
+     "optional": false
+    }
+   ],
+   "url": "https://tftflow.com/composition/set18/mama-beak-reroll"
   },
   {
    "name": "Master Yi Reroll",
@@ -3201,20 +3298,20 @@
    "units": [
     "da_18_rammus",
     "da_vi18",
-    "da_18_rengar",
     "da_18_kobuko",
     "da_18_rakan",
     "da_18_lillia",
+    "da_taric18",
     "da_18_tristana",
     "da_18_sivir"
    ],
    "positions": {
     "da_18_rammus": 3,
-    "da_vi18": 14,
-    "da_18_rengar": 15,
+    "da_vi18": 16,
     "da_18_kobuko": 17,
     "da_18_rakan": 18,
     "da_18_lillia": 19,
+    "da_taric18": 20,
     "da_18_tristana": 21,
     "da_18_sivir": 22
    },

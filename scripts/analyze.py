@@ -422,7 +422,12 @@ def attach_guides(comps, champs, traits, min_overlap=0.65):
     path = os.path.join(DATA, "guides.json")
     if not os.path.exists(path):
         return
-    guides = [g for g in json.load(open(path, encoding="utf8"))["guides"] if all(u in champs for u in g["units"])]
+    # Las invocaciones (árboles del Bosque ancestral...) no son campeones de tienda: se quitan sin descartar la guía
+    guides = []
+    for g in json.load(open(path, encoding="utf8"))["guides"]:
+        known = [u for u in g["units"] if u in champs]
+        if len(known) >= 6:
+            guides.append({**g, "units": known, "positions": {u: i for u, i in g["positions"].items() if u in champs}})
     for c in comps:
         units = set(c["units"])
         best, score = None, 0

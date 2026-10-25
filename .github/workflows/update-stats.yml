@@ -18,9 +18,9 @@ on:
         description: "Volver a leer las guías expertas (TFT Flow)"
         type: boolean
         default: false
-  # Actualización diaria: se activa cuando haya clave personal de Riot (las de desarrollo caducan en 24 h)
-  # schedule:
-  #   - cron: "0 6 * * *"   # todos los días a las 06:00 UTC (08:00 en España en verano)
+  # Actualización diaria. Con clave de desarrollo (caduca en 24 h) hay que renovar el secreto RIOT_API_KEY antes de cada ejecución
+  schedule:
+    - cron: "0 9 * * *"   # todos los días a las 09:00 UTC (10:00 en España en invierno, 11:00 en verano)
 
 permissions:
   contents: write
