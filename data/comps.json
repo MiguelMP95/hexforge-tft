@@ -2,7 +2,7 @@
   "patch": "18.5",
   "patchStart": "2026-10-01T00:00:00Z",
   "newPatch": false,
-  "updated": "2026-10-26 19:30",
+  "updated": "2026-10-26 19:32",
   "source": "Datos propios de la API de Riot: 2235 partidas clasificatorias (17880 tableros) de jugadores Master+ de EUW, del 19/10 al 25/10/2026. Composiciones con al menos 35 tableros.",
   "comps": [
     {
@@ -255,10 +255,10 @@
         "da_18_shen"
       ],
       "midStars": {},
-      "stageGames": 1881,
+      "stageGames": 2010,
       "stageSource": "guide",
       "stageCarries": [
-        "da_karma18",
+        "da_18_akali_ad",
         "da_18_khazix"
       ],
       "positions": {
@@ -288,7 +288,7 @@
       },
       "stageItems": {
         "early": {
-          "da_18_varus": [
+          "da_18_akali_ad": [
             "da_guinsoosrageblade"
           ],
           "da_18_shen": [
@@ -296,7 +296,7 @@
           ]
         },
         "mid": {
-          "da_18_varus": [
+          "da_18_akali_ad": [
             "da_guinsoosrageblade",
             "da_spearofshojin"
           ],
@@ -432,7 +432,7 @@
         "da_18_ornn",
         "da_18_varus",
         "da_18_xayah",
-        "da_karma18",
+        "da_18_veigar",
         "da_18_alistar",
         "da_18_shen"
       ],
@@ -444,11 +444,11 @@
         "da_18_shen"
       ],
       "midStars": {},
-      "stageGames": 2151,
+      "stageGames": 1321,
       "stageSource": "guide",
       "stageCarries": [
-        "da_18_leblanc",
-        "da_karma18"
+        "da_18_akali_ad",
+        "da_18_veigar"
       ],
       "positions": {
         "da_18_alistar": 0,
@@ -811,18 +811,18 @@
         "da_18_rakan",
         "da_karma18",
         "da_18_yorick",
-        "da_18_elise",
+        "da_18_xayah",
         "da_18_diana",
         "da_fiddlesticks18",
         "da_18_khazix"
       ],
       "early": [
+        "da_18_xayah",
         "da_18_rakan",
-        "da_18_kayle",
         "da_18_elise"
       ],
       "midStars": {},
-      "stageGames": 716,
+      "stageGames": 940,
       "stageSource": "guide",
       "stageCarries": [
         "da_18_khazix",
@@ -858,7 +858,7 @@
       },
       "stageItems": {
         "early": {
-          "da_18_kayle": [
+          "da_18_rakan": [
             "da_jeweledgauntlet"
           ],
           "da_18_elise": [
@@ -2820,17 +2820,18 @@
         "da_nidalee18_ap"
       ],
       "early": [
+        "da_18_akali_ad",
         "da_18_varus",
+        "da_18_yorick",
         "da_18_rakan",
-        "da_18_kayle",
-        "da_18_elise"
+        "da_18_sejuani"
       ],
       "midStars": {},
-      "stageGames": 716,
+      "stageGames": 1617,
       "stageSource": "guide",
       "stageCarries": [
-        "da_18_khazix",
-        "da_18_diana"
+        "da_18_akali_ad",
+        "da_karma18"
       ],
       "positions": {
         "da_amumu18": 2,
@@ -2850,8 +2851,8 @@
       "itemOrder": {
         "da_nidalee18_ap": [
           "da_spearofshojin",
-          "da_steraksgage",
-          "da_infinityedge"
+          "da_infinityedge",
+          "da_steraksgage"
         ],
         "da_18_aphelios": [
           "da_guinsoosrageblade",
@@ -2869,14 +2870,14 @@
           "da_18_varus": [
             "da_spearofshojin"
           ],
-          "da_18_elise": [
+          "da_18_sejuani": [
             "da_gargoylestoneplate"
           ]
         },
         "mid": {
           "da_nidalee18_ap": [
             "da_spearofshojin",
-            "da_steraksgage"
+            "da_infinityedge"
           ],
           "da_18_diana": [
             "da_gargoylestoneplate",
@@ -2995,24 +2996,24 @@
         "da_18_sentry",
         "da_karma18",
         "da_18_yorick",
-        "da_scuttlecrab18",
-        "da_murkwolf18",
+        "da_18_yunara",
         "da_krug18",
+        "da_18_masteryi_ad",
         "da_18_ahri"
       ],
       "early": [
-        "da_18_sentry",
         "da_karma18",
-        "da_cinderling18",
-        "da_scuttlecrab18",
-        "da_murkwolf18"
+        "da_18_sentry",
+        "da_18_yorick",
+        "da_18_yunara",
+        "da_scuttlecrab18"
       ],
       "midStars": {},
-      "stageGames": 358,
+      "stageGames": 1126,
       "stageSource": "guide",
       "stageCarries": [
-        "da_18_sentry",
-        "da_crimsonraptor18"
+        "da_karma18",
+        "da_18_yunara"
       ],
       "positions": {
         "da_18_sett": 3,
@@ -3031,13 +3032,13 @@
       },
       "itemOrder": {
         "da_18_ahri": [
-          "da_jeweledgauntlet",
           "da_spearofshojin",
+          "da_jeweledgauntlet",
           "da_strikersflail"
         ],
         "da_18_morgana": [
-          "da_voidstaff",
           "da_rabadonsdeathcap",
+          "da_voidstaff",
           "da_morellonomicon"
         ],
         "da_sentinel18": [
@@ -3048,19 +3049,19 @@
       },
       "stageItems": {
         "early": {
-          "da_cinderling18": [
-            "da_jeweledgauntlet"
+          "da_18_yunara": [
+            "da_spearofshojin"
           ],
-          "da_murkwolf18": [
+          "da_scuttlecrab18": [
             "da_gargoylestoneplate"
           ]
         },
         "mid": {
           "da_18_ahri": [
-            "da_jeweledgauntlet",
-            "da_spearofshojin"
+            "da_spearofshojin",
+            "da_jeweledgauntlet"
           ],
-          "da_krug18": [
+          "da_18_masteryi_ad": [
             "da_gargoylestoneplate",
             "da_adaptivehelm"
           ]
@@ -3173,17 +3174,18 @@
         "da_karma18",
         "da_18_yunara",
         "da_fiddlesticks18",
-        "da_18_azir",
+        "da_18_masteryi_ad",
         "da_18_ahri"
       ],
       "early": [
         "da_karma18",
         "da_18_yorick",
         "da_18_rakan",
+        "da_18_xayah",
         "da_18_yunara"
       ],
       "midStars": {},
-      "stageGames": 1213,
+      "stageGames": 1212,
       "stageSource": "guide",
       "stageCarries": [
         "da_karma18",
@@ -3228,7 +3230,7 @@
             "da_spearofshojin",
             "da_jeweledgauntlet"
           ],
-          "da_fiddlesticks18": [
+          "da_18_masteryi_ad": [
             "da_gargoylestoneplate",
             "da_warmogsarmor"
           ]

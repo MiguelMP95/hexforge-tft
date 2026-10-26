@@ -72,6 +72,9 @@ def read_boards(champs, traits, items, days=0, prune=False):
                 its = []
                 for it in u.get("itemNames", []):
                     iid = slug(it)
+                    # Emblemas que da un aumento: mismo objeto que el emblema normal
+                    if iid not in items and iid.endswith("augment") and iid[:-len("augment")] in items:
+                        iid = iid[:-len("augment")]
                     if iid in items:
                         its.append(iid)
                     else:

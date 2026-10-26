@@ -131,7 +131,7 @@ def main():
             if "Augment" in api:
                 continue
             kind = "emblem"
-        elif api.startswith("DA_Artifact_"):
+        elif api.startswith(("DA_Artifact_", "DA_Item_Artifact_")):
             kind = "artifact"
         elif "radiant" in api.lower():
             kind = "radiant"

@@ -2990,6 +2990,17 @@
    "img": "img/items/da_giantslayer.png"
   },
   {
+   "id": "da_item_artifact_talismanofascension",
+   "api": "DA_Item_Artifact_TalismanOfAscension",
+   "name": "Emblema de la ascensión",
+   "kind": "artifact",
+   "desc": "",
+   "components": [],
+   "role": "tank",
+   "stats": [],
+   "img": "img/items/da_item_artifact_talismanofascension.png"
+  },
+  {
    "id": "da_18_emblemblossom",
    "api": "DA_18_EmblemBlossom",
    "name": "Emblema de brote",
