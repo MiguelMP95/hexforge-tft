@@ -361,6 +361,7 @@ def stage_from_traits(c, low, champs, traits, items):
     _, holders = temp_carries(pool, items)
     # Carry provisional: el que más lleva objetos de daño en esos tableros (mejor si es de sus rasgos)
     carry_rank = sorted(holders, key=lambda u: -(holders[u] * (2 if related(u) else 1)))
+    carry_rank = [u for u in carry_rank if related(u)] or carry_rank
 
     def board(size, max_cost, extra=()):
         tmp = [u for u in carry_rank if champs[u]["cost"] <= max_cost][:2 if size > 5 else 1]
@@ -418,7 +419,7 @@ def attach_leveling(comps, champs, guides_by_name):
         c["levelingSource"] = "default"
 
 
-def attach_guides(comps, champs, traits, min_overlap=0.65):
+def attach_guides(comps, champs, traits, min_overlap=0.75):
     """Combina cada composición con la guía experta (TFT Flow) de tablero final más parecido:
     early = opener de la guía; mid = lo que ya se tiene a nivel 7 del final + opener + datos reales;
     posiciones del tablero final = las de la guía."""
@@ -459,6 +460,32 @@ def attach_guides(comps, champs, traits, min_overlap=0.65):
         c["positions"] = {u: i for u, i in best["positions"].items() if u in units}
         c["guide"] = {"name": best["name"], "url": best["url"], "match": round(score, 2)}
         c["stageSource"] = "guide"
+
+
+def shape_stages(comps, champs, traits):
+    """Fast 8/9: el mid es el tablero final sin los de 5 de coste (los de 4 ya se compran a nivel 7)
+    completado con unidades baratas de sus rasgos; el early tiene al menos 4 unidades."""
+    cost = lambda u: champs[u]["cost"]
+    for c in comps:
+        final_traits = comp_traits(c["units"], champs, traits)
+        shares = lambda u: bool(set(champs[u]["traits"]) & final_traits)
+        cheap_of_traits = sorted((u for u in champs if cost(u) <= 3 and shares(u)), key=cost)
+        if c["style"] != "Reroll":
+            mid = sorted((u for u in c["units"] if cost(u) <= 4), key=lambda u: -cost(u))[:7]
+            for u in c.get("mid", []) + c.get("early", []) + cheap_of_traits:
+                if len(mid) >= 7:
+                    break
+                if u not in mid and cost(u) <= 3 and shares(u):
+                    mid.append(u)
+            c["mid"] = sorted(mid, key=cost)
+            c["midStars"] = {u: s for u, s in c.get("midStars", {}).items() if u in mid}
+        early = list(c.get("early", []))
+        for u in sorted(c["units"], key=cost) + cheap_of_traits:
+            if len(early) >= 4:
+                break
+            if u not in early and cost(u) <= 2:
+                early.append(u)
+        c["early"] = sorted(early, key=cost)
 
 
 def main():
@@ -569,6 +596,7 @@ def main():
     unique = sorted(comps, key=lambda c: -c["stats"]["games"])[:args.max_comps]
     attach_stage_boards(unique, boards, champs, traits, items)
     attach_guides(unique, champs, traits)
+    shape_stages(unique, champs, traits)
     attach_stage_items(unique, champs, items, champ_damage_types(boards, items))
     guides_path = os.path.join(DATA, "guides.json")
     guides_by_name = {g["name"]: g for g in json.load(open(guides_path, encoding="utf8"))["guides"]} if os.path.exists(guides_path) else {}
